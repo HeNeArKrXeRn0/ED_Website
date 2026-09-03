@@ -2,9 +2,11 @@ Spec;Icon
 Payload;payload.svg
 Takeoff weight;payload.svg
 Max Takeoff Weight;max_takeoff_weight.svg
+Masse Max. Décollage;max_takeoff_weight.svg
 Autonomy;full_battery.svg
 Flight Time;full_battery.svg
 Spray Width;spray_width_1.svg
+Largeur Pulvérisation;spray_width_1.svg
 Spray Rate;spray_nozzle.svg
 Flight Radius;radar.svg
 Flight Speed;speed.svg

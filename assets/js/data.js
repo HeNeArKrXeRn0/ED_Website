@@ -64,9 +64,9 @@ window.ED_PRODUCTS = [
     useCases: ['pulverisation', 'epandage', 'nettoyage'],
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '50 kg' },
-      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '104 kg' },
+      { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '104 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
       { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '7 min' },
-      { label: { fr: 'Largeur', en: 'Spray width' }, value: '11 m' },
+      { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '11 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
       {
@@ -121,9 +121,9 @@ window.ED_PRODUCTS = [
     useCases: ['pulverisation', 'epandage', 'nettoyage', 'cartographie'],
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '100 kg' },
-      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '175 kg' },
+      { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '175 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
       { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '6 min' },
-      { label: { fr: 'Largeur', en: 'Spray width' }, value: '13 m' },
+      { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '13 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
       {
@@ -179,9 +179,9 @@ window.ED_PRODUCTS = [
     useCases: ['pulverisation', 'epandage', 'nettoyage'],
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '70 kg' },
-      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '130 kg' },
+      { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '130 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
       { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '7 min' },
-      { label: { fr: 'Largeur', en: 'Spray width' }, value: '11 m' },
+      { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '11 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
       {
@@ -236,9 +236,9 @@ window.ED_PRODUCTS = [
     useCases: ['pulverisation', 'epandage', 'nettoyage'],
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '50 kg' },
-      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '92 kg' },
+      { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '92 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
       { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '7 min' },
-      { label: { fr: 'Largeur', en: 'Spray width' }, value: '11 m' },
+      { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '11 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
       {
@@ -293,9 +293,9 @@ window.ED_PRODUCTS = [
     useCases: ['pulverisation', 'epandage', 'nettoyage'],
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '20 kg' },
-      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '53 kg' },
+      { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '53 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
       { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '9 min' },
-      { label: { fr: 'Largeur', en: 'Spray width' }, value: '7 m' },
+      { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '7 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
       {
@@ -351,9 +351,9 @@ window.ED_PRODUCTS = [
     useCases: ['pulverisation', 'epandage', 'nettoyage'],
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '20 kg' },
-      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '52 kg' },
+      { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '52 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
       { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '9 min' },
-      { label: { fr: 'Largeur', en: 'Spray width' }, value: '7 m' },
+      { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '7 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
       {

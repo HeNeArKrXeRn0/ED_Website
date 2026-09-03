@@ -411,7 +411,7 @@
     }
 
     // 2. Masse & Poids
-    if (l.indexOf('masse max. au décollage') !== -1 || l.indexOf('max takeoff weight') !== -1 || l.indexOf('mtow') !== -1) {
+    if (l.indexOf('masse max. au décollage') !== -1 || l.indexOf('masse max. décollage') !== -1 || l.indexOf('masse max') !== -1 || l.indexOf('max takeoff weight') !== -1 || l.indexOf('mtow') !== -1) {
       return 'assets/img/svg_icons/max_takeoff_weight.svg';
     }
     if (l.indexOf('charge') !== -1 || l.indexOf('payload') !== -1 || l.indexOf('cuve') !== -1 || l.indexOf('tank') !== -1 || l.indexOf('masse') !== -1 || l.indexOf('poids') !== -1 || l.indexOf('emport') !== -1 || l.indexOf('weight') !== -1) {
