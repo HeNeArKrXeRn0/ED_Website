@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="23.283333mm"
+   height="13.05118mm"
+   viewBox="0 0 23.283333 13.05118"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="speed.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.7513468"
+     inkscape:cx="18.34353"
+     inkscape:cy="27.558762"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-80.697917,-158.75)">
+    <style
+       id="style1">
+.MsftOfcThm_Accent1_Fill_v2 {
+ fill:#CBF8FF; 
+}
+</style>
+    <path
+       d="m 91.810416,160.36396 v 1.05833 c 0.185209,0 0.343959,-0.0265 0.529167,-0.0265 0.185208,0 0.343958,0 0.529167,0.0265 v -1.05833 c 1.031875,0.0529 2.010833,0.26458 2.910416,0.60854 l -0.396875,0.9525 c 0.343959,0.13229 0.661459,0.26458 0.978959,0.42333 l 0.396875,-0.97896 c 0.502708,0.23813 0.9525,0.52917 1.402291,0.84667 l 1.137709,-1.13771 C 97.366666,159.62312 94.958958,158.75 92.339583,158.75 c -6.429375,0 -11.641666,5.21229 -11.641666,11.64167 V 171.45 h 1.5875 v -1.05833 c 0,-1.0848 0.185208,-2.14313 0.502708,-3.12209 l 0.978958,0.39688 c 0.105834,-0.34396 0.238125,-0.66146 0.370417,-0.97896 l -0.978958,-0.39688 c 0.396875,-0.89958 0.9525,-1.74625 1.5875,-2.46062 l 0.740833,0.74083 c 0.238125,-0.26458 0.47625,-0.52916 0.740833,-0.76729 l -0.740833,-0.74083 c 0.714375,-0.66146 1.534583,-1.24354 2.434167,-1.69334 l 0.396875,0.97896 c 0.3175,-0.15875 0.635,-0.29104 0.978958,-0.42333 L 88.9,160.94604 c 0.899583,-0.34396 1.878541,-0.52917 2.910416,-0.58208 z"
+       class="MsftOfcThm_Accent1_Fill_v2"
+       stroke-width="0.100389"
+       fill="#CBF8FF"
+       id="path1"
+       style="fill:#000000" />
+    <path
+       d="m 101.89104,163.72417 -1.13771,1.1377 c 0.29105,0.4498 0.55563,0.92605 0.7673,1.4023 l -0.97896,0.42333 c 0.13229,0.3175 0.26458,0.66146 0.37041,0.97896 l 0.97896,-0.39688 c 0.3175,0.97896 0.50271,2.03729 0.50271,3.12209 V 171.45 h 1.5875 v -1.05833 c 0,-2.48709 -0.76729,-4.7625 -2.09021,-6.6675 z"
+       class="MsftOfcThm_Accent1_Fill_v2"
+       stroke-width="0.100389"
+       fill="#CBF8FF"
+       id="path2"
+       style="fill:#000000" />
+    <path
+       d="m 91.59875,169.91542 c -0.05292,0.0265 -0.07938,0.0794 -0.132292,0.13229 -0.370417,0.44979 -0.3175,1.11125 0.132292,1.50812 0.449791,0.37042 1.11125,0.3175 1.508125,-0.13229 l 8.228545,-9.76312 z"
+       class="MsftOfcThm_Accent1_Fill_v2"
+       stroke-width="0.100389"
+       fill="#CBF8FF"
+       id="path3"
+       style="fill:#000000" />
+  </g>
+</svg>

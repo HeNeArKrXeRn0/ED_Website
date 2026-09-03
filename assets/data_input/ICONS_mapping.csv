@@ -1,0 +1,35 @@
+Spec;Icon
+Payload;payload.svg
+Takeoff weight;payload.svg
+Max Takeoff Weight;max_takeoff_weight.svg
+Autonomy;full_battery.svg
+Flight Time;full_battery.svg
+Spray Width;spray_width_1.svg
+Spray Rate;spray_nozzle.svg
+Flight Radius;radar.svg
+Flight Speed;speed.svg
+Max Speed;speed.svg
+Wind Resistance;wind_resistance.svg
+Max Flight Altitude;max_flight_altitude.svg
+Max Takeoff Altitude;max_takeoff_altitude.svg
+RTK;rtk_antenna.svg
+RTK Antenna;rtk_antenna.svg
+D-RTK-3;rtk_antenna.svg
+GNSS;sattelite.svg
+GNSS Antenna;sattelite.svg
+FPV Camera;fpv_camera.svg
+Vision System;shield.svg
+Radar;radar.svg
+Lidar;lidar.svg
+Thermal Camera;thermal_camera.svg
+Laser Rangefinder;laser_rangefinder.svg
+Accessory Spotlight;spotlight.svg
+Accessory Speaker;loudspeaker.svg
+Gimbal Accessory;simple_camera.svg
+Infrared Spotlight;spotlight.svg
+Zoom Camera;telephoto_camera.svg
+Wide Camera;wide_camera.svg
+Medium Tele Camera;telephoto_camera.svg
+Telephoto;telephoto_camera.svg
+Remote Control;radio_tower.svg
+IP Rating;shield.svg

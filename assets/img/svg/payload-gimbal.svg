@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" fill="none" stroke="#8A93A3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Charge utile nacelle stabilisee">
+  <!-- interface de fixation -->
+  <path d="M100 30h40v12h-40z"/>
+  <path d="M110 30v-8 M130 30v-8" opacity=".6"/>
+  <!-- bras de nacelle -->
+  <path d="M120 42v12"/>
+  <path d="M86 62a34 34 0 0 1 68 0"/>
+  <!-- corps capteur -->
+  <path d="M84 62h72a10 10 0 0 1 10 10v34a10 10 0 0 1-10 10H84a10 10 0 0 1-10-10V72a10 10 0 0 1 10-10z"/>
+  <!-- objectif principal -->
+  <circle cx="106" cy="89" r="17"/>
+  <circle cx="106" cy="89" r="8" opacity=".7"/>
+  <circle cx="106" cy="89" r="3" opacity=".4"/>
+  <!-- capteur thermique -->
+  <circle cx="145" cy="80" r="9"/>
+  <circle cx="145" cy="80" r="3.5" opacity=".6"/>
+  <!-- telemetre laser -->
+  <rect x="136" y="98" width="18" height="10" rx="3" opacity=".8"/>
+  <!-- axes de stabilisation -->
+  <path d="M74 78h-8 M166 78h8" opacity=".5"/>
+</svg>

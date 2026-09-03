@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comparateur de modèles — Equip Drones</title>
+<link rel="icon" href="assets/img/svg/Logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<div data-header="compare"></div>
+
+<main id="main">
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Titre de page                                                       -->
+  <!-- ------------------------------------------------------------------ -->
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="misc.official">Distributeur officiel DJI — Algérie</p>
+      <h1 class="h-section" data-i18n="cmp.title">Comparateur de modèles</h1>
+      <p class="lead measure" data-i18n="cmp.pick">Sélectionnez 2 à 4 appareils à comparer.</p>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Sélection + tableau comparatif (rendus par comparateur.js)          -->
+  <!-- ------------------------------------------------------------------ -->
+  <section class="section">
+    <div class="wrap">
+
+      <!-- 4 emplacements : remplis par comparateur.js -->
+      <div class="grid grid-4" id="cmp-slots"></div>
+
+      <!-- Masquer les lignes identiques : affiché seulement s'il y a un tableau -->
+      <div class="row mt-6 hidden" id="cmp-tools">
+        <input type="checkbox" id="cmp-hide-same" style="width:16px;height:16px;accent-color:var(--accent)">
+        <label class="small" for="cmp-hide-same" data-i18n="cmp.hideSame">Masquer les lignes identiques</label>
+      </div>
+
+      <div class="mt-6" id="cmp-result"></div>
+
+      <p class="notice mt-5 hidden" id="cmp-note" data-i18n="prod.specNote">Spécifications publiées par DJI. Un tiret (—) indique une valeur non communiquée par le constructeur.</p>
+
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------------ -->
+  <!-- Appel à l'action                                                    -->
+  <!-- ------------------------------------------------------------------ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2 class="h-section" id="cmp-cta-title">Besoin d’aide pour choisir ?</h2>
+        <p class="lead measure mt-4" style="margin-inline:auto" data-i18n="quote.noPrice">Aucun prix n’est affiché sur ce site : chaque configuration fait l’objet d’un devis personnalisé.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="devis.html" data-i18n="cta.quote">Demander un devis</a>
+          <a class="btn btn-wa" href="https://wa.me/213661936666" target="_blank" rel="noopener noreferrer" data-i18n="cta.whatsapp">Envoyer par WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-footer></div>
+
+<script src="assets/js/theme-config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/comparateur.js"></script>
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

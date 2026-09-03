@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogue — Equip Drones</title>
+<meta name="description" content="Catalogue des drones DJI professionnels distribués en Algérie par SARL Equip Drones : Agras agricoles, Matrice et Mavic Entreprise, charges utiles Zenmuse. Vente sur devis, sans prix affiché.">
+<link rel="icon" href="assets/img/svg/Logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<div data-header="catalogue"></div>
+
+<main id="main">
+
+  <!-- ===================== En-tête de page ===================== -->
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="misc.official">Distributeur officiel DJI — Algérie</p>
+      <h1 class="h-section" data-i18n="cat.title">Catalogue</h1>
+      <p class="lead measure">
+        Appareils DJI professionnels — pulvérisation et épandage agricoles, inspection,
+        topographie et sécurité — vendus, mis en service et maintenus en Algérie par
+        SARL Equip Drones.
+        <span data-i18n="quote.noPrice">Aucun prix n’est affiché sur ce site : chaque configuration fait l’objet d’un devis personnalisé.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== Appareils + filtres ===================== -->
+  <section class="section-sm">
+    <div class="wrap">
+
+      <!-- Barre de filtres : construite par catalogue.js -->
+      <div class="filter-bar" id="ed-filters"></div>
+
+      <p class="notice mt-5" data-i18n="misc.demoNotice">
+        Démonstration : les disponibilités affichées sont fictives.
+      </p>
+
+      <!-- Grille des appareils : remplie par catalogue.js -->
+      <div class="grid grid-3 mt-6" id="ed-grid"></div>
+
+      <!-- État vide -->
+      <div id="ed-empty" class="hidden mt-6">
+        <div class="empty-state">
+          <p class="lead" data-i18n="cat.empty">Aucun appareil ne correspond à ces filtres.</p>
+          <button type="button" class="btn mt-5" data-reset data-i18n="cat.reset">Réinitialiser les filtres</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== Charges utiles et accessoires ===================== -->
+  <section class="section-sm section-alt section-bordered">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-muted" data-i18n="cat.payload">Charges utiles</p>
+        <h2 class="h-section" data-i18n="prod.payloads">Charges utiles et accessoires compatibles</h2>
+        <p class="lead measure">
+          Ces nacelles et stations se montent sur les appareils Entreprise compatibles.
+          Elles s’ajoutent au devis comme un appareil ; les filtres ci-dessus ne portent
+          que sur les appareils.
+        </p>
+      </div>
+
+      <!-- Grille des charges utiles : remplie par catalogue.js -->
+      <div class="grid grid-3" id="ed-payloads"></div>
+    </div>
+  </section>
+
+</main>
+
+<div data-footer></div>
+
+<script src="assets/js/theme-config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/catalogue.js"></script>
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>

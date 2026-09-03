@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" fill="none" stroke="#8A93A3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Station d'accueil automatisee">
+  <!-- capots ouverts -->
+  <path d="M62 96 L48 56 L84 50 L92 92" opacity=".8"/>
+  <path d="M178 96 L192 56 L156 50 L148 92" opacity=".8"/>
+  <!-- corps de la station -->
+  <path d="M62 96h116v24a8 8 0 0 1-8 8H70a8 8 0 0 1-8-8V96z"/>
+  <path d="M62 96h116" />
+  <!-- plateforme -->
+  <path d="M84 92h72" opacity=".6"/>
+  <!-- drone au centre -->
+  <path d="M112 74h16v10h-16z"/>
+  <path d="M112 78 L96 70 M128 78 L144 70"/>
+  <ellipse cx="93" cy="69" rx="13" ry="3" opacity=".8"/>
+  <ellipse cx="147" cy="69" rx="13" ry="3" opacity=".8"/>
+  <!-- voyant + mat meteo -->
+  <circle cx="120" cy="116" r="4" opacity=".7"/>
+  <path d="M196 96V64 M190 62h12" opacity=".6"/>
+  <!-- socle -->
+  <path d="M70 128v6 M170 128v6"/>
+</svg>

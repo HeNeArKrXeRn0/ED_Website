@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" fill="none" stroke="#8A93A3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Drone compact pliable">
+  <!-- bras avant -->
+  <path d="M104 66 L62 50 M136 66 L178 50"/>
+  <!-- bras arriere -->
+  <path d="M106 88 L66 102 M134 88 L174 102"/>
+  <!-- rotors -->
+  <ellipse cx="56" cy="48" rx="26" ry="5" opacity=".85"/>
+  <ellipse cx="184" cy="48" rx="26" ry="5" opacity=".85"/>
+  <ellipse cx="60" cy="104" rx="26" ry="5" opacity=".85"/>
+  <ellipse cx="180" cy="104" rx="26" ry="5" opacity=".85"/>
+  <path d="M56 48v5 M184 48v5 M60 104v-5 M180 104v-5"/>
+  <!-- fuselage compact -->
+  <path d="M104 62h32a10 10 0 0 1 10 10v16a10 10 0 0 1-10 10h-32a10 10 0 0 1-10-10V72a10 10 0 0 1 10-10z"/>
+  <!-- capteurs avant -->
+  <path d="M94 74h-6 M94 84h-6" opacity=".6"/>
+  <!-- camera -->
+  <circle cx="120" cy="106" r="8"/>
+  <circle cx="120" cy="106" r="3" opacity=".6"/>
+  <path d="M112 98h16" opacity=".5"/>
+</svg>

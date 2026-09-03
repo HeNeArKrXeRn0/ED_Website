@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" fill="none" stroke="#8A93A3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Drone industriel quadrirotor">
+  <!-- bras -->
+  <path d="M120 68 L66 44 M120 68 L174 44 M120 68 L70 92 M120 68 L170 92"/>
+  <!-- rotors -->
+  <ellipse cx="60" cy="42" rx="30" ry="5.5" opacity=".85"/>
+  <ellipse cx="180" cy="42" rx="30" ry="5.5" opacity=".85"/>
+  <ellipse cx="64" cy="94" rx="30" ry="5.5" opacity=".85"/>
+  <ellipse cx="176" cy="94" rx="30" ry="5.5" opacity=".85"/>
+  <path d="M60 42v6 M180 42v6 M64 94v-6 M176 94v-6"/>
+  <!-- fuselage -->
+  <path d="M96 58h48a8 8 0 0 1 8 8v12a8 8 0 0 1-8 8H96a8 8 0 0 1-8-8V66a8 8 0 0 1 8-8z"/>
+  <!-- antennes -->
+  <path d="M108 58v-9 M132 58v-9"/>
+  <!-- nacelle gimbal -->
+  <path d="M112 86v8h16v-8"/>
+  <circle cx="120" cy="102" r="9"/>
+  <circle cx="120" cy="102" r="3.5" opacity=".6"/>
+  <!-- trains -->
+  <path d="M92 86l-12 30 M148 86l12 30"/>
+  <path d="M68 116h24 M148 116h24"/>
+</svg>

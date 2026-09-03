@@ -1,0 +1,1682 @@
+/* ==========================================================================
+   EQUIP DRONES — SOURCE DE VÉRITÉ DU CATALOGUE
+   --------------------------------------------------------------------------
+   Pour ajouter un produit : copiez un objet, changez les champs. Rien d'autre.
+   Pour changer une disponibilité : modifiez `availability` (voir plus bas).
+   Pour remplacer une image : modifiez `image`. Une seule ligne par produit.
+
+   RÈGLE ABSOLUE SUR LES SPÉCIFICATIONS
+   Toute valeur de `specs` provient des fiches techniques officielles DJI.
+   Lorsque DJI ne publie aucun chiffre, la valeur est le tiret « — ».
+   On n'estime jamais une spécification : un chiffre faux dans un devis est un
+   problème commercial, pas un détail cosmétique.
+   ========================================================================== */
+
+/* Coordonnées reprises telles quelles du site existant */
+window.ED_CONTACT = {
+  company:    'SARL Equip Drones',
+  phone:      '+213661936666',
+  phoneLabel: '+213 661 93 66 66',
+  whatsapp:   '213661936666',
+  email:      'info@equipdrones.com',
+  instagram:  'https://www.instagram.com/equip_drones/',
+  facebook:   'https://www.facebook.com/profile.php?id=61571771371833',
+  linkedin:   'https://www.linkedin.com/company/equip-drones/',
+  youtube:    'https://www.youtube.com/@equip_drones_algeria',
+  logo:       'assets/img/svg/Logo.svg'
+};
+
+/* Photos d'ambiance reprises du site existant, hébergées en local */
+window.ED_PHOTOS = {
+  heroSpray:  'assets/img/photos/hero-spray.jpg',
+  sunsetField:'assets/img/photos/sunset-field.jpg',
+  flag:       'assets/img/photos/flag.jpg',
+  operator:   'assets/img/photos/operator.jpg',
+  background: 'assets/img/photos/background.jpg',
+  djiAg:      'assets/img/photos/dji-ag.png'
+};
+
+/* --------------------------------------------------------------------------
+   DISPONIBILITÉS — DONNÉES FICTIVES
+   ⚠ FAKE DATA : valeurs saisies à la main pour la démonstration.
+   À remplacer par un vrai flux de stock. Seul ce champ change ; l'affichage,
+   les libellés et les badges restent identiques.
+   Valeurs admises : 'in_stock' | 'on_order' | 'coming_soon'
+   -------------------------------------------------------------------------- */
+
+window.ED_PRODUCTS = [
+
+  /* ====================== AGRICULTURE — PULVÉRISATION ===================== */
+  {
+    id: 't55',
+    name: 'DJI Agras T55',
+    segment: 'agriculture',
+    category: 'agriculture',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Le vaisseau amiral de la gamme Agras, conçu pour les très grandes surfaces.',
+      en: 'The flagship of the Agras range, built for very large acreages.'
+    },
+    usage: {
+      fr: 'Le T55 s’adresse aux exploitations céréalières étendues et aux prestataires de services qui traitent plusieurs centaines d’hectares par saison. Sa capacité de cuve et son débit lui permettent d’enchaîner les parcelles sans multiplier les rotations de remplissage. Il assure aussi bien la pulvérisation phytosanitaire que l’épandage d’engrais granulés et de semences, ce qui en fait un outil rentable sur toute l’année agricole.',
+      en: 'The T55 targets large cereal operations and contractors treating hundreds of hectares a season. Its tank capacity and flow rate let it work plot after plot without constant refill trips. It handles crop-protection spraying as well as granular fertiliser and seed spreading, making it productive across the whole farming year.'
+    },
+    useCases: ['pulverisation', 'epandage', 'nettoyage'],
+    highlights: [
+      { label: { fr: 'Charge utile', en: 'Payload' }, value: '50 kg' },
+      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '104 kg' },
+      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '7 min' },
+      { label: { fr: 'Largeur', en: 'Spray width' }, value: '11 m' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Spécifications Clés', en: 'Key Specifications' },
+        rows: [
+          { label: { fr: 'Charge utile (Payload)', en: 'Payload Capacity' }, value: '50 kg' },
+          { label: { fr: 'Masse max. au décollage (MTOW)', en: 'Max Takeoff Weight' }, value: '104 kg' },
+          { label: { fr: 'Autonomie de vol', en: 'Flight Autonomy' }, value: '7 min' },
+          { label: { fr: 'Largeur de pulvérisation', en: 'Spray Width' }, value: '11 m' },
+          { label: { fr: 'Vitesse de vol max.', en: 'Max Flight Speed' }, value: '13.8 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Performances de vol', en: 'Flight Performance' },
+        rows: [
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '100 m' },
+          { label: { fr: 'Rayon de vol', en: 'Flight Radius' }, value: '2000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '6 m/s' },
+          { label: { fr: 'Altitude max. au décollage', en: 'Max Takeoff Altitude' }, value: { fr: '4500 m (au-dessus du niveau de la mer)', en: '4500 m Above Sea Level' } },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/t55.png',
+    imageFallback: 'assets/img/svg/agras-t.svg',
+    djiUrl: 'https://ag.dji.com/t55'
+  },
+  {
+    id: 't100',
+    segment: 'agriculture',
+    name: 'DJI Agras T100',
+    category: 'agriculture',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Polyvalent lourd : pulvérisation, épandage et transport de charges.',
+      en: 'Heavy multi-role: spraying, spreading and cargo lifting.'
+    },
+    usage: {
+      fr: 'Le T100 dépasse le cadre du seul traitement phytosanitaire. Sa capacité d’emport lui permet de transporter des charges en terrain difficile — palmeraies, vergers en pente, chantiers isolés — là où aucun véhicule ne passe. Les exploitations qui combinent traitement, épandage et logistique interne y trouvent une seule machine pour trois usages, avec un taux d’utilisation annuel bien supérieur à un pulvérisateur dédié.',
+      en: 'The T100 goes beyond crop protection alone. Its lift capacity lets it carry loads across difficult terrain — date palm groves, sloping orchards, remote sites — where no vehicle can go. Operations combining treatment, spreading and internal logistics get one machine for three jobs, with far higher annual utilisation than a dedicated sprayer.'
+    },
+    useCases: ['pulverisation', 'epandage', 'nettoyage', 'cartographie'],
+    highlights: [
+      { label: { fr: 'Charge utile', en: 'Payload' }, value: '100 kg' },
+      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '175 kg' },
+      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '6 min' },
+      { label: { fr: 'Largeur', en: 'Spray width' }, value: '13 m' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Spécifications Clés', en: 'Key Specifications' },
+        rows: [
+          { label: { fr: 'Charge utile (Payload)', en: 'Payload Capacity' }, value: '100 kg' },
+          { label: { fr: 'Masse max. au décollage (MTOW)', en: 'Max Takeoff Weight' }, value: '175 kg' },
+          { label: { fr: 'Autonomie de vol', en: 'Flight Autonomy' }, value: '6 min' },
+          { label: { fr: 'Largeur de pulvérisation', en: 'Spray Width' }, value: '13 m' },
+          { label: { fr: 'Vitesse de vol max.', en: 'Max Flight Speed' }, value: '13.8 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Performances de vol', en: 'Flight Performance' },
+        rows: [
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '100 m' },
+          { label: { fr: 'Rayon de vol', en: 'Flight Radius' }, value: '2000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '6 m/s' },
+          { label: { fr: 'Altitude max. au décollage', en: 'Max Takeoff Altitude' }, value: { fr: '4500 m (au-dessus du niveau de la mer)', en: '4500 m Above Sea Level' } },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus', en: 'Included' } },
+        ]
+      },
+    ],
+    availability: 'not_available',
+    image: 'assets/img/products/t100.png',
+    imageFallback: 'assets/img/svg/agras-t.svg',
+    djiUrl: 'https://ag.dji.com/t100'
+  },
+  {
+    id: 't70p',
+    segment: 'agriculture',
+    name: 'DJI Agras T70P',
+    category: 'agriculture',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Haut rendement sur grandes parcelles, avec pulvérisation de précision.',
+      en: 'High throughput on large plots, with precision spraying.'
+    },
+    usage: {
+      fr: 'Le T70P vise le meilleur compromis entre débit de chantier et précision d’application. Son système de pulvérisation module la dose en fonction de la vitesse réelle, ce qui limite le surdosage en bout de rang et les recouvrements. C’est l’appareil de référence pour les céréaliers qui veulent réduire leur consommation de produit tout en traitant de grandes surfaces dans les fenêtres météo courtes.',
+      en: 'The T70P aims at the best balance of work rate and application precision. Its spraying system modulates dose against actual ground speed, limiting overdosing at row ends and overlaps. It is the reference aircraft for cereal growers wanting lower product consumption while still covering large areas inside short weather windows.'
+    },
+    useCases: ['pulverisation', 'epandage', 'nettoyage'],
+    highlights: [
+      { label: { fr: 'Charge utile', en: 'Payload' }, value: '70 kg' },
+      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '130 kg' },
+      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '7 min' },
+      { label: { fr: 'Largeur', en: 'Spray width' }, value: '11 m' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Spécifications Clés', en: 'Key Specifications' },
+        rows: [
+          { label: { fr: 'Charge utile (Payload)', en: 'Payload Capacity' }, value: '70 kg' },
+          { label: { fr: 'Masse max. au décollage (MTOW)', en: 'Max Takeoff Weight' }, value: '130 kg' },
+          { label: { fr: 'Autonomie de vol', en: 'Flight Autonomy' }, value: '7 min' },
+          { label: { fr: 'Largeur de pulvérisation', en: 'Spray Width' }, value: '11 m' },
+          { label: { fr: 'Vitesse de vol max.', en: 'Max Flight Speed' }, value: '13.8 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Performances de vol', en: 'Flight Performance' },
+        rows: [
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '100 m' },
+          { label: { fr: 'Rayon de vol', en: 'Flight Radius' }, value: '2000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '6 m/s' },
+          { label: { fr: 'Altitude max. au décollage', en: 'Max Takeoff Altitude' }, value: { fr: '4500 m (au-dessus du niveau de la mer)', en: '4500 m Above Sea Level' } },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/t70p.png',
+    imageFallback: 'assets/img/svg/agras-t.svg',
+    djiUrl: 'https://ag.dji.com/t70p'
+  },
+  {
+    id: 't50',
+    segment: 'agriculture',
+    name: 'DJI Agras T50',
+    category: 'agriculture',
+    type: 'aircraft',
+    tagline: {
+      fr: 'La référence polyvalente pour exploitations moyennes et grandes.',
+      en: 'The versatile reference for medium and large farms.'
+    },
+    usage: {
+      fr: 'Le T50 est le modèle le plus déployé de la gamme et le meilleur point d’entrée pour une exploitation qui mécanise son traitement. Il couvre la pulvérisation comme l’épandage, son radar évite le relief et les obstacles, et son écosystème de batteries et de pièces est largement disponible. Pour la majorité des exploitations algériennes de taille moyenne, c’est le choix par défaut.',
+      en: 'The T50 is the most widely deployed model in the range and the best entry point for a farm mechanising its treatment. It covers spraying and spreading alike, its radar avoids terrain and obstacles, and its battery and parts ecosystem is widely available. For most medium-sized Algerian farms, this is the default choice.'
+    },
+    useCases: ['pulverisation', 'epandage', 'nettoyage'],
+    highlights: [
+      { label: { fr: 'Charge utile', en: 'Payload' }, value: '50 kg' },
+      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '92 kg' },
+      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '7 min' },
+      { label: { fr: 'Largeur', en: 'Spray width' }, value: '11 m' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Spécifications Clés', en: 'Key Specifications' },
+        rows: [
+          { label: { fr: 'Charge utile (Payload)', en: 'Payload Capacity' }, value: '50 kg' },
+          { label: { fr: 'Masse max. au décollage (MTOW)', en: 'Max Takeoff Weight' }, value: '92 kg' },
+          { label: { fr: 'Autonomie de vol', en: 'Flight Autonomy' }, value: '7 min' },
+          { label: { fr: 'Largeur de pulvérisation', en: 'Spray Width' }, value: '11 m' },
+          { label: { fr: 'Vitesse de vol max.', en: 'Max Flight Speed' }, value: '10 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Performances de vol', en: 'Flight Performance' },
+        rows: [
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '100 m' },
+          { label: { fr: 'Rayon de vol', en: 'Flight Radius' }, value: '2000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '6 m/s' },
+          { label: { fr: 'Altitude max. au décollage', en: 'Max Takeoff Altitude' }, value: { fr: '4500 m (au-dessus du niveau de la mer)', en: '4500 m Above Sea Level' } },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/t50.png',
+    imageFallback: 'assets/img/svg/agras-t.svg',
+    djiUrl: 'https://ag.dji.com/t50'
+  },
+  {
+    id: 't25p',
+    segment: 'agriculture',
+    name: 'DJI Agras T25P',
+    category: 'agriculture',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Compact et maniable, pensé pour les vergers et les parcelles morcelées.',
+      en: 'Compact and agile, built for orchards and fragmented plots.'
+    },
+    usage: {
+      fr: 'Le T25P privilégie la maniabilité sur le débit brut. Son gabarit réduit lui permet d’évoluer entre les rangs de vergers, dans les palmeraies denses et sur les petites parcelles irrégulières où un appareil plus lourd serait inutilisable. Il se transporte dans un véhicule utilitaire ordinaire, ce qui simplifie la logistique pour les prestataires intervenant sur plusieurs sites dans la journée.',
+      en: 'The T25P favours agility over raw throughput. Its compact size lets it work between orchard rows, inside dense palm groves and on small irregular plots where a heavier aircraft would be unusable. It fits in an ordinary van, simplifying logistics for contractors covering several sites in a day.'
+    },
+    useCases: ['pulverisation', 'epandage', 'nettoyage'],
+    highlights: [
+      { label: { fr: 'Charge utile', en: 'Payload' }, value: '20 kg' },
+      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '53 kg' },
+      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '9 min' },
+      { label: { fr: 'Largeur', en: 'Spray width' }, value: '7 m' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Spécifications Clés', en: 'Key Specifications' },
+        rows: [
+          { label: { fr: 'Charge utile (Payload)', en: 'Payload Capacity' }, value: '20 kg' },
+          { label: { fr: 'Masse max. au décollage (MTOW)', en: 'Max Takeoff Weight' }, value: '53 kg' },
+          { label: { fr: 'Autonomie de vol', en: 'Flight Autonomy' }, value: '9 min' },
+          { label: { fr: 'Largeur de pulvérisation', en: 'Spray Width' }, value: '7 m' },
+          { label: { fr: 'Vitesse de vol max.', en: 'Max Flight Speed' }, value: '10 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Performances de vol', en: 'Flight Performance' },
+        rows: [
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '100 m' },
+          { label: { fr: 'Rayon de vol', en: 'Flight Radius' }, value: '2000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '6 m/s' },
+          { label: { fr: 'Altitude max. au décollage', en: 'Max Takeoff Altitude' }, value: { fr: '4500 m (au-dessus du niveau de la mer)', en: '4500 m Above Sea Level' } },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Projecteur', en: 'Spotlight' }, value: { fr: 'Inclus', en: 'Included' } },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/t25p.png',
+    imageFallback: 'assets/img/svg/agras-t.svg',
+    djiUrl: 'https://ag.dji.com/t25p'
+  },
+  {
+    id: 't25',
+    segment: 'agriculture',
+    name: 'DJI Agras T25',
+    category: 'agriculture',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Le drone agricole compact et maniable pour les vergers et moyennes parcelles.',
+      en: 'The compact and nimble agricultural drone for orchards and mid-size plots.'
+    },
+    usage: {
+      fr: 'Le T25 est l’appareil d’apprentissage et de première installation. Il permet à une exploitation ou à un jeune prestataire de démarrer une activité de traitement aérien avec un investissement contenu, tout en conservant les automatismes de vol et la sécurité de la gamme Agras. Beaucoup d’opérateurs commencent avec un T25 avant de monter en gamme une fois leur carnet de commandes constitué.',
+      en: 'The T25 is the learning and first-installation aircraft. It lets a farm or a new contractor start aerial treatment with contained investment, while keeping the flight automation and safety of the Agras range. Many operators start on a T25 and move up once their order book is established.'
+    },
+    useCases: ['pulverisation', 'epandage', 'nettoyage'],
+    highlights: [
+      { label: { fr: 'Charge utile', en: 'Payload' }, value: '20 kg' },
+      { label: { fr: 'Masse max.', en: 'MTOW' }, value: '52 kg' },
+      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '9 min' },
+      { label: { fr: 'Largeur', en: 'Spray width' }, value: '7 m' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Spécifications Clés', en: 'Key Specifications' },
+        rows: [
+          { label: { fr: 'Charge utile (Payload)', en: 'Payload Capacity' }, value: '20 kg' },
+          { label: { fr: 'Masse max. au décollage (MTOW)', en: 'Max Takeoff Weight' }, value: '52 kg' },
+          { label: { fr: 'Autonomie de vol', en: 'Flight Autonomy' }, value: '9 min' },
+          { label: { fr: 'Largeur de pulvérisation', en: 'Spray Width' }, value: '4 - 7 m' },
+          { label: { fr: 'Vitesse de vol max.', en: 'Max Flight Speed' }, value: '10 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Performances de vol', en: 'Flight Performance' },
+        rows: [
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '100 m' },
+          { label: { fr: 'Rayon de vol', en: 'Flight Radius' }, value: '2000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '6 m/s' },
+          { label: { fr: 'Altitude max. au décollage', en: 'Max Takeoff Altitude' }, value: { fr: '4500 m (au-dessus du niveau de la mer)', en: '4500 m Above Sea Level' } },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/t25.png',
+    imageFallback: 'assets/img/svg/agras-t.svg',
+    djiUrl: 'https://ag.dji.com/t25'
+  },
+  {
+    id: 'mavic-3m',
+    segment: 'agriculture',
+    name: 'DJI Mavic 3 Multispectral',
+    category: 'agriculture',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Cartographie multispectrale : voir l’état du couvert avant de traiter.',
+      en: 'Multispectral mapping: see crop status before you treat.'
+    },
+    usage: {
+      fr: 'Le Mavic 3M ne traite pas, il observe. Ses capteurs multispectraux mesurent la vigueur du couvert végétal et produisent des cartes d’indices (NDVI et assimilés) qui révèlent les zones de stress hydrique, les carences et les attaques avant qu’elles ne soient visibles à l’œil. Ces cartes alimentent directement les Agras en prescriptions de dose variable : on ne traite que là où c’est nécessaire.',
+      en: 'The Mavic 3M does not treat, it observes. Its multispectral sensors measure canopy vigour and produce index maps (NDVI and similar) revealing water stress, deficiencies and pest attacks before they are visible to the eye. These maps feed the Agras directly as variable-rate prescriptions: you treat only where needed.'
+    },
+    useCases: ['cartographie'],
+    highlights: [
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '43 min' },
+      { label: { fr: 'Capteur RVB', en: 'RGB sensor' }, value: '20 Mpx' },
+      { label: { fr: 'Multispectral', en: 'Multispectral' }, value: '4 bandes' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Année de lancement', en: 'Year Introduced' }, value: '2022 (launch announced 2022-11-23)' },
+        ]
+      },
+      {
+        group: { fr: 'Pulvérisation', en: 'Spraying' },
+        rows: [
+        { label: { fr: 'Capacité de la cuve de pulvérisation', en: 'Spray Tank Capacity' }, value: '—' },
+        { label: { fr: 'Débit de pulvérisation max.', en: 'Max Spray Flow Rate' }, value: '—' },
+        { label: { fr: 'Nombre et type de buses', en: 'Number of Nozzles / Nozzle Type' }, value: '—' },
+        { label: { fr: 'Rendement max. en pulvérisation', en: 'Max Operating Field Efficiency - Spraying' }, value: '—' },
+        ]
+      },
+      {
+        group: { fr: 'Épandage', en: 'Spreading' },
+        rows: [
+        { label: { fr: 'Capacité de la trémie de granulés', en: 'Spreader / Granule Tank Capacity' }, value: '—' },
+        { label: { fr: 'Rendement max. en épandage', en: 'Max Operating Field Efficiency - Spreading' }, value: '—' },
+        ]
+      },
+      {
+        group: { fr: 'Aéronef et performances', en: 'Aircraft and performance' },
+        rows: [
+        { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '1,050 g' },
+        { label: { fr: 'Masse nette (hélices et module RTK)', en: 'Net Weight (with propellers and RTK module)' }, value: '951 g' },
+        { label: { fr: 'Charge utile max.', en: 'Max Payload / Carry Capacity' }, value: '—' },
+        { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (without wind)' }, value: '43 minutes' },
+        { label: { fr: 'Autonomie en vol stationnaire (sans vent)', en: 'Max Hover Time (without wind)' }, value: '37 minutes' },
+        { label: { fr: 'Distance de vol max.', en: 'Max Flight Distance' }, value: '32 km' },
+        { label: { fr: 'Vitesse max. (niveau de la mer, sans vent)', en: 'Max Flight Speed (at sea level, no wind)' }, value: '15 m/s (Normal Mode); Flying forward: 21 m/s, flying sideways: 20 m/s, flying backwards: 19 m/s (Sport mode)' },
+        { label: { fr: 'Vitesse ascensionnelle / de descente max.', en: 'Max Ascent / Descent Speed' }, value: 'Ascent: 6 m/s (Normal Mode), 8 m/s (Sport Mode); Descent: 6 m/s (Normal Mode), 6 m/s (Sport Mode)' },
+        { label: { fr: 'Résistance au vent', en: 'Max Wind Speed Resistance' }, value: '12 m/s' },
+        { label: { fr: 'Altitude max. de décollage', en: 'Max Take-off Altitude Above Sea Level' }, value: '6000 m (without a payload)' },
+        { label: { fr: 'Précision en vol stationnaire', en: 'Hovering Accuracy Range' }, value: 'Vertical: ±0.1 m (Vision Positioning enabled); ±0.5 m (GNSS Positioning enabled); ±0.1 m (D-RTK enabled). Horizontal: ±0.3 m (Vision Positioning enabled); ±0.5 m (HD Positioning enabled); ±0.1 m (RTK enabled)' },
+        { label: { fr: 'Diagonale / empattement', en: 'Diagonal Length / Wheelbase' }, value: 'Diagonal: 380.1 mm' },
+        { label: { fr: 'Dimensions (replié / déplié)', en: 'Dimensions (Folded/Unfolded)' }, value: 'Folded (without propellers): 223×96.3×122.2 mm (Length×Width×Height); Unfolded (without propellers): 347.5×283×139.6 mm (Length×Width×Height)' },
+        { label: { fr: 'Modèle de moteur et d’hélice', en: 'Motor / Propeller Model' }, value: 'Motor Model Number 2008; Propeller Model Number 9453F Enterprise Edition' },
+        ]
+      },
+      {
+        group: { fr: 'Détection et sécurité', en: 'Sensing and safety' },
+        rows: [
+        { label: { fr: 'Système de détection d’obstacles', en: 'Obstacle Sensing System' }, value: 'Omnidirectional binocular vision system, with an infrared sensor at the bottom of the aircraft. Forward: Distance Measuring Range 0.5 m to 20 m, Detection Range 0.5 m to 200 m, FOV Horizontal 90°, vertical 103°; Backward: 0.5 m to 16 m, FOV Horizontal 90°, vertical 103°; Lateral: 0.5 m to 25 m, FOV Horizontal 90°, vertical 85°; Upward: 0.2 m to 10 m, FOV Front and rear 100°, left and right 90°; Downward: 0.3 m to 18 m, FOV Front and rear 130°, left and right 160°' },
+        ]
+      },
+      {
+        group: { fr: 'Positionnement', en: 'Positioning' },
+        rows: [
+        { label: { fr: 'Précision de positionnement RTK', en: 'RTK Positioning Accuracy' }, value: 'Fixed RTK: Horizontal: 1 cm + 1 ppm; Vertical: 1.5 cm + 1 ppm' },
+        { label: { fr: 'GNSS', en: 'GNSS' }, value: 'GPS + Galileo + BeiDou + GLONASS (GLONASS is supported only when RTK module is enabled)' },
+        { label: { fr: 'Module RTK', en: 'RTK Module' }, value: 'Dimensions 50.2×40.2×66.2 mm, Weight 24±2 g, Interface USB-C, Power approximately 1.2 watts' },
+        ]
+      },
+      {
+        group: { fr: 'Imagerie et capteurs', en: 'Imaging and sensors' },
+        rows: [
+        { label: { fr: 'Bande de fréquence', en: 'Operating Band' }, value: '2.400-2.4835 GHz; 5.725-5.850 GHz' },
+        { label: { fr: 'Caméra RVB — Capteur d’image', en: 'RGB Camera - Image Sensor' }, value: '4/3 CMOS, Effective Pixels: 20 MP' },
+        { label: { fr: 'Caméra RVB — Objectif', en: 'RGB Camera - Lens' }, value: 'FOV: 84°; Equivalent focal length: 24 mm; Aperture: f/2.8 to f/11; Focus: 1 m to ∞' },
+        { label: { fr: 'Caméra RVB — Taille max. des images', en: 'RGB Camera - Max Image Size' }, value: '5280×3956' },
+        { label: { fr: 'Caméra RVB — ISO / obturateur', en: 'RGB Camera - ISO / Shutter' }, value: 'ISO 100-6400; Electronic shutter: 8-1/8000 s; Mechanical shutter: 8-1/2000 s' },
+        { label: { fr: 'Caméra RVB — Résolution vidéo', en: 'RGB Camera - Video Resolution' }, value: 'H.264: 4K: 3840×2160@30fps; FHD: 1920×1080@30fps (Max Video Bitrate 4K: 130Mbps, FHD: 70Mbps)' },
+        { label: { fr: 'Caméra RVB — Format photo / vidéo', en: 'RGB Camera - Image / Video Format' }, value: 'JPEG/DNG (RAW); MP4 (MPEG-4 AVC/H.264)' },
+        { label: { fr: 'Caméra multispectrale — Capteur d’image', en: 'Multispectral Camera - Image Sensor' }, value: '1/2.8-inch CMOS, effective pixels: 5 MP' },
+        { label: { fr: 'Caméra multispectrale — Bandes spectrales', en: 'Multispectral Camera - Bands' }, value: 'Green (G): 560 ± 16 nm; Red (R): 650 ± 16 nm; Red Edge (RE): 730 ± 16 nm; Near infrared (NIR): 860 ± 26 nm' },
+        { label: { fr: 'Caméra multispectrale — Objectif', en: 'Multispectral Camera - Lens' }, value: 'FOV: 73.91° (61.2° x 48.10°); Equivalent focal length: 25 mm; Aperture: f/2.0; Focus: Fixed Focus' },
+        { label: { fr: 'Caméra multispectrale — Taille max. des images', en: 'Multispectral Camera - Max Image Size' }, value: '2592×1944' },
+        { label: { fr: 'Caméra multispectrale — Gain / obturateur', en: 'Multispectral Camera - Gain / Shutter' }, value: 'Gain Range 1x-32x; Electronic Shutter: 1/30~1/12800 s' },
+        { label: { fr: 'Caméra multispectrale — Format d’image', en: 'Multispectral Camera - Image Format' }, value: 'TIFF' },
+        { label: { fr: 'Caméra multispectrale — Résolution vidéo', en: 'Multispectral Camera - Video Resolution' }, value: 'H.264, FHD: 1920 x 1080@30fps; Video content: NDVI/GNDVI/NDRE (Max Video Bitrate: Stream 60 Mbps)' },
+        { label: { fr: 'Capteur d’ensoleillement', en: 'Light / Sunlight Sensor' }, value: 'Built-in module' },
+        { label: { fr: 'Nacelle', en: 'Gimbal' }, value: '3-axis mechanical gimbal (tilt, roll, pan); Mechanical Range: Tilt -135° to 45°, Roll -45° to 45°, Pan -27° to 27°; Controllable Range: Tilt -90° to 35°; Max Control Speed (tilt) 100°/s; Angular Vibration Range ±0.007°' },
+        ]
+      },
+      {
+        group: { fr: 'Transmission et radiocommande', en: 'Transmission and controller' },
+        rows: [
+        { label: { fr: 'Système de transmission vidéo', en: 'Video Transmission System' }, value: 'DJI O3 Image Transmission Industry Edition' },
+        { label: { fr: 'Portée utile max. du signal (sans obstacle ni interférence)', en: 'Max Effective Signal Distance (Unobstructed, No interference)' }, value: 'FCC: 15 km; CE: 8 km; SRRC: 8 km; MIC: 8 km' },
+        { label: { fr: 'Portée de transmission max. (Obstructed)', en: 'Max Transmission Distance (Obstructed)' }, value: 'Strong Interference (urban landscapes, residential areas, etc.): 1.5-3 km (FCC/CE/SRRC/MIC); Medium Interference (suburban landscapes, city parks, etc.): 3-9 km (FCC), 3-6 km (CE/SRRC/MIC); Weak Interference (remote fields, open farmland, etc.): 9-15 km (FCC), 6-8 km (CE/SRRC/MIC)' },
+        { label: { fr: 'Qualité du retour vidéo / Latence', en: 'Live View Quality / Latency' }, value: 'Remote Controller: 1080p/30fps; Latency approximately 200 milliseconds' },
+        { label: { fr: 'Radiocommande', en: 'Remote Controller' }, value: 'DJI RC Pro Enterprise Edition (Model RM510B), 5.5-inch 1920×1080 screen, 60 fps, 1,000 nits, 10-point multi-touch; Battery 5000 mAh 7.2 V; Operating Time approx. 3 hours; Internal Memory (ROM) 64 GB' },
+        ]
+      },
+      {
+        group: { fr: 'Batterie et alimentation', en: 'Battery and power' },
+        rows: [
+        { label: { fr: 'Modèle de batterie / Capacity', en: 'Battery Model / Capacity' }, value: '5000 mAh, Standard Voltage 15.4 V, Max Charging Voltage 17.6 V, Battery Type LiPo 4S (Lithium Cobalt), Energy 77 watt-hours, Weight 335.5 g' },
+        { label: { fr: 'Temps de charge de la batterie', en: 'Battery Charge Time' }, value: 'Approx. 1.5 hours (measured when only using the 100W Battery Charging Hub, or when using a 15V USB charger); approximately 2 hours (12V USB charger); approximately 2 hours and 50 minutes (100W Battery Charging Hub charging aircraft and remote control at the same time)' },
+        ]
+      },
+      {
+        group: { fr: 'Environnement', en: 'Environment' },
+        rows: [
+        { label: { fr: 'Température d’exploitation', en: 'Operating Temperature' }, value: '-10° to 40° C (14° to 104° F)' },
+        { label: { fr: 'Indice de protection', en: 'IP Rating' }, value: '—' },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/mavic-3m.png',
+    imageFallback: 'assets/img/svg/mavic-fold.svg',
+    djiUrl: 'https://ag.dji.com/mavic-3-m'
+  },
+
+  /* ========================= ENTREPRISE / INDUSTRIE ======================= */
+  {
+    id: 'matrice-400',
+    segment: 'enterprise',
+    name: 'DJI Matrice 400',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Plateforme longue endurance pour missions lourdes et étendues.',
+      en: 'Long-endurance platform for heavy, wide-area missions.'
+    },
+    usage: {
+      fr: 'Le Matrice 400 est la plateforme des missions que les appareils plus légers ne peuvent pas tenir : couverture de longs linéaires, relevés étendus, surveillance prolongée. Son autonomie et sa capacité d’emport permettent d’associer plusieurs charges utiles sur un même vol — thermique, LiDAR, zoom — et donc de rentrer plusieurs livrables d’une seule sortie sur des sites difficiles d’accès.',
+      en: 'The Matrice 400 is the platform for missions lighter aircraft cannot sustain: long linear corridors, wide-area survey, extended surveillance. Its endurance and lift allow several payloads on one flight — thermal, LiDAR, zoom — bringing back multiple deliverables from a single sortie over hard-to-reach sites.'
+    },
+    useCases: ['inspection', 'topographie', 'securite'],
+    highlights: [
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '59 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '49 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '59 min' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '49 km' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '7000 m' },
+          { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: '9,7 kg' },
+          { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '15,8 kg' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '25 m/s' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Station D-RTK 3', en: 'D-RTK 3 Base Station' }, value: { fr: 'Compatible', en: 'Compatible' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Radar', en: 'Radar' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Accessoires de nacelle', en: 'Gimbal Accessory' }, value: { fr: 'Série Zenmuse (H30T, L2, P1...)', en: 'Zenmuse Series' } },
+        ]
+      },
+    ],
+    compatiblePayloads: ['zenmuse-h30t', 'zenmuse-l2', 'zenmuse-p1', 'd-rtk-3'],
+    availability: 'coming_soon',
+    image: 'assets/img/products/matrice-400.png',
+    imageFallback: 'assets/img/svg/matrice-quad.svg',
+    djiUrl: 'https://enterprise.dji.com/matrice-400'
+  },
+  {
+    id: 'matrice-4e',
+    segment: 'enterprise',
+    name: 'DJI Matrice 4E',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Photogrammétrie et relevés topographiques de précision.',
+      en: 'Photogrammetry and precision topographic survey.'
+    },
+    usage: {
+      fr: 'Le Matrice 4E est dédié à la production de données géométriques : orthophotos, modèles numériques de terrain, calculs de cubatures. Ses capteurs et son RTK permettent d’atteindre une précision centimétrique sans multiplier les points d’appui au sol. Bureaux d’études, carrières, chantiers de travaux publics et services cadastraux l’utilisent pour remplacer des relevés terrestres longs et coûteux.',
+      en: 'The Matrice 4E is dedicated to geometric data: orthophotos, digital terrain models, volume calculations. Its sensors and RTK reach centimetre accuracy without multiplying ground control points. Survey firms, quarries, civil-works sites and land-registry services use it to replace slow, costly ground surveys.'
+    },
+    useCases: ['topographie', 'inspection', 'cartographie'],
+    highlights: [
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '49 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '35 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '49 min' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '35 km' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
+          { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: '1,22 kg' },
+          { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '1,43 kg' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '21 m/s' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Non inclus (dédié photogrammétrie)', en: 'Not included (Photogrammetry dedicated)' } },
+          { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Projecteur d’appoint', en: 'Accessory Spotlight' }, value: 'AL1' },
+          { label: { fr: 'Haut-parleur d’appoint', en: 'Accessory Speaker' }, value: 'AS1' },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: '4/3-inch CMOS Effective Pixels: 20 MP' },
+          { label: { fr: 'Téléobjectif moyen', en: 'Medium Tele Camera' }, value: '1/1.3-inch CMOS, Effective Pixels: 48 MP' },
+          { label: { fr: 'Téléobjectif', en: 'Telephoto Camera' }, value: '1/1.5-inch CMOS, Effective Pixels: 48 MP' },
+        ]
+      },
+    ],
+    compatiblePayloads: ['d-rtk-3'],
+    availability: 'coming_soon',
+    image: 'assets/img/products/matrice-4e.png',
+    imageFallback: 'assets/img/svg/matrice-quad.svg',
+    djiUrl: 'https://enterprise.dji.com/matrice-4-series'
+  },
+  {
+    id: 'matrice-4t',
+    segment: 'enterprise',
+    name: 'DJI Matrice 4T',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Thermique, zoom et télémètre pour l’inspection et la sécurité civile.',
+      en: 'Thermal, zoom and rangefinder for inspection and public safety.'
+    },
+    usage: {
+      fr: 'Le Matrice 4T combine caméra thermique, zoom longue portée et télémètre laser dans un appareil transportable par un seul opérateur. Il détecte les points chauds sur un réseau électrique, repère une fuite sur une canalisation, localise une personne de nuit. Protection civile, gestionnaires de réseaux et services de sécurité l’emploient pour des interventions où la vitesse de déploiement prime.',
+      en: 'The Matrice 4T combines a thermal camera, long-range zoom and laser rangefinder in an aircraft one operator can carry. It finds hot spots on an electrical network, spots a pipeline leak, locates a person at night. Civil protection, network operators and security services use it where speed of deployment matters most.'
+    },
+    useCases: ['inspection', 'securite', 'topographie'],
+    highlights: [
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '49 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '35 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '49 min' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '35 km' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
+          { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: '1,22 kg' },
+          { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '1,43 kg' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '21 m/s' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Inclus (thermique radiométrique 640×512)', en: 'Included (640×512 Radiometric Thermal)' } },
+          { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Projecteur d’appoint', en: 'Accessory Spotlight' }, value: 'AL1' },
+          { label: { fr: 'Haut-parleur d’appoint', en: 'Accessory Speaker' }, value: 'AS1' },
+          { label: { fr: 'Projecteur infrarouge', en: 'Infrared Spotlight' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: '1/1.3-inch CMOS, Effective Pixels: 48 MP' },
+          { label: { fr: 'Téléobjectif moyen', en: 'Medium Tele Camera' }, value: '1/1.3-inch CMOS, Effective Pixels: 48 MP' },
+          { label: { fr: 'Téléobjectif', en: 'Telephoto Camera' }, value: '1/1.5-inch CMOS, Effective Pixels: 48 MP' },
+        ]
+      },
+    ],
+    compatiblePayloads: ['d-rtk-3'],
+    availability: 'coming_soon',
+    image: 'assets/img/products/matrice-4t.png',
+    imageFallback: 'assets/img/svg/matrice-quad.svg',
+    djiUrl: 'https://enterprise.dji.com/matrice-4-series'
+  },
+  {
+    id: 'matrice-350-rtk',
+    segment: 'enterprise',
+    name: 'DJI Matrice 350 RTK',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Le cheval de bataille industriel, multi-charges utiles.',
+      en: 'The industrial workhorse, multi-payload.'
+    },
+    usage: {
+      fr: 'Le Matrice 350 RTK est la plateforme industrielle la plus éprouvée de la gamme DJI. Sa force est l’écosystème : une même machine reçoit un LiDAR le matin pour un relevé, une thermique l’après-midi pour une inspection de poste électrique. Sa protection contre les intempéries et sa redondance en font l’appareil de référence des exploitants de réseaux et des prestataires industriels.',
+      en: 'The Matrice 350 RTK is the most proven industrial platform in the DJI range. Its strength is the ecosystem: the same airframe takes a LiDAR in the morning for a survey and a thermal in the afternoon for a substation inspection. Weather sealing and redundancy make it the reference aircraft for network operators and industrial contractors.'
+    },
+    useCases: ['inspection', 'topographie', 'securite', 'cartographie'],
+    highlights: [
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '55 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '20 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '7000 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '55 min' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '20 km' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '7000 m' },
+          { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: '3,77 kg' },
+          { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '9,2 kg' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '23 m/s' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Station D-RTK 3', en: 'D-RTK 3 Base Station' }, value: { fr: 'Compatible', en: 'Compatible' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (6 directions)', en: 'Included (6 Directions)' } },
+          { label: { fr: 'Radar', en: 'Radar' }, value: { fr: 'Compatible (Radar CSM)', en: 'Compatible (CSM Radar)' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Compatible (Zenmuse L2)', en: 'Compatible (Zenmuse L2)' } },
+          { label: { fr: 'Accessoires de nacelle', en: 'Gimbal Accessory' }, value: { fr: 'Série Zenmuse (H30T, H20N, L2, P1)', en: 'Zenmuse Series (H30T, H20N, L2, P1)' } },
+        ]
+      },
+    ],
+    compatiblePayloads: ['zenmuse-h30t', 'zenmuse-h20n', 'zenmuse-l2', 'zenmuse-p1', 'd-rtk-3'],
+    availability: 'coming_soon',
+    image: 'assets/img/products/matrice-350-rtk.png',
+    imageFallback: 'assets/img/svg/matrice-quad.svg',
+    djiUrl: 'https://enterprise.dji.com/matrice-350-rtk'
+  },
+  {
+    id: 'dock-3',
+    segment: 'enterprise',
+    name: 'DJI Dock 3',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Station d’intervention automatique autonome.',
+      en: 'Autonomous automated intervention dock.'
+    },
+    usage: {
+      fr: 'Le Dock 3 supprime le déplacement humain. L’appareil décolle seul selon un calendrier, exécute sa mission, revient se poser et se recharger. Pour un site industriel, une carrière ou un linéaire à surveiller quotidiennement, cela transforme une tournée d’inspection en une donnée automatique. Il se déploie en poste fixe comme en version véhiculée pour couvrir plusieurs sites.',
+      en: 'The Dock 3 removes the site visit. The aircraft takes off on schedule by itself, flies its mission, lands and recharges. For an industrial site, a quarry or a corridor needing daily monitoring, that turns an inspection round into an automatic data feed. It deploys as a fixed station or vehicle-mounted to cover several sites.'
+    },
+    useCases: ['inspection', 'securite', 'topographie'],
+    highlights: [
+      { label: { fr: 'Protection', en: 'IP rating' }, value: 'IP56' },
+      { label: { fr: 'Masse', en: 'Weight' }, value: '55 kg' },
+      { label: { fr: 'Aéronefs', en: 'Aircraft' }, value: '1' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Nom du produit', en: 'Product Name' }, value: 'DJI Dock 3' },
+        { label: { fr: 'Catégorie de produit', en: 'Product category' }, value: 'Automated drone-in-a-box dock for 24/7 remote operations; DJI’s first dock adaptable for vehicle mounting' },
+        { label: { fr: 'Nombre d’aéronefs hébergés', en: 'Number of Drones Accommodated' }, value: '1' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Supported Aircraft' }, value: 'DJI Matrice 4D / DJI Matrice 4TD (the dock-housed aircraft; IP55-rated, same cameras as the Matrice 4 Series but improved flight and protection performance). Charging Hub / AL1 Spotlight / AS1 Speaker accessory line reads: “Supports Matrice 4TD/4D, Matrice 4T/4E”' },
+        { label: { fr: 'Accessoire associé', en: 'Related accessory' }, value: 'D-RTK 3 Relay Fixed Deployment Version makes DJI Dock 3 site selection more flexible' },
+        ]
+      },
+      {
+        group: { fr: 'Aéronef et performances', en: 'Aircraft and performance' },
+        rows: [
+        { label: { fr: 'Masse totale', en: 'Total Weight' }, value: '55 kg (without aircraft)' },
+        { label: { fr: 'Dimensions (capot ouvert)', en: 'Dimensions (Dock Cover Opened)' }, value: '1760×745×485 mm (L×W×H)' },
+        { label: { fr: 'Dimensions (capot fermé)', en: 'Dimensions (Dock Cover Closed)' }, value: '640×745×770 mm (L×W×H)' },
+        { label: { fr: 'Remarque sur les dimensions', en: 'Dimensions note' }, value: 'All data includes the RTK module width (160 mm), wind speed gauge height (145 mm), and mounting base brackets (58 mm)' },
+        { label: { fr: 'Vent max. admissible à l’atterrissage', en: 'Max Allowable Landing Wind Speed' }, value: '12 m/s' },
+        { label: { fr: 'Altitude max. d’exploitation', en: 'Max Operating Altitude' }, value: '4500 m' },
+        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — Masse', en: 'Housed aircraft (Matrice 4D/4TD) — Weight' }, value: '1850 g (incl. battery, propellers, microSD card)' },
+        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — Masse max. au décollage', en: 'Housed aircraft (Matrice 4D/4TD) — Max Takeoff Weight' }, value: '2090 g' },
+        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — Dimensions', en: 'Housed aircraft (Matrice 4D/4TD) — Dimensions' }, value: '377.7×416.2×212.5 mm (L×W×H, without propellers)' },
+        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — Empattement diagonal', en: 'Housed aircraft (Matrice 4D/4TD) — Diagonal Wheelbase' }, value: '498.5 mm' },
+        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — Distance de vol max.', en: 'Housed aircraft (Matrice 4D/4TD) — Max Flight Distance' }, value: '43 km' },
+        ]
+      },
+      {
+        group: { fr: 'Positionnement', en: 'Positioning' },
+        rows: [
+        { label: { fr: 'Réception satellite de la station de base RTK', en: 'RTK Base Station Satellite Reception' }, value: 'Simultaneously receive: GPS L1 C/A, L2, L5; BeiDou B1l, B2l, B3l, B2a, B2b, B1C; GLONASS F1, F2; Galileo E1, E5a, E5b, E6; QZSS L1, L2, L5' },
+        { label: { fr: 'Précision de positionnement de la station', en: 'Dock positioning accuracy' }, value: '— (no dock-level RTK accuracy figure published; aircraft hovering accuracy with RTK is ±0.1 m)' },
+        ]
+      },
+      {
+        group: { fr: 'Imagerie et capteurs', en: 'Imaging and sensors' },
+        rows: [
+        { label: { fr: 'Support de nacelle véhiculé (accessoire)', en: 'Vehicle-Mounted Gimbal Mount (accessory)' }, value: 'Weight: Right Bracket and Gimbal Support 440 g, Left Bracket 155 g; Right bracket and gimbal support dimensions: 112.8×152.2×157.8 mm (L×W×H)' },
+        { label: { fr: 'Capteurs', en: 'Sensors' }, value: 'Wind speed sensor, rainfall sensor, ambient temperature sensor, water immersion sensor, in-cabin temperature sensor, in-cabin humidity sensor — all supported' },
+        { label: { fr: 'Caméras de surveillance', en: 'Security Cameras' }, value: 'External: 1920×1080, FOV 151°, auxiliary white light. Internal: 1920×1080, FOV 151°, auxiliary white light' },
+        ]
+      },
+      {
+        group: { fr: 'Transmission et radiocommande', en: 'Transmission and controller' },
+        rows: [
+        { label: { fr: 'Transmission vidéo — fréquence', en: 'Video Transmission — Operating Frequency' }, value: '2.400-2.4835 GHz; 5.150-5.250 GHz (CE: 5.170-5.250 GHz); 5.725-5.850 GHz' },
+        { label: { fr: 'Transmission vidéo — antenne', en: 'Video Transmission — Antenna' }, value: 'Built-in 9 antennas, 2T4R, supports intelligent switching' },
+        { label: { fr: 'Transmission vidéo — système', en: 'Video Transmission — System' }, value: 'O4+ Enterprise (stated in DJI’s Dock 3 release-highlights text; the Dock – Video Transmission spec group itself lists only frequency, antenna and EIRP)' },
+        { label: { fr: 'Puissance d’émission (PIRE)', en: 'Transmitter Power (EIRP)' }, value: '2.4 GHz: < 33 dBm (FCC), < 20 dBm (CE/SRRC/MIC); 5.2 GHz: < 23 dBm (FCC/CE); 5.8 GHz: < 33 dBm (FCC), < 14 dBm (CE), < 30 dBm (SRRC)' },
+        { label: { fr: 'Connectivité réseau', en: 'Network Access' }, value: 'Ethernet: 10/100/1000 Mbps adaptive Ethernet port; 4G Access: requires DJI Cellular Dongle 2 (sold separately)' },
+        ]
+      },
+      {
+        group: { fr: 'Batterie et alimentation', en: 'Battery and power' },
+        rows: [
+        { label: { fr: 'Batterie de secours', en: 'Backup Battery' }, value: 'Capacity 12 Ah; Output Voltage 12 V; Battery Type: Lead-acid battery; Battery Life: > 4 hours (measured with a fully charged backup battery in a 25° C environment; during a power outage the dock does not support aircraft charging, air conditioning, dock cover heating, or wind speed gauge heating)' },
+        { label: { fr: 'Temps de charge de l’aéronef', en: 'Aircraft Charging Time' }, value: '27 minutes (measured charging the aircraft, powered off, from 15% to 95% in a 25° C / 77° F environment)' },
+        { label: { fr: 'Tension de charge en sortie', en: 'Charging Output Voltage' }, value: '35 V DC' },
+        { label: { fr: 'Tension d’entrée', en: 'Input Voltage' }, value: '100-240 V (AC), 50/60 Hz' },
+        { label: { fr: 'Puissance d’entrée', en: 'Input Power' }, value: 'Max 800 W' },
+        ]
+      },
+      {
+        group: { fr: 'Station', en: 'Dock' },
+        rows: [
+        { label: { fr: 'Mode de déploiement — véhiculé', en: 'Deployment mode — vehicle-mounted' }, value: 'Yes. DJI: “DJI’s First Dock Adaptable for Vehicle Mounting”; “DJI Dock 3 empowers 24/7 remote operations and, for the first time, supports mobile vehicle-mounted deployment, effortlessly adapting to various environments.” Release notes: “Supports vehicle-mounted deployment.”' },
+        { label: { fr: 'Contraintes d’exploitation en version véhiculée (FAQ DJI)', en: 'Vehicle-mounted operating constraints (DJI FAQ)' }, value: 'The parking slope must be less than 3° during operation; remote dock calibration must be completed in the cloud before operation; during aircraft operation the vehicle and dock must not move; the dock base must be securely fixed to the vehicle mounting bracket with lock nuts and a safety rope; the dock cover must be closed when the vehicle is moving' },
+        { label: { fr: 'Système de climatisation', en: 'Air Conditioning System' }, value: 'Compressor-based air conditioning; Operating Voltage 48 V DC' },
+        { label: { fr: 'Protection contre la foudre', en: 'Lightning Protection' }, value: 'AC Power Port: 20 kA (rated), meets EN 61643-11 Type 2 / IEC 61643-1 Class II; Ethernet Port: 10 kA (I_total), meets EN/IEC 61643-21 Category C' },
+        { label: { fr: 'Capacité d’extension', en: 'Expansion Capability' }, value: 'Edge Computing: supports data communication with external switches' },
+        { label: { fr: 'Temps de déploiement / d’installation', en: 'Deployment / setup time' }, value: '— (DJI publishes no deployment/setup-time figure on the specs page; release notes state “Supports quick takeoff, ready to fly as soon as the cover is opened”)' },
+        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — IP rating', en: 'Housed aircraft (Matrice 4D/4TD) — IP rating' }, value: 'IP55' },
+        ]
+      },
+      {
+        group: { fr: 'Environnement', en: 'Environment' },
+        rows: [
+        { label: { fr: 'Température d’exploitation', en: 'Operating Temperature' }, value: '-30° to 50° C (-22° to 122° F)' },
+        { label: { fr: 'Indice de protection', en: 'Ingress Protection Rating' }, value: 'IP56' },
+        ]
+      },
+    ],
+    compatiblePayloads: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/dock-3.png',
+    imageFallback: 'assets/img/svg/dock.svg',
+    djiUrl: 'https://enterprise.dji.com/dock-3'
+  },
+
+  /* ====================== CHARGES UTILES & ACCESSOIRES ==================== */
+  {
+    id: 'zenmuse-h30t',
+    segment: 'agriculture',
+    name: 'DJI Zenmuse H30T',
+    category: 'enterprise',
+    type: 'payload',
+    tagline: {
+      fr: 'Nacelle quadruple capteur : zoom, grand-angle, thermique et télémètre.',
+      en: 'Quad-sensor gimbal: zoom, wide, thermal and rangefinder.'
+    },
+    usage: {
+      fr: 'La H30T réunit quatre capteurs sur une seule nacelle, ce qui évite de refaire un vol pour changer de modalité. Un même passage fournit l’image visible, la signature thermique et la distance exacte de la cible. C’est la charge utile de référence pour l’inspection de réseaux électriques et les missions de sécurité de nuit.',
+      en: 'The H30T brings four sensors onto one gimbal, avoiding a second flight to change modality. A single pass yields the visible image, the thermal signature and the exact target distance. It is the reference payload for power-line inspection and night security missions.'
+    },
+    useCases: ['inspection', 'securite'],
+    highlights: [
+      { label: { fr: 'Zoom hybride', en: 'Hybrid zoom' }, value: '34×' },
+      { label: { fr: 'Thermique', en: 'Thermal' }, value: '1280×1024' },
+      { label: { fr: 'Protection', en: 'IP rating' }, value: 'IP54' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Présentation', en: 'What it is' }, value: 'Flagship multi-sensor enterprise gimbal payload combining a 40 MP zoom camera, 48 MP wide camera, 1280×1024 infrared thermal camera, laser rangefinder and NIR auxiliary light for inspection, public safety and search-and-rescue.' },
+        { label: { fr: 'Éclairage d’appoint proche infrarouge', en: 'NIR Auxiliary Light' }, value: 'FOV 4.6±0.6° (round); Illumination Range @100 m: approx. 8 m diameter circle' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400; Matrice 350 RTK; Matrice 300 RTK (requires DJI RC Plus)' },
+        ]
+      },
+      {
+        group: { fr: 'Aéronef et performances', en: 'Aircraft and performance' },
+        rows: [
+        { label: { fr: 'Masse', en: 'Weight' }, value: '920±5 g' },
+        { label: { fr: 'Dimensions', en: 'Dimensions' }, value: '170×145×165 mm (L×W×H)' },
+        ]
+      },
+      {
+        group: { fr: 'Positionnement', en: 'Positioning' },
+        rows: [
+        { label: { fr: 'Télémètre laser — précision', en: 'Laser Rangefinder — Accuracy' }, value: '≤ 500 m: ±(0.2 m + measurement distance × 0.15%); > 500 m: ±1.0 m' },
+        ]
+      },
+      {
+        group: { fr: 'Imagerie et capteurs', en: 'Imaging and sensors' },
+        rows: [
+        { label: { fr: 'Caméra zoom — Capteur', en: 'Zoom Camera — Sensor' }, value: '1/1.8-inch CMOS, Effective Pixels: 40 MP' },
+        { label: { fr: 'Caméra zoom — Objectif', en: 'Zoom Camera — Lens' }, value: 'Actual Focal Length: 7.1-172 mm (equivalent focal length: 33.4-809.3 mm); Aperture f/1.6-f/5.2; DFOV 66.7°-2.9°' },
+        { label: { fr: 'Caméra zoom — Zoom', en: 'Zoom Camera — Zoom' }, value: 'Hybrid Optical Zoom: 34×; Max Zoom: 400×' },
+        { label: { fr: 'Caméra zoom — ISO', en: 'Zoom Camera — ISO' }, value: 'Single Shot: 100-25600; Night Scene: 100-819200' },
+        { label: { fr: 'Caméra zoom — Max Taille des photos', en: 'Zoom Camera — Max Photo Size' }, value: '7328×5496, 3664×2748' },
+        { label: { fr: 'Caméra grand-angle — Capteur', en: 'Wide-Angle Camera — Sensor' }, value: '1/1.3-inch CMOS, Effective Pixels: 48 MP' },
+        { label: { fr: 'Caméra grand-angle — Objectif', en: 'Wide-Angle Camera — Lens' }, value: 'Actual Focal Length: 6.72 mm (equivalent focal length: 24 mm); Aperture f/1.7; DFOV 82.1°' },
+        { label: { fr: 'Caméra thermique infrarouge — Détecteur', en: 'Infrared Thermal Camera — Imager' }, value: 'Uncooled VOx Microbolometer' },
+        { label: { fr: 'Caméra thermique infrarouge — Résolution', en: 'Infrared Thermal Camera — Resolution' }, value: '1280×1024' },
+        { label: { fr: 'Caméra thermique infrarouge — Objectif', en: 'Infrared Thermal Camera — Lens' }, value: 'Focal Length 24 mm (equivalent focal length 52 mm); Aperture f/0.95; DFOV 45.2°' },
+        { label: { fr: 'Caméra thermique infrarouge — Pas des pixels', en: 'Infrared Thermal Camera — Pixel Pitch' }, value: '12 μm' },
+        { label: { fr: 'Caméra thermique infrarouge — Zoom numérique', en: 'Infrared Thermal Camera — Digital Zoom' }, value: '32×' },
+        { label: { fr: 'Caméra thermique infrarouge — Bande spectrale', en: 'Infrared Thermal Camera — Spectral Band' }, value: '8-14 μm' },
+        { label: { fr: 'Caméra thermique infrarouge — NETD', en: 'Infrared Thermal Camera — NETD' }, value: '≤ 50 mk@f/1.0' },
+        { label: { fr: 'Caméra thermique infrarouge — Plage de mesure de température', en: 'Infrared Thermal Camera — Temperature Measurement Range' }, value: 'High Gain: -20° to 150° C (-4° to 302° F); -20° to 450° C (-4° to 842° F) with Infrared Density Filter. Low Gain: 0° to 600° C (32° to 1112° F); 0° to 1600° C (32° to 2912° F) with Infrared Density Filter' },
+        { label: { fr: 'Télémètre laser — plage de mesure', en: 'Laser Rangefinder — Measurement Range' }, value: '3-3000 m (range for common objects: grasslands 2000 m, woodlands 1900 m)' },
+        { label: { fr: 'Télémètre laser — longueur d’onde / sécurité', en: 'Laser Rangefinder — Wavelength / Safety' }, value: '905 nm; Class 1' },
+        { label: { fr: 'Nacelle', en: 'Gimbal' }, value: '3-axis (tilt, roll, pan); Angular vibration — Hover: ±0.002°, Flight: ±0.004°; Mounting: Detachable DJI SKYPORT; Controllable Range Tilt -120° to +60°, Pan ±320°' },
+        ]
+      },
+      {
+        group: { fr: 'Batterie et alimentation', en: 'Battery and power' },
+        rows: [
+        { label: { fr: 'Alimentation', en: 'Power' }, value: 'H30: 26 W; H30T: 28 W' },
+        ]
+      },
+      {
+        group: { fr: 'Environnement', en: 'Environment' },
+        rows: [
+        { label: { fr: 'Indice de protection', en: 'Ingress Protection Rating' }, value: 'IP54 (under controlled laboratory conditions, per IEC60529; the IP rating is not permanently effective and may decrease due to product wear and tear)' },
+        { label: { fr: 'Température d’exploitation', en: 'Operating Temperature' }, value: '-20° to 50° C (-4° to 122° F)' },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/zenmuse-h30t.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com/zenmuse-h30-series'
+  },
+  {
+    id: 'zenmuse-h20n',
+    segment: 'agriculture',
+    name: 'DJI Zenmuse H20N',
+    category: 'enterprise',
+    type: 'payload',
+    tagline: {
+      fr: 'Vision nocturne : capteurs starlight et thermiques couplés.',
+      en: 'Night vision: paired starlight and thermal sensors.'
+    },
+    usage: {
+      fr: 'La H20N est spécialisée dans les opérations de nuit. Ses capteurs starlight restituent une image exploitable en très faible luminosité, là où une caméra classique ne voit plus rien. Elle est employée pour la surveillance de sites sensibles, la recherche de personnes et les interventions de sécurité après la tombée du jour.',
+      en: 'The H20N is specialised for night operations. Its starlight sensors deliver a usable image in very low light, where a conventional camera sees nothing. It is used for sensitive-site surveillance, search operations and security work after dark.'
+    },
+    useCases: ['securite', 'inspection'],
+    highlights: [
+      { label: { fr: 'Thermique', en: 'Thermal' }, value: '640×512' },
+      { label: { fr: 'Télémètre', en: 'Rangefinder' }, value: '1 200 m' },
+      { label: { fr: 'Masse', en: 'Weight' }, value: '878 g' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Présentation', en: 'What it is' }, value: 'Night-optimised hybrid multi-sensor gimbal payload pairing starlight zoom and wide cameras with dual (wide + tele) thermal cameras and a laser rangefinder, for round-the-clock public safety and night operations.' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 300 RTK (per the Zenmuse H20N specs page “Supported Aircraft” field). Note: the Matrice 350 RTK specs page separately lists Zenmuse H20N among its supported gimbals.' },
+        ]
+      },
+      {
+        group: { fr: 'Aéronef et performances', en: 'Aircraft and performance' },
+        rows: [
+        { label: { fr: 'Masse', en: 'Weight' }, value: '878±5 g' },
+        { label: { fr: 'Dimensions', en: 'Dimensions' }, value: '178×135×161 mm' },
+        ]
+      },
+      {
+        group: { fr: 'Positionnement', en: 'Positioning' },
+        rows: [
+        { label: { fr: 'Télémètre laser — précision', en: 'Laser Rangefinder — Accuracy' }, value: '±(0.2 m + target distance × 0.15%)' },
+        ]
+      },
+      {
+        group: { fr: 'Imagerie et capteurs', en: 'Imaging and sensors' },
+        rows: [
+        { label: { fr: 'Caméra zoom (starlight) — Capteur', en: 'Zoom Camera (starlight) — Sensor' }, value: '1/1.8" CMOS; Effective Pixels: 4M' },
+        { label: { fr: 'Caméra zoom — Objectif', en: 'Zoom Camera — Lens' }, value: 'Focal Length: 6.8-119.9 mm (equivalent: approximately 32.7-574.5 mm); Aperture f/1.6-f/11; Focus 1 m to ∞ (wide), 8 m to ∞ (tele)' },
+        { label: { fr: 'Caméra zoom — Taille max. des images', en: 'Zoom Camera — Max Image Size' }, value: '2688×1512' },
+        { label: { fr: 'Caméra zoom — ISO', en: 'Zoom Camera — ISO' }, value: 'Video: 100-102400; Photo: 100-102400' },
+        { label: { fr: 'Caméra grand-angle (starlight) — Capteur', en: 'Wide Camera (starlight) — Sensor' }, value: '1/2.7" CMOS; Effective Pixels: 2M' },
+        { label: { fr: 'Caméra grand-angle — Objectif', en: 'Wide Camera — Lens' }, value: 'DFOV 73.6°; Focal Length 4.5 mm (equivalent: approximately 29 mm); Aperture f/2.8; Focus 1 m to ∞' },
+        { label: { fr: 'Caméra grand-angle — Taille max. des images', en: 'Wide Camera — Max Image Size' }, value: '1920×1080' },
+        { label: { fr: 'Tele Caméra thermique infrarouge', en: 'Tele Infrared Thermal Camera' }, value: 'Resolution 640×512; DFOV 12.5°; Focal Length 44.5 mm (equivalent: approximately 196 mm); Aperture f/1.2; Focus 45 m to ∞' },
+        { label: { fr: 'Wide Caméra thermique infrarouge', en: 'Wide Infrared Thermal Camera' }, value: 'Resolution 640×512; DFOV 45.5°; Focal Length 12 mm (equivalent: approximately 53 mm); Aperture f/1.0; Focus 5 m to ∞' },
+        { label: { fr: 'Thermique — Détecteur', en: 'Thermal — Imager' }, value: 'Uncooled VOx Microbolometer' },
+        { label: { fr: 'Thermique — Pas des pixels', en: 'Thermal — Pixel Pitch' }, value: '12 μm' },
+        { label: { fr: 'Thermique — Bande spectrale', en: 'Thermal — Spectral Band' }, value: '8-14 μm' },
+        { label: { fr: 'Thermique — NETD', en: 'Thermal — NETD' }, value: '≤50 mK @ f/1.0' },
+        { label: { fr: 'Thermique — Zoom numérique équivalent', en: 'Thermal — Equivalent Digital Zoom' }, value: '16x, 32x' },
+        { label: { fr: 'Thermique — Plage de scène', en: 'Thermal — Scene Range' }, value: '-20° C to 150° C (High Gain); 0° C to 500° C (Low Gain)' },
+        { label: { fr: 'Thermique — Méthode de mesure de température', en: 'Thermal — Temperature Measurement Method' }, value: 'Spot Meter, Area Measurement' },
+        { label: { fr: 'Télémètre laser — plage de mesure', en: 'Laser Rangefinder — Measuring Range' }, value: '3-1,200 m (0.5 × 12 m vertical surface with 20% reflectivity)' },
+        { label: { fr: 'Télémètre laser — longueur d’onde / sécurité', en: 'Laser Rangefinder — Wavelength / Safety' }, value: '905 nm; Class 1M (IEC 60825-1:2014)' },
+        { label: { fr: 'Nacelle', en: 'Gimbal' }, value: 'Angular vibration range ±0.01°; Detachable mount; Controllable Range Pan ±320°, Tilt -120° to +60°; Max control speed 90°/s (pan and tilt)' },
+        ]
+      },
+      {
+        group: { fr: 'Environnement', en: 'Environment' },
+        rows: [
+        { label: { fr: 'Indice de protection', en: 'Protection Rating' }, value: 'IP44 (per IEC60529; the protection rating is not permanent and might be reduced due to prolonged use and wear)' },
+        { label: { fr: 'Température d’exploitation', en: 'Operating Temperature' }, value: '-20° to 50° C (-4 to 122°F)' },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/zenmuse-h20n.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com/zenmuse-h20n'
+  },
+  {
+    id: 'zenmuse-l2',
+    segment: 'agriculture',
+    name: 'DJI Zenmuse L2',
+    category: 'enterprise',
+    type: 'payload',
+    tagline: {
+      fr: 'LiDAR aéroporté : relevés 3D sous couvert végétal.',
+      en: 'Airborne LiDAR: 3D survey beneath vegetation.'
+    },
+    usage: {
+      fr: 'La L2 mesure la distance par laser et reconstruit le terrain en nuage de points, y compris sous la végétation — ce que la photogrammétrie ne sait pas faire. Elle est utilisée pour les modèles numériques de terrain en zone boisée, les relevés de lignes électriques et les études de génie civil où la précision altimétrique est déterminante.',
+      en: 'The L2 measures distance by laser and reconstructs terrain as a point cloud, including beneath vegetation — which photogrammetry cannot do. It is used for digital terrain models in wooded areas, power-line surveys and civil engineering studies where vertical accuracy is decisive.'
+    },
+    useCases: ['topographie', 'inspection', 'cartographie'],
+    highlights: [
+      { label: { fr: 'Portée LiDAR', en: 'LiDAR range' }, value: '450 m' },
+      { label: { fr: 'Points/s', en: 'Point rate' }, value: '240 000' },
+      { label: { fr: 'Masse', en: 'Weight' }, value: '905 g' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Présentation', en: 'What it is' }, value: 'Integrated LiDAR payload combining a frame LiDAR module, high-accuracy IMU and a 4/3 CMOS RGB mapping camera for aerial surveying, topographic mapping and 3D reconstruction with DJI Terra.' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400; Matrice 350 RTK; Matrice 300 RTK (requires DJI RC Plus)' },
+        ]
+      },
+      {
+        group: { fr: 'Aéronef et performances', en: 'Aircraft and performance' },
+        rows: [
+        { label: { fr: 'Plage du gyromètre de la centrale inertielle', en: 'IMU Angular Velocity Meter Range' }, value: '±300 dps' },
+        { label: { fr: 'Masse', en: 'Weight' }, value: '905±5 g' },
+        { label: { fr: 'Dimensions', en: 'Dimensions' }, value: '155×128×176 mm (L×W×H)' },
+        ]
+      },
+      {
+        group: { fr: 'Positionnement', en: 'Positioning' },
+        rows: [
+        { label: { fr: 'Précision de télémétrie (RMS 1σ)', en: 'Ranging Accuracy (RMS 1σ)' }, value: '2 cm @ 150 m' },
+        { label: { fr: 'Précision du système', en: 'System Accuracy' }, value: 'Horizontal: 5 cm @ 150 m; Vertical: 4 cm @ 150 m' },
+        { label: { fr: 'Précision de positionnement horizontal', en: 'Horizontal Positioning Accuracy' }, value: 'RTK FIX: 1 cm + 1 ppm' },
+        { label: { fr: 'Précision de positionnement vertical', en: 'Vertical Positioning Accuracy' }, value: 'RTK FIX: 1.5 cm + 1 ppm' },
+        ]
+      },
+      {
+        group: { fr: 'Imagerie et capteurs', en: 'Imaging and sensors' },
+        rows: [
+        { label: { fr: 'Débit du nuage de points', en: 'Point Cloud Rate' }, value: 'Single return: max. 240,000 pts/s; Multiple returns: max. 1,200,000 pts/s' },
+        { label: { fr: 'Portée de détection', en: 'Detection Range' }, value: '450 m @ 50% reflectivity, 0 klx; 250 m @ 10% reflectivity, 100 klx (maximum detection range 500 m)' },
+        { label: { fr: 'Portée de détection minimale', en: 'Minimum Detection Range' }, value: '3 m' },
+        { label: { fr: 'Nombre max. de retours pris en charge', en: 'Maximum Returns Supported' }, value: '5' },
+        { label: { fr: 'Modes de balayage', en: 'Scanning Modes' }, value: 'Non-repetitive scanning pattern, Repetitive scanning pattern' },
+        { label: { fr: 'Champ de vision', en: 'FOV' }, value: 'Repetitive scanning pattern: Horizontal 70°, Vertical 3°; Non-repetitive scanning pattern: Horizontal 70°, Vertical 75°' },
+        { label: { fr: 'Longueur d’onde laser / sécurité', en: 'Laser Wavelength / Safety' }, value: '905 nm; Class 1 (IEC 60825-1:2014)' },
+        { label: { fr: 'Fréquence d’émission des impulsions laser', en: 'Laser Pulse Emission Frequency' }, value: '240 kHz' },
+        { label: { fr: 'Divergence du faisceau laser', en: 'Laser Beam Divergence' }, value: 'Horizontal 0.2 mrad, Vertical 0.6 mrad' },
+        { label: { fr: 'Taille du spot laser', en: 'Laser Spot Size' }, value: 'Horizontal 4 cm, vertical 12 cm @ 100 m (FWHM)' },
+        { label: { fr: 'Fréquence de rafraîchissement de la centrale inertielle', en: 'IMU Update Frequency' }, value: '200 Hz' },
+        { label: { fr: 'Plage de l’accéléromètre de la centrale inertielle', en: 'IMU Accelerometer Range' }, value: '±6 g' },
+        { label: { fr: 'Caméra RVB de cartographie — Capteur', en: 'RGB Mapping Camera — Sensor' }, value: '4/3 CMOS, Effective Pixels: 20 MP' },
+        ]
+      },
+      {
+        group: { fr: 'Batterie et alimentation', en: 'Battery and power' },
+        rows: [
+        { label: { fr: 'Alimentation', en: 'Power' }, value: '28 W (typical); 58 W (max.)' },
+        ]
+      },
+      {
+        group: { fr: 'Environnement', en: 'Environment' },
+        rows: [
+        { label: { fr: 'Indice de protection', en: 'IP Rating' }, value: 'IP54 (per IEC60529 under controlled laboratory conditions)' },
+        { label: { fr: 'Température d’exploitation', en: 'Operating Temperature' }, value: '-20° to 50° C (-4° to 122° F)' },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/zenmuse-l2.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com/zenmuse-l2'
+  },
+  {
+    id: 'zenmuse-p1',
+    segment: 'enterprise',
+    name: 'DJI Zenmuse P1',
+    category: 'enterprise',
+    type: 'payload',
+    tagline: {
+      fr: 'Plein format pour photogrammétrie haute précision.',
+      en: 'Full-frame sensor for high-precision photogrammetry.'
+    },
+    usage: {
+      fr: 'La P1 embarque un capteur plein format destiné à la cartographie de grande emprise. Elle couvre davantage de surface par vol qu’un capteur plus petit, à précision égale.',
+      en: 'The P1 carries a full-frame sensor aimed at wide-area mapping, covering more ground per flight with metrology-grade accuracy.'
+    },
+    useCases: ['topographie', 'cartographie'],
+    highlights: [
+      { label: { fr: 'Capteur', en: 'Sensor' }, value: 'Plein format' },
+      { label: { fr: 'Photo', en: 'Photo' }, value: '45 Mpx' },
+      { label: { fr: 'Précision H.', en: 'H. accuracy' }, value: '3 cm' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/zenmuse-p1.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com/zenmuse-p1'
+  },
+  {
+    id: 'd-rtk-3',
+    segment: 'enterprise',
+    name: 'DJI D-RTK 3',
+    category: 'enterprise',
+    type: 'payload',
+    tagline: {
+      fr: 'Station de base RTK pour une précision centimétrique au sol.',
+      en: 'RTK base station for centimetre accuracy on the ground.'
+    },
+    usage: {
+      fr: 'La station D-RTK 3 fournit la correction différentielle qui fait passer le positionnement du mètre au centimètre.',
+      en: 'The D-RTK 3 base station provides differential correction for centimetre-level positioning.'
+    },
+    useCases: ['topographie', 'cartographie', 'cereales'],
+    highlights: [
+      { label: { fr: 'Précision RTK', en: 'RTK accuracy' }, value: '0,8 cm' },
+      { label: { fr: 'Autonomie', en: 'Operating time' }, value: '7 h' },
+      { label: { fr: 'Protection', en: 'IP rating' }, value: 'IP67' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/d-rtk-3.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com/d-rtk-3'
+  },
+
+  /* ===================== ENTERPRISE AIRCRAFT ================== */
+
+  {
+    id: 'matrice-30t',
+    name: 'DJI Matrice 30T',
+    segment: 'enterprise',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Plateforme thermique compacte pour la surveillance et l’inspection critique.',
+      en: 'Compact thermal platform for surveillance and critical inspection.'
+    },
+    usage: {
+      fr: 'Le Matrice 30T intègre capteurs grand-angle, zoom 48 MP et thermique radiométrique dans un châssis pliable résistant IP55.',
+      en: 'Matrice 30T integrates wide, 48 MP zoom, and radiometric thermal sensors in a foldable IP55 airframe.'
+    },
+    useCases: ['inspection', 'securite'],
+    highlights: [
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '41 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '40 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '41 min' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '40 km' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
+          { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: '3,77 kg' },
+          { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '4,07 kg' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '23 m/s' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Microbolomètre VOx non refroidi (640×512)', en: 'Uncooled VOx Microbolometer (640×512)' } },
+          { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: { fr: 'Inclus (jusqu’à 1 200 m)', en: 'Included (up to 1,200 m)' } },
+          { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/2" CMOS, Effective pixels: 48M' },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: '1/2" CMOS, Effective pixels: 12M' },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/matrice-30t.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://enterprise.dji.com/matrice-30',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'matrice-4td',
+    name: 'DJI Matrice 4TD',
+    segment: 'enterprise',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Drone de surveillance thermique ultra-compact pour opérations automatisées.',
+      en: 'Ultra-compact thermal surveillance drone for automated operations.'
+    },
+    usage: {
+      fr: 'Conçu pour des missions d’intervention rapide et de surveillance continue avec capteurs thermiques et visuels avancés.',
+      en: 'Designed for rapid intervention and continuous surveillance with dual thermal and visual sensors.'
+    },
+    useCases: ['inspection', 'securite', 'topographie'],
+    highlights: [
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '41 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '10 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '41 min' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '10 km' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
+          { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: '1,85 kg' },
+          { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '2,09 kg' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '21 m/s' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Station D-RTK 3', en: 'D-RTK 3 Base Station' }, value: { fr: 'Compatible', en: 'Compatible' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: '640×512 Microbolomètre VOx non refroidi', en: '640×512 Uncooled VOx Microbolometer' } },
+          { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Projecteur d’appoint', en: 'Accessory Spotlight' }, value: 'AL1' },
+          { label: { fr: 'Haut-parleur d’appoint', en: 'Accessory Speaker' }, value: 'AS1' },
+          { label: { fr: 'Projecteur infrarouge', en: 'Infrared Spotlight' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: '1/1.3-inch CMOS, Effective Pixels: 48 MP' },
+          { label: { fr: 'Téléobjectif moyen', en: 'Medium Tele Camera' }, value: '1/1.3-inch CMOS, Effective Pixels: 48 MP' },
+          { label: { fr: 'Téléobjectif', en: 'Telephoto Camera' }, value: '1/1.5-inch CMOS, Effective Pixels: 48 MP' },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/matrice-4td.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://enterprise.dji.com',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'matrice-4d',
+    name: 'DJI Matrice 4D',
+    segment: 'enterprise',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Drone de cartographie et photogrammétrie haute précision pour opérations automatisées.',
+      en: 'High-precision mapping and photogrammetry drone for automated dock operations.'
+    },
+    usage: {
+      fr: 'Hébergé dans le DJI Dock 3, le Matrice 4D est dédié aux relevés topographiques et à la modélisation 3D automatisée grâce à son capteur grand-angle 4/3 CMOS avec obturateur mécanique.',
+      en: 'Housed in the DJI Dock 3, the Matrice 4D is dedicated to automated topographic surveys and 3D modeling with its 4/3 CMOS mechanical shutter wide camera.'
+    },
+    useCases: ['topographie', 'inspection', 'cartographie'],
+    highlights: [
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '41 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '10 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '41 min' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '10 km' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
+          { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: '1,85 kg' },
+          { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '2,09 kg' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '21 m/s' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Station D-RTK 3', en: 'D-RTK 3 Base Station' }, value: { fr: 'Compatible', en: 'Compatible' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Non inclus (dédié photogrammétrie)', en: 'Not included (Photogrammetry dedicated)' } },
+          { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Projecteur d’appoint', en: 'Accessory Spotlight' }, value: 'AL1' },
+          { label: { fr: 'Haut-parleur d’appoint', en: 'Accessory Speaker' }, value: 'AS1' },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: '4/3-inch CMOS Effective Pixels: 20 MP' },
+          { label: { fr: 'Téléobjectif moyen', en: 'Medium Tele Camera' }, value: '1/1.3-inch CMOS, Effective Pixels: 48 MP' },
+          { label: { fr: 'Téléobjectif', en: 'Telephoto Camera' }, value: '1/1.5-inch CMOS, Effective Pixels: 48 MP' },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/matrice-4e.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://enterprise.dji.com',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'flycart-30',
+    name: 'DJI FlyCart 30',
+    segment: 'enterprise',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Solution de transport aérien dynamique pour charges lourdes jusqu’à 40 kg.',
+      en: 'Dynamic aerial transport solution for heavy payloads up to 40 kg.'
+    },
+    usage: {
+      fr: 'Acheminement de matériel sur chantiers isolés, logistique d’urgence et ravitaillement par voie aérienne.',
+      en: 'Cargo transport to remote worksites, emergency logistics, and aerial delivery.'
+    },
+    useCases: ['inspection', 'securite'],
+    highlights: [
+      { label: { fr: 'Charge max.', en: 'Max payload' }, value: '30–40 kg' },
+      { label: { fr: 'Rayon d’action', en: 'Flight range' }, value: '28 km' },
+      { label: { fr: 'Vitesse max.', en: 'Max speed' }, value: '20 m/s' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/flycart-30.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://enterprise.dji.com/flycart-30',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'flycart-100',
+    name: 'DJI FlyCart 100',
+    segment: 'enterprise',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Système de livraison haute capacité pour transport de fret industriel lourd.',
+      en: 'High-capacity delivery system for heavy industrial cargo.'
+    },
+    usage: {
+      fr: 'Aéronef de transport lourd pour charges volumineuses et logistique sur longues distances.',
+      en: 'Heavy-lift transport aircraft for large industrial equipment and long-distance cargo dispatch.'
+    },
+    useCases: ['inspection', 'securite'],
+    highlights: [
+      { label: { fr: 'Charge max.', en: 'Max payload' }, value: '100 kg' },
+      { label: { fr: 'Portée', en: 'Range' }, value: '40 km' },
+      { label: { fr: 'Alimentation', en: 'Power' }, value: 'Bi-batterie' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/flycart-100.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://enterprise.dji.com',
+    compatiblePayloads: []
+  },
+
+  /* ==================== CAMERA AIRCRAFT ==================== */
+
+  {
+    id: 'air-3s',
+    name: 'DJI Air 3S',
+    segment: 'camera',
+    category: 'camera',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Drone de voyage photo/vidéo avec capteur principal 1 pouce et téléobjectif 70mm.',
+      en: 'Dual-camera travel drone with 1-inch main sensor and 70mm telephoto.'
+    },
+    usage: {
+      fr: 'Le compagnon idéal pour les créateurs de contenu exigeants, paysages, tournages et voyages.',
+      en: 'Ideal for demanding creators, landscapes, travel videography, and commercial shoots.'
+    },
+    useCases: [],
+    highlights: [
+      { label: { fr: 'Capteur', en: 'Sensor' }, value: '1" CMOS' },
+      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K/60fps HDR' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '45 min' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/air-3s.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://www.dji.com/air-3s',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'mini-4-pro',
+    name: 'DJI Mini 4 Pro',
+    segment: 'camera',
+    category: 'camera',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Mini drone ultra-léger (<249 g) avec vidéo 4K/60fps HDR et détection 360°.',
+      en: 'Ultra-light (<249g) mini drone with 4K/60fps HDR video and 360° obstacle sensing.'
+    },
+    usage: {
+      fr: 'Ultra-compact, pliable et puissant, le Mini 4 Pro permet de filmer en vertical natif et de suivre automatiquement les sujets.',
+      en: 'Ultra-compact and capable, providing vertical shooting, obstacle avoidance, and ActiveTrack 360.'
+    },
+    useCases: [],
+    highlights: [
+      { label: { fr: 'Poids', en: 'Weight' }, value: '< 249 g' },
+      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K/60fps HDR' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '34 min' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/mini-4-pro.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://www.dji.com/mini-4-pro',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'mini-5-pro',
+    name: 'DJI Mini 5 Pro',
+    segment: 'camera',
+    category: 'camera',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Nouvelle génération ultra-compacte avec capteur optimisé et autonomie étendue.',
+      en: 'Next-generation ultra-compact drone with enhanced sensor and battery life.'
+    },
+    usage: {
+      fr: 'Performances étendues dans un format de poche pour vidéastes nomades et photographes.',
+      en: 'Enhanced performance in a pocket-sized package for mobile videographers.'
+    },
+    useCases: [],
+    highlights: [
+      { label: { fr: 'Poids', en: 'Weight' }, value: '< 249 g' },
+      { label: { fr: 'Résolution', en: 'Resolution' }, value: '4K/120fps' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '38 min' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/mini-5-pro.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://www.dji.com',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'flip',
+    name: 'DJI Flip',
+    segment: 'camera',
+    category: 'camera',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Drone ultra-compact au design révolutionnaire pour capture aérienne spontanée.',
+      en: 'Ultra-compact drone with innovative folding design for spontaneous aerial capture.'
+    },
+    usage: {
+      fr: 'Pensé pour un déploiement instantané et des prises de vue rapides en plein air.',
+      en: 'Designed for immediate deployment and effortless point-and-shoot aerial imaging.'
+    },
+    useCases: [],
+    highlights: [
+      { label: { fr: 'Format', en: 'Format' }, value: 'Ultra-pliable' },
+      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K stabilisée' },
+      { label: { fr: 'Contrôle', en: 'Control' }, value: 'Gestuel & App' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/flip.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://www.dji.com',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'lito-1',
+    name: 'DJI Lito 1',
+    segment: 'camera',
+    category: 'camera',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Drone polyvalent compact avec suivi intelligent IA et grande stabilité.',
+      en: 'Versatile compact drone with intelligent AI subject tracking.'
+    },
+    usage: {
+      fr: 'Idéal pour le vlogging dynamique, les activités sportives et les prises de vue automatisées.',
+      en: 'Ideal for dynamic vlogging, outdoor action sports, and automated tracking.'
+    },
+    useCases: [],
+    highlights: [
+      { label: { fr: 'Suivi IA', en: 'AI Tracking' }, value: 'ActiveTrack 360' },
+      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K/60fps' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '31 min' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/lito-1.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://www.dji.com',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'mavic-4-pro',
+    name: 'DJI Mavic 4 Pro',
+    segment: 'camera',
+    category: 'camera',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Le standard professionnel de l’imagerie aérienne avec triple caméra Hasselblad.',
+      en: 'The pro standard in aerial imagery with triple Hasselblad camera system.'
+    },
+    usage: {
+      fr: 'Le Mavic 4 Pro repousse les limites des productions audiovisuelles avec ses trois optiques de pointe et son profil 10 bits D-Log M.',
+      en: 'Built for broadcast and cinema productions with high dynamic range triple lenses and 10-bit D-Log M.'
+    },
+    useCases: [],
+    highlights: [
+      { label: { fr: 'Optique', en: 'Optics' }, value: 'Triple Hasselblad' },
+      { label: { fr: 'Vidéo', en: 'Video' }, value: '5.1K / 4K 120fps' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '46 min' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/mavic-4-pro.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://www.dji.com',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'neo-2',
+    name: 'DJI Neo 2',
+    segment: 'camera',
+    category: 'camera',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Nanodrone ultra-léger (135 g) avec décollage de la paume et commandes simplifiées.',
+      en: 'Ultra-light nano drone (135g) with palm takeoff and simplified controls.'
+    },
+    usage: {
+      fr: 'Décollez directement de la main sans radiocommande. Le compagnon quotidien parfait pour des plans aériens créatifs instantanés.',
+      en: 'Launch directly from your hand without a controller. Perfect for effortless daily self-shots and vlogs.'
+    },
+    useCases: [],
+    highlights: [
+      { label: { fr: 'Poids', en: 'Weight' }, value: '135 g' },
+      { label: { fr: 'Décollage', en: 'Takeoff' }, value: 'Paume de la main' },
+      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K Ultra HD' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/neo-2.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://www.dji.com/neo',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'avata-360',
+    name: 'DJI Avata 360',
+    segment: 'camera',
+    category: 'camera',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Drone FPV immersif avec protection intégrée et capture 360° ultra-fluide.',
+      en: 'Immersive FPV drone with built-in propeller guards and 360° recording.'
+    },
+    usage: {
+      fr: 'Vivez l’expérience du vol FPV en toute sécurité. Châssis renforcé, stabilisation RockSteady et casque immersif.',
+      en: 'Experience intuitive FPV flight with enclosed guards, RockSteady stabilization, and immersive goggles.'
+    },
+    useCases: [],
+    highlights: [
+      { label: { fr: 'Immersion', en: 'Immersion' }, value: 'Casque FPV HD' },
+      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K/60fps' },
+      { label: { fr: 'Sécurité', en: 'Safety' }, value: 'Protection intégrée' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/avata-360.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://www.dji.com/avata-2',
+    compatiblePayloads: []
+  },
+
+  /* ======================== PAYLOADS — AGRICULTURE ======================== */
+
+  {
+    id: 'zenmuse-l3',
+    name: 'Zenmuse L3',
+    segment: 'agriculture',
+    category: 'agriculture',
+    type: 'payload',
+    tagline: {
+      fr: 'Capteur LiDAR et optique haute précision pour cartographie et topographie de terrain.',
+      en: 'High-precision LiDAR and optical sensor for topographic terrain mapping.'
+    },
+    usage: {
+      fr: 'Permet la reconstitution 3D des parcelles, la mesure de biomasse et l’analyse du relief sous couvert végétal.',
+      en: 'Provides high-accuracy 3D terrain modeling, canopy penetration, and vegetation biomass analysis.'
+    },
+    useCases: ['topographie', 'cartographie', 'cereales'],
+    highlights: [
+      { label: { fr: 'Précision', en: 'Accuracy' }, value: '3 cm' },
+      { label: { fr: 'Portée', en: 'Range' }, value: '450 m' },
+      { label: { fr: 'Impulsion', en: 'Rate' }, value: '240 kHz' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/zenmuse-l3.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com'
+  },
+
+  {
+    id: 'zenmuse-s1',
+    name: 'Zenmuse S1',
+    segment: 'agriculture',
+    category: 'agriculture',
+    type: 'payload',
+    tagline: {
+      fr: 'Capteur multispectral 4 bandes pour diagnostic agronomique et calcul du NDVI.',
+      en: '4-band multispectral sensor for agronomic diagnosis and NDVI vegetation indices.'
+    },
+    usage: {
+      fr: 'Génère des cartes de vigueur végétative (NDVI, NDRE) pour moduler les apports en engrais et détecter le stress hydrique ou parasitaire.',
+      en: 'Generates crop-health maps to optimize fertilization and identify irrigation/pest stress.'
+    },
+    useCases: ['cartographie', 'cereales', 'vignes', 'palmeraies'],
+    highlights: [
+      { label: { fr: 'Bandes', en: 'Bands' }, value: '4 canaux MS' },
+      { label: { fr: 'Résolution', en: 'Resolution' }, value: '5 MP' },
+      { label: { fr: 'Capteur solaire', en: 'Sunlight sensor' }, value: 'Intégré' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/zenmuse-s1.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com'
+  },
+
+  {
+    id: 'zenmuse-v1',
+    name: 'Zenmuse V1',
+    segment: 'agriculture',
+    category: 'agriculture',
+    type: 'payload',
+    tagline: {
+      fr: 'Caméra thermique radiométrique haute sensibilité pour surveillance agricole et irrigation.',
+      en: 'High-sensitivity radiometric thermal camera for crop monitoring and irrigation control.'
+    },
+    usage: {
+      fr: 'Détecte les anomalies d’irrigation, le stress thermique des vergers et surveille les installations agricoles.',
+      en: 'Monitors irrigation efficiency, orchard heat stress, and agricultural facilities day and night.'
+    },
+    useCases: ['palmeraies', 'serres', 'inspection'],
+    highlights: [
+      { label: { fr: 'Résolution', en: 'Thermal res.' }, value: '640×512' },
+      { label: { fr: 'Sensibilité', en: 'Sensitivity' }, value: 'NETD ≤ 50 mK' },
+      { label: { fr: 'Zoom', en: 'Zoom' }, value: '8× numérique' }
+    ],
+    specs: [],
+    availability: 'coming_soon',
+    image: 'assets/img/products/zenmuse-v1.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com'
+  }
+];

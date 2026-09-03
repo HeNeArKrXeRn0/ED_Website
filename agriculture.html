@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DJI Agriculture — Drones Agricoles Agras en Algérie | Equip Drones</title>
+<meta name="description" content="Gamme complète des drones agricoles DJI Agras distribués en Algérie par SARL Equip Drones : T55, T100, T70P, T50, T25P, Mavic 3M. Pulvérisation, épandage et cartographie.">
+<link rel="icon" href="assets/img/svg/Logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<div data-header="agriculture"></div>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n="misc.official">Distributeur officiel DJI — Algérie</p>
+          <h1 class="h-hero">Solutions Agricoles <span class="accent">DJI Agras</span></h1>
+          <p class="lead">
+            Pulvérisation ultra-ciblée, épandage grand débit et cartographie multispectrale. 
+            Équipez votre exploitation avec des aéronefs robustes conçus pour optimiser vos rendements 
+            et réduire vos coûts d'intrants jusqu'à 30%.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="devis.html" data-i18n="cta.quote">Demander un devis</a>
+            <a class="btn btn-secondary btn-lg" href="cycle-operationnel-agras.html">Cycle Opérationnel →</a>
+            <a class="btn btn-lg" href="comparateur.html?ids=t50,t70p" data-i18n="cta.compare">Comparer les modèles</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/img/photos/hero-spray.jpg"
+               alt="Drone DJI Agras en opération de pulvérisation agricole"
+               onerror="this.onerror=null;this.src='assets/img/svg/agras-t.svg'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CHIFFRES CLÉS AGRICOLES ===================== -->
+  <section class="section-sm" aria-label="Points forts agricoles">
+    <div class="wrap">
+      <div class="stat-strip">
+        <div class="stat">
+          <div class="stat-value">50 L+</div>
+          <div class="stat-label">Capacité de cuve max. (Agras T50 / T55)</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">Jusqu'à 24 ha/h</div>
+          <div class="stat-label">Débit de travail en grande culture</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">-90%</div>
+          <div class="stat-label">D'eau consommée vs pulvérisation tractée</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">RTK &lt; 1 cm</div>
+          <div class="stat-label">Précision de passage sur lignes de vol</div>
+        </div>
+      </div>
+
+      <div class="card p-6 mt-6 row-between items-center" style="background: var(--color-surface-alt); border-color: var(--color-accent-subtle);">
+        <div>
+          <span class="badge badge-accent mb-2">Chantier Continu</span>
+          <h3 class="h-card">Découvrez le Cycle d'Opération à 4 Batteries</h3>
+          <p class="tiny color-muted mt-1">Recharge ultra-rapide 10 min par groupe électrogène Inverter pour un traitement non-stop.</p>
+        </div>
+        <a class="btn btn-primary mt-3 mt-md-0" href="cycle-operationnel-agras.html">Découvrir le schéma →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APPAREILS AGRICOLES & FILTRES ===================== -->
+  <section class="section-sm" id="appareils">
+    <div class="wrap">
+      <div class="section-head row-between">
+        <div>
+          <p class="eyebrow eyebrow-muted">Catalogue Agriculture</p>
+          <h2 class="h-section">Drones de Pulvérisation &amp; Cartographie</h2>
+        </div>
+        <a class="link-arrow" href="comparateur.html">Ouvrir le comparateur complet →</a>
+      </div>
+
+      <!-- Barre de filtres interactive -->
+      <div class="filter-bar mt-6" id="ag-filters"></div>
+
+      <!-- Grille des appareils -->
+      <div class="grid grid-3 mt-6" id="ag-grid"></div>
+
+      <!-- État vide -->
+      <div id="ag-empty" class="hidden mt-6">
+        <div class="empty-state">
+          <p class="lead">Aucun drone agricole ne correspond à cette sélection.</p>
+          <button type="button" class="btn mt-5" id="ag-reset">Réinitialiser les filtres</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </section>
+
+  <!-- ===================== CYCLE D'ACCOMPAGNEMENT ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-muted">Support technique local</p>
+        <h2 class="h-section">L'Écosystème Agricole Equip Drones</h2>
+      </div>
+
+      <div class="grid grid-3 mt-6">
+        <div class="card p-6">
+          <div class="feature-num mb-3">01 — CONSEIL &amp; FLOTTE</div>
+          <h3 class="h-card mb-3">Dimensionnement sur mesure</h3>
+          <p class="body">
+            Nous analysons votre parcellaire (cultures, relief, rotation) pour déterminer la taille de cuve, 
+            le nombre de batteries et le groupe électrogène adapté à votre rythme de travail.
+          </p>
+        </div>
+
+        <div class="card p-6">
+          <div class="feature-num mb-3">02 — FORMATION PILOTES</div>
+          <h3 class="h-card mb-3">Prise en main &amp; Sécurité</h3>
+          <p class="body">
+            Formation pratique de vos opérateurs aux plans de vol automatisés, à l'étalonnage des buses 
+            centrifuges et aux protocoles d'entretien quotidien.
+          </p>
+        </div>
+
+        <div class="card p-6">
+          <div class="feature-num mb-3">03 — ATELIER &amp; PIÈCES</div>
+          <h3 class="h-card mb-3">Continuité de chantier</h3>
+          <p class="body">
+            Stock permanent d'hélices, bras, moteurs, pompes et buses d'origine DJI en Algérie 
+            pour garantir une remise en vol immédiate pendant les périodes critiques de traitement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BANNIÈRE CTA ===================== -->
+  <section class="section section-alt section-bordered">
+    <div class="wrap wrap-narrow text-center">
+      <h2 class="h-section">Prêt à moderniser vos traitements parcellaires ?</h2>
+      <p class="lead mt-4">
+        Contactez nos conseillers techniques agricoles pour recevoir une étude de faisabilité et un devis personnalisé.
+      </p>
+      <div class="row mt-6" style="justify-content:center;gap:16px">
+        <a class="btn btn-primary btn-lg" href="devis.html">Demander un devis agricole</a>
+        <a class="btn btn-lg" href="applications.html">Explorer les applications par culture</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-footer></div>
+
+<!-- Scripts standards -->
+<script src="assets/js/theme-config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+
+<script>
+(function () {
+  'use strict';
+
+  var SECTORS = ['pulverisation', 'epandage', 'nettoyage', 'cartographie'];
+  var AVAIL = ['in_stock', 'on_order', 'coming_soon', 'not_available'];
+
+  var state = { sector: 'all', avail: 'all' };
+
+  function chip(group, value, label, pressed) {
+    return '<button type="button" class="chip"' +
+           ' data-filter="' + group + '"' +
+           ' data-value="' + ED.ui.esc(value) + '"' +
+           ' aria-pressed="' + (pressed ? 'true' : 'false') + '">' +
+           ED.ui.esc(label) + '</button>';
+  }
+
+  function renderFilterBar() {
+    var allLabel = ED.i18n.lang === 'en' ? 'All applications' : 'Toutes les applications';
+    var allAvailLabel = ED.i18n.lang === 'en' ? 'All availabilities' : 'Toutes disponibilités';
+    var sectorLabel = ED.i18n.lang === 'en' ? 'Application / Sector' : 'Application / Secteur';
+    var availLabel = ED.i18n.t('avail.label');
+
+    var sectorChips = chip('sector', 'all', allLabel, state.sector === 'all') +
+      SECTORS.map(function (s) {
+        return chip('sector', s, ED.i18n.t('sector.' + s), state.sector === s);
+      }).join('');
+
+    var availChips = chip('avail', 'all', allAvailLabel, state.avail === 'all') +
+      AVAIL.map(function (a) {
+        return chip('avail', a, ED.i18n.t('avail.' + a), state.avail === a);
+      }).join('');
+
+    var html = '<div class="filter-group">' +
+                 '<span class="filter-label">' + ED.ui.esc(sectorLabel) + '</span>' +
+                 '<div class="chips">' + sectorChips + '</div>' +
+               '</div>' +
+               '<div class="filter-group">' +
+                 '<span class="filter-label">' + ED.ui.esc(availLabel) + '</span>' +
+                 '<div class="chips">' + availChips + '</div>' +
+               '</div>' +
+               '<p class="result-count" id="ag-count" role="status"></p>';
+
+    var bar = document.getElementById('ag-filters');
+    if (bar) bar.innerHTML = html;
+  }
+
+  function matches(p) {
+    if (p.category !== 'agriculture' || p.type !== 'aircraft') return false;
+    if (state.avail !== 'all' && p.availability !== state.avail) return false;
+    if (state.sector !== 'all' && (p.useCases || []).indexOf(state.sector) === -1) return false;
+    return true;
+  }
+
+  function apply() {
+    var products = ED.data.products.filter(matches);
+
+    document.querySelectorAll('#ag-filters .chip[data-filter]').forEach(function (b) {
+      var pressed = state[b.getAttribute('data-filter')] === b.getAttribute('data-value');
+      b.setAttribute('aria-pressed', String(pressed));
+    });
+
+    var count = document.getElementById('ag-count');
+    if (count) {
+      count.textContent = ED.i18n.lang === 'en'
+        ? products.length + ' agricultural model(s)'
+        : products.length + ' modèle(s) agricole(s)';
+    }
+
+    var grid = document.getElementById('ag-grid');
+    if (grid) {
+      grid.innerHTML = products.map(function (p) { return ED.ui.productCard(p); }).join('');
+      ED.i18n.apply(grid);
+      grid.classList.toggle('hidden', products.length === 0);
+    }
+
+    var empty = document.getElementById('ag-empty');
+    if (empty) empty.classList.toggle('hidden', products.length !== 0);
+  }
+
+  function init() {
+    renderFilterBar();
+    apply();
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest) return;
+      var c = e.target.closest('#ag-filters .chip[data-filter]');
+      if (c) {
+        state[c.getAttribute('data-filter')] = c.getAttribute('data-value');
+        apply();
+        return;
+      }
+
+      if (e.target.closest('#ag-reset')) {
+        state.sector = 'all';
+        state.avail = 'all';
+        apply();
+      }
+    });
+  }
+
+  document.addEventListener('ed:ready', init);
+  document.addEventListener('ed:langchange', function () {
+    renderFilterBar();
+    apply();
+  });
+})();
+</script>
+
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

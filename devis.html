@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demande de devis — Equip Drones</title>
+<meta name="description" content="Composez votre demande de devis DJI : sélectionnez vos appareils, indiquez vos coordonnées, puis envoyez-nous votre demande par WhatsApp ou par e-mail. SARL Equip Drones, distributeur officiel DJI en Algérie.">
+<link rel="icon" href="assets/img/svg/Logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<div data-header="quote"></div>
+
+<main id="main">
+
+  <!-- ===================================================================
+       Titre de page
+       =================================================================== -->
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="misc.official">Distributeur officiel DJI — Algérie</p>
+      <h1 class="h-section" data-i18n="quote.title">Demande de devis</h1>
+      <p class="lead measure">Sélectionnez vos appareils, renseignez vos coordonnées, puis transmettez votre demande par WhatsApp ou par e-mail. Nous revenons vers vous avec une proposition détaillée.</p>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="wrap wrap-narrow">
+
+      <!-- =================================================================
+           A. Votre sélection (panier)
+           ================================================================= -->
+      <div class="row-between mb-5">
+        <h2 class="h-sub" data-i18n="quote.yourList">Votre sélection</h2>
+        <span class="result-count" id="quote-count"></span>
+      </div>
+
+      <!-- Lignes injectées par devis.js -->
+      <div id="quote-lines"></div>
+
+      <p class="notice mt-5" data-i18n="quote.noPrice">Aucun prix n’est affiché sur ce site : chaque configuration fait l’objet d’un devis personnalisé.</p>
+
+      <hr class="divider">
+
+      <!-- =================================================================
+           B. Vos coordonnées
+           ================================================================= -->
+      <div id="quote-form-wrap">
+        <h2 class="h-sub mb-5" data-i18n="quote.yourInfo">Vos coordonnées</h2>
+
+        <!-- novalidate : la validation est pilotée par devis.js pour afficher
+             nos propres messages ; les attributs `required` restent en place
+             pour la sémantique et les technologies d'assistance. -->
+        <form id="quote-form" novalidate>
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="q-name"><span data-i18n="quote.name">Nom complet</span> <span class="req">*</span></label>
+              <input class="input" type="text" id="q-name" name="name"
+                     autocomplete="name" required aria-describedby="err-name">
+              <span class="error-msg" id="err-name"></span>
+            </div>
+
+            <div class="field">
+              <label for="q-company"><span data-i18n="quote.company">Société / exploitation</span></label>
+              <input class="input" type="text" id="q-company" name="company"
+                     autocomplete="organization">
+            </div>
+
+            <div class="field">
+              <label for="q-email"><span data-i18n="quote.email">E-mail</span> <span class="req">*</span></label>
+              <input class="input" type="email" id="q-email" name="email"
+                     autocomplete="email" required aria-describedby="err-email">
+              <span class="error-msg" id="err-email"></span>
+            </div>
+
+            <div class="field">
+              <label for="q-phone"><span data-i18n="quote.phone">Téléphone</span> <span class="req">*</span></label>
+              <input class="input" type="tel" id="q-phone" name="phone"
+                     autocomplete="tel" required aria-describedby="err-phone">
+              <span class="error-msg" id="err-phone"></span>
+            </div>
+
+            <div class="field">
+              <label for="q-wilaya"><span data-i18n="quote.wilaya">Wilaya</span></label>
+              <!-- Options ajoutées par devis.js depuis ED.wilayas -->
+              <select class="select" id="q-wilaya" name="wilaya">
+                <option value="" data-i18n="quote.wilayaPick">Sélectionnez une wilaya</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="q-activity"><span data-i18n="quote.activity">Type d’activité</span></label>
+              <select class="select" id="q-activity" name="activity">
+                <option value="">Sélectionnez votre activité</option>
+                <option>Exploitation agricole</option>
+                <option>Prestataire de services agricoles</option>
+                <option>Bureau d’études</option>
+                <option>Collectivité ou administration</option>
+                <option>Industrie ou énergie</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="q-area"><span data-i18n="quote.area">Superficie à traiter (ha)</span></label>
+              <input class="input" type="number" id="q-area" name="area"
+                     min="0" step="1" inputmode="numeric">
+            </div>
+
+            <div class="field span-2">
+              <label for="q-message"><span data-i18n="quote.message">Message</span></label>
+              <textarea class="textarea" id="q-message" name="message" rows="5"
+                        data-i18n-attr="placeholder:quote.messagePh"
+                        placeholder="Précisez votre besoin, vos cultures, vos délais…"></textarea>
+            </div>
+
+          </div>
+
+          <div class="mt-6">
+            <button type="submit" class="btn btn-primary btn-lg" data-i18n="quote.submit">Envoyer ma demande</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- =================================================================
+           C. Confirmation — remplace le formulaire après validation
+           ================================================================= -->
+      <div id="quote-sent" class="card hidden" role="status" tabindex="-1">
+        <h2 class="h-card" data-i18n="quote.sentTitle">Votre demande est prête</h2>
+        <p class="body measure mt-4" data-i18n="quote.sentBody">Choisissez WhatsApp ou l’e-mail pour nous l’envoyer. Vous pouvez aussi copier le message et nous l’adresser par le canal de votre choix.</p>
+
+        <p class="small mt-6" data-i18n="quote.how">Comment souhaitez-vous nous transmettre votre demande ?</p>
+
+        <div class="row mt-4">
+          <a class="btn btn-wa btn-lg" id="q-wa" href="https://wa.me/213661936666"
+             target="_blank" rel="noopener noreferrer"
+             data-i18n="cta.whatsapp">Envoyer par WhatsApp</a>
+          <a class="btn btn-lg" id="q-mail" href="mailto:info@equipdrones.com"
+             data-i18n="cta.email">Envoyer par e-mail</a>
+          <button type="button" class="btn btn-ghost btn-lg" id="q-copy"
+                  data-i18n="cta.copy">Copier le message</button>
+        </div>
+
+        <div class="field mt-6">
+          <label for="q-msg"><span data-i18n="quote.message">Message</span></label>
+          <textarea class="textarea mono" id="q-msg" rows="14" readonly></textarea>
+        </div>
+
+        <div class="mt-5">
+          <button type="button" class="btn btn-ghost" id="q-new"
+                  data-i18n="quote.newRequest">Faire une nouvelle demande</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div data-footer></div>
+
+<script src="assets/js/theme-config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/devis.js"></script>
+  <script src="assets/js/motion.js"></script>
+</body>
+</html>
