@@ -1,6 +1,7 @@
-﻿Drone;Availability;Payload (kg);Max Takeoff Weight (kg);Autonomy (min);Spray Width (m);Fligth Radius (m);Flight Speed (m/s)
+Drone;Availability;Payload (kg);Max Takeoff Weight (kg);Autonomy (min);Spray Width (m);Fligth Radius (m);Flight Speed (m/s)
 T100;Not Available;100;175;6;13;2000;13,8
 T70P;Coming Soon;70;130;7;11;2000;13,8
 T55;Coming Soon;50;104;7;11;2000;13,8
-T50;Coming Soon;50;92;7;11;2000;10
+T50;Discontinued;50;92;7;11;2000;10
+T25;Discontinued;20;52;9;7;2000;10
 T25P;Coming Soon;20;53;9;7;2000;10

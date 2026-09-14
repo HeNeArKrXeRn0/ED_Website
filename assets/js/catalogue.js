@@ -9,7 +9,7 @@
   'use strict';
 
   var CATS  = ['agriculture', 'enterprise', 'camera'];
-  var AVAIL = ['in_stock', 'on_order', 'coming_soon', 'not_available'];
+  var AVAIL = ['in_stock', 'on_order', 'coming_soon', 'discontinued', 'not_available'];
 
   /* Source de vérité de la vue. L'URL n'en est que le reflet partageable. */
   var state  = { cat: 'all', sector: 'all', avail: 'all' };

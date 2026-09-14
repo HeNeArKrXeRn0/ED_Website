@@ -226,6 +226,13 @@
   function headCell(p) {
     var href = 'produit.html?id=' + encodeURIComponent(p.id);
     var soon = p.availability === 'coming_soon';
+    var discontinued = p.availability === 'discontinued';
+
+    var actionBtn = discontinued
+      ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.discontinued">' + esc(t('cta.discontinued')) + '</button>'
+      : (soon
+        ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.notify">' + esc(t('cta.notify')) + '</button>'
+        : '<button type="button" class="btn btn-sm btn-primary" data-add="' + esc(p.id) + '" data-i18n="cta.addQuote">' + esc(t('cta.addQuote')) + '</button>');
 
     return '<th scope="col"' + STICKY_FIX + '>' +
       '<div class="stack" style="align-items:flex-start">' +
@@ -233,9 +240,7 @@
         '<a href="' + href + '">' + esc(p.name) + '</a>' +
         window.ED.ui.badge(p.availability) +
         '<span class="row">' +
-          (soon
-            ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.notify">' + esc(t('cta.notify')) + '</button>'
-            : '<button type="button" class="btn btn-sm btn-primary" data-add="' + esc(p.id) + '" data-i18n="cta.addQuote">' + esc(t('cta.addQuote')) + '</button>') +
+          actionBtn +
           '<a class="btn btn-sm" href="' + href + '" data-i18n="cta.details">' + esc(t('cta.details')) + '</a>' +
         '</span>' +
       '</div>' +

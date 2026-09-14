@@ -133,9 +133,9 @@
     try {
       var raw = JSON.parse(localStorage.getItem(LS_CART) || '[]');
       if (!Array.isArray(raw)) return [];
-      /* On ne garde que les lignes dont le produit existe encore */
+      /* On ne garde que les lignes dont le produit existe encore et n'est pas discontinué */
       return raw
-        .filter(function (l) { return l && byIdMap[l.id]; })
+        .filter(function (l) { return l && byIdMap[l.id] && byIdMap[l.id].availability !== 'discontinued'; })
         .map(function (l) {
           return { id: l.id, qty: Math.max(1, Math.min(999, parseInt(l.qty, 10) || 1)) };
         });
@@ -159,7 +159,7 @@
       return readCart().some(function (l) { return l.id === id; });
     },
     add: function (id, qty) {
-      if (!byIdMap[id]) return;
+      if (!byIdMap[id] || byIdMap[id].availability === 'discontinued') return;
       var n = Math.max(1, parseInt(qty, 10) || 1);
       var lines = readCart();
       var found = lines.filter(function (l) { return l.id === id; })[0];
@@ -517,6 +517,13 @@
     }).join('');
 
     var soon = p.availability === 'coming_soon';
+    var discontinued = p.availability === 'discontinued';
+
+    var actionBtn = discontinued
+      ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.discontinued">' + t('cta.discontinued') + '</button>'
+      : (soon
+        ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.notify">' + t('cta.notify') + '</button>'
+        : '<button type="button" class="btn btn-sm btn-primary" data-add="' + esc(p.id) + '" data-i18n="cta.addQuote">' + t('cta.addQuote') + '</button>');
 
     return '' +
       '<article class="p-card" data-id="' + esc(p.id) + '">' +
@@ -535,9 +542,7 @@
           (highlights ? '<div class="p-card-specs">' + highlights + '</div>' : '') +
           '<div class="p-card-actions">' +
             '<a class="btn btn-sm" href="produit.html?id=' + encodeURIComponent(p.id) + '" data-i18n="cta.details">' + t('cta.details') + '</a>' +
-            (soon
-              ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.notify">' + t('cta.notify') + '</button>'
-              : '<button type="button" class="btn btn-sm btn-primary" data-add="' + esc(p.id) + '" data-i18n="cta.addQuote">' + t('cta.addQuote') + '</button>') +
+            actionBtn +
           '</div>' +
         '</div>' +
       '</article>';
@@ -603,11 +608,12 @@
     var btn = e.target.closest && e.target.closest('[data-add]');
     if (!btn) return;
     var id = btn.getAttribute('data-add');
+    var p = data.byId(id);
+    if (!p || p.availability === 'discontinued') return;
     var qtyInput = document.querySelector('[data-qty-for="' + id + '"]');
     var qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
     cart.add(id, qty);
-    var p = data.byId(id);
-    toast(t('cta.added') + (p ? ' — ' + p.name : ''));
+    toast(t('cta.added') + ' — ' + p.name);
   });
 
   function boot() {

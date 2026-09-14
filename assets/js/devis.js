@@ -43,7 +43,7 @@
 
   function lineHTML(line) {
     var p = ED().data.byId(line.id);
-    if (!p) return '';
+    if (!p || p.availability === 'discontinued') return '';
 
     var id  = esc(p.id);
     var qid = 'qty-' + id;
@@ -271,7 +271,7 @@
     } else {
       items.forEach(function (line) {
         var p = ED().data.byId(line.id);
-        if (!p) return;
+        if (!p || p.availability === 'discontinued') return;
         out.push('- ' + line.qty + ' x ' + p.name + ' (' + availFr(p.availability) + ')');
       });
     }

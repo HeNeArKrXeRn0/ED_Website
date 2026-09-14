@@ -1,4 +1,4 @@
-﻿Drone,RTK,D-RTK-3,GNSS,FPV Camera,Vision System,Radar,Lidar,Thermal Camera,Laser Rangefinder,Accessory Spotlight,Accessory Speaker,Gimbal Accessory,Infrared Spotlight,Zoom Camera,Wide Camera,Medium Tele Camera,Telephoto
+Drone,RTK,D-RTK-3,GNSS,FPV Camera,Vision System,Radar,Lidar,Thermal Camera,Laser Rangefinder,Accessory Spotlight,Accessory Speaker,Gimbal Accessory,Infrared Spotlight,Zoom Camera,Wide Camera,Medium Tele Camera,Telephoto
 Matrice 400,TRUE,Compatible,TRUE,TRUE,TRUE,TRUE,TRUE,,,,,Zenmuse Series,,,,,
 Matrice 30T,TRUE,,TRUE,TRUE,TRUE,,,Uncooled VOx Microbolometer,TRUE,,,,,"1/2"" CMOS, Effective pixels: 48M","1/2"" CMOS, Effective pixels: 12M",,
 Mavic 3M,TRUE,,TRUE,,TRUE,,,,,,,,,,,,
@@ -6,3 +6,6 @@ Matrice 4T,TRUE,,TRUE,,TRUE,,,TRUE,TRUE,AL1,AS1,,TRUE,,"1/1.3-inch CMOS, Effecti
 Matrice 4E,TRUE,,TRUE,,TRUE,,,FALSE,TRUE,AL1,AS1,,,,4/3-inch CMOS Effective Pixels: 20 MP,"1/1.3-inch CMOS, Effective Pixels: 48 MP","1/1.5-inch CMOS, Effective Pixels: 48 MP"
 Matrice 4D,TRUE,Compatible,TRUE,,TRUE,,,FALSE,TRUE,AL1,AS1,,,,"4/3-inch CMOS, Effective Pixels: 20MP","1/1.3-inch CMOS, Effective Pixels: 48 MP","1/1.5-inch CMOS, Effective Pixels: 48 MP"
 Matrice 4TD,TRUE,Compatible,TRUE,,TRUE,,,640×512 Uncooled VOx Microbolometer,TRUE,AL1,AS1,,TRUE,,"1/1.3-inch CMOS, Effective Pixels: 48MP","1/1.3-inch CMOS, Effective Pixels: 48 MP","1/1.5-inch CMOS, Effective Pixels: 48 MP"
+Matrice 350 RTK,TRUE,Compatible,TRUE,TRUE,TRUE,Compatible (CSM Radar),Compatible (Zenmuse L2),Zenmuse H20N / H30T,TRUE,,,Zenmuse Series (H30T, H20N, L2, P1),,,,,
+Mavic 3E,TRUE,,TRUE,,TRUE,,,FALSE,,Compatible,Compatible,,,"1/2"" CMOS, Effective pixels: 12 MP",4/3-inch CMOS Effective Pixels: 20 MP,,
+Mavic 3T,TRUE,,TRUE,,TRUE,,,640×512 Uncooled VOx Microbolometer,,Compatible,Compatible,,,"1/2"" CMOS, Effective pixels: 12 MP","1/2"" CMOS, Effective pixels: 48 MP",,

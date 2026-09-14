@@ -271,7 +271,7 @@ window.ED_PRODUCTS = [
         ]
       },
     ],
-    availability: 'coming_soon',
+    availability: 'discontinued',
     image: 'assets/img/products/t50.png',
     imageFallback: 'assets/img/svg/agras-t.svg',
     djiUrl: 'https://ag.dji.com/t50'
@@ -386,7 +386,7 @@ window.ED_PRODUCTS = [
         ]
       },
     ],
-    availability: 'coming_soon',
+    availability: 'discontinued',
     image: 'assets/img/products/t25.png',
     imageFallback: 'assets/img/svg/agras-t.svg',
     djiUrl: 'https://ag.dji.com/t25'
@@ -732,10 +732,111 @@ window.ED_PRODUCTS = [
       },
     ],
     compatiblePayloads: ['zenmuse-h30t', 'zenmuse-h20n', 'zenmuse-l2', 'zenmuse-p1', 'd-rtk-3'],
-    availability: 'coming_soon',
+    availability: 'discontinued',
     image: 'assets/img/products/matrice-350-rtk.png',
     imageFallback: 'assets/img/svg/matrice-quad.svg',
     djiUrl: 'https://enterprise.dji.com/matrice-350-rtk'
+  },
+  {
+    id: 'mavic-3e',
+    segment: 'enterprise',
+    name: 'DJI Mavic 3E',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Photogrammétrie compacte avec capteur grand-angle mécanique 4/3.',
+      en: 'Compact photogrammetry with 4/3 mechanical wide sensor.'
+    },
+    usage: {
+      fr: 'Le Mavic 3E redéfinit les standards de l’industrie pour les petits drones d’arpentage. Équipé d’un capteur 4/3 CMOS de 20 MP à obturateur mécanique et d’un zoom hybride jusqu’à 56×, il permet des levés topographiques rapides et sans flou de mouvement.',
+      en: 'The Mavic 3E sets new standards for small commercial survey drones. Featuring a 20 MP 4/3 CMOS mechanical shutter wide camera and up to 56× hybrid zoom, it delivers fast, blur-free topographic mapping.'
+    },
+    useCases: ['topographie', 'inspection', 'cartographie'],
+    highlights: [
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '45 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '32 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '45 min' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '32 km' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '6000 m' },
+          { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: '0,92 kg' },
+          { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '1,05 kg' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '21 m/s' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Module optionnel', en: 'Optional module' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (omnidirectionnel)', en: 'Included (Omnidirectional)' } },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: '4/3-inch CMOS Effective Pixels: 20 MP' },
+          { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/2" CMOS, Effective pixels: 12 MP (56× hybride)' },
+        ]
+      },
+    ],
+    compatiblePayloads: [],
+    availability: 'discontinued',
+    image: 'assets/img/products/mavic-3e.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://enterprise.dji.com/mavic-3-enterprise'
+  },
+  {
+    id: 'mavic-3t',
+    segment: 'enterprise',
+    name: 'DJI Mavic 3T',
+    category: 'enterprise',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Inspection thermique et sécurité civile ultra-portables.',
+      en: 'Ultra-portable thermal inspection and public safety.'
+    },
+    usage: {
+      fr: 'Le Mavic 3T intègre une caméra thermique 640×512, un capteur grand-angle 48 MP et un téléobjectif zoom jusqu’à 56×. Il excelle dans la lutte contre les incendies, la recherche et le sauvetage, ainsi que l’inspection nocturne des infrastructures.',
+      en: 'The Mavic 3T integrates a 640×512 thermal camera, a 48 MP wide camera, and up to 56× tele zoom. It excels in firefighting, search and rescue, and nocturnal infrastructure inspection.'
+    },
+    useCases: ['inspection', 'securite'],
+    highlights: [
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '45 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '32 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '45 min' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '32 km' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '6000 m' },
+          { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: '0,92 kg' },
+          { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '1,05 kg' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '21 m/s' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Module optionnel', en: 'Optional module' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (omnidirectionnel)', en: 'Included (Omnidirectional)' } },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: '640×512 Microbolomètre VOx non refroidi' },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: '1/2" CMOS, Effective pixels: 48 MP' },
+          { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/2" CMOS, Effective pixels: 12 MP (56× hybride)' },
+        ]
+      },
+    ],
+    compatiblePayloads: [],
+    availability: 'discontinued',
+    image: 'assets/img/products/mavic-3t.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://enterprise.dji.com/mavic-3-enterprise'
   },
   {
     id: 'dock-3',
@@ -1193,7 +1294,7 @@ window.ED_PRODUCTS = [
         ]
       },
     ],
-    availability: 'coming_soon',
+    availability: 'discontinued',
     image: 'assets/img/products/matrice-30t.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://enterprise.dji.com/matrice-30',

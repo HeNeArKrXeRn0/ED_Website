@@ -48,6 +48,7 @@
 
   function heroBlock(p) {
     var soon   = p.availability === 'coming_soon';
+    var discontinued = p.availability === 'discontinued';
     var catKey = p.type === 'payload' ? 'cat.payload' : 'cat.' + p.category;
 
     var tags = (p.useCases || []).map(function (s) {
@@ -61,9 +62,11 @@
         '</div>'
       : '';
 
-    var actions = soon
-      ? '<a class="btn btn-primary" href="devis.html" data-i18n="cta.notify">' + esc(t('cta.notify')) + '</a>'
-      : '<div class="qty">' +
+    var actions = discontinued
+      ? '<button type="button" class="btn btn-primary" disabled data-i18n="cta.discontinued">' + esc(t('cta.discontinued')) + '</button>'
+      : (soon
+        ? '<a class="btn btn-primary" href="devis.html" data-i18n="cta.notify">' + esc(t('cta.notify')) + '</a>'
+        : '<div class="qty">' +
             '<button type="button" data-qty-step="-1" aria-label="Diminuer la quantité">−</button>' +
             '<label class="sr-only" for="ed-qty" data-i18n="prod.qty">' + esc(t('prod.qty')) + '</label>' +
             '<input id="ed-qty" type="number" inputmode="numeric" min="1" max="999" step="1" ' +
@@ -71,7 +74,7 @@
             '<button type="button" data-qty-step="1" aria-label="Augmenter la quantité">+</button>' +
           '</div>' +
           '<button type="button" class="btn btn-primary" data-add="' + esc(p.id) + '" ' +
-                  'data-i18n="cta.addQuote">' + esc(t('cta.addQuote')) + '</button>';
+                  'data-i18n="cta.addQuote">' + esc(t('cta.addQuote')) + '</button>');
 
     var dji = p.djiUrl
       ? '<a class="btn btn-ghost" href="' + esc(p.djiUrl) + '" target="_blank" rel="noopener noreferrer" ' +
