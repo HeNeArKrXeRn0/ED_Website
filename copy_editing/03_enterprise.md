@@ -1,5 +1,7 @@
 # Page : Gamme DJI Entreprise (enterprise.html)
 
+> 🕒 **Dernière synchronisation avec le site :** 14 septembre 2026 à 12:05 (EDT) — *Toutes les modifications de ce fichier ont été appliquées au code source du site web.*
+
 ---
 
 ## 0. SEO & Métadonnées
@@ -24,14 +26,14 @@
   - **Valeur** : `IP55`
   - **Libellé** : Résistance pluie, vent et poussières extrêmes
 - **Chiffre 2** : 
-  - **Valeur** : `Jusqu'à 55 min`
-  - **Libellé** : Autonomie de vol max. par paire de batteries
+  - **Valeur** : `55 min`
+  - **Libellé** : Autonomie de vol maximale
 - **Chiffre 3** : 
   - **Valeur** : `20 km`
   - **Libellé** : Portée de transmission vidéo O4 Enterprise
 - **Chiffre 4** : 
-  - **Valeur** : `Jusqu'à 40 kg`
-  - **Libellé** : Capacité de fret lourd (DJI FlyCart)
+  - **Valeur** : `Jusqu'à 30 kg`
+  - **Libellé** : Capacité de fret lourd (DJI FlyCart 30)
 
 ---
 

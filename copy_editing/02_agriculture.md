@@ -1,10 +1,12 @@
 # Page : Gamme Agriculture DJI Agras (agriculture.html)
 
+> 🕒 **Dernière synchronisation avec le site :** 14 septembre 2026 à 12:05 (EDT) — *Toutes les modifications de ce fichier ont été appliquées au code source du site web.*
+
 ---
 
 ## 0. SEO & Métadonnées
 - **Balise Title** : DJI Agriculture — Drones Agricoles Agras en Algérie | Equip Drones
-- **Meta Description** : Gamme complète des drones agricoles DJI Agras distribués en Algérie par SARL Equip Drones : T55, T100, T70P, T50, T25P, Mavic 3M. Pulvérisation, épandage et cartographie.
+- **Meta Description** : Gamme complète des drones agricoles DJI Agras distribués en Algérie par SARL Equip Drones : T55, T70P, T25P, Mavic 3M. Pulvérisation, épandage et cartographie.
 
 ---
 
@@ -62,7 +64,7 @@
 
 ### Les 3 blocs d'accompagnement :
 1. **01 — CONSEIL : Choix d'appreils**
-   - *Texte* : Nous analysons vos besoins (cultures, relief, rotation) pour déterminer le modèle et les accessoires adapté à votre projet.
+   - *Texte* : Nous analysons vos besoins (cultures, relief, rotation) pour déterminer le modèle et les accessoires adaptés à votre projet.
 2. **02 — FORMATION PILOTES : Prise en main & Sécurité**
    - *Texte* : Formation pratique de vos opérateurs aux plans de vol automatisés, à l'étalonnage des buses centrifuges et aux protocoles d'entretien quotidien.
 3. **03 — ATELIER & PIÈCES : Continuité de chantier**

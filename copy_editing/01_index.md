@@ -1,5 +1,7 @@
 # Page : Accueil (index.html)
 
+> 🕒 **Dernière synchronisation avec le site :** 14 septembre 2026 à 12:05 (EDT) — *Toutes les modifications de ce fichier ont été appliquées au code source du site web.*
+
 ---
 
 ## 0. SEO & Métadonnées
@@ -11,7 +13,7 @@
 ## 1. Hero Section (En-tête principal)
 - **Emplacement** : Haut de page (`.hero`)
 - **Eyebrow (Surtitre)** : Distributeur officiel DJI — Algérie
-- **Titre principal (H1)** : Le drone agricole permet une gestion <br>numérique, informative, intelligente et précise des cultures.
+- **Titre principal (H1)** : Le drone agricole permet une gestion numérique, informative, intelligente et précise des cultures.
 - **Introduction (Lead)** : SARL Equip Drones équipe les exploitations et les prestataires algériens en drones DJI : pulvérisation, épandage, cartographie des cultures et inspection. Vente, formation des pilotes, maintenance et pièces détachées assurées ici, en Algérie.
 - **Bouton CTA 1** : Demander un devis
 - **Bouton CTA 2** : Découvrir les gammes

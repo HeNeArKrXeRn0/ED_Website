@@ -1,0 +1,23 @@
+﻿Drone;Mavic 3M
+Availability;Coming Soon
+Flight Time (min);43
+Flight Radius (km);32
+Max. Flight Altitude (m);500
+Empty Weight (kg);0,95
+Max. Takeoff Weight (kg);1,05
+Max. Speed (m/s);21
+Wind Resistance (m/s);12
+RTK;TRUE
+GNSS;TRUE
+Vision System;TRUE
+RGB Camera;4/3 CMOS, Effective Pixels: 20 MP
+Multispectral Camera;1/2.8-inch CMOS, effective pixels: 5 MP
+Multispectral Camera Band;"Green (G): 560 ± 16 nm;"
+Multispectral Camera Band;"Red (R): 650 ± 16 nm;"
+Multispectral Camera Band;"Red Edge (RE): 730 ± 16 nm;"
+Multispectral Camera Band;"Near infrared (NIR): 860 ± 26 nm;"
+;
+;
+;
+;
+;

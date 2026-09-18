@@ -23,7 +23,8 @@ window.ED_CONTACT = {
   facebook:   'https://www.facebook.com/profile.php?id=61571771371833',
   linkedin:   'https://www.linkedin.com/company/equip-drones/',
   youtube:    'https://www.youtube.com/@equip_drones_algeria',
-  logo:       'assets/img/svg/Logo.svg'
+  logo:       'assets/img/svg/Logo.svg',
+  djiLogo:    'assets/img/photos/DJI_logo_white.png'
 };
 
 /* Photos d'ambiance reprises du site existant, hébergées en local */
@@ -33,7 +34,8 @@ window.ED_PHOTOS = {
   flag:       'assets/img/photos/flag.jpg',
   operator:   'assets/img/photos/operator.jpg',
   background: 'assets/img/photos/background.jpg',
-  djiAg:      'assets/img/photos/dji-ag.png'
+  djiAg:      'assets/img/photos/dji-ag.png',
+  services:   'assets/img/photos/06_services_IMG01.jpg'
 };
 
 /* --------------------------------------------------------------------------
@@ -407,112 +409,39 @@ window.ED_PRODUCTS = [
     },
     useCases: ['cartographie'],
     highlights: [
-      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '43 min' },
-      { label: { fr: 'Capteur RVB', en: 'RGB sensor' }, value: '20 Mpx' },
-      { label: { fr: 'Multispectral', en: 'Multispectral' }, value: '4 bandes' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '43 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '32 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Caméra multispectrale', en: 'Multispectral Camera' }, value: 'G/R/RE/NIR', icon: 'assets/img/svg_icons/simple_camera.svg' },
     ],
     specs: [
       {
-        group: { fr: 'Général', en: 'General' },
+        group: { fr: 'Performances', en: 'Performance' },
         rows: [
-        { label: { fr: 'Année de lancement', en: 'Year Introduced' }, value: '2022 (launch announced 2022-11-23)' },
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '43 min' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '32 km' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
+          { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: '0,95 kg' },
+          { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '1,05 kg' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '21 m/s' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
         ]
       },
       {
-        group: { fr: 'Pulvérisation', en: 'Spraying' },
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
         rows: [
-        { label: { fr: 'Capacité de la cuve de pulvérisation', en: 'Spray Tank Capacity' }, value: '—' },
-        { label: { fr: 'Débit de pulvérisation max.', en: 'Max Spray Flow Rate' }, value: '—' },
-        { label: { fr: 'Nombre et type de buses', en: 'Number of Nozzles / Nozzle Type' }, value: '—' },
-        { label: { fr: 'Rendement max. en pulvérisation', en: 'Max Operating Field Efficiency - Spraying' }, value: '—' },
-        ]
-      },
-      {
-        group: { fr: 'Épandage', en: 'Spreading' },
-        rows: [
-        { label: { fr: 'Capacité de la trémie de granulés', en: 'Spreader / Granule Tank Capacity' }, value: '—' },
-        { label: { fr: 'Rendement max. en épandage', en: 'Max Operating Field Efficiency - Spreading' }, value: '—' },
-        ]
-      },
-      {
-        group: { fr: 'Aéronef et performances', en: 'Aircraft and performance' },
-        rows: [
-        { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: '1,050 g' },
-        { label: { fr: 'Masse nette (hélices et module RTK)', en: 'Net Weight (with propellers and RTK module)' }, value: '951 g' },
-        { label: { fr: 'Charge utile max.', en: 'Max Payload / Carry Capacity' }, value: '—' },
-        { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (without wind)' }, value: '43 minutes' },
-        { label: { fr: 'Autonomie en vol stationnaire (sans vent)', en: 'Max Hover Time (without wind)' }, value: '37 minutes' },
-        { label: { fr: 'Distance de vol max.', en: 'Max Flight Distance' }, value: '32 km' },
-        { label: { fr: 'Vitesse max. (niveau de la mer, sans vent)', en: 'Max Flight Speed (at sea level, no wind)' }, value: '15 m/s (Normal Mode); Flying forward: 21 m/s, flying sideways: 20 m/s, flying backwards: 19 m/s (Sport mode)' },
-        { label: { fr: 'Vitesse ascensionnelle / de descente max.', en: 'Max Ascent / Descent Speed' }, value: 'Ascent: 6 m/s (Normal Mode), 8 m/s (Sport Mode); Descent: 6 m/s (Normal Mode), 6 m/s (Sport Mode)' },
-        { label: { fr: 'Résistance au vent', en: 'Max Wind Speed Resistance' }, value: '12 m/s' },
-        { label: { fr: 'Altitude max. de décollage', en: 'Max Take-off Altitude Above Sea Level' }, value: '6000 m (without a payload)' },
-        { label: { fr: 'Précision en vol stationnaire', en: 'Hovering Accuracy Range' }, value: 'Vertical: ±0.1 m (Vision Positioning enabled); ±0.5 m (GNSS Positioning enabled); ±0.1 m (D-RTK enabled). Horizontal: ±0.3 m (Vision Positioning enabled); ±0.5 m (HD Positioning enabled); ±0.1 m (RTK enabled)' },
-        { label: { fr: 'Diagonale / empattement', en: 'Diagonal Length / Wheelbase' }, value: 'Diagonal: 380.1 mm' },
-        { label: { fr: 'Dimensions (replié / déplié)', en: 'Dimensions (Folded/Unfolded)' }, value: 'Folded (without propellers): 223×96.3×122.2 mm (Length×Width×Height); Unfolded (without propellers): 347.5×283×139.6 mm (Length×Width×Height)' },
-        { label: { fr: 'Modèle de moteur et d’hélice', en: 'Motor / Propeller Model' }, value: 'Motor Model Number 2008; Propeller Model Number 9453F Enterprise Edition' },
-        ]
-      },
-      {
-        group: { fr: 'Détection et sécurité', en: 'Sensing and safety' },
-        rows: [
-        { label: { fr: 'Système de détection d’obstacles', en: 'Obstacle Sensing System' }, value: 'Omnidirectional binocular vision system, with an infrared sensor at the bottom of the aircraft. Forward: Distance Measuring Range 0.5 m to 20 m, Detection Range 0.5 m to 200 m, FOV Horizontal 90°, vertical 103°; Backward: 0.5 m to 16 m, FOV Horizontal 90°, vertical 103°; Lateral: 0.5 m to 25 m, FOV Horizontal 90°, vertical 85°; Upward: 0.2 m to 10 m, FOV Front and rear 100°, left and right 90°; Downward: 0.3 m to 18 m, FOV Front and rear 130°, left and right 160°' },
-        ]
-      },
-      {
-        group: { fr: 'Positionnement', en: 'Positioning' },
-        rows: [
-        { label: { fr: 'Précision de positionnement RTK', en: 'RTK Positioning Accuracy' }, value: 'Fixed RTK: Horizontal: 1 cm + 1 ppm; Vertical: 1.5 cm + 1 ppm' },
-        { label: { fr: 'GNSS', en: 'GNSS' }, value: 'GPS + Galileo + BeiDou + GLONASS (GLONASS is supported only when RTK module is enabled)' },
-        { label: { fr: 'Module RTK', en: 'RTK Module' }, value: 'Dimensions 50.2×40.2×66.2 mm, Weight 24±2 g, Interface USB-C, Power approximately 1.2 watts' },
-        ]
-      },
-      {
-        group: { fr: 'Imagerie et capteurs', en: 'Imaging and sensors' },
-        rows: [
-        { label: { fr: 'Bande de fréquence', en: 'Operating Band' }, value: '2.400-2.4835 GHz; 5.725-5.850 GHz' },
-        { label: { fr: 'Caméra RVB — Capteur d’image', en: 'RGB Camera - Image Sensor' }, value: '4/3 CMOS, Effective Pixels: 20 MP' },
-        { label: { fr: 'Caméra RVB — Objectif', en: 'RGB Camera - Lens' }, value: 'FOV: 84°; Equivalent focal length: 24 mm; Aperture: f/2.8 to f/11; Focus: 1 m to ∞' },
-        { label: { fr: 'Caméra RVB — Taille max. des images', en: 'RGB Camera - Max Image Size' }, value: '5280×3956' },
-        { label: { fr: 'Caméra RVB — ISO / obturateur', en: 'RGB Camera - ISO / Shutter' }, value: 'ISO 100-6400; Electronic shutter: 8-1/8000 s; Mechanical shutter: 8-1/2000 s' },
-        { label: { fr: 'Caméra RVB — Résolution vidéo', en: 'RGB Camera - Video Resolution' }, value: 'H.264: 4K: 3840×2160@30fps; FHD: 1920×1080@30fps (Max Video Bitrate 4K: 130Mbps, FHD: 70Mbps)' },
-        { label: { fr: 'Caméra RVB — Format photo / vidéo', en: 'RGB Camera - Image / Video Format' }, value: 'JPEG/DNG (RAW); MP4 (MPEG-4 AVC/H.264)' },
-        { label: { fr: 'Caméra multispectrale — Capteur d’image', en: 'Multispectral Camera - Image Sensor' }, value: '1/2.8-inch CMOS, effective pixels: 5 MP' },
-        { label: { fr: 'Caméra multispectrale — Bandes spectrales', en: 'Multispectral Camera - Bands' }, value: 'Green (G): 560 ± 16 nm; Red (R): 650 ± 16 nm; Red Edge (RE): 730 ± 16 nm; Near infrared (NIR): 860 ± 26 nm' },
-        { label: { fr: 'Caméra multispectrale — Objectif', en: 'Multispectral Camera - Lens' }, value: 'FOV: 73.91° (61.2° x 48.10°); Equivalent focal length: 25 mm; Aperture: f/2.0; Focus: Fixed Focus' },
-        { label: { fr: 'Caméra multispectrale — Taille max. des images', en: 'Multispectral Camera - Max Image Size' }, value: '2592×1944' },
-        { label: { fr: 'Caméra multispectrale — Gain / obturateur', en: 'Multispectral Camera - Gain / Shutter' }, value: 'Gain Range 1x-32x; Electronic Shutter: 1/30~1/12800 s' },
-        { label: { fr: 'Caméra multispectrale — Format d’image', en: 'Multispectral Camera - Image Format' }, value: 'TIFF' },
-        { label: { fr: 'Caméra multispectrale — Résolution vidéo', en: 'Multispectral Camera - Video Resolution' }, value: 'H.264, FHD: 1920 x 1080@30fps; Video content: NDVI/GNDVI/NDRE (Max Video Bitrate: Stream 60 Mbps)' },
-        { label: { fr: 'Capteur d’ensoleillement', en: 'Light / Sunlight Sensor' }, value: 'Built-in module' },
-        { label: { fr: 'Nacelle', en: 'Gimbal' }, value: '3-axis mechanical gimbal (tilt, roll, pan); Mechanical Range: Tilt -135° to 45°, Roll -45° to 45°, Pan -27° to 27°; Controllable Range: Tilt -90° to 35°; Max Control Speed (tilt) 100°/s; Angular Vibration Range ±0.007°' },
-        ]
-      },
-      {
-        group: { fr: 'Transmission et radiocommande', en: 'Transmission and controller' },
-        rows: [
-        { label: { fr: 'Système de transmission vidéo', en: 'Video Transmission System' }, value: 'DJI O3 Image Transmission Industry Edition' },
-        { label: { fr: 'Portée utile max. du signal (sans obstacle ni interférence)', en: 'Max Effective Signal Distance (Unobstructed, No interference)' }, value: 'FCC: 15 km; CE: 8 km; SRRC: 8 km; MIC: 8 km' },
-        { label: { fr: 'Portée de transmission max. (Obstructed)', en: 'Max Transmission Distance (Obstructed)' }, value: 'Strong Interference (urban landscapes, residential areas, etc.): 1.5-3 km (FCC/CE/SRRC/MIC); Medium Interference (suburban landscapes, city parks, etc.): 3-9 km (FCC), 3-6 km (CE/SRRC/MIC); Weak Interference (remote fields, open farmland, etc.): 9-15 km (FCC), 6-8 km (CE/SRRC/MIC)' },
-        { label: { fr: 'Qualité du retour vidéo / Latence', en: 'Live View Quality / Latency' }, value: 'Remote Controller: 1080p/30fps; Latency approximately 200 milliseconds' },
-        { label: { fr: 'Radiocommande', en: 'Remote Controller' }, value: 'DJI RC Pro Enterprise Edition (Model RM510B), 5.5-inch 1920×1080 screen, 60 fps, 1,000 nits, 10-point multi-touch; Battery 5000 mAh 7.2 V; Operating Time approx. 3 hours; Internal Memory (ROM) 64 GB' },
-        ]
-      },
-      {
-        group: { fr: 'Batterie et alimentation', en: 'Battery and power' },
-        rows: [
-        { label: { fr: 'Modèle de batterie / Capacity', en: 'Battery Model / Capacity' }, value: '5000 mAh, Standard Voltage 15.4 V, Max Charging Voltage 17.6 V, Battery Type LiPo 4S (Lithium Cobalt), Energy 77 watt-hours, Weight 335.5 g' },
-        { label: { fr: 'Temps de charge de la batterie', en: 'Battery Charge Time' }, value: 'Approx. 1.5 hours (measured when only using the 100W Battery Charging Hub, or when using a 15V USB charger); approximately 2 hours (12V USB charger); approximately 2 hours and 50 minutes (100W Battery Charging Hub charging aircraft and remote control at the same time)' },
-        ]
-      },
-      {
-        group: { fr: 'Environnement', en: 'Environment' },
-        rows: [
-        { label: { fr: 'Température d’exploitation', en: 'Operating Temperature' }, value: '-10° to 40° C (14° to 104° F)' },
-        { label: { fr: 'Indice de protection', en: 'IP Rating' }, value: '—' },
+          { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (omnidirectionnel)', en: 'Included (Omnidirectional)' } },
+          { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS, Effective Pixels: 20 MP' },
+          { label: { fr: 'Caméra multispectrale', en: 'Multispectral Camera' }, value: '1/2.8-inch CMOS, Effective Pixels: 5 MP' },
+          { label: { fr: 'Bande multispectrale — Vert (G)', en: 'Multispectral Band — Green (G)' }, value: '560 ± 16 nm' },
+          { label: { fr: 'Bande multispectrale — Rouge (R)', en: 'Multispectral Band — Red (R)' }, value: '650 ± 16 nm' },
+          { label: { fr: 'Bande multispectrale — Red Edge (RE)', en: 'Multispectral Band — Red Edge (RE)' }, value: '730 ± 16 nm' },
+          { label: { fr: 'Bande multispectrale — Proche infrarouge (NIR)', en: 'Multispectral Band — Near infrared (NIR)' }, value: '860 ± 26 nm' },
         ]
       },
     ],
+    compatiblePayloads: [],
     availability: 'coming_soon',
     image: 'assets/img/products/mavic-3m.png',
     imageFallback: 'assets/img/svg/mavic-fold.svg',
@@ -1295,7 +1224,7 @@ window.ED_PRODUCTS = [
       },
     ],
     availability: 'discontinued',
-    image: 'assets/img/products/matrice-30t.png',
+    image: 'assets/img/products/Matrice-30-T.webp',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://enterprise.dji.com/matrice-30',
     compatiblePayloads: []
@@ -1353,7 +1282,7 @@ window.ED_PRODUCTS = [
       },
     ],
     availability: 'coming_soon',
-    image: 'assets/img/products/matrice-4td.png',
+    image: 'assets/img/products/Matrice-4-TD.webp',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://enterprise.dji.com',
     compatiblePayloads: []
@@ -1438,7 +1367,7 @@ window.ED_PRODUCTS = [
     ],
     specs: [],
     availability: 'coming_soon',
-    image: 'assets/img/products/flycart-30.png',
+    image: 'assets/img/products/flycart-30.webp',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://enterprise.dji.com/flycart-30',
     compatiblePayloads: []
@@ -1490,11 +1419,34 @@ window.ED_PRODUCTS = [
     },
     useCases: [],
     highlights: [
-      { label: { fr: 'Capteur', en: 'Sensor' }, value: '1" CMOS' },
-      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K/60fps HDR' },
-      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '45 min' }
+      { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '720 g', icon: 'assets/img/svg_icons/payload.svg', key: 'takeoff-weight' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '45 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '32 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '720 g' },
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '45 min' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '21 m/s' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '32 km' },
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '120 m' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '6000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: '1-inch CMOS, 50MP Effective Pixels; FOV 84°; f/1.8' },
+          { label: { fr: 'Téléobjectif moyen', en: 'Medium Tele Camera' }, value: '1/1.3-inch CMOS, 48MP Effective Pixels; FOV 35°; f/2.8' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
     image: 'assets/img/products/air-3s.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
@@ -1518,12 +1470,36 @@ window.ED_PRODUCTS = [
     },
     useCases: [],
     highlights: [
-      { label: { fr: 'Poids', en: 'Weight' }, value: '< 249 g' },
-      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K/60fps HDR' },
-      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '34 min' }
+      { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '249 g', icon: 'assets/img/svg_icons/payload.svg', key: 'takeoff-weight' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '34 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '18 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
     ],
-    specs: [],
-    availability: 'coming_soon',
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '249 g' },
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '34 min' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '16 m/s' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '18 km' },
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '120 m' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '4000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '11 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Non inclus', en: 'Not included' } },
+          { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: '1/1.3-inch CMOS, Effective Pixels: 48 MP' },
+          { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '82.1°' },
+          { label: { fr: 'Caméra principale — Ouverture', en: 'Main Camera — Aperture' }, value: 'f/1.7' },
+        ]
+      },
+    ],
+    availability: 'discontinued',
     image: 'assets/img/products/mini-4-pro.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://www.dji.com/mini-4-pro',
@@ -1546,11 +1522,35 @@ window.ED_PRODUCTS = [
     },
     useCases: [],
     highlights: [
-      { label: { fr: 'Poids', en: 'Weight' }, value: '< 249 g' },
-      { label: { fr: 'Résolution', en: 'Resolution' }, value: '4K/120fps' },
-      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '38 min' }
+      { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '249 g', icon: 'assets/img/svg_icons/payload.svg', key: 'takeoff-weight' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '36 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '21 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '249 g' },
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '36 min' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '19 m/s' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '21 km' },
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '120 m' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '6000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: '1-inch CMOS, 50MP Effective Pixels' },
+          { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '84°' },
+          { label: { fr: 'Caméra principale — Ouverture', en: 'Main Camera — Aperture' }, value: 'f/1.8' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
     image: 'assets/img/products/mini-5-pro.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
@@ -1574,11 +1574,35 @@ window.ED_PRODUCTS = [
     },
     useCases: [],
     highlights: [
-      { label: { fr: 'Format', en: 'Format' }, value: 'Ultra-pliable' },
-      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K stabilisée' },
-      { label: { fr: 'Contrôle', en: 'Control' }, value: 'Gestuel & App' }
+      { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '233 g', icon: 'assets/img/svg_icons/payload.svg', key: 'takeoff-weight' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '31 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '14 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '233 g' },
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '31 min' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '12 m/s' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '14 km' },
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '120 m' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '3000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '11 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Non inclus', en: 'Not included' } },
+          { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: '1/1.3-inch CMOS' },
+          { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '82.1°' },
+          { label: { fr: 'Caméra principale — Ouverture', en: 'Main Camera — Aperture' }, value: 'f/1.7' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
     image: 'assets/img/products/flip.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
@@ -1602,11 +1626,87 @@ window.ED_PRODUCTS = [
     },
     useCases: [],
     highlights: [
-      { label: { fr: 'Suivi IA', en: 'AI Tracking' }, value: 'ActiveTrack 360' },
-      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K/60fps' },
-      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '31 min' }
+      { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '183 g', icon: 'assets/img/svg_icons/payload.svg', key: 'takeoff-weight' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '52 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '32 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '183 g' },
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '52 min' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '18 m/s' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '32 km' },
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '120 m' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '4500 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '11 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Non inclus', en: 'Not included' } },
+          { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: '1/2-inch CMOS, 48MP Effective Pixels' },
+          { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '79°' },
+          { label: { fr: 'Caméra principale — Ouverture', en: 'Main Camera — Aperture' }, value: 'f/1.8' },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/lito-1.png',
+    imageFallback: 'assets/img/svg/aircraft.svg',
+    djiUrl: 'https://www.dji.com',
+    compatiblePayloads: []
+  },
+
+  {
+    id: 'lito-x1',
+    name: 'DJI Lito X1',
+    segment: 'camera',
+    category: 'camera',
+    type: 'aircraft',
+    tagline: {
+      fr: 'Version étendue du Lito 1 avec suivi intelligent IA et grande stabilité.',
+      en: 'Extended version of the Lito 1 with intelligent AI subject tracking.'
+    },
+    usage: {
+      fr: 'Idéal pour le vlogging dynamique, les activités sportives et les prises de vue automatisées.',
+      en: 'Ideal for dynamic vlogging, outdoor action sports, and automated tracking.'
+    },
+    useCases: [],
+    highlights: [
+      { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '183 g', icon: 'assets/img/svg_icons/payload.svg', key: 'takeoff-weight' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '52 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '32 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '183 g' },
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '52 min' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '18 m/s' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '32 km' },
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '120 m' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '4500 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '11 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: '1/1.3-inch CMOS, 48MP Effective Pixels' },
+          { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '82.1°' },
+          { label: { fr: 'Caméra principale — Ouverture', en: 'Main Camera — Aperture' }, value: 'f/1.7' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
     image: 'assets/img/products/lito-1.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
@@ -1630,11 +1730,35 @@ window.ED_PRODUCTS = [
     },
     useCases: [],
     highlights: [
-      { label: { fr: 'Optique', en: 'Optics' }, value: 'Triple Hasselblad' },
-      { label: { fr: 'Vidéo', en: 'Video' }, value: '5.1K / 4K 120fps' },
-      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '46 min' }
+      { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '1063 g', icon: 'assets/img/svg_icons/payload.svg', key: 'takeoff-weight' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '51 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '41 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '1063 g' },
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '51 min' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '25 m/s' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '41 km' },
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '120 m' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '6000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: '4/3 CMOS, Effective Pixels: 100 MP; FOV 72°; f/2.0' },
+          { label: { fr: 'Téléobjectif moyen', en: 'Medium Tele Camera' }, value: '1/1.3-inch CMOS, Effective Pixels: 48 MP; FOV 35°; f/2.8' },
+          { label: { fr: 'Téléobjectif', en: 'Telephoto Camera' }, value: '1/1.5-inch CMOS, Effective Pixels: 50 MP; FOV 15°; f/2.8' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
     image: 'assets/img/products/mavic-4-pro.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
@@ -1649,8 +1773,8 @@ window.ED_PRODUCTS = [
     category: 'camera',
     type: 'aircraft',
     tagline: {
-      fr: 'Nanodrone ultra-léger (135 g) avec décollage de la paume et commandes simplifiées.',
-      en: 'Ultra-light nano drone (135g) with palm takeoff and simplified controls.'
+      fr: 'Nanodrone ultra-léger (160 g) avec décollage de la paume et commandes simplifiées.',
+      en: 'Ultra-light nano drone (160g) with palm takeoff and simplified controls.'
     },
     usage: {
       fr: 'Décollez directement de la main sans radiocommande. Le compagnon quotidien parfait pour des plans aériens créatifs instantanés.',
@@ -1658,11 +1782,35 @@ window.ED_PRODUCTS = [
     },
     useCases: [],
     highlights: [
-      { label: { fr: 'Poids', en: 'Weight' }, value: '135 g' },
-      { label: { fr: 'Décollage', en: 'Takeoff' }, value: 'Paume de la main' },
-      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K Ultra HD' }
+      { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '160 g', icon: 'assets/img/svg_icons/payload.svg', key: 'takeoff-weight' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '19 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '7 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '160 g' },
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '19 min' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '12 m/s' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '7 km' },
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '120 m' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '2000 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '11 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: '1/2-inch CMOS' },
+          { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '119.8°' },
+          { label: { fr: 'Caméra principale — Ouverture', en: 'Main Camera — Aperture' }, value: 'f/2.2' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
     image: 'assets/img/products/neo-2.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
@@ -1686,11 +1834,35 @@ window.ED_PRODUCTS = [
     },
     useCases: [],
     highlights: [
-      { label: { fr: 'Immersion', en: 'Immersion' }, value: 'Casque FPV HD' },
-      { label: { fr: 'Vidéo', en: 'Video' }, value: '4K/60fps' },
-      { label: { fr: 'Sécurité', en: 'Safety' }, value: 'Protection intégrée' }
+      { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '455 g', icon: 'assets/img/svg_icons/payload.svg', key: 'takeoff-weight' },
+      { label: { fr: 'Autonomie', en: 'Flight time' }, value: '23 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '13 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Performances', en: 'Performance' },
+        rows: [
+          { label: { fr: 'Masse au décollage', en: 'Takeoff Weight' }, value: '455 g' },
+          { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '23 min' },
+          { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '18 m/s' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '13 km' },
+          { label: { fr: 'Altitude de vol max.', en: 'Max Flight Altitude' }, value: '120 m' },
+          { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '4500 m' },
+          { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '11 m/s' },
+        ]
+      },
+      {
+        group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
+        rows: [
+          { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
+          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: 'Two 1/1.1-Inch CMOS; Effective Pixels 64MP' },
+          { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '200°' },
+          { label: { fr: 'Caméra principale — Ouverture', en: 'Main Camera — Aperture' }, value: 'f/1.9' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
     image: 'assets/img/products/avata-360.png',
     imageFallback: 'assets/img/svg/aircraft.svg',

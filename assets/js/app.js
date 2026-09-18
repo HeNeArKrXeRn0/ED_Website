@@ -23,7 +23,8 @@
     facebook:   'https://www.facebook.com/profile.php?id=61571771371833',
     linkedin:   'https://www.linkedin.com/company/equip-drones/',
     youtube:    'https://www.youtube.com/@equip_drones_algeria',
-    logo:       'https://equipdrones.carrd.co/assets/images/image04.png'
+    logo:       'assets/img/svg/Logo.svg',
+    djiLogo:    'assets/img/photos/DJI_logo_white.png'
   };
 
   /* ---------------------------------------------------------------- utils */
@@ -228,9 +229,12 @@
       '<header class="site-header">' +
         '<div class="wrap">' +
           '<a class="brand" href="index.html" aria-label="' + esc(CONTACT.company) + '">' +
-            '<img src="' + esc(CONTACT.logo) + '" alt="' + esc(CONTACT.company) + '" ' +
+            '<img class="brand-logo" src="' + esc(CONTACT.logo) + '" alt="' + esc(CONTACT.company) + '" ' +
                  'onerror="this.onerror=null;this.style.display=\'none\'">' +
             '<span class="brand-text">Equip Drones</span>' +
+            (CONTACT.djiLogo ? '<span class="brand-divider" aria-hidden="true"></span>' +
+            '<img class="brand-dji" src="' + esc(CONTACT.djiLogo) + '" alt="DJI" ' +
+                 'onerror="this.onerror=null;this.style.display=\'none\'">' : '') +
           '</a>' +
           '<nav class="nav" id="ed-nav">' + links + '</nav>' +
           '<div class="header-actions">' +
@@ -264,8 +268,10 @@
           '<div class="footer-grid">' +
             '<div>' +
               '<div class="brand mb-4">' +
-                '<img src="' + esc(CONTACT.logo) + '" alt="" onerror="this.onerror=null;this.style.display=\'none\'">' +
+                '<img class="brand-logo" src="' + esc(CONTACT.logo) + '" alt="" onerror="this.onerror=null;this.style.display=\'none\'">' +
                 '<span class="brand-text">Equip Drones</span>' +
+                (CONTACT.djiLogo ? '<span class="brand-divider" aria-hidden="true"></span>' +
+                '<img class="brand-dji" src="' + esc(CONTACT.djiLogo) + '" alt="DJI" onerror="this.onerror=null;this.style.display=\'none\'">' : '') +
               '</div>' +
               '<p class="small measure" data-i18n="foot.tagline">' + t('foot.tagline') + '</p>' +
               '<div class="socials mt-5">' +

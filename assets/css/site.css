@@ -88,7 +88,7 @@
 
   --t: 180ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  --header-h: 68px;
+  --header-h: 74px;
 }
 
 /* --------------------------------------------------------------------------
@@ -265,10 +265,26 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .site-header .wrap { height: 100%; display: flex; align-items: center; gap: var(--s5); }
 
 .brand { display: flex; align-items: center; gap: var(--s3); flex-shrink: 0; }
-.brand img { height: 30px; width: auto; }
+.brand img { height: 45px; width: auto; }
 .brand-text {
-  font-family: var(--mono); font-size: 13px; font-weight: 700;
+  font-family: var(--mono); font-size: 15px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
+}
+.brand-divider {
+  display: inline-block;
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+  margin-inline: 4px;
+}
+.brand-dji {
+  height: 27px !important;
+  width: auto !important;
+  opacity: 0.9;
+  transition: opacity var(--t);
+}
+.brand:hover .brand-dji {
+  opacity: 1;
 }
 
 .nav { display: flex; align-items: center; gap: var(--s5); margin-left: auto; }
@@ -325,7 +341,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero-actions { display: flex; gap: var(--s3); flex-wrap: wrap; margin-top: var(--s6); }
 .hero .lead { margin-top: var(--s5); max-width: 52ch; }
 .hero-media { position: relative; }
-.hero-media img { width: 100%; object-fit: contain; }
+.hero-media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
 
 .page-head { padding-block: var(--s8) var(--s6); border-bottom: 1px solid var(--border-soft); }
 .page-head .lead { margin-top: var(--s4); }
@@ -350,6 +371,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .stat-label {
   margin-top: var(--s3); font-size: 12px; color: var(--muted);
   letter-spacing: 0.04em; line-height: 1.4;
+}
+.stat .spec-icon {
+  margin-bottom: var(--s3);
 }
 
 /* --------------------------------------------------------------------------
@@ -641,6 +665,23 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   padding-block: var(--s8) var(--s6);
   margin-top: var(--s9);
 }
+.site-footer .brand {
+  gap: var(--s4);
+}
+.site-footer .brand img.brand-logo,
+.site-footer .brand > img:first-child {
+  height: 60px;
+}
+.site-footer .brand-text {
+  font-size: 18px;
+}
+.site-footer .brand-divider {
+  height: 32px;
+  margin-inline: var(--s2);
+}
+.site-footer .brand-dji {
+  height: 36px !important;
+}
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: var(--s7); }
 .footer-title {
   font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em;
@@ -746,6 +787,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .btn { width: 100%; }
   .row .btn, .btn-row .btn, .p-card-actions .btn, .hero-actions .btn { width: auto; }
   .hero-actions .btn { flex: 1 1 auto; }
+}
+
+@media (max-width: 440px) {
+  .site-header .brand-text { display: none; }
 }
 
 /* --------------------------------------------------------------------------

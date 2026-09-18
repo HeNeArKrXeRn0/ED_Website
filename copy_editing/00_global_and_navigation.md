@@ -1,5 +1,7 @@
 # Éléments Globaux (En-tête, Navigation & Pied de Page)
 
+> 🕒 **Dernière synchronisation avec le site :** 14 septembre 2026 à 12:05 (EDT) — *Toutes les modifications de ce fichier ont été appliquées au code source du site web.*
+
 > Ces textes s'affichent de façon transversale sur l'ensemble des pages du site. Ils sont gérés via le template partagé et le dictionnaire de traduction (`i18n.js` / `app.js`).
 
 ---
