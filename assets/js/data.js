@@ -492,11 +492,11 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Radar', en: 'Radar' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Accessoires de nacelle', en: 'Gimbal Accessory' }, value: { fr: 'Série Zenmuse (H30T, L2, P1...)', en: 'Zenmuse Series' } },
+          { label: { fr: 'Accessoires de nacelle', en: 'Gimbal Accessory' }, value: { fr: 'Série Zenmuse (H30, H30T, L3, S1, V1, L2, P1)', en: 'Zenmuse Series (H30, H30T, L3, S1, V1, L2, P1)' } },
         ]
       },
     ],
-    compatiblePayloads: ['zenmuse-h30t', 'zenmuse-l2', 'zenmuse-p1', 'd-rtk-3'],
+    compatiblePayloads: ['zenmuse-h30', 'zenmuse-h30t', 'zenmuse-l3', 'zenmuse-s1', 'zenmuse-v1', 'zenmuse-l2', 'zenmuse-p1', 'd-rtk-3'],
     availability: 'coming_soon',
     image: 'assets/img/products/matrice-400.png',
     imageFallback: 'assets/img/svg/matrice-quad.svg',
@@ -656,11 +656,11 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (6 directions)', en: 'Included (6 Directions)' } },
           { label: { fr: 'Radar', en: 'Radar' }, value: { fr: 'Compatible (Radar CSM)', en: 'Compatible (CSM Radar)' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Compatible (Zenmuse L2)', en: 'Compatible (Zenmuse L2)' } },
-          { label: { fr: 'Accessoires de nacelle', en: 'Gimbal Accessory' }, value: { fr: 'Série Zenmuse (H30T, H20N, L2, P1)', en: 'Zenmuse Series (H30T, H20N, L2, P1)' } },
+          { label: { fr: 'Accessoires de nacelle', en: 'Gimbal Accessory' }, value: { fr: 'Série Zenmuse (H20, H20T, H20N, H30T, L2, P1)', en: 'Zenmuse Series (H20, H20T, H20N, H30T, L2, P1)' } },
         ]
       },
     ],
-    compatiblePayloads: ['zenmuse-h30t', 'zenmuse-h20n', 'zenmuse-l2', 'zenmuse-p1', 'd-rtk-3'],
+    compatiblePayloads: ['zenmuse-h30t', 'zenmuse-h20', 'zenmuse-h20t', 'zenmuse-h20n', 'zenmuse-l2', 'zenmuse-p1', 'd-rtk-3'],
     availability: 'discontinued',
     image: 'assets/img/products/matrice-350-rtk.png',
     imageFallback: 'assets/img/svg/matrice-quad.svg',
@@ -879,7 +879,7 @@ window.ED_PRODUCTS = [
   /* ====================== CHARGES UTILES & ACCESSOIRES ==================== */
   {
     id: 'zenmuse-h30t',
-    segment: 'agriculture',
+    segment: 'enterprise',
     name: 'DJI Zenmuse H30T',
     category: 'enterprise',
     type: 'payload',
@@ -903,7 +903,7 @@ window.ED_PRODUCTS = [
         rows: [
         { label: { fr: 'Présentation', en: 'What it is' }, value: 'Flagship multi-sensor enterprise gimbal payload combining a 40 MP zoom camera, 48 MP wide camera, 1280×1024 infrared thermal camera, laser rangefinder and NIR auxiliary light for inspection, public safety and search-and-rescue.' },
         { label: { fr: 'Éclairage d’appoint proche infrarouge', en: 'NIR Auxiliary Light' }, value: 'FOV 4.6±0.6° (round); Illumination Range @100 m: approx. 8 m diameter circle' },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400; Matrice 350 RTK; Matrice 300 RTK (requires DJI RC Plus)' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
         ]
       },
       {
@@ -911,11 +911,13 @@ window.ED_PRODUCTS = [
         rows: [
         { label: { fr: 'Masse', en: 'Weight' }, value: '920±5 g' },
         { label: { fr: 'Dimensions', en: 'Dimensions' }, value: '170×145×165 mm (L×W×H)' },
+        { label: { fr: 'Statut (référentiel zenmuse_specs.csv)', en: 'Status (zenmuse_specs.csv)' }, value: 'Coming Soon' },
         ]
       },
       {
         group: { fr: 'Positionnement', en: 'Positioning' },
         rows: [
+        { label: { fr: 'Télémètre laser — portée (CSV)', en: 'Laser Rangefinder — Range (CSV)' }, value: '3000 m' },
         { label: { fr: 'Télémètre laser — précision', en: 'Laser Rangefinder — Accuracy' }, value: '≤ 500 m: ±(0.2 m + measurement distance × 0.15%); > 500 m: ±1.0 m' },
         ]
       },
@@ -963,7 +965,7 @@ window.ED_PRODUCTS = [
   },
   {
     id: 'zenmuse-h20n',
-    segment: 'agriculture',
+    segment: 'enterprise',
     name: 'DJI Zenmuse H20N',
     category: 'enterprise',
     type: 'payload',
@@ -986,7 +988,12 @@ window.ED_PRODUCTS = [
         group: { fr: 'Général', en: 'General' },
         rows: [
         { label: { fr: 'Présentation', en: 'What it is' }, value: 'Night-optimised hybrid multi-sensor gimbal payload pairing starlight zoom and wide cameras with dual (wide + tele) thermal cameras and a laser rangefinder, for round-the-clock public safety and night operations.' },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 300 RTK (per the Zenmuse H20N specs page “Supported Aircraft” field). Note: the Matrice 350 RTK specs page separately lists Zenmuse H20N among its supported gimbals.' },
+        { label: { fr: 'Caméra thermique (CSV)', en: 'Thermal Camera (CSV)' }, value: 'Dual 640×512 px @ 30fps' },
+        { label: { fr: 'Télémètre laser (CSV)', en: 'Laser Rangefinder (CSV)' }, value: '1200 m' },
+        { label: { fr: 'Vision nocturne grand-angle (CSV)', en: 'Night Vision Wide Camera (CSV)' }, value: '1/2.7" CMOS, 2MP' },
+        { label: { fr: 'Vision nocturne zoom (CSV)', en: 'Night Vision Zoom Camera (CSV)' }, value: '1/1.8" CMOS, 4MP' },
+        { label: { fr: 'Statut (référentiel zenmuse_specs.csv)', en: 'Status (zenmuse_specs.csv)' }, value: 'Discontinued' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 350 RTK' },
         ]
       },
       {
@@ -1034,14 +1041,14 @@ window.ED_PRODUCTS = [
         ]
       },
     ],
-    availability: 'coming_soon',
+    availability: 'discontinued',
     image: 'assets/img/products/zenmuse-h20n.png',
     imageFallback: 'assets/img/svg/payload-gimbal.svg',
     djiUrl: 'https://enterprise.dji.com/zenmuse-h20n'
   },
   {
     id: 'zenmuse-l2',
-    segment: 'agriculture',
+    segment: 'enterprise',
     name: 'DJI Zenmuse L2',
     category: 'enterprise',
     type: 'payload',
@@ -1064,7 +1071,10 @@ window.ED_PRODUCTS = [
         group: { fr: 'Général', en: 'General' },
         rows: [
         { label: { fr: 'Présentation', en: 'What it is' }, value: 'Integrated LiDAR payload combining a frame LiDAR module, high-accuracy IMU and a 4/3 CMOS RGB mapping camera for aerial surveying, topographic mapping and 3D reconstruction with DJI Terra.' },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400; Matrice 350 RTK; Matrice 300 RTK (requires DJI RC Plus)' },
+        { label: { fr: 'LiDAR (CSV)', en: 'LiDAR (CSV)' }, value: 'Oui / Yes' },
+        { label: { fr: 'Caméra RVB (CSV)', en: 'RGB Camera (CSV)' }, value: '4/3 CMOS, 20MP' },
+        { label: { fr: 'Statut (référentiel zenmuse_specs.csv)', en: 'Status (zenmuse_specs.csv)' }, value: 'Coming Soon' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
         ]
       },
       {
@@ -1141,11 +1151,136 @@ window.ED_PRODUCTS = [
       { label: { fr: 'Photo', en: 'Photo' }, value: '45 Mpx' },
       { label: { fr: 'Précision H.', en: 'H. accuracy' }, value: '3 cm' }
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Présentation', en: 'What it is' }, value: 'Full-frame 45MP photogrammetry payload for high-precision aerial mapping.' },
+        { label: { fr: 'Caméra RVB (CSV)', en: 'RGB Camera (CSV)' }, value: 'Full Frame, 45MP' },
+        { label: { fr: 'Statut (référentiel zenmuse_specs.csv)', en: 'Status (zenmuse_specs.csv)' }, value: 'Coming Soon' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
     image: 'assets/img/products/zenmuse-p1.png',
     imageFallback: 'assets/img/svg/payload-gimbal.svg',
     djiUrl: 'https://enterprise.dji.com/zenmuse-p1'
+  },
+  {
+    id: 'zenmuse-h30',
+    segment: 'enterprise',
+    name: 'DJI Zenmuse H30',
+    category: 'enterprise',
+    type: 'payload',
+    tagline: {
+      fr: 'Triple capteur jour : zoom 40 MP, grand-angle 48 MP et télémètre 3000 m.',
+      en: 'Triple day sensor: 40MP zoom, 48MP wide and 3000 m rangefinder.'
+    },
+    usage: {
+      fr: 'La H30 reprend la plateforme optique de la H30T sans la voie thermique, pour l’inspection diurne haute résolution : zoom 34×, grand-angle 48 MP, télémètre 3000 m et éclairage NIR d’appoint, sur Matrice 400.',
+      en: 'The H30 reuses the H30T optical platform without thermal, for high-resolution daytime inspection: 34× zoom, 48MP wide, 3000 m rangefinder and NIR auxiliary light, on Matrice 400.'
+    },
+    useCases: ['inspection', 'cartographie'],
+    highlights: [
+      { label: { fr: 'Zoom hybride', en: 'Hybrid zoom' }, value: '34×' },
+      { label: { fr: 'Grand-angle', en: 'Wide' }, value: '48 MP' },
+      { label: { fr: 'Télémètre', en: 'Rangefinder' }, value: '3000 m' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Présentation', en: 'What it is' }, value: 'Day-only multi-sensor gimbal payload: zoom + wide + laser rangefinder + NIR auxiliary light.' },
+        { label: { fr: 'Caméra zoom (CSV)', en: 'Zoom Camera (CSV)' }, value: '1/1.8" CMOS, 40MP' },
+        { label: { fr: 'Caméra grand-angle (CSV)', en: 'Wide-Angle Camera (CSV)' }, value: '1/1.3" CMOS, 48MP' },
+        { label: { fr: 'Caméra thermique (CSV)', en: 'Thermal Camera (CSV)' }, value: 'FALSE — pas de voie thermique / no thermal' },
+        { label: { fr: 'Télémètre laser (CSV)', en: 'Laser Rangefinder (CSV)' }, value: '3000m' },
+        { label: { fr: 'Éclairage IR (CSV)', en: 'Spotlight IR (CSV)' }, value: 'TRUE (NIR Auxiliary Light)' },
+        { label: { fr: 'Statut (référentiel zenmuse_specs.csv)', en: 'Status (zenmuse_specs.csv)' }, value: 'Coming Soon' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+        ]
+      },
+    ],
+    availability: 'coming_soon',
+    image: 'assets/img/products/H30.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com/zenmuse-h30-series'
+  },
+  {
+    id: 'zenmuse-h20',
+    segment: 'enterprise',
+    name: 'DJI Zenmuse H20',
+    category: 'enterprise',
+    type: 'payload',
+    tagline: {
+      fr: 'Triple capteur éprouvé pour Matrice 350 RTK : zoom, grand-angle, télémètre.',
+      en: 'Proven triple sensor for Matrice 350 RTK: zoom, wide, rangefinder.'
+    },
+    usage: {
+      fr: 'La H20 combine zoom 20 MP, grand-angle 12 MP et télémètre 1200 m pour l’inspection et la cartographie légère sur Matrice 350 RTK. Gamme remplacée par H30/H30T sur Matrice 400.',
+      en: 'The H20 combines 20MP zoom, 12MP wide and 1200 m rangefinder for inspection and light mapping on Matrice 350 RTK. Superseded by H30/H30T on Matrice 400.'
+    },
+    useCases: ['inspection', 'cartographie'],
+    highlights: [
+      { label: { fr: 'Zoom', en: 'Zoom' }, value: '20 MP' },
+      { label: { fr: 'Grand-angle', en: 'Wide' }, value: '12 MP' },
+      { label: { fr: 'Télémètre', en: 'Rangefinder' }, value: '1200 m' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Caméra zoom (CSV)', en: 'Zoom Camera (CSV)' }, value: '1/1.7" CMOS, 20MP' },
+        { label: { fr: 'Caméra grand-angle (CSV)', en: 'Wide-Angle Camera (CSV)' }, value: '1/2.3" CMOS, 12MP' },
+        { label: { fr: 'Télémètre laser (CSV)', en: 'Laser Rangefinder (CSV)' }, value: '1200m' },
+        { label: { fr: 'Statut (référentiel zenmuse_specs.csv)', en: 'Status (zenmuse_specs.csv)' }, value: 'Discontinued' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 350 RTK' },
+        ]
+      },
+    ],
+    availability: 'discontinued',
+    image: 'assets/img/products/H20.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com/zenmuse-h20-series'
+  },
+  {
+    id: 'zenmuse-h20t',
+    segment: 'enterprise',
+    name: 'DJI Zenmuse H20T',
+    category: 'enterprise',
+    type: 'payload',
+    tagline: {
+      fr: 'Quadruple capteur avec thermique 640×512 pour Matrice 350 RTK.',
+      en: 'Quad sensor with 640×512 thermal for Matrice 350 RTK.'
+    },
+    usage: {
+      fr: 'La H20T ajoute une thermique 640×512 @ 30fps à la plateforme H20 pour l’inspection thermographique et la sécurité sur Matrice 350 RTK. Gamme remplacée par H30T sur Matrice 400.',
+      en: 'The H20T adds 640×512 @ 30fps thermal to the H20 platform for thermography and security on Matrice 350 RTK. Superseded by H30T on Matrice 400.'
+    },
+    useCases: ['inspection', 'securite'],
+    highlights: [
+      { label: { fr: 'Thermique', en: 'Thermal' }, value: '640×512' },
+      { label: { fr: 'Zoom', en: 'Zoom' }, value: '20 MP' },
+      { label: { fr: 'Télémètre', en: 'Rangefinder' }, value: '1200 m' },
+    ],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Caméra zoom (CSV)', en: 'Zoom Camera (CSV)' }, value: '1/1.7" CMOS, 20MP' },
+        { label: { fr: 'Caméra grand-angle (CSV)', en: 'Wide-Angle Camera (CSV)' }, value: '1/2.3" CMOS, 12MP' },
+        { label: { fr: 'Caméra thermique (CSV)', en: 'Thermal Camera (CSV)' }, value: '640×512 px @ 30fps' },
+        { label: { fr: 'Télémètre laser (CSV)', en: 'Laser Rangefinder (CSV)' }, value: '1200m' },
+        { label: { fr: 'Statut (référentiel zenmuse_specs.csv)', en: 'Status (zenmuse_specs.csv)' }, value: 'Discontinued' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 350 RTK' },
+        ]
+      },
+    ],
+    availability: 'discontinued',
+    image: 'assets/img/products/H20T.png',
+    imageFallback: 'assets/img/svg/payload-gimbal.svg',
+    djiUrl: 'https://enterprise.dji.com/zenmuse-h20-series'
   },
   {
     id: 'd-rtk-3',
@@ -1224,7 +1359,7 @@ window.ED_PRODUCTS = [
       },
     ],
     availability: 'discontinued',
-    image: 'assets/img/products/Matrice-30-T.webp',
+    image: 'assets/img/products/matrice-30t.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://enterprise.dji.com/matrice-30',
     compatiblePayloads: []
@@ -1282,7 +1417,7 @@ window.ED_PRODUCTS = [
       },
     ],
     availability: 'coming_soon',
-    image: 'assets/img/products/Matrice-4-TD.webp',
+    image: 'assets/img/products/matrice-4-td.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://enterprise.dji.com',
     compatiblePayloads: []
@@ -1367,7 +1502,7 @@ window.ED_PRODUCTS = [
     ],
     specs: [],
     availability: 'coming_soon',
-    image: 'assets/img/products/flycart-30.webp',
+    image: 'assets/img/products/flycart-30.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://enterprise.dji.com/flycart-30',
     compatiblePayloads: []
@@ -1708,7 +1843,7 @@ window.ED_PRODUCTS = [
       },
     ],
     availability: 'coming_soon',
-    image: 'assets/img/products/lito-1.png',
+    image: 'assets/img/products/lito-x1.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://www.dji.com',
     compatiblePayloads: []
@@ -1760,7 +1895,7 @@ window.ED_PRODUCTS = [
       },
     ],
     availability: 'coming_soon',
-    image: 'assets/img/products/mavic-4-pro.png',
+    image: 'assets/img/products/mavic-4pro.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://www.dji.com',
     compatiblePayloads: []
@@ -1874,82 +2009,115 @@ window.ED_PRODUCTS = [
 
   {
     id: 'zenmuse-l3',
-    name: 'Zenmuse L3',
-    segment: 'agriculture',
-    category: 'agriculture',
+    name: 'DJI Zenmuse L3',
+    segment: 'enterprise',
+    category: 'enterprise',
     type: 'payload',
     tagline: {
-      fr: 'Capteur LiDAR et optique haute précision pour cartographie et topographie de terrain.',
-      en: 'High-precision LiDAR and optical sensor for topographic terrain mapping.'
+      fr: 'LiDAR nouvelle génération pour Matrice 400 : cartographie 3D haute densité.',
+      en: 'Next-gen LiDAR for Matrice 400: high-density 3D mapping.'
     },
     usage: {
-      fr: 'Permet la reconstitution 3D des parcelles, la mesure de biomasse et l’analyse du relief sous couvert végétal.',
-      en: 'Provides high-accuracy 3D terrain modeling, canopy penetration, and vegetation biomass analysis.'
+      fr: 'La L3 associe un module LiDAR et une caméra RVB 4/3 CMOS pour les relevés topographiques, modèles numériques de terrain et inspection de linéaires sur Matrice 400.',
+      en: 'The L3 pairs a LiDAR module with a 4/3 CMOS RGB camera for topographic survey, terrain models and corridor inspection on Matrice 400.'
     },
-    useCases: ['topographie', 'cartographie', 'cereales'],
+    useCases: ['topographie', 'cartographie', 'inspection'],
     highlights: [
-      { label: { fr: 'Précision', en: 'Accuracy' }, value: '3 cm' },
-      { label: { fr: 'Portée', en: 'Range' }, value: '450 m' },
-      { label: { fr: 'Impulsion', en: 'Rate' }, value: '240 kHz' }
+      { label: { fr: 'LiDAR', en: 'LiDAR' }, value: 'Oui' },
+      { label: { fr: 'Caméra RVB', en: 'RGB camera' }, value: '4/3 CMOS' },
+      { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Présentation', en: 'What it is' }, value: 'LiDAR + RGB mapping payload for Matrice 400.' },
+        { label: { fr: 'LiDAR (CSV)', en: 'LiDAR (CSV)' }, value: 'Oui / Yes' },
+        { label: { fr: 'Caméra RVB (CSV)', en: 'RGB Camera (CSV)' }, value: '4/3 CMOS' },
+        { label: { fr: 'Statut (référentiel zenmuse_specs.csv)', en: 'Status (zenmuse_specs.csv)' }, value: 'Coming Soon' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
-    image: 'assets/img/products/zenmuse-l3.png',
+    image: 'assets/img/products/L3.png',
     imageFallback: 'assets/img/svg/payload-gimbal.svg',
-    djiUrl: 'https://enterprise.dji.com'
+    djiUrl: 'https://enterprise.dji.com/zenmuse-l3'
   },
 
   {
     id: 'zenmuse-s1',
-    name: 'Zenmuse S1',
-    segment: 'agriculture',
-    category: 'agriculture',
+    name: 'DJI Zenmuse S1',
+    segment: 'enterprise',
+    category: 'enterprise',
     type: 'payload',
     tagline: {
-      fr: 'Capteur multispectral 4 bandes pour diagnostic agronomique et calcul du NDVI.',
-      en: '4-band multispectral sensor for agronomic diagnosis and NDVI vegetation indices.'
+      fr: 'Projecteur visible longue portée pour opérations nocturnes Matrice 400.',
+      en: 'Long-range visible spotlight for Matrice 400 night operations.'
     },
     usage: {
-      fr: 'Génère des cartes de vigueur végétative (NDVI, NDRE) pour moduler les apports en engrais et détecter le stress hydrique ou parasitaire.',
-      en: 'Generates crop-health maps to optimize fertilization and identify irrigation/pest stress.'
+      fr: 'Le S1 éclaire les scènes de nuit pour la recherche, la sécurité et l’inspection : 30 lux à 100 m, portée 500 m, porté par Matrice 400.',
+      en: 'The S1 lights night scenes for search, security and inspection: 30 lux at 100 m, 500 m range, carried by Matrice 400.'
     },
-    useCases: ['cartographie', 'cereales', 'vignes', 'palmeraies'],
+    useCases: ['securite', 'inspection'],
     highlights: [
-      { label: { fr: 'Bandes', en: 'Bands' }, value: '4 canaux MS' },
-      { label: { fr: 'Résolution', en: 'Resolution' }, value: '5 MP' },
-      { label: { fr: 'Capteur solaire', en: 'Sunlight sensor' }, value: 'Intégré' }
+      { label: { fr: 'Éclairage', en: 'Illuminance' }, value: '30 lux @ 100 m' },
+      { label: { fr: 'Portée', en: 'Range' }, value: '500 m' },
+      { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Présentation', en: 'What it is' }, value: 'Visible spotlight payload for night search, security and inspection.' },
+        { label: { fr: 'Projecteur visible (CSV)', en: 'Spotlight VIS (CSV)' }, value: '30 lux @ 100 m' },
+        { label: { fr: 'Portée projecteur visible (CSV)', en: 'Spotlight VIS Range (CSV)' }, value: '500m' },
+        { label: { fr: 'Statut (référentiel zenmuse_specs.csv)', en: 'Status (zenmuse_specs.csv)' }, value: 'Coming Soon' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
-    image: 'assets/img/products/zenmuse-s1.png',
+    image: 'assets/img/products/S1.png',
     imageFallback: 'assets/img/svg/payload-gimbal.svg',
-    djiUrl: 'https://enterprise.dji.com'
+    djiUrl: 'https://enterprise.dji.com/zenmuse-s1'
   },
 
   {
     id: 'zenmuse-v1',
-    name: 'Zenmuse V1',
-    segment: 'agriculture',
-    category: 'agriculture',
+    name: 'DJI Zenmuse V1',
+    segment: 'enterprise',
+    category: 'enterprise',
     type: 'payload',
     tagline: {
-      fr: 'Caméra thermique radiométrique haute sensibilité pour surveillance agricole et irrigation.',
-      en: 'High-sensitivity radiometric thermal camera for crop monitoring and irrigation control.'
+      fr: 'Haut-parleur longue portée pour Matrice 400 : 129 dB à 700 m.',
+      en: 'Long-range loudspeaker for Matrice 400: 129 dB out to 700 m.'
     },
     usage: {
-      fr: 'Détecte les anomalies d’irrigation, le stress thermique des vergers et surveille les installations agricoles.',
-      en: 'Monitors irrigation efficiency, orchard heat stress, and agricultural facilities day and night.'
+      fr: 'Le V1 diffuse messages d’alerte et consignes à grande distance pour la sécurité civile, la gestion de foules et les secours : 129 dB à 1 m, portée 700 m.',
+      en: 'The V1 broadcasts alerts and instructions at distance for public safety, crowd management and rescue: 129 dB at 1 m, 700 m range.'
     },
-    useCases: ['palmeraies', 'serres', 'inspection'],
+    useCases: ['securite', 'inspection'],
     highlights: [
-      { label: { fr: 'Résolution', en: 'Thermal res.' }, value: '640×512' },
-      { label: { fr: 'Sensibilité', en: 'Sensitivity' }, value: 'NETD ≤ 50 mK' },
-      { label: { fr: 'Zoom', en: 'Zoom' }, value: '8× numérique' }
+      { label: { fr: 'Niveau', en: 'Level' }, value: '129 dB @ 1 m' },
+      { label: { fr: 'Portée', en: 'Range' }, value: '700 m' },
+      { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
-    specs: [],
+    specs: [
+      {
+        group: { fr: 'Général', en: 'General' },
+        rows: [
+        { label: { fr: 'Présentation', en: 'What it is' }, value: 'Loudspeaker payload for broadcast, alert and rescue coordination.' },
+        { label: { fr: 'Haut-parleur (CSV)', en: 'Loudspeaker (CSV)' }, value: '129 dB @ 1 m' },
+        { label: { fr: 'Portée haut-parleur (CSV)', en: 'Loudspeaker Range (CSV)' }, value: '700m' },
+        { label: { fr: 'Statut (référentiel zenmuse_specs.csv)', en: 'Status (zenmuse_specs.csv)' }, value: 'Coming Soon' },
+        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+        ]
+      },
+    ],
     availability: 'coming_soon',
-    image: 'assets/img/products/zenmuse-v1.png',
+    image: 'assets/img/products/V1.png',
     imageFallback: 'assets/img/svg/payload-gimbal.svg',
-    djiUrl: 'https://enterprise.dji.com'
+    djiUrl: 'https://enterprise.dji.com/zenmuse-v1'
   }
 ];
