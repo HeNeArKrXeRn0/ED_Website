@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Demande de devis — Equip Drones</title>
-<meta name="description" content="Composez votre demande de devis DJI : sélectionnez vos appareils, indiquez vos coordonnées, puis envoyez-nous votre demande par WhatsApp ou par e-mail. SARL Equip Drones, distributeur officiel DJI en Algérie.">
+<title data-i18n="devis.copy.demande-de-devis-equip-drones">Demande de devis — Equip Drones</title>
+<meta name="description" content="Composez votre demande de devis DJI : sélectionnez vos appareils, indiquez vos coordonnées, puis envoyez-nous votre demande par WhatsApp ou par e-mail. SARL Equip Drones, distributeur officiel DJI en Algérie." data-i18n-attr="content:devis.meta.description">
 <link rel="icon" href="assets/img/svg/Logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
@@ -20,7 +20,7 @@
     <div class="wrap">
       <p class="eyebrow" data-i18n="misc.official">Distributeur officiel DJI — Algérie</p>
       <h1 class="h-section" data-i18n="quote.title">Demande de devis</h1>
-      <p class="lead measure">Sélectionnez vos appareils, renseignez vos coordonnées, puis transmettez votre demande par WhatsApp ou par e-mail. Nous revenons vers vous avec une proposition détaillée.</p>
+      <p class="lead measure" data-i18n="devis.copy.selectionnez-vos-appareils-renseignez-vos-coordonnees-puis">Sélectionnez vos appareils, renseignez vos coordonnées, puis transmettez votre demande par WhatsApp ou par e-mail. Nous revenons vers vous avec une proposition détaillée.</p>
     </div>
   </section>
 
@@ -55,34 +55,34 @@
           <div class="form-grid">
 
             <div class="field">
-              <label for="q-name"><span data-i18n="quote.name">Nom complet</span> <span class="req">*</span></label>
+              <label for="q-name" data-i18n-html="devis.copy.nom-complet"><span>Nom complet</span> <span class="req">*</span></label>
               <input class="input" type="text" id="q-name" name="name"
                      autocomplete="name" required aria-describedby="err-name">
               <span class="error-msg" id="err-name"></span>
             </div>
 
             <div class="field">
-              <label for="q-company"><span data-i18n="quote.company">Société / exploitation</span></label>
+              <label for="q-company" data-i18n-html="devis.copy.societe-exploitation"><span>Société / exploitation</span></label>
               <input class="input" type="text" id="q-company" name="company"
                      autocomplete="organization">
             </div>
 
             <div class="field">
-              <label for="q-email"><span data-i18n="quote.email">E-mail</span> <span class="req">*</span></label>
+              <label for="q-email" data-i18n-html="devis.copy.e-mail"><span>E-mail</span> <span class="req">*</span></label>
               <input class="input" type="email" id="q-email" name="email"
                      autocomplete="email" required aria-describedby="err-email">
               <span class="error-msg" id="err-email"></span>
             </div>
 
             <div class="field">
-              <label for="q-phone"><span data-i18n="quote.phone">Téléphone</span> <span class="req">*</span></label>
+              <label for="q-phone" data-i18n-html="devis.copy.telephone"><span>Téléphone</span> <span class="req">*</span></label>
               <input class="input" type="tel" id="q-phone" name="phone"
                      autocomplete="tel" required aria-describedby="err-phone">
               <span class="error-msg" id="err-phone"></span>
             </div>
 
             <div class="field">
-              <label for="q-wilaya"><span data-i18n="quote.wilaya">Wilaya</span></label>
+              <label for="q-wilaya" data-i18n-html="devis.copy.wilaya"><span>Wilaya</span></label>
               <!-- Options ajoutées par devis.js depuis ED.wilayas -->
               <select class="select" id="q-wilaya" name="wilaya">
                 <option value="" data-i18n="quote.wilayaPick">Sélectionnez une wilaya</option>
@@ -90,26 +90,26 @@
             </div>
 
             <div class="field">
-              <label for="q-activity"><span data-i18n="quote.activity">Type d’activité</span></label>
+              <label for="q-activity" data-i18n-html="devis.copy.type-dactivite"><span>Type d’activité</span></label>
               <select class="select" id="q-activity" name="activity">
-                <option value="">Sélectionnez votre activité</option>
-                <option>Exploitation agricole</option>
-                <option>Prestataire de services agricoles</option>
-                <option>Bureau d’études</option>
-                <option>Collectivité ou administration</option>
-                <option>Industrie ou énergie</option>
-                <option>Autre</option>
+                <option value="" data-i18n="devis.copy.selectionnez-votre-activite">Sélectionnez votre activité</option>
+                <option value="devis.copy.exploitation-agricole" data-i18n="devis.copy.exploitation-agricole">Exploitation agricole</option>
+                <option value="devis.copy.prestataire-de-services-agricoles" data-i18n="devis.copy.prestataire-de-services-agricoles">Prestataire de services agricoles</option>
+                <option value="devis.copy.bureau-detudes" data-i18n="devis.copy.bureau-detudes">Bureau d’études</option>
+                <option value="devis.copy.collectivite-ou-administration" data-i18n="devis.copy.collectivite-ou-administration">Collectivité ou administration</option>
+                <option value="devis.copy.industrie-ou-energie" data-i18n="devis.copy.industrie-ou-energie">Industrie ou énergie</option>
+                <option value="devis.copy.autre" data-i18n="devis.copy.autre">Autre</option>
               </select>
             </div>
 
             <div class="field">
-              <label for="q-area"><span data-i18n="quote.area">Superficie à traiter (ha)</span></label>
+              <label for="q-area" data-i18n-html="devis.copy.superficie-a-traiter-ha"><span>Superficie à traiter (ha)</span></label>
               <input class="input" type="number" id="q-area" name="area"
                      min="0" step="1" inputmode="numeric">
             </div>
 
             <div class="field span-2">
-              <label for="q-message"><span data-i18n="quote.message">Message</span></label>
+              <label for="q-message" data-i18n-html="devis.copy.message"><span>Message</span></label>
               <textarea class="textarea" id="q-message" name="message" rows="5"
                         data-i18n-attr="placeholder:quote.messagePh"
                         placeholder="Précisez votre besoin, vos cultures, vos délais…"></textarea>
@@ -118,7 +118,7 @@
           </div>
 
           <div class="mt-6">
-            <button type="submit" class="btn btn-primary btn-lg" data-i18n="quote.submit">Envoyer ma demande</button>
+            <button type="submit" class="btn btn-primary btn-lg" data-i18n="quote.submit">Préparer ma demande</button>
           </div>
         </form>
       </div>
@@ -143,13 +143,13 @@
         </div>
 
         <div class="field mt-6">
-          <label for="q-msg"><span data-i18n="quote.message">Message</span></label>
+          <label for="q-msg" data-i18n-html="devis.copy.message"><span>Message</span></label>
           <textarea class="textarea mono" id="q-msg" rows="14" readonly></textarea>
         </div>
 
         <div class="mt-5">
           <button type="button" class="btn btn-ghost" id="q-new"
-                  data-i18n="quote.newRequest">Faire une nouvelle demande</button>
+                  data-i18n="quote.newRequest">Modifier ma demande</button>
         </div>
       </div>
 

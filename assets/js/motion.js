@@ -212,6 +212,7 @@
     var t0 = null, DUR = 1150;
 
     function step(ts) {
+      if (el._stat !== s) return; // A language change cancelled this animation.
       if (t0 === null) t0 = ts;
       var p = Math.min(1, (ts - t0) / DUR);
       var eased = 1 - Math.pow(2, -10 * p);          // easeOutExpo
@@ -301,6 +302,8 @@
   document.addEventListener('ed:langchange', function () {
     /* Les compteurs ont été réécrits : on autorise un nouveau passage. */
     document.querySelectorAll('.stat-value').forEach(function (el) {
+      if (el._stat && !el.hasAttribute('data-i18n')) el.textContent = el._stat.original;
+      if (counterIO) counterIO.unobserve(el);
       delete el.dataset.counted; el._stat = null;
     });
     setTimeout(function () { refresh(); }, 30);

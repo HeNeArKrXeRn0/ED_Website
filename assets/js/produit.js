@@ -34,7 +34,7 @@
       var iconHTML = icon ? '<img class="spec-icon" src="' + esc(icon) + '" alt="" aria-hidden="true" style="width:28px;height:28px;margin:0 auto 8px auto;display:block;">' : '';
       return '<div class="stat" style="text-align:center;">' +
                iconHTML +
-               '<div class="stat-value">' + esc(h.value) + '</div>' +
+               '<div class="stat-value">' + esc(L(h.value)) + '</div>' +
                '<div class="stat-label">' + esc(L(h.label)) + '</div>' +
              '</div>';
     }).join('');
@@ -67,11 +67,11 @@
       : (soon
         ? '<a class="btn btn-primary" href="devis.html" data-i18n="cta.notify">' + esc(t('cta.notify')) + '</a>'
         : '<div class="qty">' +
-            '<button type="button" data-qty-step="-1" aria-label="Diminuer la quantité">−</button>' +
+            '<button type="button" data-qty-step="-1" aria-label="' + esc(t('qty.decrease')) + '">−</button>' +
             '<label class="sr-only" for="ed-qty" data-i18n="prod.qty">' + esc(t('prod.qty')) + '</label>' +
             '<input id="ed-qty" type="number" inputmode="numeric" min="1" max="999" step="1" ' +
                    'value="1" data-qty-for="' + esc(p.id) + '">' +
-            '<button type="button" data-qty-step="1" aria-label="Augmenter la quantité">+</button>' +
+            '<button type="button" data-qty-step="1" aria-label="' + esc(t('qty.increase')) + '">+</button>' +
           '</div>' +
           '<button type="button" class="btn btn-primary" data-add="' + esc(p.id) + '" ' +
                   'data-i18n="cta.addQuote">' + esc(t('cta.addQuote')) + '</button>');
@@ -94,7 +94,7 @@
     return '' +
       '<section class="hero">' +
         '<div class="wrap">' +
-          '<nav class="small" aria-label="Fil d’Ariane">' +
+          '<nav class="small" aria-label="' + esc(t('nav.breadcrumb')) + '">' +
             '<a href="index.html" data-i18n="nav.home">' + esc(t('nav.home')) + '</a>' +
             '<span aria-hidden="true"> / </span>' +
             '<a href="' + parentHref + '" data-i18n="' + parentKey + '">' + esc(t(parentKey)) + '</a>' +
@@ -289,5 +289,11 @@
   }
 
   document.addEventListener('ed:ready', render);
-  document.addEventListener('ed:langchange', render);
+  document.addEventListener('ed:langchange', function () {
+    var input = document.querySelector('[data-qty-for]');
+    var qty = input && input.value;
+    render();
+    input = document.querySelector('[data-qty-for]');
+    if (input && qty) input.value = qty;
+  });
 })();

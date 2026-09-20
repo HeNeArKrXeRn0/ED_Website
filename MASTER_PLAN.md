@@ -2,9 +2,9 @@
 
 **Role:** This is the living handoff document for the Equip Drones website. Read it before changing the site, then update the relevant sections and the change log in the same piece of work. It records the *implemented* site, current operating status, and synchronized future plans from [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md).
 
-**Last reviewed:** 2026-08-31  
+**Last reviewed:** 2026-09-20
 **Current release:** static v0 with modular components (no build step or package manager)  
-**Primary language:** French; an English interface toggle is present  
+**Languages:** French by default; complete French/English editorial and interface copy
 **Authoritative source of current state:** the files described below. Use [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md) for the 10-day implementation roadmap and release criteria.
 
 ---
@@ -49,7 +49,7 @@ Browse catalogue / sector / product / compare
 4. **Catalogue source of truth:** Maintain `assets/js/data.js` as the runtime source of truth. Every item must have a unique `id`.
 5. **Script load order:** Preserve the required script order on every page:  
    `theme-config.js` → `data.js` → `i18n.js` → `app.js` → page-specific/inline script → `motion.js`.
-6. **Bilingual text:** Dynamic interface text must have FR/EN entries in `assets/js/i18n.js` and use `data-i18n` or `data-i18n-attr`. French editorial prose requires deliberate translation when adding English support.
+6. **Bilingual text:** All editorial and interface text must have deliberate FR/EN entries in `assets/js/i18n.js`. Use `data-i18n`, `data-i18n-html` for trusted repository-owned markup, and `data-i18n-attr` for attributes. Product prose, spec labels and language-dependent values use `{fr, en}` in `data.js`. Brand names, official organisation names, units and user-entered text remain unchanged. Run `node --test tests/i18n.test.cjs`.
 7. **Document updates:** After any structural or feature change, update `MASTER_PLAN.md` and check alignment with `IMPLEMENTATION_PLAN.md`.
 
 ---
@@ -236,7 +236,7 @@ All Enterprise models (`matrice-400`, `matrice-4e`, `matrice-4t`, `matrice-4d`, 
 - **Design system (`assets/js/theme-config.js`):** Centralized theme tokens for colors (`primary`, `accent`, `bg`, `surface`, `border`, `text`, `icon`), fonts, spacing, shadows, and transitions. Propagated to CSS variables via JavaScript.
 - **Product imagery:** Stored locally in `assets/img/products/*.png` with vector fallbacks in `assets/img/svg/*.svg`.
 - **Infographics:** High-resolution operating diagrams in `assets/img/infographics/` (e.g. `agras_cycle.png`).
-- **Translation:** French is primary. Dynamic UI strings live in `assets/js/i18n.js`. Complete bilingual editorial prose is an ongoing deliverable.
+- **Translation:** French is the default. All 12 pages, dynamic catalogue views, form errors, prepared messages, metadata and accessible labels support French and English. The selected language persists across navigation; switching preserves form and selection state.
 
 ---
 
@@ -288,7 +288,7 @@ gantt
 
 1. **Enterprise & Camera retail-only refinement (Day 7):** Ensure clear "sales only" badges and banners across all non-agriculture cards and RFQ flows.
 2. **Case studies (`etudes-de-cas.html`) & Road shows (`actualites.html`) (Day 6):** Data-driven static sections for Algerian field results and upcoming events.
-3. **Complete English editorial coverage:** Translate long-form French editorial sections or scope the toggle to completed sections.
+3. **English editorial coverage — implemented locally 2026-09-20:** Full FR/EN coverage and switcher fixes completed; deployment remains a separate step.
 4. **SEO & Structured Data:** XML sitemap, `robots.txt`, canonical URLs, social open graph tags, and schema.org structured data (Organization, Product, Service, Event).
 
 ### P2 — Post-launch improvements
@@ -315,10 +315,50 @@ When making changes to the site:
 
 ---
 
-## 10. Change log
+## 10. Bilingual copy verification — 2026-09-20
+
+**Customer success:** Buyers can understand the equipment, service scope and RFQ handoff in either language without losing their work.
+
+**Customer signal:** FR/EN round-trips preserve entered information, quantities, filters, comparison selections and prepared requests; all tested text and attributes follow the language choice.
+
+**Business objective:** Reduce language-related RFQ abandonment and clarification work for sales.
+
+**Linking assumption:** Clear, consistent product information and an uninterrupted enquiry flow help qualified buyers complete a useful request. No conversion uplift has been measured.
+
+**Ledger:** No owning issue or issue-tracker workflow was identified for this standalone repository. This document records the implementation and validation; no Linear update was made.
+
+### What changed
+
+- Added deliberate French/English copy across all 12 root pages, including page titles, descriptions, alt text, accessible names, filters, empty states and explanatory prose.
+- Localized language-dependent specifications and product highlights for the 39 catalogue records. Removed import-only CSV labels from visitor-facing specifications.
+- Corrected overstated wording and translation mismatches, clarified agricultural support versus Enterprise/Camera sales, and removed unconditional safety, productivity and charging promises. Discontinued T25/T50 copy now matches their existing catalogue status.
+- Corrected V1 wording from “129 dB at 700 m” to “129 dB at 1 m; maximum range 700 m” for Matrice 400, using [DJI’s V1 specifications](https://enterprise.dji.com/zenmuse-v1/specs).
+- Prepared quote and contact messages, email subjects, validation errors and clipboard guidance use the selected language; free text is preserved. The RFQ button says “Prepare my request” because transmission still occurs in the visitor’s messaging application.
+- Replaced the Agras diagram containing embedded English with a bilingual HTML sequence. No image-generation dependency was added.
+- Preserved header focus/mobile menu state, product quantity, form activity selection, cart and comparison state on language changes. Fixed the Agriculture language-function check and stale animated-counter callbacks.
+- Kept both language controls visible at 360px. Fixed the existing theme initialization exception and aligned its defaults with the existing CSS tokens to retain the established design.
+
+### Verification
+
+- `node --test tests/i18n.test.cjs`: 7 passing tests, covering dictionary completeness, translation references, script syntax, all product cards, persistent language selection, generated messages and theme initialization.
+- In-app Chromium preview: all 12 pages switched FR → EN → FR; all 39 product detail routes rendered in both languages. Unknown/missing product IDs show a translated not-found state. Three products with no spec rows retain their existing no-spec presentation.
+- Checked rendered dictionary text and accessible attributes across all pages. Product document titles intentionally use the product name or translated not-found title instead of the generic template title.
+- RFQ: required errors translate immediately; entered fields/activity survive switching; prepared WhatsApp/email bodies and subjects translate; free text remains intact. No message was sent.
+- Product quantity of 3 survives switching, adds correctly, and persists in the cart after navigation/reload. Contact-form errors translate immediately.
+- Mobile menu remains open on switching and focus remains on the selected language button. At 360px both language controls are visible; 768px filters and 1440px comparison preserve their selections. Comparison deep links and hide-identical state survive switching.
+- `git diff --check` passes. Local browser console checked after fixing the pre-existing theme exception.
+
+### Limits and follow-up
+
+This is a language/copy consistency review, not independent verification of every supplier specification, company accreditation, inventory status or historical industry statistic. Those remain business-supplied information requiring owner/source confirmation before publication. Existing “coming soon” and “discontinued” statuses and RFQ handoff architecture remain in place. Firefox/Safari and deployed-site testing were not performed; changes are local and have not been pushed or deployed.
+
+---
+
+## 11. Change log
 
 | Date | Change | Notes |
 |---|---|---|
+| 2026-09-20 | Complete FR/EN copy and reliable language switching | Updated all 12 pages, bilingual catalogue values, runtime messages and accessible labels; preserved visitor state; added 7 regression tests. See bilingual verification above. |
 | 2026-09-03 | Updated Agriculture highlights bar: Masse Max. Décollage & Largeur Pulvérisation | Updated highlights across all agricultural drones (`t100`, `t70p`, `t55`, `t50`, `t25p`, `t25`) in `assets/js/data.js`: renamed maximum takeoff weight spec description in French to `Masse Max. Décollage` with icon `max_takeoff_weight.svg`, and renamed spray width spec description to `Largeur Pulvérisation` with icon `spray_width_1.svg`. Updated `getSpecIcon` in `assets/js/app.js` and `assets/data_input/ICONS_mapping.csv`. |
 | 2026-09-03 | Integrated Enterprise equipment specs & 15+ new SVG icons | Integrated `assets/data_input/ENTERPRISE_EQUIPEMENT_SPECS.csv` into runtime data (`assets/js/data.js`). Replaced placeholder equipment rows across Enterprise models (`matrice-400`, `matrice-4e`, `matrice-4t`, `matrice-4td`, `matrice-30t`, `matrice-350-rtk`) and added `matrice-4d`. Updated `assets/data_input/ICONS_mapping.csv` and upgraded `getSpecIcon` in `assets/js/app.js` with full bilingual support for newly added SVG icons (`rtk_antenna.svg`, `fpv_camera.svg`, `thermal_camera.svg`, `laser_rangefinder.svg`, `spotlight.svg`, `loudspeaker.svg`, `wide_camera.svg`, `telephoto_camera.svg`, `simple_camera.svg`, `max_flight_altitude.svg`, `max_takeoff_altitude.svg`, `max_takeoff_weight.svg`, `wind_resistance.svg`, `lidar.svg`). |
 | 2026-08-31 | Updated Agriculture application sectors (Spraying, Spreading, Cleaning, Mapping) | Updated `useCases` across all DJI Agras aircraft (`t55`, `t70p`, `t50`, `t25p`, `t25`) to `['pulverisation', 'epandage', 'nettoyage']` (Spraying, Spreading, Cleaning) and `t100` to include `cartographie` (Mapping via LiDAR). Added bilingual i18n keys for spraying, spreading, cleaning, mapping. Updated `agriculture.html` filter bar chips and `applications.html` fallback renderer. |
