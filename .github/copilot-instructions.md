@@ -87,6 +87,8 @@ Every page must load scripts in this order or features will break:
 
 ## Translation & UI Text
 
+For every website change involving visitor-facing copy, automatically apply [the bilingual copy skill](../.agents/skills/ed-website-bilingual-copy/SKILL.md) in the same task. Translate the counterpart language and check the rendered result without waiting for a separate request. Skip translation when no public copy changes. See [AGENTS.md](../AGENTS.md) for the repository-wide trigger.
+
 ### Adding UI Text
 
 1. Add an FR/EN entry to `assets/js/i18n.js`
@@ -95,7 +97,7 @@ Every page must load scripts in this order or features will break:
 
 ### Editorial Content
 
-Long-form HTML on home, services, applications, and about pages is currently French-only (not auto-translated). Complete English coverage is a P1 feature. Product prose like `tagline`, `usage`, and spec labels must be bilingual.
+All public pages now have deliberate French/English editorial copy. Keep new text bilingual, including metadata, accessible labels, errors, empty states and prepared messages. Use `data-i18n-html` only for trusted repository-owned markup. Product prose, spec labels and language-dependent values must be bilingual. Preserve brand names, official names, units and visitor-entered text. Run `node --test tests/i18n.test.cjs` and check a language round-trip without losing form or selection state.
 
 ## Common Tasks
 
@@ -183,7 +185,7 @@ Before calling work done:
 3. **Cart persistence** — add items from different pages, change qty, reload browser; items should persist
 4. **Deep links** — test `?cat=`, `?secteur=`, `?dispo=` on catalogue and `?ids=` on comparator
 5. **Forms** — quote cart form and about-page contact form; valid/invalid states; generated WhatsApp/mailto URLs
-6. **Language toggle** — FR/EN across pages with dynamic content; document any intentional French-only sections
+6. **Language toggle** — FR/EN across pages with dynamic content; include metadata, accessible labels, errors and prepared messages
 7. **Responsive** — test at 360 px, 768 px, 1440 px widths; keyboard navigation; reduced-motion preference
 8. **Outbound links** — spot-check DJI, WhatsApp, social, phone, and email links are valid
 

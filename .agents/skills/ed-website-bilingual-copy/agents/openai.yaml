@@ -1,0 +1,6 @@
+interface:
+  display_name: "Equip Drones bilingual copy"
+  short_description: "Keep website copy synchronized in French and English"
+  default_prompt: "Use $ed-website-bilingual-copy to update both languages for the website copy changed in this task and verify the language switcher."
+policy:
+  allow_implicit_invocation: true

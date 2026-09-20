@@ -305,7 +305,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .lang-toggle button {
   background: transparent; border: 0; cursor: pointer;
   padding: 5px 9px; font-family: var(--mono); font-size: 11px;
-  letter-spacing: 0.08em; color: var(--dim); transition: all var(--t);
+  letter-spacing: 0.08em; color: var(--muted); transition: all var(--t);
 }
 .lang-toggle button[aria-pressed="true"] { background: var(--surface-2); color: var(--text); }
 .lang-toggle button:hover { color: var(--text); }
@@ -892,3 +892,15 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   body { background: #fff; color: #000; }
   .card, .p-card { border-color: #ccc; }
 }
+
+/* Keep both language choices reachable on narrow screens. */
+.lang-toggle { flex-shrink: 0; }
+.header-actions .cart-link { width: auto; }
+@media (max-width: 440px) {
+  .site-header .wrap { gap: 8px; }
+  .site-header .brand-dji, .site-header .brand-divider { display: none; }
+  .header-actions { gap: 8px; }
+}
+.cycle-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s5); padding: 0; list-style: none; }
+.cycle-flow li { display: flex; flex-direction: column; gap: var(--s3); }
+@media (max-width: 640px) { .cycle-flow { grid-template-columns: repeat(2, 1fr); } }

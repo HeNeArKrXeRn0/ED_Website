@@ -6,28 +6,29 @@
  * Changes apply immediately via CSS custom properties.
  */
 
+// Defaults match site.css so initialization preserves the established design.
 const THEME = {
   colors: {
-    primary: '#0a0e27',        // Main background
-    secondary: '#1a1f3a',      // Secondary background, cards
-    accent: '#00d9ff',         // Highlights, CTAs, interactive elements
-    icon: '#e0e6ff',           // SVG Spec icons color
-    text: '#e0e6ff',           // Primary text
-    textMuted: '#8892b0',      // Secondary text, labels
-    border: '#2a2f4d',         // Borders, dividers
-    background: '#0f1419',     // Page background
-    success: '#10b981',        // Success states
-    warning: '#f59e0b',        // Warning states
-    error: '#ef4444',          // Error states
+    primary: '#0A0B0D',        // Main background
+    secondary: '#131519',      // Secondary background, cards
+    accent: '#00E08A',         // Highlights, CTAs, interactive elements
+    icon: '#00E08A',           // SVG Spec icons color
+    text: '#F2F4F7',           // Primary text
+    textMuted: '#8A93A3',      // Secondary text, labels
+    border: '#2A2E36',         // Borders, dividers
+    background: '#0A0B0D',     // Page background
+    success: '#00C46A',        // Success states
+    warning: '#FFB020',        // Warning states
+    error: '#FF5A5A',          // Error states
   },
   
   spacing: {
-    xs: '0.5rem',
-    sm: '1rem',
-    md: '1.5rem',
-    lg: '2rem',
-    xl: '3rem',
-    xxl: '4rem',
+    xs: '4px',
+    sm: '8px',
+    md: '12px',
+    lg: '16px',
+    xl: '24px',
+    xxl: '32px',
   },
   
   typography: {
@@ -35,9 +36,9 @@ const THEME = {
     sizeSm: '14px',
     sizeLg: '18px',
     sizeXl: '20px',
-    size2xl: '24px',
+    'size-2xl': '24px',
     
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif',
     fontWeight: '400',
     fontWeightBold: '600',
   },
@@ -51,7 +52,7 @@ const THEME = {
   radius: {
     sm: '4px',
     md: '8px',
-    lg: '12px',
+    lg: '8px',
     full: '9999px',
   },
   
@@ -84,7 +85,8 @@ function applyTheme(themeOverride = null) {
   
   // Apply typography
   Object.entries(theme.typography).forEach(([key, value]) => {
-    const cssVarName = `--font-${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
+    const property = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+    const cssVarName = property.startsWith('font-') ? `--${property}` : `--font-${property}`;
     root.style.setProperty(cssVarName, value);
   });
   
@@ -109,7 +111,7 @@ function applyTheme(themeOverride = null) {
 
 // Apply theme when DOM is ready (before ED loads)
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', applyTheme);
+  document.addEventListener('DOMContentLoaded', function () { applyTheme(); });
 } else {
   applyTheme();
 }

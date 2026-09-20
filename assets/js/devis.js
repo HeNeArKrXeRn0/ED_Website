@@ -2,7 +2,7 @@
    EQUIP DRONES — Page « Demande de devis »
    Consomme le contrat window.ED exposé par app.js. Ne le modifie jamais.
 
-   Aucun back-end : le formulaire produit UN message texte en français, que
+   Aucun back-end : le formulaire produit UN message texte dans la langue choisie, que
    l'utilisateur transmet lui-même par WhatsApp, par e-mail ou par copier-coller.
    Aucun prix, aucun total, aucune donnée envoyée ailleurs que par ces canaux.
    ========================================================================== */
@@ -18,14 +18,6 @@
   function t(k)  { return ED().i18n.t(k); }
   function esc(s){ return ED().ui.esc(s); }
   function $(id) { return document.getElementById(id); }
-
-  /* Le message part TOUJOURS en français, même si l'interface est en anglais :
-     il est lu par l'équipe commerciale en Algérie. On lit donc directement le
-     libellé `fr` du dictionnaire plutôt que la traduction courante. */
-  function availFr(availability) {
-    var entry = window.ED_STRINGS && window.ED_STRINGS['avail.' + availability];
-    return (entry && entry.fr) || t('avail.' + availability);
-  }
 
   /* ==========================================================================
      A. Sélection (panier)
@@ -69,13 +61,13 @@
           '</label>' +
           '<div class="qty">' +
             '<button type="button" data-step="-1" data-id="' + id + '"' +
-                    ' data-focus="minus:' + id + '" aria-label="Diminuer la quantité"' +
+                    ' data-focus="minus:' + id + '" aria-label="' + esc(t('qty.decrease')) + '"' +
                     (line.qty <= 1 ? ' disabled' : '') + '>&#8722;</button>' +
             '<input type="number" id="' + qid + '" value="' + line.qty + '"' +
                    ' min="1" max="999" step="1" inputmode="numeric"' +
                    ' data-qty-input="' + id + '" data-focus="input:' + id + '">' +
             '<button type="button" data-step="1" data-id="' + id + '"' +
-                    ' data-focus="plus:' + id + '" aria-label="Augmenter la quantité">+</button>' +
+                    ' data-focus="plus:' + id + '" aria-label="' + esc(t('qty.increase')) + '">+</button>' +
           '</div>' +
         '</div>' +
 
@@ -109,7 +101,7 @@
     ED().i18n.apply(host);
 
     if (count) {
-      count.textContent = items.length ? ED().cart.count() + ' ' + t('cat.results') : '';
+      count.textContent = items.length ? ED().cart.count() + ' ' + t('quote.items') : '';
     }
 
     if (focusKey) {
@@ -252,33 +244,33 @@
   function buildMessage(d) {
     var out = [];
 
-    out.push('Nouvelle demande de devis — Equip Drones');
+    out.push(t('message.quote'));
     out.push('');
-    out.push('CONTACT');
-    out.push('Nom       : ' + d.name);
-    if (d.company)  out.push('Société   : ' + d.company);
-    out.push('E-mail    : ' + d.email);
-    out.push('Téléphone : ' + d.phone);
-    if (d.wilaya)   out.push('Wilaya    : ' + d.wilaya);
-    if (d.activity) out.push('Activité  : ' + d.activity);
-    if (d.area)     out.push('Superficie: ' + d.area + ' ha');
+    out.push(t('message.contact'));
+    out.push(t('quote.name') + ': ' + d.name);
+    if (d.company)  out.push(t('quote.company') + ': ' + d.company);
+    out.push(t('quote.email') + ': ' + d.email);
+    out.push(t('quote.phone') + ': ' + d.phone);
+    if (d.wilaya)   out.push(t('quote.wilaya') + ': ' + d.wilaya);
+    if (d.activity) out.push(t('quote.activity') + ': ' + t(d.activity));
+    if (d.area)     out.push(t('quote.area') + ': ' + d.area);
 
     out.push('');
-    out.push('MATÉRIEL DEMANDÉ');
+    out.push(t('message.equipment'));
     var items = ED().cart.items();
     if (!items.length) {
-      out.push('- Demande générale (aucun appareil sélectionné)');
+      out.push('- ' + t('message.general'));
     } else {
       items.forEach(function (line) {
         var p = ED().data.byId(line.id);
         if (!p || p.availability === 'discontinued') return;
-        out.push('- ' + line.qty + ' x ' + p.name + ' (' + availFr(p.availability) + ')');
+        out.push('- ' + line.qty + ' x ' + p.name + ' (' + t('avail.' + p.availability) + ')');
       });
     }
 
     if (d.message) {
       out.push('');
-      out.push('MESSAGE');
+      out.push(t('quote.message'));
       out.push(d.message);
     }
 
@@ -289,7 +281,7 @@
     if (!lastData) return;
 
     var message = buildMessage(lastData);
-    var subject = 'Demande de devis — ' + (lastData.name || ED().contact.company);
+    var subject = t('message.subject') + ' — ' + (lastData.name || ED().contact.company);
 
     var box = $('q-msg');
     if (box) box.value = message;
@@ -351,7 +343,7 @@
         done = false;
       }
       if (done) ok();
-      else ED().ui.toast('Sélectionnez le texte puis Ctrl+C');
+      else ED().ui.toast(t('cta.copyManual'));
     }
 
     try {
@@ -407,7 +399,15 @@
   if (window.ED && document.readyState !== 'loading') start();
 
   document.addEventListener('ed:langchange', function () {
-    if (started) render();
+    if (!started) return;
+    render();
+    RULES.forEach(function (rule) {
+      var input = $(rule.id);
+      if (input && input.getAttribute('aria-invalid') === 'true') {
+        setFieldError(input, rule.err, t(input.value.trim() ? rule.key : 'quote.required'));
+      }
+    });
+    if (panelIsOpen()) showPanel();
   });
 
   document.addEventListener('ed:cartchange', function () {

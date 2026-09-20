@@ -238,9 +238,9 @@
           '</a>' +
           '<nav class="nav" id="ed-nav">' + links + '</nav>' +
           '<div class="header-actions">' +
-            '<div class="lang-toggle" role="group" aria-label="Langue / Language">' +
-              '<button type="button" data-lang="fr" aria-pressed="' + (currentLang === 'fr') + '">FR</button>' +
-              '<button type="button" data-lang="en" aria-pressed="' + (currentLang === 'en') + '">EN</button>' +
+            '<div class="lang-toggle" role="group" data-i18n-attr="aria-label:nav.language" aria-label="' + esc(t('nav.language')) + '">' +
+              '<button type="button" data-lang="fr" lang="fr" aria-label="Français" aria-pressed="' + (currentLang === 'fr') + '">FR</button>' +
+              '<button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="' + (currentLang === 'en') + '">EN</button>' +
             '</div>' +
             '<a class="btn btn-primary btn-sm cart-link" href="devis.html">' +
               '<span data-i18n="nav.quote">' + t('nav.quote') + '</span>' +
@@ -397,7 +397,7 @@
 
       return {
         label: spec.label,
-        value: spec.format(row && row.value),
+        value: spec.format(row && L(row.value)),
         icon: spec.icon,
         key: spec.key
       };
@@ -518,7 +518,7 @@
              (hasIcon
                ? '<img class="p-card-spec-icon" src="' + esc(icon) + '" alt="" aria-hidden="true">'
                : '') +
-             '<div><div class="p-card-spec-v">' + esc(h.value) + '</div>' +
+             '<div><div class="p-card-spec-v">' + esc(L(h.value)) + '</div>' +
              '<div class="p-card-spec-l">' + esc(L(h.label)) + '</div></div></div>';
     }).join('');
 
@@ -627,16 +627,6 @@
     applyI18n(document);
     document.dispatchEvent(new CustomEvent('ed:ready'));
   }
-
-  /* Re-traduit le chrome à chaque changement de langue */
-  document.addEventListener('ed:langchange', function () {
-    var h = document.querySelector('[data-header]');
-    if (h) h.innerHTML = headerHTML(h.getAttribute('data-header') || '');
-    var f = document.querySelector('[data-footer]');
-    if (f) f.innerHTML = footerHTML();
-    mountChrome();
-    applyI18n(document);
-  });
 
   /* ------------------------------------------------------------- export */
   window.ED = {
