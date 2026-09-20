@@ -354,10 +354,25 @@ This is a language/copy consistency review, not independent verification of ever
 
 ---
 
-## 11. Change log
+## 11. Automatic bilingual maintenance
+
+The repository skill [.agents/skills/ed-website-bilingual-copy/SKILL.md](.agents/skills/ed-website-bilingual-copy/SKILL.md) maintains both languages whenever a coding agent changes public website copy. `AGENTS.md` and `.github/copilot-instructions.md` route agents to it without a separate translation request. It covers new and changed copy, including existing pairs whose counterpart may now be stale, and skips changes without public copy.
+
+The intended customer outcome is consistent information and uninterrupted RFQ preparation in either language. The customer signal is matching FR/EN meaning and a language round-trip that preserves visitor state. This should reduce language-related RFQ abandonment and sales clarification, though no conversion uplift has been measured.
+
+The skill is versioned with the repository. Its implicit invocation policy is enabled, and a local Codex skill link points to this checkout's skill folder. Other clones can use the repository instructions without that local link.
+
+The workflow `.github/workflows/bilingual-copy.yml` runs `node --test tests/i18n.test.cjs` on pushes and pull requests, with manual dispatch also available. It catches missing declared translations and broken references; it does not judge semantic accuracy, detect every hard-coded sentence, translate human edits, or generate commits. Agents perform that copy review using the skill. No external translation service or API key is required.
+
+Validation: the skill frontmatter and metadata were validated; the seven regression tests passed; controlled missing-translation and unknown-key cases were verified to fail in a temporary checkout. GitHub execution starts only after the workflow is pushed. No branch protection, push or deployment was performed. This remains a standalone repository with no identified owning issue; no Linear update was made.
+
+---
+
+## 12. Change log
 
 | Date | Change | Notes |
 |---|---|---|
+| 2026-09-20 | Automatic bilingual copy skill and CI checks | Added a repository skill, implicit invocation metadata, agent/Copilot routing, and a read-only GitHub regression workflow. Translation is performed by the coding agent; CI validates declared translations. |
 | 2026-09-20 | Complete FR/EN copy and reliable language switching | Updated all 12 pages, bilingual catalogue values, runtime messages and accessible labels; preserved visitor state; added 7 regression tests. See bilingual verification above. |
 | 2026-09-03 | Updated Agriculture highlights bar: Masse Max. Décollage & Largeur Pulvérisation | Updated highlights across all agricultural drones (`t100`, `t70p`, `t55`, `t50`, `t25p`, `t25`) in `assets/js/data.js`: renamed maximum takeoff weight spec description in French to `Masse Max. Décollage` with icon `max_takeoff_weight.svg`, and renamed spray width spec description to `Largeur Pulvérisation` with icon `spray_width_1.svg`. Updated `getSpecIcon` in `assets/js/app.js` and `assets/data_input/ICONS_mapping.csv`. |
 | 2026-09-03 | Integrated Enterprise equipment specs & 15+ new SVG icons | Integrated `assets/data_input/ENTERPRISE_EQUIPEMENT_SPECS.csv` into runtime data (`assets/js/data.js`). Replaced placeholder equipment rows across Enterprise models (`matrice-400`, `matrice-4e`, `matrice-4t`, `matrice-4td`, `matrice-30t`, `matrice-350-rtk`) and added `matrice-4d`. Updated `assets/data_input/ICONS_mapping.csv` and upgraded `getSpecIcon` in `assets/js/app.js` with full bilingual support for newly added SVG icons (`rtk_antenna.svg`, `fpv_camera.svg`, `thermal_camera.svg`, `laser_rangefinder.svg`, `spotlight.svg`, `loudspeaker.svg`, `wide_camera.svg`, `telephoto_camera.svg`, `simple_camera.svg`, `max_flight_altitude.svg`, `max_takeoff_altitude.svg`, `max_takeoff_weight.svg`, `wind_resistance.svg`, `lidar.svg`). |

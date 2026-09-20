@@ -87,6 +87,8 @@ Every page must load scripts in this order or features will break:
 
 ## Translation & UI Text
 
+For every website change involving visitor-facing copy, automatically apply [the bilingual copy skill](../.agents/skills/ed-website-bilingual-copy/SKILL.md) in the same task. Translate the counterpart language and check the rendered result without waiting for a separate request. Skip translation when no public copy changes. See [AGENTS.md](../AGENTS.md) for the repository-wide trigger.
+
 ### Adding UI Text
 
 1. Add an FR/EN entry to `assets/js/i18n.js`
