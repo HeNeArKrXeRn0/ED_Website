@@ -506,11 +506,18 @@
       return 'assets/img/svg_icons/simple_camera.svg';
     }
 
+    // 14. Compatibilité aéronefs
+    if (l.indexOf('compatib') !== -1 || l.indexOf('aéronefs') !== -1 || l.indexOf('porteur') !== -1 || l.indexOf('carrier') !== -1) {
+      return 'assets/img/svg_icons/compatibility.svg';
+    }
+
     return 'assets/img/svg_icons/payload.svg';
   }
 
   function productCardHTML(p) {
-    var highlights = catalogueHighlights(p).slice(0, 4).map(function (h) {
+    /* Accessories (payloads) show no highlight specs on cards — the full
+       specs and highlight bar live on the product page. */
+    var highlights = (p.type === 'payload' ? [] : catalogueHighlights(p).slice(0, 4)).map(function (h) {
       var icon = h.icon || getSpecIcon(L(h.label));
       var hasIcon = Boolean(icon);
       return '<div class="p-card-spec' + (hasIcon ? '' : ' p-card-spec--plain') + '"' +

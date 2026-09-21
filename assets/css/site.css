@@ -420,10 +420,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border-top: 1px solid var(--border-soft);
   padding-top: var(--s4); margin-top: var(--s2);
 }
-.p-card-spec { min-width: 0; display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 6px; align-items: start; }
+.p-card-spec { min-width: 0; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 6px; align-items: start; }
 .p-card-spec--plain { display: block; }
 .p-card-spec-icon, .spec-icon {
-  width: 24px; height: 24px; display: inline-block; vertical-align: middle;
+  width: 36px; height: 36px; display: inline-block; vertical-align: middle;
   object-fit: contain; flex-shrink: 0;
   filter: invert(70%) sepia(100%) saturate(1000%) hue-rotate(115deg);
 }

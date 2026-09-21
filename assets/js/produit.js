@@ -24,18 +24,20 @@
     return ED.ui.productCard(p);
   }
 
-  /* Bandeau de chiffres clés — omis tant que `highlights` est vide */
+  /* Bandeau de chiffres clés — omis tant que `highlights` est vide.
+     Payloads show the spec name big and its value small. */
   function statStrip(p) {
     var hs = (p.highlights || []).filter(function (h) { return h && h.value != null; });
     if (!hs.length) return '';
+    var swapHL = p.type === 'payload';
 
     var cells = hs.map(function (h) {
       var icon = h.icon || (ED.ui.getSpecIcon ? ED.ui.getSpecIcon(L(h.label)) : null);
-      var iconHTML = icon ? '<img class="spec-icon" src="' + esc(icon) + '" alt="" aria-hidden="true" style="width:28px;height:28px;margin:0 auto 8px auto;display:block;">' : '';
+      var iconHTML = icon ? '<img class="spec-icon" src="' + esc(icon) + '" alt="" aria-hidden="true" style="width:42px;height:42px;margin:0 auto 8px auto;display:block;">' : '';
       return '<div class="stat" style="text-align:center;">' +
                iconHTML +
-               '<div class="stat-value">' + esc(L(h.value)) + '</div>' +
-               '<div class="stat-label">' + esc(L(h.label)) + '</div>' +
+               '<div class="stat-value">' + esc(swapHL ? L(h.label) : L(h.value)) + '</div>' +
+               '<div class="stat-label">' + esc(swapHL ? L(h.value) : L(h.label)) + '</div>' +
              '</div>';
     }).join('');
 

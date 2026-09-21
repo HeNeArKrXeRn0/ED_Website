@@ -61,7 +61,6 @@ window.ED_PRODUCTS = [
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '50 kg' },
       { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '104 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
-      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '7 min' },
       { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '11 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
@@ -115,7 +114,6 @@ window.ED_PRODUCTS = [
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '100 kg' },
       { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '175 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
-      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '6 min' },
       { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '13 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
@@ -170,7 +168,6 @@ window.ED_PRODUCTS = [
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '70 kg' },
       { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '130 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
-      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '7 min' },
       { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '11 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
@@ -224,7 +221,6 @@ window.ED_PRODUCTS = [
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '50 kg' },
       { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '92 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
-      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '7 min' },
       { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '11 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
@@ -278,7 +274,6 @@ window.ED_PRODUCTS = [
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '20 kg' },
       { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '53 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
-      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '9 min' },
       { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '7 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
@@ -333,7 +328,6 @@ window.ED_PRODUCTS = [
     highlights: [
       { label: { fr: 'Charge utile', en: 'Payload' }, value: '20 kg' },
       { label: { fr: 'Masse Max. Décollage', en: 'Max Takeoff Weight' }, value: '52 kg', icon: 'assets/img/svg_icons/max_takeoff_weight.svg' },
-      { label: { fr: 'Autonomie', en: 'Autonomy' }, value: '9 min' },
       { label: { fr: 'Largeur Pulvérisation', en: 'Spray Width' }, value: '7 m', icon: 'assets/img/svg_icons/spray_width_1.svg' },
     ],
     specs: [
@@ -826,7 +820,7 @@ window.ED_PRODUCTS = [
     },
     useCases: ['topographie', 'inspection', 'cartographie'],
     highlights: [
-      { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Oui', en: 'Yes' } },
+      { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus', en: 'Included' } },
       { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS, 20 MP' },
       { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
@@ -834,7 +828,7 @@ window.ED_PRODUCTS = [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Oui', en: 'Yes' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS, 20MP' },
           { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Bientôt disponible', en: 'Coming soon' } },
           { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' }
@@ -898,7 +892,7 @@ window.ED_PRODUCTS = [
     useCases: ['inspection', 'cartographie'],
     highlights: [
       { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '40 MP' },
-      { label: { fr: 'Grand-angle', en: 'Wide' }, value: '48 MP' },
+      { label: { fr: 'Caméra grand-angle', en: 'Wide-Angle Camera' }, value: '48 MP', icon: 'assets/img/svg_icons/wide_camera.svg' },
       { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '3000 m' }
     ],
     specs: [
@@ -907,7 +901,7 @@ window.ED_PRODUCTS = [
         rows: [
           { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/1.8" CMOS, 40MP' },
           { label: { fr: 'Caméra grand-angle', en: 'Wide-Angle Camera' }, value: '1/1.3" CMOS, 48MP' },
-          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Non', en: 'No' } },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Non inclus', en: 'Not included' } },
           { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '3000 m' },
           { label: { fr: 'Éclairage IR', en: 'Spotlight IR' }, value: { fr: 'Oui — éclairage proche infrarouge', en: 'Yes — NIR auxiliary light' } },
           { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Bientôt disponible', en: 'Coming soon' } },
@@ -937,8 +931,8 @@ window.ED_PRODUCTS = [
     useCases: ['inspection', 'cartographie'],
     highlights: [
       { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '20 MP' },
-      { label: { fr: 'Grand-angle', en: 'Wide' }, value: '12 MP' },
-      { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200 m' }
+      { label: { fr: 'Caméra grand-angle', en: 'Wide-Angle Camera' }, value: '12 MP', icon: 'assets/img/svg_icons/wide_camera.svg' },
+      { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200 m' },
     ],
     specs: [
       {
@@ -1709,7 +1703,7 @@ window.ED_PRODUCTS = [
     },
     useCases: ['topographie', 'cartographie', 'inspection'],
     highlights: [
-      { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Oui', en: 'Yes' } },
+      { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus', en: 'Included' } },
       { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS' },
       { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
@@ -1717,7 +1711,7 @@ window.ED_PRODUCTS = [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Oui', en: 'Yes' } },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS' },
           { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Bientôt disponible', en: 'Coming soon' } },
           { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' }
