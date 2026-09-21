@@ -20,7 +20,8 @@ D-RTK-3;rtk_antenna.svg
 GNSS;sattelite.svg
 GNSS Antenna;sattelite.svg
 FPV Camera;fpv_camera.svg
-Vision System;shield.svg
+Obstacle Avoidance;shield.svg
+Évitement d’obstacles;shield.svg
 Radar;radar.svg
 Lidar;lidar.svg
 Thermal Camera;thermal_camera.svg

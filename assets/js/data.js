@@ -90,7 +90,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
         ]
       },
@@ -144,7 +144,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus', en: 'Included' } },
         ]
@@ -199,7 +199,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
         ]
       },
@@ -253,7 +253,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
         ]
       },
@@ -307,7 +307,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Projecteur', en: 'Spotlight' }, value: { fr: 'Inclus', en: 'Included' } },
         ]
@@ -362,7 +362,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Radars AESA', en: 'AESA Radars' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision pour l’évitement d’obstacles', en: 'Vision System for Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
         ]
       },
@@ -407,7 +407,7 @@ window.ED_PRODUCTS = [
         rows: [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (omnidirectionnel)', en: 'Included (Omnidirectional)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus (omnidirectionnel)', en: 'Included (Omnidirectional)' } },
           { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: {"fr": "4/3 CMOS, pixels effectifs: 20 MP", "en": "4/3 CMOS, Effective Pixels: 20 MP"} },
           { label: { fr: 'Caméra multispectrale', en: 'Multispectral Camera' }, value: {"fr": "CMOS 1/2.8 pouce, pixels effectifs: 5 MP", "en": "1/2.8-inch CMOS, Effective Pixels: 5 MP"} },
           { label: { fr: 'Bande multispectrale — Vert (G)', en: 'Multispectral Band — Green (G)' }, value: '560 ± 16 nm' },
@@ -465,7 +465,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Station D-RTK 3', en: 'D-RTK 3 Base Station' }, value: { fr: 'Compatible', en: 'Compatible' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Radar', en: 'Radar' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Accessoires de nacelle', en: 'Gimbal Accessory' }, value: { fr: 'Série Zenmuse (H30, H30T, L3, S1, V1, L2, P1)', en: 'Zenmuse Series (H30, H30T, L3, S1, V1, L2, P1)' } },
@@ -513,7 +513,7 @@ window.ED_PRODUCTS = [
         rows: [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Non inclus (dédié photogrammétrie)', en: 'Not included (Photogrammetry dedicated)' } },
           { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Projecteur d’appoint', en: 'Accessory Spotlight' }, value: 'AL1' },
@@ -565,7 +565,7 @@ window.ED_PRODUCTS = [
         rows: [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Inclus (thermique radiométrique 640×512)', en: 'Included (640×512 Radiometric Thermal)' } },
           { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Projecteur d’appoint', en: 'Accessory Spotlight' }, value: 'AL1' },
@@ -623,7 +623,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Station D-RTK 3', en: 'D-RTK 3 Base Station' }, value: { fr: 'Compatible', en: 'Compatible' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (6 directions)', en: 'Included (6 Directions)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus (6 directions)', en: 'Included (6 Directions)' } },
           { label: { fr: 'Radar', en: 'Radar' }, value: { fr: 'Compatible (Radar CSM)', en: 'Compatible (CSM Radar)' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Compatible (Zenmuse L2)', en: 'Compatible (Zenmuse L2)' } },
           { label: { fr: 'Accessoires de nacelle', en: 'Gimbal Accessory' }, value: { fr: 'Série Zenmuse (H20, H20T, H20N, H30T, L2, P1)', en: 'Zenmuse Series (H20, H20T, H20N, H30T, L2, P1)' } },
@@ -668,7 +668,7 @@ window.ED_PRODUCTS = [
         rows: [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Module optionnel', en: 'Optional module' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (omnidirectionnel)', en: 'Included (Omnidirectional)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus (omnidirectionnel)', en: 'Included (Omnidirectional)' } },
           { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: {"fr": "CMOS 4/3 pouce pixels effectifs: 20 MP", "en": "4/3-inch CMOS Effective Pixels: 20 MP"} },
           { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: {"fr": "1/2\" CMOS, pixels effectifs: 12 MP (56× hybride)", "en": "1/2\" CMOS, Effective pixels: 12 MP (56× hybrid)"} },
         ]
@@ -718,7 +718,7 @@ window.ED_PRODUCTS = [
         rows: [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Module optionnel', en: 'Optional module' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (omnidirectionnel)', en: 'Included (Omnidirectional)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus (omnidirectionnel)', en: 'Included (Omnidirectional)' } },
           { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: {"fr": "Microbolomètre VOx non refroidi, 640 × 512", "en": "Uncooled VOx microbolometer, 640 × 512"} },
           { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: {"fr": "1/2\" CMOS, pixels effectifs: 48 MP", "en": "1/2\" CMOS, Effective pixels: 48 MP"} },
           { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: {"fr": "1/2\" CMOS, pixels effectifs: 12 MP (56× hybride)", "en": "1/2\" CMOS, Effective pixels: 12 MP (56× hybrid)"} },
@@ -730,108 +730,6 @@ window.ED_PRODUCTS = [
     image: 'assets/img/products/mavic-3t.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://enterprise.dji.com/mavic-3-enterprise'
-  },
-  {
-    id: 'dock-3',
-    segment: 'enterprise',
-    name: 'DJI Dock 3',
-    category: 'enterprise',
-    type: 'aircraft',
-    tagline: {"fr": "Station automatisée pour opérations à distance.", "en": "Automated station for remote operations."},
-    usage: {"fr": "Le Dock 3 permet de programmer des missions à distance avec un appareil compatible, puis d’assurer son atterrissage et sa recharge. Il convient à des inspections récurrentes sous supervision, avec une installation, une maintenance et des autorisations adaptées. Le déploiement sur véhicule impose les conditions de montage et d’immobilisation prévues par DJI.", "en": "Dock 3 enables scheduled remote missions with a compatible aircraft, followed by landing and charging. It supports recurring supervised inspections with suitable installation, maintenance and authorisations. Vehicle deployment must follow DJI’s mounting and stationary-operation requirements."},
-    useCases: ['inspection', 'securite', 'topographie'],
-    highlights: [
-      { label: { fr: 'Protection', en: 'IP rating' }, value: 'IP56' },
-      { label: { fr: 'Masse', en: 'Weight' }, value: '55 kg' },
-      { label: { fr: 'Aéronefs', en: 'Aircraft' }, value: '1' },
-    ],
-    specs: [
-      {
-        group: { fr: 'Général', en: 'General' },
-        rows: [
-        { label: { fr: 'Nom du produit', en: 'Product Name' }, value: 'DJI Dock 3' },
-        { label: { fr: 'Catégorie de produit', en: 'Product category' }, value: {"fr": "Station automatisée pour opérations à distance, compatible avec un déploiement sur véhicule.", "en": "Automated dock for remote operations, with support for vehicle-mounted deployment."} },
-        { label: { fr: 'Nombre d’aéronefs hébergés', en: 'Number of Drones Accommodated' }, value: '1' },
-        { label: { fr: 'Aéronefs compatibles', en: 'Supported Aircraft' }, value: {"fr": "DJI Matrice 4D et Matrice 4TD, appareils compatibles avec la station. Vérifiez séparément la compatibilité des accessoires.", "en": "DJI Matrice 4D and Matrice 4TD, the dock-compatible aircraft. Check accessory compatibility separately."} },
-        { label: { fr: 'Accessoire associé', en: 'Related accessory' }, value: {"fr": "Relais D-RTK 3 pour déploiement fixe : davantage de possibilités d’implantation du DJI Dock 3.", "en": "D-RTK 3 Relay Fixed Deployment Version provides more options for DJI Dock 3 placement."} },
-        ]
-      },
-      {
-        group: { fr: 'Aéronef et performances', en: 'Aircraft and performance' },
-        rows: [
-        { label: { fr: 'Masse totale', en: 'Total Weight' }, value: {"fr": "55 kg (sans appareil)", "en": "55 kg (without aircraft)"} },
-        { label: { fr: 'Dimensions (capot ouvert)', en: 'Dimensions (Dock Cover Opened)' }, value: {"fr": "1760×745×485 mm (L × l × H)", "en": "1760×745×485 mm (L×W×H)"} },
-        { label: { fr: 'Dimensions (capot fermé)', en: 'Dimensions (Dock Cover Closed)' }, value: {"fr": "640×745×770 mm (L × l × H)", "en": "640×745×770 mm (L×W×H)"} },
-        { label: { fr: 'Remarque sur les dimensions', en: 'Dimensions note' }, value: {"fr": "Dimensions incluant le module RTK en largeur (160 mm), l’anémomètre en hauteur (145 mm) et les supports de fixation (58 mm).", "en": "Dimensions include RTK module width (160 mm), anemometer height (145 mm) and mounting brackets (58 mm)."} },
-        { label: { fr: 'Vent max. admissible à l’atterrissage', en: 'Max Allowable Landing Wind Speed' }, value: '12 m/s' },
-        { label: { fr: 'Altitude max. d’exploitation', en: 'Max Operating Altitude' }, value: '4500 m' },
-        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — Masse', en: 'Housed aircraft (Matrice 4D/4TD) — Weight' }, value: {"fr": "1850 g (batterie, hélices et carte microSD incluses)", "en": "1850 g (incl. battery, propellers, microSD card)"} },
-        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — Masse max. au décollage', en: 'Housed aircraft (Matrice 4D/4TD) — Max Takeoff Weight' }, value: '2090 g' },
-        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — Dimensions', en: 'Housed aircraft (Matrice 4D/4TD) — Dimensions' }, value: {"fr": "377.7×416.2×212.5 mm (L × l × H, sans hélices)", "en": "377.7×416.2×212.5 mm (L×W×H, without propellers)"} },
-        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — Empattement diagonal', en: 'Housed aircraft (Matrice 4D/4TD) — Diagonal Wheelbase' }, value: '498.5 mm' },
-        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — Distance de vol max.', en: 'Housed aircraft (Matrice 4D/4TD) — Max Flight Distance' }, value: '43 km' },
-        ]
-      },
-      {
-        group: { fr: 'Positionnement', en: 'Positioning' },
-        rows: [
-        { label: { fr: 'Réception satellite de la station de base RTK', en: 'RTK Base Station Satellite Reception' }, value: {"fr": "Réception simultanée: GPS L1 C/A, L2, L5; BeiDou B1l, B2l, B3l, B2a, B2b, B1C; GLONASS F1, F2; Galileo E1, E5a, E5b, E6; QZSS L1, L2, L5", "en": "Simultaneously receive: GPS L1 C/A, L2, L5; BeiDou B1l, B2l, B3l, B2a, B2b, B1C; GLONASS F1, F2; Galileo E1, E5a, E5b, E6; QZSS L1, L2, L5"} },
-        { label: { fr: 'Précision de positionnement de la station', en: 'Dock positioning accuracy' }, value: {"fr": "— (précision RTK de la station non indiquée ; précision de vol stationnaire de l’appareil avec RTK : ±0,1 m)", "en": "— (dock RTK accuracy not stated; aircraft hovering accuracy with RTK: ±0.1 m)"} },
-        ]
-      },
-      {
-        group: { fr: 'Imagerie et capteurs', en: 'Imaging and sensors' },
-        rows: [
-        { label: { fr: 'Support de nacelle véhiculé (accessoire)', en: 'Vehicle-Mounted Gimbal Mount (accessory)' }, value: {"fr": "Poids : support droit et support de nacelle 440 g, support gauche 155 g ; dimensions du support droit et de nacelle : 112,8 × 152,2 × 157,8 mm (L × l × H)", "en": "Weight: right bracket and gimbal support 440 g, left bracket 155 g; right bracket and gimbal support dimensions: 112.8 × 152.2 × 157.8 mm (L × W × H)"} },
-        { label: { fr: 'Capteurs', en: 'Sensors' }, value: {"fr": "Capteurs de vent, pluie, température ambiante, immersion, température interne et humidité interne.", "en": "Wind, rainfall, ambient-temperature, water-immersion, internal-temperature and internal-humidity sensors."} },
-        { label: { fr: 'Caméras de surveillance', en: 'Security Cameras' }, value: {"fr": "Extérieur : 1920 × 1080, champ de vision 151°, éclairage blanc d’appoint. Intérieur : 1920 × 1080, champ de vision 151°, éclairage blanc d’appoint.", "en": "External: 1920 × 1080, 151° field of view, auxiliary white light. Internal: 1920 × 1080, 151° field of view, auxiliary white light."} },
-        ]
-      },
-      {
-        group: { fr: 'Transmission et radiocommande', en: 'Transmission and controller' },
-        rows: [
-        { label: { fr: 'Transmission vidéo — fréquence', en: 'Video Transmission — Operating Frequency' }, value: '2.400-2.4835 GHz; 5.150-5.250 GHz (CE: 5.170-5.250 GHz); 5.725-5.850 GHz' },
-        { label: { fr: 'Transmission vidéo — antenne', en: 'Video Transmission — Antenna' }, value: {"fr": "9 antennes intégrées, 2T4R, commutation intelligente", "en": "9 built-in antennas, 2T4R, intelligent switching"} },
-        { label: { fr: 'Transmission vidéo — système', en: 'Video Transmission — System' }, value: {"fr": "O4+ Enterprise", "en": "O4+ Enterprise"} },
-        { label: { fr: 'Puissance d’émission (PIRE)', en: 'Transmitter Power (EIRP)' }, value: '2.4 GHz: < 33 dBm (FCC), < 20 dBm (CE/SRRC/MIC); 5.2 GHz: < 23 dBm (FCC/CE); 5.8 GHz: < 33 dBm (FCC), < 14 dBm (CE), < 30 dBm (SRRC)' },
-        { label: { fr: 'Connectivité réseau', en: 'Network Access' }, value: {"fr": "Ethernet : port adaptatif 10/100/1000 Mbit/s ; accès 4G : DJI Cellular Dongle 2 requis, vendu séparément", "en": "Ethernet: adaptive 10/100/1000 Mbps port; 4G: requires DJI Cellular Dongle 2, sold separately"} },
-        ]
-      },
-      {
-        group: { fr: 'Batterie et alimentation', en: 'Battery and power' },
-        rows: [
-        { label: { fr: 'Batterie de secours', en: 'Backup Battery' }, value: {"fr": "Capacité 12 Ah ; sortie 12 V ; batterie au plomb ; autonomie > 4 h avec batterie de secours pleine à 25 °C. En cas de coupure, la station n’assure ni la charge de l’appareil, ni la climatisation, ni le chauffage du capot ou de l’anémomètre.", "en": "Capacity 12 Ah; output 12 V; lead-acid battery; runtime > 4 h with a fully charged backup battery at 25 °C. During an outage, aircraft charging, air conditioning and dock-cover/anemometer heating are unavailable."} },
-        { label: { fr: 'Temps de charge de l’aéronef', en: 'Aircraft Charging Time' }, value: {"fr": "27 minutes : charge de l’appareil éteint de 15 % à 95 %, à 25 °C / 77 °F", "en": "27 minutes: aircraft powered off, charging from 15% to 95% at 25 °C / 77 °F"} },
-        { label: { fr: 'Tension de charge en sortie', en: 'Charging Output Voltage' }, value: '35 V DC' },
-        { label: { fr: 'Tension d’entrée', en: 'Input Voltage' }, value: '100-240 V (AC), 50/60 Hz' },
-        { label: { fr: 'Puissance d’entrée', en: 'Input Power' }, value: {"fr": "Max. 800 W", "en": "Max 800 W"} },
-        ]
-      },
-      {
-        group: { fr: 'Station', en: 'Dock' },
-        rows: [
-        { label: { fr: 'Mode de déploiement — véhiculé', en: 'Deployment mode — vehicle-mounted' }, value: {"fr": "Oui, sous réserve des conditions de montage et d’exploitation du constructeur.", "en": "Yes, subject to the manufacturer’s mounting and operating requirements."} },
-        { label: { fr: 'Contraintes d’exploitation en version véhiculée (FAQ DJI)', en: 'Vehicle-mounted operating constraints (DJI FAQ)' }, value: {"fr": "Pente de stationnement inférieure à 3° ; étalonnage à distance avant exploitation ; véhicule et station immobiles pendant le vol ; base fixée au support avec écrous de sécurité et câble de retenue ; capot fermé pendant le déplacement du véhicule.", "en": "Parking slope below 3°; remote calibration before operation; vehicle and dock stationary during flight; base secured with lock nuts and a safety rope; dock cover closed while the vehicle is moving."} },
-        { label: { fr: 'Système de climatisation', en: 'Air Conditioning System' }, value: {"fr": "Climatisation par compresseur ; tension de fonctionnement 48 V CC", "en": "Compressor-based air conditioning; operating voltage 48 V DC"} },
-        { label: { fr: 'Protection contre la foudre', en: 'Lightning Protection' }, value: {"fr": "Port d’alimentation CA : 20 kA nominal, EN 61643-11 type 2 / IEC 61643-1 classe II ; port Ethernet : 10 kA (I_total), EN/IEC 61643-21 catégorie C", "en": "AC power port: 20 kA rated, EN 61643-11 Type 2 / IEC 61643-1 Class II; Ethernet port: 10 kA (I_total), EN/IEC 61643-21 Category C"} },
-        { label: { fr: 'Capacité d’extension', en: 'Expansion Capability' }, value: {"fr": "Informatique en périphérie : communication de données avec des commutateurs externes", "en": "Edge computing: data communication with external switches"} },
-        { label: { fr: 'Temps de déploiement / d’installation', en: 'Deployment / setup time' }, value: {"fr": "— (durée de mise en place non indiquée dans les spécifications)", "en": "— (setup time not stated in the specifications)"} },
-        { label: { fr: 'Aéronef hébergé (Matrice 4D/4TD) — IP rating', en: 'Housed aircraft (Matrice 4D/4TD) — IP rating' }, value: 'IP55' },
-        ]
-      },
-      {
-        group: { fr: 'Environnement', en: 'Environment' },
-        rows: [
-        { label: { fr: 'Température d’exploitation', en: 'Operating Temperature' }, value: {"fr": "-30° à 50° C (-22° à 122° F)", "en": "-30° to 50° C (-22° to 122° F)"} },
-        { label: { fr: 'Indice de protection', en: 'Ingress Protection Rating' }, value: 'IP56' },
-        ]
-      },
-    ],
-    compatiblePayloads: [],
-    availability: 'coming_soon',
-    image: 'assets/img/products/dock-3.png',
-    imageFallback: 'assets/img/svg/dock.svg',
-    djiUrl: 'https://enterprise.dji.com/dock-3'
   },
 
   /* ====================== CHARGES UTILES & ACCESSOIRES ==================== */
@@ -845,73 +743,29 @@ window.ED_PRODUCTS = [
       fr: 'Nacelle quadruple capteur : zoom, grand-angle, thermique et télémètre.',
       en: 'Quad-sensor gimbal: zoom, wide, thermal and rangefinder.'
     },
-    usage: {"fr": "La H30T associe zoom, grand-angle, caméra thermique et télémètre laser, avec un éclairage proche infrarouge d’appoint. Elle permet de recueillir plusieurs types d’observation lors d’une même mission d’inspection ou de recherche. Les mesures dépendent des conditions et des limites des capteurs.", "en": "The H30T combines zoom, wide-angle, thermal imaging and laser ranging with auxiliary near-infrared illumination. It supports multiple types of observation during a single inspection or search mission. Measurements depend on conditions and sensor limitations."},
+    usage: {
+      fr: 'La H30T associe zoom, grand-angle, caméra thermique et télémètre laser, avec un éclairage proche infrarouge d’appoint. Elle permet de recueillir plusieurs types d’observation lors d’une même mission d’inspection ou de recherche. Les mesures dépendent des conditions et des limites des capteurs.',
+      en: 'The H30T combines zoom, wide-angle, thermal imaging and laser ranging with auxiliary near-infrared illumination. It supports multiple types of observation during a single inspection or search mission. Measurements depend on conditions and sensor limitations.'
+    },
     useCases: ['inspection', 'securite'],
     highlights: [
-      { label: { fr: 'Zoom hybride', en: 'Hybrid zoom' }, value: '34×' },
-      { label: { fr: 'Thermique', en: 'Thermal' }, value: '1280×1024' },
-      { label: { fr: 'Protection', en: 'IP rating' }, value: 'IP54' },
+      { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: '1280×1024' },
+      { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '40 MP' },
+      { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '3000 m' }
     ],
     specs: [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-        { label: { fr: 'Présentation', en: 'What it is' }, value: {"fr": "Nacelle multicapteur : zoom 40 MP, grand-angle 48 MP, thermique 1280 × 1024, télémètre laser et éclairage proche infrarouge pour l’inspection et les secours.", "en": "Multi-sensor payload: 40 MP zoom, 48 MP wide-angle, 1280 × 1024 thermal camera, laser rangefinder and near-infrared auxiliary light for inspection and emergency response."} },
-        { label: { fr: 'Éclairage d’appoint proche infrarouge', en: 'NIR Auxiliary Light' }, value: {"fr": "champ de vision 4.6±0.6° (circulaire); Portée d’éclairage @100 m: environ 8 m de diamètre", "en": "FOV 4.6±0.6° (round); Illumination Range @100 m: approx. 8 m diameter circle"} },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+          { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/1.8" CMOS, 40MP' },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide-Angle Camera' }, value: '1/1.3" CMOS, 48MP' },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: '1280×1024 @ 30 i/s', en: '1280×1024 @ 30fps' } },
+          { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '3000 m' },
+          { label: { fr: 'Éclairage IR', en: 'Spotlight IR' }, value: { fr: 'Oui — éclairage proche infrarouge', en: 'Yes — NIR auxiliary light' } },
+          { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Bientôt disponible', en: 'Coming soon' } },
+          { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' }
         ]
-      },
-      {
-        group: { fr: 'Aéronef et performances', en: 'Aircraft and performance' },
-        rows: [
-        { label: { fr: 'Masse', en: 'Weight' }, value: '920±5 g' },
-        { label: { fr: 'Dimensions', en: 'Dimensions' }, value: {"fr": "170×145×165 mm (L × l × H)", "en": "170×145×165 mm (L×W×H)"} },
-        { label: { fr: 'Statut', en: 'Status (zenmuse_specs.csv)' }, value: {"fr": "Bientôt disponible", "en": "Coming soon"} },
-        ]
-      },
-      {
-        group: { fr: 'Positionnement', en: 'Positioning' },
-        rows: [
-        { label: { fr: 'Télémètre laser — portée', en: 'Laser Rangefinder — Range' }, value: '3000 m' },
-        { label: { fr: 'Télémètre laser — précision', en: 'Laser Rangefinder — Accuracy' }, value: {"fr": "≤ 500 m: ±(0.2 m + distance mesurée × 0.15%); > 500 m: ±1.0 m", "en": "≤ 500 m: ±(0.2 m + measurement distance × 0.15%); > 500 m: ±1.0 m"} },
-        ]
-      },
-      {
-        group: { fr: 'Imagerie et capteurs', en: 'Imaging and sensors' },
-        rows: [
-        { label: { fr: 'Caméra zoom — Capteur', en: 'Zoom Camera — Sensor' }, value: {"fr": "CMOS 1/1.8 pouce, pixels effectifs: 40 MP", "en": "1/1.8-inch CMOS, Effective Pixels: 40 MP"} },
-        { label: { fr: 'Caméra zoom — Objectif', en: 'Zoom Camera — Lens' }, value: {"fr": "Focale réelle: 7.1-172 mm (focale équivalente: 33.4-809.3 mm); Ouverture f/1.6-f/5.2; champ de vision diagonal 66.7°-2.9°", "en": "Actual Focal Length: 7.1-172 mm (equivalent focal length: 33.4-809.3 mm); Aperture f/1.6-f/5.2; DFOV 66.7°-2.9°"} },
-        { label: { fr: 'Caméra zoom — Zoom', en: 'Zoom Camera — Zoom' }, value: {"fr": "Zoom optique hybride: 34×; Zoom maximal: 400×", "en": "Hybrid Optical Zoom: 34×; Max Zoom: 400×"} },
-        { label: { fr: 'Caméra zoom — ISO', en: 'Zoom Camera — ISO' }, value: {"fr": "Prise de vue unique: 100-25600; Scène nocturne: 100-819200", "en": "Single Shot: 100-25600; Night Scene: 100-819200"} },
-        { label: { fr: 'Caméra zoom — Max Taille des photos', en: 'Zoom Camera — Max Photo Size' }, value: '7328×5496, 3664×2748' },
-        { label: { fr: 'Caméra grand-angle — Capteur', en: 'Wide-Angle Camera — Sensor' }, value: {"fr": "CMOS 1/1.3 pouce, pixels effectifs: 48 MP", "en": "1/1.3-inch CMOS, Effective Pixels: 48 MP"} },
-        { label: { fr: 'Caméra grand-angle — Objectif', en: 'Wide-Angle Camera — Lens' }, value: {"fr": "Focale réelle: 6.72 mm (focale équivalente: 24 mm); Ouverture f/1.7; champ de vision diagonal 82.1°", "en": "Actual Focal Length: 6.72 mm (equivalent focal length: 24 mm); Aperture f/1.7; DFOV 82.1°"} },
-        { label: { fr: 'Caméra thermique infrarouge — Détecteur', en: 'Infrared Thermal Camera — Imager' }, value: {"fr": "Microbolomètre VOx non refroidi", "en": "Uncooled VOx microbolometer"} },
-        { label: { fr: 'Caméra thermique infrarouge — Résolution', en: 'Infrared Thermal Camera — Resolution' }, value: '1280×1024' },
-        { label: { fr: 'Caméra thermique infrarouge — Objectif', en: 'Infrared Thermal Camera — Lens' }, value: {"fr": "Focale 24 mm (focale équivalente 52 mm); Ouverture f/0.95; champ de vision diagonal 45.2°", "en": "Focal Length 24 mm (equivalent focal length 52 mm); Aperture f/0.95; DFOV 45.2°"} },
-        { label: { fr: 'Caméra thermique infrarouge — Pas des pixels', en: 'Infrared Thermal Camera — Pixel Pitch' }, value: '12 μm' },
-        { label: { fr: 'Caméra thermique infrarouge — Zoom numérique', en: 'Infrared Thermal Camera — Digital Zoom' }, value: '32×' },
-        { label: { fr: 'Caméra thermique infrarouge — Bande spectrale', en: 'Infrared Thermal Camera — Spectral Band' }, value: '8-14 μm' },
-        { label: { fr: 'Caméra thermique infrarouge — NETD', en: 'Infrared Thermal Camera — NETD' }, value: '≤ 50 mk@f/1.0' },
-        { label: { fr: 'Caméra thermique infrarouge — Plage de mesure de température', en: 'Infrared Thermal Camera — Temperature Measurement Range' }, value: {"fr": "Gain élevé: -20° à 150° C (-4° à 302° F); -20° à 450° C (-4° à 842° F) avec filtre de densité infrarouge. Gain faible: 0° à 600° C (32° à 1112° F); 0° à 1600° C (32° à 2912° F) avec filtre de densité infrarouge", "en": "High Gain: -20° to 150° C (-4° to 302° F); -20° to 450° C (-4° to 842° F) with Infrared Density Filter. Low Gain: 0° to 600° C (32° to 1112° F); 0° to 1600° C (32° to 2912° F) with Infrared Density Filter"} },
-        { label: { fr: 'Télémètre laser — plage de mesure', en: 'Laser Rangefinder — Measurement Range' }, value: {"fr": "3-3000 m (portée pour les objets courants: prairies 2000 m, zones boisées 1900 m)", "en": "3-3000 m (range for common objects: grasslands 2000 m, woodlands 1900 m)"} },
-        { label: { fr: 'Télémètre laser — longueur d’onde / sécurité', en: 'Laser Rangefinder — Wavelength / Safety' }, value: {"fr": "905 nm; Classe 1", "en": "905 nm; Class 1"} },
-        { label: { fr: 'Nacelle', en: 'Gimbal' }, value: {"fr": "3 axes : inclinaison, roulis, panoramique ; vibrations angulaires : ±0,002° en stationnaire, ±0,004° en vol ; fixation amovible DJI SKYPORT ; plage commandable : inclinaison de -120° à +60°, panoramique ±320°", "en": "3 axes: tilt, roll, pan; angular vibration: ±0.002° hovering, ±0.004° in flight; detachable DJI SKYPORT; controllable range: tilt -120° to +60°, pan ±320°"} },
-        ]
-      },
-      {
-        group: { fr: 'Batterie et alimentation', en: 'Battery and power' },
-        rows: [
-        { label: { fr: 'Alimentation', en: 'Power' }, value: 'H30: 26 W; H30T: 28 W' },
-        ]
-      },
-      {
-        group: { fr: 'Environnement', en: 'Environment' },
-        rows: [
-        { label: { fr: 'Indice de protection', en: 'Ingress Protection Rating' }, value: {"fr": "IP54 (dans des conditions de laboratoire contrôlées, selon IEC60529; l’indice IP n’est pas permanent et peut diminuer avec l’usure du produit)", "en": "IP54 (under controlled laboratory conditions, per IEC60529; the IP rating is not permanently effective and may decrease due to product wear and tear)"} },
-        { label: { fr: 'Température d’exploitation', en: 'Operating Temperature' }, value: {"fr": "-20° à 50° C (-4° à 122° F)", "en": "-20° to 50° C (-4° to 122° F)"} },
-        ]
-      },
+      }
     ],
     availability: 'coming_soon',
     image: 'assets/img/products/zenmuse-h30t.png',
@@ -934,67 +788,22 @@ window.ED_PRODUCTS = [
     },
     useCases: ['securite', 'inspection'],
     highlights: [
-      { label: { fr: 'Thermique', en: 'Thermal' }, value: '640×512' },
-      { label: { fr: 'Télémètre', en: 'Rangefinder' }, value: '1 200 m' },
-      { label: { fr: 'Masse', en: 'Weight' }, value: '878 g' },
+      { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Double 640×512', en: 'Dual 640×512' } },
+      { label: { fr: 'Vision nocturne zoom', en: 'Night Vision Zoom' }, value: '4 MP' },
+      { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200 m' }
     ],
     specs: [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-        { label: { fr: 'Présentation', en: 'What it is' }, value: {"fr": "Nacelle multicapteur pour les opérations nocturnes : caméras zoom et grand-angle à faible luminosité, deux caméras thermiques et télémètre laser.", "en": "Multi-sensor payload for night operations: low-light zoom and wide cameras, dual thermal cameras and a laser rangefinder."} },
-        { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: {"fr": "Double 640×512 px @ 30 i/s", "en": "Dual 640×512 px @ 30fps"} },
-        { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200 m' },
-        { label: { fr: 'Vision nocturne grand-angle', en: 'Night Vision Wide Camera' }, value: '1/2.7" CMOS, 2MP' },
-        { label: { fr: 'Vision nocturne zoom', en: 'Night Vision Zoom Camera' }, value: '1/1.8" CMOS, 4MP' },
-        { label: { fr: 'Statut', en: 'Status (zenmuse_specs.csv)' }, value: {"fr": "Fin de série", "en": "Discontinued"} },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 350 RTK' },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Double 640×512 px @ 30 i/s', en: 'Dual 640×512 px @ 30fps' } },
+          { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200 m' },
+          { label: { fr: 'Vision nocturne grand-angle', en: 'Night Vision Wide Camera' }, value: '1/2.7" CMOS, 2MP' },
+          { label: { fr: 'Vision nocturne zoom', en: 'Night Vision Zoom Camera' }, value: '1/1.8" CMOS, 4MP' },
+          { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Fin de série', en: 'Discontinued' } },
+          { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 350 RTK' }
         ]
-      },
-      {
-        group: { fr: 'Aéronef et performances', en: 'Aircraft and performance' },
-        rows: [
-        { label: { fr: 'Masse', en: 'Weight' }, value: '878±5 g' },
-        { label: { fr: 'Dimensions', en: 'Dimensions' }, value: '178×135×161 mm' },
-        ]
-      },
-      {
-        group: { fr: 'Positionnement', en: 'Positioning' },
-        rows: [
-        { label: { fr: 'Télémètre laser — précision', en: 'Laser Rangefinder — Accuracy' }, value: {"fr": "±(0.2 m + distance de la cible × 0.15%)", "en": "±(0.2 m + target distance × 0.15%)"} },
-        ]
-      },
-      {
-        group: { fr: 'Imagerie et capteurs', en: 'Imaging and sensors' },
-        rows: [
-        { label: { fr: 'Caméra zoom (starlight) — Capteur', en: 'Zoom Camera (starlight) — Sensor' }, value: {"fr": "1/1.8\" CMOS; pixels effectifs: 4M", "en": "1/1.8\" CMOS; Effective Pixels: 4M"} },
-        { label: { fr: 'Caméra zoom — Objectif', en: 'Zoom Camera — Lens' }, value: {"fr": "Focale : 6.8-119.9 mm (équivalent : environ 32.7-574.5 mm); Ouverture f/1.6-f/11; Mise au point 1 m à ∞ (grand-angle), 8 m à ∞ (téléobjectif)", "en": "Focal Length: 6.8-119.9 mm (equivalent: approximately 32.7-574.5 mm); Aperture f/1.6-f/11; Focus 1 m to ∞ (wide), 8 m to ∞ (tele)"} },
-        { label: { fr: 'Caméra zoom — Taille max. des images', en: 'Zoom Camera — Max Image Size' }, value: '2688×1512' },
-        { label: { fr: 'Caméra zoom — ISO', en: 'Zoom Camera — ISO' }, value: {"fr": "Vidéo: 100-102400; Photo: 100-102400", "en": "Video: 100-102400; Photo: 100-102400"} },
-        { label: { fr: 'Caméra grand-angle (starlight) — Capteur', en: 'Wide Camera (starlight) — Sensor' }, value: {"fr": "1/2.7\" CMOS; pixels effectifs: 2M", "en": "1/2.7\" CMOS; Effective Pixels: 2M"} },
-        { label: { fr: 'Caméra grand-angle — Objectif', en: 'Wide Camera — Lens' }, value: {"fr": "champ de vision diagonal 73.6°; Focale 4.5 mm (équivalent : environ 29 mm); Ouverture f/2.8; Mise au point 1 m à ∞", "en": "DFOV 73.6°; Focal Length 4.5 mm (equivalent: approximately 29 mm); Aperture f/2.8; Focus 1 m to ∞"} },
-        { label: { fr: 'Caméra grand-angle — Taille max. des images', en: 'Wide Camera — Max Image Size' }, value: '1920×1080' },
-        { label: { fr: 'Tele Caméra thermique infrarouge', en: 'Tele Infrared Thermal Camera' }, value: {"fr": "Résolution 640×512; champ de vision diagonal 12.5°; Focale 44.5 mm (équivalent : environ 196 mm); Ouverture f/1.2; Mise au point 45 m à ∞", "en": "Resolution 640×512; DFOV 12.5°; Focal Length 44.5 mm (equivalent: approximately 196 mm); Aperture f/1.2; Focus 45 m to ∞"} },
-        { label: { fr: 'Wide Caméra thermique infrarouge', en: 'Wide Infrared Thermal Camera' }, value: {"fr": "Résolution 640×512; champ de vision diagonal 45.5°; Focale 12 mm (équivalent : environ 53 mm); Ouverture f/1.0; Mise au point 5 m à ∞", "en": "Resolution 640×512; DFOV 45.5°; Focal Length 12 mm (equivalent: approximately 53 mm); Aperture f/1.0; Focus 5 m to ∞"} },
-        { label: { fr: 'Thermique — Détecteur', en: 'Thermal — Imager' }, value: {"fr": "Microbolomètre VOx non refroidi", "en": "Uncooled VOx microbolometer"} },
-        { label: { fr: 'Thermique — Pas des pixels', en: 'Thermal — Pixel Pitch' }, value: '12 μm' },
-        { label: { fr: 'Thermique — Bande spectrale', en: 'Thermal — Spectral Band' }, value: '8-14 μm' },
-        { label: { fr: 'Thermique — NETD', en: 'Thermal — NETD' }, value: '≤50 mK @ f/1.0' },
-        { label: { fr: 'Thermique — Zoom numérique équivalent', en: 'Thermal — Equivalent Digital Zoom' }, value: '16x, 32x' },
-        { label: { fr: 'Thermique — Plage de scène', en: 'Thermal — Scene Range' }, value: {"fr": "-20° C à 150° C (Gain élevé); 0° C à 500° C (Gain faible)", "en": "-20° C to 150° C (High Gain); 0° C to 500° C (Low Gain)"} },
-        { label: { fr: 'Thermique — Méthode de mesure de température', en: 'Thermal — Temperature Measurement Method' }, value: {"fr": "Mesure ponctuelle et par zone", "en": "Spot and area measurement"} },
-        { label: { fr: 'Télémètre laser — plage de mesure', en: 'Laser Rangefinder — Measuring Range' }, value: {"fr": "3-1,200 m (0.5 × 12 m surface verticale de réflectivité 20 %)", "en": "3-1,200 m (0.5 × 12 m vertical surface with 20% reflectivity)"} },
-        { label: { fr: 'Télémètre laser — longueur d’onde / sécurité', en: 'Laser Rangefinder — Wavelength / Safety' }, value: {"fr": "905 nm; Classe 1M (IEC 60825-1:2014)", "en": "905 nm; Class 1M (IEC 60825-1:2014)"} },
-        { label: { fr: 'Nacelle', en: 'Gimbal' }, value: {"fr": "Vibrations angulaires ±0,01° ; fixation amovible ; plage commandable : panoramique ±320°, inclinaison de -120° à +60° ; vitesse maximale 90°/s sur ces deux axes", "en": "Angular vibration ±0.01°; detachable mount; controllable range: pan ±320°, tilt -120° to +60°; maximum control speed 90°/s on both axes"} },
-        ]
-      },
-      {
-        group: { fr: 'Environnement', en: 'Environment' },
-        rows: [
-        { label: { fr: 'Indice de protection', en: 'Protection Rating' }, value: {"fr": "IP44 (selon IEC60529; l’indice de protection n’est pas permanent et peut diminuer avec l’usage et l’usure)", "en": "IP44 (per IEC60529; the protection rating is not permanent and might be reduced due to prolonged use and wear)"} },
-        { label: { fr: 'Température d’exploitation', en: 'Operating Temperature' }, value: {"fr": "-20° à 50° C (-4 à 122°F)", "en": "-20° to 50° C (-4 to 122°F)"} },
-        ]
-      },
+      }
     ],
     availability: 'discontinued',
     image: 'assets/img/products/zenmuse-h20n.png',
@@ -1011,72 +820,26 @@ window.ED_PRODUCTS = [
       fr: 'LiDAR aéroporté : relevés 3D sous couvert végétal.',
       en: 'Airborne LiDAR: 3D survey beneath vegetation.'
     },
-    usage: {"fr": "La L2 utilise le LiDAR pour produire des nuages de points destinés aux relevés de terrain et d’infrastructure. Elle peut recueillir des points au sol à travers les ouvertures du couvert végétal. La densité de végétation, le plan de vol et le traitement influencent la qualité du modèle obtenu.", "en": "The L2 uses LiDAR to produce point clouds for terrain and infrastructure surveys. It can capture ground points through gaps in vegetation. Vegetation density, flight planning and processing affect the quality of the resulting model."},
+    usage: {
+      fr: 'La L2 utilise le LiDAR pour produire des nuages de points destinés aux relevés de terrain et d’infrastructure. Elle peut recueillir des points au sol à travers les ouvertures du couvert végétal. La densité de végétation, le plan de vol et le traitement influencent la qualité du modèle obtenu.',
+      en: 'The L2 uses LiDAR to produce point clouds for terrain and infrastructure surveys. It can capture ground points through gaps in vegetation. Vegetation density, flight planning and processing affect the quality of the resulting model.'
+    },
     useCases: ['topographie', 'inspection', 'cartographie'],
     highlights: [
-      { label: { fr: 'Portée LiDAR', en: 'LiDAR range' }, value: '450 m' },
-      { label: { fr: 'Points/s', en: 'Point rate' }, value: '240 000' },
-      { label: { fr: 'Masse', en: 'Weight' }, value: '905 g' },
+      { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Oui', en: 'Yes' } },
+      { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS, 20 MP' },
+      { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
     specs: [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-        { label: { fr: 'Présentation', en: 'What it is' }, value: {"fr": "Nacelle combinant un LiDAR, une centrale inertielle et une caméra RGB CMOS 4/3 pour le levé aérien, la topographie et la reconstruction 3D avec DJI Terra.", "en": "Payload combining LiDAR, an IMU and a 4/3 CMOS RGB camera for aerial surveying, topographic mapping and 3D reconstruction with DJI Terra."} },
-        { label: { fr: 'LiDAR', en: 'LiDAR' }, value: {"fr": "Oui", "en": "Yes"} },
-        { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS, 20MP' },
-        { label: { fr: 'Statut', en: 'Status (zenmuse_specs.csv)' }, value: {"fr": "Bientôt disponible", "en": "Coming soon"} },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Oui', en: 'Yes' } },
+          { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS, 20MP' },
+          { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Bientôt disponible', en: 'Coming soon' } },
+          { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' }
         ]
-      },
-      {
-        group: { fr: 'Aéronef et performances', en: 'Aircraft and performance' },
-        rows: [
-        { label: { fr: 'Plage du gyromètre de la centrale inertielle', en: 'IMU Angular Velocity Meter Range' }, value: '±300 dps' },
-        { label: { fr: 'Masse', en: 'Weight' }, value: '905±5 g' },
-        { label: { fr: 'Dimensions', en: 'Dimensions' }, value: {"fr": "155×128×176 mm (L × l × H)", "en": "155×128×176 mm (L×W×H)"} },
-        ]
-      },
-      {
-        group: { fr: 'Positionnement', en: 'Positioning' },
-        rows: [
-        { label: { fr: 'Précision de télémétrie (RMS 1σ)', en: 'Ranging Accuracy (RMS 1σ)' }, value: '2 cm @ 150 m' },
-        { label: { fr: 'Précision du système', en: 'System Accuracy' }, value: 'Horizontal: 5 cm @ 150 m; Vertical: 4 cm @ 150 m' },
-        { label: { fr: 'Précision de positionnement horizontal', en: 'Horizontal Positioning Accuracy' }, value: 'RTK FIX: 1 cm + 1 ppm' },
-        { label: { fr: 'Précision de positionnement vertical', en: 'Vertical Positioning Accuracy' }, value: 'RTK FIX: 1.5 cm + 1 ppm' },
-        ]
-      },
-      {
-        group: { fr: 'Imagerie et capteurs', en: 'Imaging and sensors' },
-        rows: [
-        { label: { fr: 'Débit du nuage de points', en: 'Point Cloud Rate' }, value: {"fr": "Retour unique: max. 240,000 pts/s; Retours multiples: max. 1,200,000 pts/s", "en": "Single return: max. 240,000 pts/s; Multiple returns: max. 1,200,000 pts/s"} },
-        { label: { fr: 'Portée de détection', en: 'Detection Range' }, value: {"fr": "450 m @ 50% réflectivité, 0 klx; 250 m @ 10% réflectivité, 100 klx (portée de détection maximale 500 m)", "en": "450 m @ 50% reflectivity, 0 klx; 250 m @ 10% reflectivity, 100 klx (maximum detection range 500 m)"} },
-        { label: { fr: 'Portée de détection minimale', en: 'Minimum Detection Range' }, value: '3 m' },
-        { label: { fr: 'Nombre max. de retours pris en charge', en: 'Maximum Returns Supported' }, value: '5' },
-        { label: { fr: 'Modes de balayage', en: 'Scanning Modes' }, value: {"fr": "Balayage non répétitif ou répétitif", "en": "Non-repetitive or repetitive scanning"} },
-        { label: { fr: 'Champ de vision', en: 'FOV' }, value: {"fr": "Balayage répétitif: Horizontal 70°, Vertical 3°; Balayage non répétitif: Horizontal 70°, Vertical 75°", "en": "Repetitive scanning pattern: Horizontal 70°, Vertical 3°; Non-repetitive scanning pattern: Horizontal 70°, Vertical 75°"} },
-        { label: { fr: 'Longueur d’onde laser / sécurité', en: 'Laser Wavelength / Safety' }, value: {"fr": "905 nm; Classe 1 (IEC 60825-1:2014)", "en": "905 nm; Class 1 (IEC 60825-1:2014)"} },
-        { label: { fr: 'Fréquence d’émission des impulsions laser', en: 'Laser Pulse Emission Frequency' }, value: '240 kHz' },
-        { label: { fr: 'Divergence du faisceau laser', en: 'Laser Beam Divergence' }, value: 'Horizontal 0.2 mrad, Vertical 0.6 mrad' },
-        { label: { fr: 'Taille du spot laser', en: 'Laser Spot Size' }, value: 'Horizontal 4 cm, vertical 12 cm @ 100 m (FWHM)' },
-        { label: { fr: 'Fréquence de rafraîchissement de la centrale inertielle', en: 'IMU Update Frequency' }, value: '200 Hz' },
-        { label: { fr: 'Plage de l’accéléromètre de la centrale inertielle', en: 'IMU Accelerometer Range' }, value: '±6 g' },
-        { label: { fr: 'Caméra RVB de cartographie — Capteur', en: 'RGB Mapping Camera — Sensor' }, value: {"fr": "4/3 CMOS, pixels effectifs: 20 MP", "en": "4/3 CMOS, Effective Pixels: 20 MP"} },
-        ]
-      },
-      {
-        group: { fr: 'Batterie et alimentation', en: 'Battery and power' },
-        rows: [
-        { label: { fr: 'Alimentation', en: 'Power' }, value: {"fr": "28 W (typique); 58 W (max.)", "en": "28 W (typical); 58 W (max.)"} },
-        ]
-      },
-      {
-        group: { fr: 'Environnement', en: 'Environment' },
-        rows: [
-        { label: { fr: 'Indice de protection', en: 'IP Rating' }, value: {"fr": "IP54 (selon IEC60529 dans des conditions de laboratoire contrôlées)", "en": "IP54 (per IEC60529 under controlled laboratory conditions)"} },
-        { label: { fr: 'Température d’exploitation', en: 'Operating Temperature' }, value: {"fr": "-20° à 50° C (-4° à 122° F)", "en": "-20° to 50° C (-4° to 122° F)"} },
-        ]
-      },
+      }
     ],
     availability: 'coming_soon',
     image: 'assets/img/products/zenmuse-l2.png',
@@ -1093,23 +856,25 @@ window.ED_PRODUCTS = [
       fr: 'Plein format pour photogrammétrie haute précision.',
       en: 'Full-frame sensor for high-precision photogrammetry.'
     },
-    usage: {"fr": "La P1 embarque un capteur plein format pour la photogrammétrie et la cartographie de grandes surfaces. La couverture par vol et la précision finale dépendent de l’objectif, de l’altitude, du recouvrement et du protocole de traitement.", "en": "The P1 carries a full-frame sensor for photogrammetry and large-area mapping. Coverage per flight and final accuracy depend on the lens, altitude, image overlap and processing workflow."},
+    usage: {
+      fr: 'La P1 embarque un capteur plein format pour la photogrammétrie et la cartographie de grandes surfaces. La couverture par vol et la précision finale dépendent de l’objectif, de l’altitude, du recouvrement et du protocole de traitement.',
+      en: 'The P1 carries a full-frame sensor for photogrammetry and large-area mapping. Coverage per flight and final accuracy depend on the lens, altitude, image overlap and processing workflow.'
+    },
     useCases: ['topographie', 'cartographie'],
     highlights: [
-      { label: { fr: 'Capteur', en: 'Sensor' }, value: {"fr": "Plein format", "en": "Full frame"} },
-      { label: { fr: 'Photo', en: 'Photo' }, value: {"fr": "45 Mpx", "en": "45 MP"} },
-      { label: { fr: 'Précision H.', en: 'H. accuracy' }, value: '3 cm' }
+      { label: { fr: 'Capteur', en: 'Sensor' }, value: { fr: 'Plein format', en: 'Full frame' } },
+      { label: { fr: 'Résolution', en: 'Resolution' }, value: '45 MP' },
+      { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
     specs: [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-        { label: { fr: 'Présentation', en: 'What it is' }, value: {"fr": "Nacelle de photogrammétrie plein format 45 MP pour la cartographie aérienne.", "en": "Full-frame 45 MP photogrammetry payload for aerial mapping."} },
-        { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: {"fr": "Plein format, 45 MP", "en": "Full frame, 45 MP"} },
-        { label: { fr: 'Statut', en: 'Status (zenmuse_specs.csv)' }, value: {"fr": "Bientôt disponible", "en": "Coming soon"} },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+          { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: { fr: 'Plein format, 45 MP', en: 'Full frame, 45 MP' } },
+          { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Bientôt disponible', en: 'Coming soon' } },
+          { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' }
         ]
-      },
+      }
     ],
     availability: 'coming_soon',
     image: 'assets/img/products/zenmuse-p1.png',
@@ -1132,24 +897,23 @@ window.ED_PRODUCTS = [
     },
     useCases: ['inspection', 'cartographie'],
     highlights: [
-      { label: { fr: 'Zoom hybride', en: 'Hybrid zoom' }, value: '34×' },
+      { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '40 MP' },
       { label: { fr: 'Grand-angle', en: 'Wide' }, value: '48 MP' },
-      { label: { fr: 'Télémètre', en: 'Rangefinder' }, value: '3000 m' },
+      { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '3000 m' }
     ],
     specs: [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-        { label: { fr: 'Présentation', en: 'What it is' }, value: {"fr": "Nacelle multicapteur sans caméra thermique : zoom, grand-angle, télémètre laser et éclairage proche infrarouge.", "en": "Multi-sensor payload without a thermal camera: zoom, wide-angle, laser rangefinder and near-infrared auxiliary light."} },
-        { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/1.8" CMOS, 40MP' },
-        { label: { fr: 'Caméra grand-angle', en: 'Wide-Angle Camera' }, value: '1/1.3" CMOS, 48MP' },
-        { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: {"fr": "Non — sans caméra thermique", "en": "No — no thermal camera"} },
-        { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '3000m' },
-        { label: { fr: 'Éclairage IR', en: 'Spotlight IR' }, value: {"fr": "Oui — éclairage proche infrarouge", "en": "Yes — near-infrared auxiliary light"} },
-        { label: { fr: 'Statut', en: 'Status (zenmuse_specs.csv)' }, value: {"fr": "Bientôt disponible", "en": "Coming soon"} },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+          { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/1.8" CMOS, 40MP' },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide-Angle Camera' }, value: '1/1.3" CMOS, 48MP' },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Non', en: 'No' } },
+          { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '3000 m' },
+          { label: { fr: 'Éclairage IR', en: 'Spotlight IR' }, value: { fr: 'Oui — éclairage proche infrarouge', en: 'Yes — NIR auxiliary light' } },
+          { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Bientôt disponible', en: 'Coming soon' } },
+          { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' }
         ]
-      },
+      }
     ],
     availability: 'coming_soon',
     image: 'assets/img/products/H30.png',
@@ -1172,21 +936,21 @@ window.ED_PRODUCTS = [
     },
     useCases: ['inspection', 'cartographie'],
     highlights: [
-      { label: { fr: 'Zoom', en: 'Zoom' }, value: '20 MP' },
+      { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '20 MP' },
       { label: { fr: 'Grand-angle', en: 'Wide' }, value: '12 MP' },
-      { label: { fr: 'Télémètre', en: 'Rangefinder' }, value: '1200 m' },
+      { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200 m' }
     ],
     specs: [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-        { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/1.7" CMOS, 20MP' },
-        { label: { fr: 'Caméra grand-angle', en: 'Wide-Angle Camera' }, value: '1/2.3" CMOS, 12MP' },
-        { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200m' },
-        { label: { fr: 'Statut', en: 'Status (zenmuse_specs.csv)' }, value: {"fr": "Fin de série", "en": "Discontinued"} },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 350 RTK' },
+          { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/1.7" CMOS, 20MP' },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide-Angle Camera' }, value: '1/2.3" CMOS, 12MP' },
+          { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200 m' },
+          { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Fin de série', en: 'Discontinued' } },
+          { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 350 RTK' }
         ]
-      },
+      }
     ],
     availability: 'discontinued',
     image: 'assets/img/products/H20.png',
@@ -1209,22 +973,22 @@ window.ED_PRODUCTS = [
     },
     useCases: ['inspection', 'securite'],
     highlights: [
-      { label: { fr: 'Thermique', en: 'Thermal' }, value: '640×512' },
-      { label: { fr: 'Zoom', en: 'Zoom' }, value: '20 MP' },
-      { label: { fr: 'Télémètre', en: 'Rangefinder' }, value: '1200 m' },
+      { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: '640×512' },
+      { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '20 MP' },
+      { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200 m' }
     ],
     specs: [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-        { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/1.7" CMOS, 20MP' },
-        { label: { fr: 'Caméra grand-angle', en: 'Wide-Angle Camera' }, value: '1/2.3" CMOS, 12MP' },
-        { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: {"fr": "640×512 px @ 30 i/s", "en": "640×512 px @ 30fps"} },
-        { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200m' },
-        { label: { fr: 'Statut', en: 'Status (zenmuse_specs.csv)' }, value: {"fr": "Fin de série", "en": "Discontinued"} },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 350 RTK' },
+          { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: '1/1.7" CMOS, 20MP' },
+          { label: { fr: 'Caméra grand-angle', en: 'Wide-Angle Camera' }, value: '1/2.3" CMOS, 12MP' },
+          { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: '640×512 px @ 30 i/s', en: '640×512 px @ 30fps' } },
+          { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: '1200 m' },
+          { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Fin de série', en: 'Discontinued' } },
+          { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 350 RTK' }
         ]
-      },
+      }
     ],
     availability: 'discontinued',
     image: 'assets/img/products/H20T.png',
@@ -1299,7 +1063,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra FPV', en: 'FPV Camera' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Microbolomètre VOx non refroidi (640×512)', en: 'Uncooled VOx Microbolometer (640×512)' } },
           { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: { fr: 'Inclus (jusqu’à 1 200 m)', en: 'Included (up to 1,200 m)' } },
           { label: { fr: 'Caméra zoom', en: 'Zoom Camera' }, value: {"fr": "1/2\" CMOS, pixels effectifs: 48M", "en": "1/2\" CMOS, Effective pixels: 48M"} },
@@ -1324,7 +1088,7 @@ window.ED_PRODUCTS = [
       fr: 'Drone de surveillance thermique ultra-compact pour opérations automatisées.',
       en: 'Ultra-compact thermal surveillance drone for automated operations.'
     },
-    usage: {"fr": "Le Matrice 4TD associe caméras thermiques et visuelles pour des missions à distance avec un DJI Dock 3 compatible. Les opérations automatisées nécessitent une supervision et des conditions d’exploitation adaptées.", "en": "The Matrice 4TD combines thermal and visual cameras for remote missions with a compatible DJI Dock 3. Automated operations require supervision and suitable operating conditions."},
+    usage: {"fr": "Le Matrice 4TD associe caméras thermiques et visuelles pour des missions à distance et des interventions programmées. Les opérations automatisées nécessitent une supervision et des conditions d’exploitation adaptées.", "en": "The Matrice 4TD combines thermal and visual cameras for remote missions and scheduled operations. Automated operations require supervision and suitable operating conditions."},
     useCases: ['inspection', 'securite', 'topographie'],
     highlights: [
       { label: { fr: 'Autonomie', en: 'Flight time' }, value: '41 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
@@ -1350,7 +1114,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Station D-RTK 3', en: 'D-RTK 3 Base Station' }, value: { fr: 'Compatible', en: 'Compatible' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: '640×512 Microbolomètre VOx non refroidi', en: '640×512 Uncooled VOx Microbolometer' } },
           { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Projecteur d’appoint', en: 'Accessory Spotlight' }, value: 'AL1' },
@@ -1377,11 +1141,11 @@ window.ED_PRODUCTS = [
     type: 'aircraft',
     tagline: {
       fr: 'Drone de cartographie et photogrammétrie haute précision pour opérations automatisées.',
-      en: 'High-precision mapping and photogrammetry drone for automated dock operations.'
+      en: 'High-precision mapping and photogrammetry drone for automated operations.'
     },
     usage: {
-      fr: 'Hébergé dans le DJI Dock 3, le Matrice 4D est dédié aux relevés topographiques et à la modélisation 3D automatisée grâce à son capteur grand-angle 4/3 CMOS avec obturateur mécanique.',
-      en: 'Housed in the DJI Dock 3, the Matrice 4D is dedicated to automated topographic surveys and 3D modeling with its 4/3 CMOS mechanical shutter wide camera.'
+      fr: 'Le Matrice 4D est dédié aux relevés topographiques et à la modélisation 3D automatisée grâce à son capteur grand-angle 4/3 CMOS avec obturateur mécanique.',
+      en: 'The Matrice 4D is dedicated to automated topographic surveys and 3D modeling with its 4/3 CMOS mechanical shutter wide camera.'
     },
     useCases: ['topographie', 'inspection', 'cartographie'],
     highlights: [
@@ -1408,7 +1172,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Antenne RTK', en: 'RTK Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Station D-RTK 3', en: 'D-RTK 3 Base Station' }, value: { fr: 'Compatible', en: 'Compatible' } },
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: { fr: 'Inclus', en: 'Included' } },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus', en: 'Included' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Caméra thermique', en: 'Thermal Camera' }, value: { fr: 'Non inclus (dédié photogrammétrie)', en: 'Not included (Photogrammetry dedicated)' } },
           { label: { fr: 'Télémètre laser', en: 'Laser Rangefinder' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'Projecteur d’appoint', en: 'Accessory Spotlight' }, value: 'AL1' },
@@ -1515,7 +1279,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
         rows: [
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
           { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: {"fr": "CMOS 1 pouce, 50 MP effectifs; champ de vision 84°; f/1.8", "en": "1-inch CMOS, 50MP Effective Pixels; FOV 84°; f/1.8"} },
           { label: { fr: 'Téléobjectif moyen', en: 'Medium Tele Camera' }, value: {"fr": "CMOS 1/1.3 pouce, 48 MP effectifs; champ de vision 35°; f/2.8", "en": "1/1.3-inch CMOS, 48MP Effective Pixels; FOV 35°; f/2.8"} },
@@ -1563,7 +1327,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
         rows: [
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Non inclus', en: 'Not included' } },
           { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: {"fr": "CMOS 1/1.3 pouce, pixels effectifs: 48 MP", "en": "1/1.3-inch CMOS, Effective Pixels: 48 MP"} },
           { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '82.1°' },
@@ -1612,7 +1376,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
         rows: [
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
           { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: {"fr": "CMOS 1 pouce, 50 MP effectifs", "en": "1-inch CMOS, 50MP Effective Pixels"} },
           { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '84°' },
@@ -1661,7 +1425,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
         rows: [
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Non inclus', en: 'Not included' } },
           { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: {"fr": "CMOS 1/1.3 pouce", "en": "1/1.3-inch CMOS"} },
           { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '82.1°' },
@@ -1713,7 +1477,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
         rows: [
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Non inclus', en: 'Not included' } },
           { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: {"fr": "CMOS 1/2 pouce, 48 MP effectifs", "en": "1/2-inch CMOS, 48MP Effective Pixels"} },
           { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '79°' },
@@ -1765,7 +1529,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
         rows: [
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
           { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: {"fr": "CMOS 1/1.3 pouce, 48 MP effectifs", "en": "1/1.3-inch CMOS, 48MP Effective Pixels"} },
           { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '82.1°' },
@@ -1811,7 +1575,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
         rows: [
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
           { label: { fr: 'Caméra grand-angle', en: 'Wide Camera' }, value: {"fr": "4/3 CMOS, pixels effectifs: 100 MP; champ de vision 72°; f/2.0", "en": "4/3 CMOS, Effective Pixels: 100 MP; FOV 72°; f/2.0"} },
           { label: { fr: 'Téléobjectif moyen', en: 'Medium Tele Camera' }, value: {"fr": "CMOS 1/1.3 pouce, pixels effectifs: 48 MP; champ de vision 35°; f/2.8", "en": "1/1.3-inch CMOS, Effective Pixels: 48 MP; FOV 35°; f/2.8"} },
@@ -1863,7 +1627,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
         rows: [
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
           { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: {"fr": "CMOS 1/2 pouce", "en": "1/2-inch CMOS"} },
           { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '119.8°' },
@@ -1912,7 +1676,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Équipements intégrés', en: 'Integrated Equipment' },
         rows: [
           { label: { fr: 'Antenne GNSS', en: 'GNSS Antenna' }, value: 'GPS + Galileo + BeiDou' },
-          { label: { fr: 'Système de vision', en: 'Vision System' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
+          { label: { fr: 'Évitement d’obstacles', en: 'Obstacle Avoidance' }, value: { fr: 'Inclus', en: 'Included' } },
           { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Inclus (évitement d’obstacles)', en: 'Included (Obstacle avoidance)' } },
           { label: { fr: 'Caméra principale', en: 'Main Camera' }, value: {"fr": "Deux CMOS 1/1.1 pouce; pixels effectifs 64MP", "en": "Two 1/1.1-Inch CMOS; Effective Pixels 64MP"} },
           { label: { fr: 'Caméra principale — Angle de champ', en: 'Main Camera — Field of View' }, value: '200°' },
@@ -1945,21 +1709,20 @@ window.ED_PRODUCTS = [
     },
     useCases: ['topographie', 'cartographie', 'inspection'],
     highlights: [
-      { label: { fr: 'LiDAR', en: 'LiDAR' }, value: 'Oui' },
-      { label: { fr: 'Caméra RVB', en: 'RGB camera' }, value: '4/3 CMOS' },
+      { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Oui', en: 'Yes' } },
+      { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS' },
       { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
     specs: [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-        { label: { fr: 'Présentation', en: 'What it is' }, value: {"fr": "Nacelle de cartographie LiDAR et RGB pour Matrice 400.", "en": "LiDAR and RGB mapping payload for Matrice 400."} },
-        { label: { fr: 'LiDAR', en: 'LiDAR' }, value: {"fr": "Oui", "en": "Yes"} },
-        { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS' },
-        { label: { fr: 'Statut', en: 'Status (zenmuse_specs.csv)' }, value: {"fr": "Bientôt disponible", "en": "Coming soon"} },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+          { label: { fr: 'LiDAR', en: 'LiDAR' }, value: { fr: 'Oui', en: 'Yes' } },
+          { label: { fr: 'Caméra RVB', en: 'RGB Camera' }, value: '4/3 CMOS' },
+          { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Bientôt disponible', en: 'Coming soon' } },
+          { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' }
         ]
-      },
+      }
     ],
     availability: 'coming_soon',
     image: 'assets/img/products/L3.png',
@@ -1983,7 +1746,7 @@ window.ED_PRODUCTS = [
     },
     useCases: ['securite', 'inspection'],
     highlights: [
-      { label: { fr: 'Éclairage', en: 'Illuminance' }, value: '30 lux @ 100 m' },
+      { label: { fr: 'Projecteur visible', en: 'Spotlight VIS' }, value: '30 lux @ 100 m' },
       { label: { fr: 'Portée', en: 'Range' }, value: '500 m' },
       { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
@@ -1991,13 +1754,12 @@ window.ED_PRODUCTS = [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-        { label: { fr: 'Présentation', en: 'What it is' }, value: {"fr": "Projecteur visible pour la recherche nocturne, la sécurité et l’inspection.", "en": "Visible spotlight for night searches, security and inspection."} },
-        { label: { fr: 'Projecteur visible', en: 'Spotlight VIS' }, value: '30 lux @ 100 m' },
-        { label: { fr: 'Portée projecteur visible', en: 'Spotlight VIS Range' }, value: '500m' },
-        { label: { fr: 'Statut', en: 'Status (zenmuse_specs.csv)' }, value: {"fr": "Bientôt disponible", "en": "Coming soon"} },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+          { label: { fr: 'Projecteur visible', en: 'Spotlight VIS' }, value: '30 lux @ 100 m' },
+          { label: { fr: 'Portée projecteur visible', en: 'Spotlight VIS Range' }, value: '500 m' },
+          { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Bientôt disponible', en: 'Coming soon' } },
+          { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' }
         ]
-      },
+      }
     ],
     availability: 'coming_soon',
     image: 'assets/img/products/S1.png',
@@ -2021,7 +1783,7 @@ window.ED_PRODUCTS = [
     },
     useCases: ['securite', 'inspection'],
     highlights: [
-      { label: { fr: 'Niveau', en: 'Level' }, value: '129 dB @ 1 m' },
+      { label: { fr: 'Haut-parleur', en: 'Loudspeaker' }, value: '129 dB @ 1 m' },
       { label: { fr: 'Portée', en: 'Range' }, value: '700 m' },
       { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
@@ -2029,13 +1791,12 @@ window.ED_PRODUCTS = [
       {
         group: { fr: 'Général', en: 'General' },
         rows: [
-        { label: { fr: 'Présentation', en: 'What it is' }, value: {"fr": "Haut-parleur pour la diffusion de messages, les alertes et la coordination des secours.", "en": "Loudspeaker for announcements, alerts and emergency-response coordination."} },
-        { label: { fr: 'Haut-parleur', en: 'Loudspeaker' }, value: '129 dB @ 1 m' },
-        { label: { fr: 'Portée haut-parleur', en: 'Loudspeaker Range' }, value: '700m' },
-        { label: { fr: 'Statut', en: 'Status (zenmuse_specs.csv)' }, value: {"fr": "Bientôt disponible", "en": "Coming soon"} },
-        { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' },
+          { label: { fr: 'Haut-parleur', en: 'Loudspeaker' }, value: '129 dB @ 1 m' },
+          { label: { fr: 'Portée haut-parleur', en: 'Loudspeaker Range' }, value: '700 m' },
+          { label: { fr: 'Statut', en: 'Status' }, value: { fr: 'Bientôt disponible', en: 'Coming soon' } },
+          { label: { fr: 'Aéronefs compatibles', en: 'Compatible Aircraft' }, value: 'Matrice 400' }
         ]
-      },
+      }
     ],
     availability: 'coming_soon',
     image: 'assets/img/products/V1.png',

@@ -1,6 +1,6 @@
 ﻿Drone,Mini 4 Pro,Mini 5 Pro,Air 3S,Flip,Lito 1,Lito X1,Mavic 4 Pro,Neo 2,Avata 360
 GNSS,GPS + Galileo + BeiDou,GPS + Galileo + BeiDou,GPS + Galileo + BeiDou,GPS + Galileo + BeiDou,GPS + Galileo + BeiDou,GPS + Galileo + BeiDou,GPS + Galileo + BeiDou,GPS + Galileo + BeiDou,GPS + Galileo + BeiDou
-Vision System,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance
+Obstacle Avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance
 Lidar,FALSE,obstacle avoidance,obstacle avoidance,FALSE,FALSE,obstacle avoidance,obstacle avoidance,obstacle avoidance,obstacle avoidance
 Image Sensor,"1/1.3-inch CMOS, Effective Pixels: 48 MP","1-inch CMOS, 50MP Effective Pixels",,1/1.3-inch CMOS,"1/2-inch CMOS, 48MP Effective Pixels","1/1.3-inch CMOS, 48MP Effective Pixels",,1/2-inch CMOS,Two 1/1.1-Inch CMOS; Effective Pixels 64MP
 Lens FoV (º),82.1,84,,82.1,79,82.1,,119.8,200

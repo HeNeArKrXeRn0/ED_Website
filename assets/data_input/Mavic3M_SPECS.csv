@@ -9,7 +9,7 @@ Max. Speed (m/s);21
 Wind Resistance (m/s);12
 RTK;TRUE
 GNSS;TRUE
-Vision System;TRUE
+Obstacle Avoidance;TRUE
 RGB Camera;4/3 CMOS, Effective Pixels: 20 MP
 Multispectral Camera;1/2.8-inch CMOS, effective pixels: 5 MP
 Multispectral Camera Band;"Green (G): 560 ± 16 nm;"

@@ -172,12 +172,13 @@
            '<div class="grid grid-3">' + list.map(card).join('') + '</div>';
   }
 
-  /* 3 autres appareils partageant un secteur ou une catégorie */
+  /* 3 autres modèles (appareils ou accessoires) partageant un secteur ou une catégorie */
   function relatedBlock(p) {
     var sectors = p.useCases || [];
+    var targetType = p.type || 'aircraft';
 
     var scored = ED.data.products
-      .filter(function (o) { return o.type === 'aircraft' && o.id !== p.id; })
+      .filter(function (o) { return o.type === targetType && o.id !== p.id; })
       .map(function (o) {
         var shared = (o.useCases || []).filter(function (s) {
           return sectors.indexOf(s) !== -1;

@@ -1,4 +1,4 @@
-Drone,RTK,D-RTK-3,GNSS,FPV Camera,Vision System,Radar,Lidar,Thermal Camera,Laser Rangefinder,Accessory Spotlight,Accessory Speaker,Gimbal Accessory,Infrared Spotlight,Zoom Camera,Wide Camera,Medium Tele Camera,Telephoto
+Drone,RTK,D-RTK-3,GNSS,FPV Camera,Obstacle Avoidance,Radar,Lidar,Thermal Camera,Laser Rangefinder,Accessory Spotlight,Accessory Speaker,Gimbal Accessory,Infrared Spotlight,Zoom Camera,Wide Camera,Medium Tele Camera,Telephoto
 Matrice 400,TRUE,Compatible,TRUE,TRUE,TRUE,TRUE,TRUE,,,,,Zenmuse Series,,,,,
 Matrice 30T,TRUE,,TRUE,TRUE,TRUE,,,Uncooled VOx Microbolometer,TRUE,,,,,"1/2"" CMOS, Effective pixels: 48M","1/2"" CMOS, Effective pixels: 12M",,
 Mavic 3M,TRUE,,TRUE,,TRUE,,,,,,,,,,,,

@@ -175,7 +175,6 @@ Each product entry adheres to this schema:
 | `matrice-4td` | DJI Matrice 4TD | Enterprise | Sales only | Coming soon | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
 | `matrice-30t` | DJI Matrice 30T | Enterprise | Sales only | Coming soon | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
 | `matrice-350-rtk` | DJI Matrice 350 RTK | Enterprise | Sales only | In stock (demo) | DJI Official |
-| `dock-3` | DJI Dock 3 | Enterprise | Sales only | Coming soon | DJI Official |
 
 ### Payloads and accessories
 
@@ -209,8 +208,7 @@ Icons in `assets/img/svg_icons/` are rendered dynamically in cards and spec tabl
 - **Loudspeakers / Speakers:** `loudspeaker.svg`
 - **Wide Cameras:** `wide_camera.svg`
 - **Telephoto / Zoom Cameras:** `telephoto_camera.svg`
-- **LiDAR:** `lidar.svg`
-- **Vision System / Obstacle Avoidance / IP Protection:** `shield.svg`
+- **Obstacle Avoidance / IP Protection:** `shield.svg`
 - **Generic Optical / Built-in Camera / Gimbal:** `simple_camera.svg`
 - **Remote Control & Radiocommande:** `radio_tower.svg`
 
@@ -218,14 +216,14 @@ Icons in `assets/img/svg_icons/` are rendered dynamically in cards and spec tabl
 All DJI Agras models (`t100`, `t70p`, `t55`, `t50`, `t25p`, `t25`) feature a streamlined 3-tier spec structure:
 1. **Spécifications Clés / Key Specifications:** Preserved core metrics (Payload, MTOW, Autonomy, Spray Width, Max Flight Speed).
 2. **Performances de vol / Flight Performance:** Uniform across all models (Max flight altitude: 100 m; Flight Radius: 2000 m; Wind Resistance: 6 m/s; Max Takeoff Altitude: 4500 m Above Sea Level).
-3. **Équipements intégrés / Integrated Equipment:** Uniform integrated systems (RTK Antenna, GNSS Antenna, AESA Radars, Vision System for Obstacle Avoidance, FPV Camera) with dedicated exceptions:
+3. **Équipements intégrés / Integrated Equipment:** Uniform integrated systems (RTK Antenna, GNSS Antenna, AESA Radars, Obstacle Avoidance, FPV Camera) with dedicated exceptions:
    - **T100:** Includes `LiDAR` in addition.
    - **T25P:** Includes `Projecteur` / `Spotlight` in addition.
 
 #### Standardized Enterprise equipment specifications (`ENTERPRISE_EQUIPEMENT_SPECS.csv`)
 All Enterprise models (`matrice-400`, `matrice-4e`, `matrice-4t`, `matrice-4d`, `matrice-4td`, `matrice-30t`, `matrice-350-rtk`) feature standardized equipment entries:
 - **Navigation & Positioning:** Antenne RTK (`rtk_antenna.svg`), Station D-RTK 3, Antenne GNSS (`sattelite.svg`).
-- **Vision & Safety:** Système de vision (`shield.svg`), Radars AESA/CSM (`radar.svg`), Télémètre laser (`laser_rangefinder.svg`).
+- **Vision & Safety:** Évitement d’obstacles (`shield.svg`), Radars AESA/CSM (`radar.svg`), Télémètre laser (`laser_rangefinder.svg`).
 - **Imaging Payloads & Sensors:** Caméra FPV (`fpv_camera.svg`), Caméra grand-angle (`wide_camera.svg`), Téléobjectif moyen & Téléobjectif (`telephoto_camera.svg`), Caméra zoom, Caméra thermique radiométrique (`thermal_camera.svg`), LiDAR (`lidar.svg`), Accessoires de nacelle Zenmuse (`simple_camera.svg`).
 - **Operational Accessories:** Projecteur d’appoint AL1 / infrarouge (`spotlight.svg`), Haut-parleur d’appoint AS1 (`loudspeaker.svg`).
 
@@ -372,6 +370,9 @@ Validation: the skill frontmatter and metadata were validated; the seven regress
 
 | Date | Change | Notes |
 |---|---|---|
+| 2026-09-21 | Renamed Vision System spec to Obstacle Avoidance across all categories | Renamed all instances of "Vision System" (`Système de vision` / `Système de vision pour l’évitement d’obstacles`) to "Obstacle Avoidance" (`Évitement d’obstacles`) across all categories (Agriculture, Enterprise, Camera) in `assets/js/data.js` and CSV inputs (`ENTERPRISE_EQUIPEMENT_SPECS.csv`, `CAMERA_EQUIPEMENT_SPECS.csv`, `Mavic3M_SPECS.csv`, `ICONS_mapping.csv`). Mapped icon resolution to `shield.svg`. Full bilingual verification passed. |
+| 2026-09-21 | Removed DJI Dock 3 from catalogue | Removed `dock-3` from `assets/js/data.js`, `applications.html`, and `MASTER_PLAN.md`. Updated `matrice-4td` and `matrice-4d` descriptions to generic automated operations. Full bilingual verification passed. |
+| 2026-09-21 | Aligned Zenmuse specs, highlights, and similar accessories | Streamlined Zenmuse payload specs in `assets/js/data.js` to only include specs mentioned in `assets/data_input/zenmuse_specs.csv`. Updated highlights to prioritize thermal cameras, main cameras, and laser rangefinders. Updated `relatedBlock` in `assets/js/produit.js` to show similar accessories (payloads) when viewing accessory product detail pages, rather than drones. Full bilingual verification passed. |
 | 2026-09-20 | Automatic bilingual copy skill and CI checks | Added a repository skill, implicit invocation metadata, agent/Copilot routing, and a read-only GitHub regression workflow. Translation is performed by the coding agent; CI validates declared translations. |
 | 2026-09-20 | Complete FR/EN copy and reliable language switching | Updated all 12 pages, bilingual catalogue values, runtime messages and accessible labels; preserved visitor state; added 7 regression tests. See bilingual verification above. |
 | 2026-09-03 | Updated Agriculture highlights bar: Masse Max. Décollage & Largeur Pulvérisation | Updated highlights across all agricultural drones (`t100`, `t70p`, `t55`, `t50`, `t25p`, `t25`) in `assets/js/data.js`: renamed maximum takeoff weight spec description in French to `Masse Max. Décollage` with icon `max_takeoff_weight.svg`, and renamed spray width spec description to `Largeur Pulvérisation` with icon `spray_width_1.svg`. Updated `getSpecIcon` in `assets/js/app.js` and `assets/data_input/ICONS_mapping.csv`. |
