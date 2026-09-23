@@ -22,7 +22,7 @@ GNSS Antenna;sattelite.svg
 FPV Camera;fpv_camera.svg
 Obstacle Avoidance;shield.svg
 Évitement d’obstacles;shield.svg
-Radar;radar.svg
+Radar;radar_dish.svg
 Lidar;lidar.svg
 Thermal Camera;thermal_camera.svg
 Laser Rangefinder;laser_rangefinder.svg
@@ -38,6 +38,8 @@ Medium Tele Camera;telephoto_camera.svg
 Telephoto;telephoto_camera.svg
 Remote Control;radio_tower.svg
 IP Rating;shield.svg
+Protection Rating;shield.svg
+Indice de protection;shield.svg
 Compatible Aircraft;compatibility.svg
 Aéronefs compatibles;compatibility.svg
 Carrier;compatibility.svg

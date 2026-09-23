@@ -194,7 +194,8 @@ Icons in `assets/img/svg_icons/` are rendered dynamically in cards and spec tabl
 - **Autonomy / Battery / Flight Time:** `full_battery.svg`
 - **Spray Width:** `spray_width_1.svg`
 - **Spray Rate / Nozzles:** `spray_nozzle.svg`
-- **Flight Radius / Radars (AESA):** `radar.svg`
+- **Radars (AESA):** `radar_dish.svg`
+- **Flight Radius:** `radar.svg`
 - **Flight Speed / Max Speed:** `speed.svg`
 - **Wind Resistance:** `wind_resistance.svg`
 - **Max Flight Altitude:** `max_flight_altitude.svg`
@@ -223,7 +224,7 @@ All DJI Agras models (`t100`, `t70p`, `t55`, `t50`, `t25p`, `t25`) feature a str
 #### Standardized Enterprise equipment specifications (`ENTERPRISE_EQUIPEMENT_SPECS.csv`)
 All Enterprise models (`matrice-400`, `matrice-4e`, `matrice-4t`, `matrice-4d`, `matrice-4td`, `matrice-30t`, `matrice-350-rtk`) feature standardized equipment entries:
 - **Navigation & Positioning:** Antenne RTK (`rtk_antenna.svg`), Station D-RTK 3, Antenne GNSS (`sattelite.svg`).
-- **Vision & Safety:** Évitement d’obstacles (`shield.svg`), Radars AESA/CSM (`radar.svg`), Télémètre laser (`laser_rangefinder.svg`).
+- **Vision & Safety:** Évitement d’obstacles (`shield.svg`), Radars AESA/CSM (`radar_dish.svg`), Télémètre laser (`laser_rangefinder.svg`).
 - **Imaging Payloads & Sensors:** Caméra FPV (`fpv_camera.svg`), Caméra grand-angle (`wide_camera.svg`), Téléobjectif moyen & Téléobjectif (`telephoto_camera.svg`), Caméra zoom, Caméra thermique radiométrique (`thermal_camera.svg`), LiDAR (`lidar.svg`), Accessoires de nacelle Zenmuse (`simple_camera.svg`).
 - **Operational Accessories:** Projecteur d’appoint AL1 / infrarouge (`spotlight.svg`), Haut-parleur d’appoint AS1 (`loudspeaker.svg`).
 
@@ -371,6 +372,12 @@ Validation: the skill frontmatter and metadata were validated; the seven regress
 
 | Date | Change | Notes |
 |---|---|---|
+| 2026-09-23 | Added IP55 protection rating to Matrice 4D/4TD/30T, 400 and 350 RTK | `matrice-4d`, `matrice-4td`, `matrice-30t`, `matrice-400` and `matrice-350-rtk` in `assets/js/data.js` each have an "Indice de protection / Protection Rating = IP55" spec row (resolves to `shield.svg` via existing icon mapping; mapping CSV extended). Bilingual label inline in product data. `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. |
+| 2026-09-23 | Enterprise flight radius corrections (400/350/30T) | `matrice-400` now 40 km (was 49 km), `matrice-350-rtk` confirmed at 20 km (no change), `matrice-30t` now 15 km (was 40 km) in highlights and spec rows. Language-neutral values, no dictionary change. `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. |
+| 2026-09-23 | Mavic 3 max flight distance corrected to 15 km | `mavic-3m`, `mavic-3e` and `mavic-3t` in `assets/js/data.js` now show 15 km (was 32 km) in highlights and "Max Flight Radius" spec rows. Language-neutral values, no dictionary change. `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. |
+| 2026-09-23 | Matrice 4D image and Matrice 4 flight radius corrected | `matrice-4d` in `assets/js/data.js` now uses `assets/img/products/matrice-4-td.png` (same card image as `matrice-4td`); all four Matrice 4 variants (4E/4T/4D/4TD) show 25 km max flight radius in highlights and spec rows. Values are language-neutral strings, no dictionary change. `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. |
+| 2026-09-23 | Radar/AESA specs now use the dish icon | `ED.ui.getSpecIcon` in `assets/js/app.js` and the `Radar` row in `assets/data_input/ICONS_mapping.csv` now resolve to `assets/img/svg_icons/radar_dish.svg`. Covers the Agras "Radars AESA" rows and Enterprise "Radar"/CSM rows. Flight-radius highlights and the transmission stat keep `radar.svg` (range, not radar). `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. |
+| 2026-09-23 | Updated agriculture highlight stats with spec icons | Reworked the four post-hero stats in `agriculture.html`: kept 70 kg payload (`payload.svg`) and 24 ha/h work rate (`spray_nozzle.svg`); replaced water-reduction/RTK stats with Autopilot (`navigation.svg`, sub-label unchanged) and Smart Controller (`remote_control.svg`, sub-label "Flight planning, control and monitoring"), with matching FR/EN dictionary entries. Removed three obsolete dictionary keys. `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. |
 | 2026-09-22 | Added pre-launch SEO handoff plan | Documented the local SEO audit, implementation sequence, owner decisions, validation gates, and production-launch checklist in `docs/seo-prelaunch-handoff.md`. No production SEO configuration, deployment, or public copy changed. |
 | 2026-09-21 | Renamed Vision System spec to Obstacle Avoidance across all categories | Renamed all instances of "Vision System" (`Système de vision` / `Système de vision pour l’évitement d’obstacles`) to "Obstacle Avoidance" (`Évitement d’obstacles`) across all categories (Agriculture, Enterprise, Camera) in `assets/js/data.js` and CSV inputs (`ENTERPRISE_EQUIPEMENT_SPECS.csv`, `CAMERA_EQUIPEMENT_SPECS.csv`, `Mavic3M_SPECS.csv`, `ICONS_mapping.csv`). Mapped icon resolution to `shield.svg`. Full bilingual verification passed. |
 | 2026-09-21 | Removed DJI Dock 3 from catalogue | Removed `dock-3` from `assets/js/data.js`, `applications.html`, and `MASTER_PLAN.md`. Updated `matrice-4td` and `matrice-4d` descriptions to generic automated operations. Full bilingual verification passed. |

@@ -381,7 +381,7 @@ window.ED_PRODUCTS = [
     useCases: ['cartographie'],
     highlights: [
       { label: { fr: 'Autonomie', en: 'Flight time' }, value: '43 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
-      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '32 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '15 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
       { label: { fr: 'Caméra multispectrale', en: 'Multispectral Camera' }, value: 'G/R/RE/NIR', icon: 'assets/img/svg_icons/simple_camera.svg' },
     ],
     specs: [
@@ -389,7 +389,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Performances', en: 'Performance' },
         rows: [
           { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '43 min' },
-          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '32 km' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '15 km' },
           { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
           { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: {"fr": "0,95 kg", "en": "0.95 kg"} },
           { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: {"fr": "1,05 kg", "en": "1.05 kg"} },
@@ -437,7 +437,7 @@ window.ED_PRODUCTS = [
     useCases: ['inspection', 'topographie', 'securite'],
     highlights: [
       { label: { fr: 'Autonomie', en: 'Flight time' }, value: '59 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
-      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '49 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '40 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
       { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
     ],
     specs: [
@@ -445,12 +445,13 @@ window.ED_PRODUCTS = [
         group: { fr: 'Performances', en: 'Performance' },
         rows: [
           { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '59 min' },
-          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '49 km' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '40 km' },
           { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '7000 m' },
           { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: {"fr": "9,7 kg", "en": "9.7 kg"} },
           { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: {"fr": "15,8 kg", "en": "15.8 kg"} },
           { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '25 m/s' },
           { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+          { label: { fr: 'Indice de protection', en: 'Protection Rating' }, value: 'IP55' },
         ]
       },
       {
@@ -487,7 +488,7 @@ window.ED_PRODUCTS = [
     useCases: ['topographie', 'inspection', 'cartographie'],
     highlights: [
       { label: { fr: 'Autonomie', en: 'Flight time' }, value: '49 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
-      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '35 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '25 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
       { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
     ],
     specs: [
@@ -495,7 +496,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Performances', en: 'Performance' },
         rows: [
           { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '49 min' },
-          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '35 km' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '25 km' },
           { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
           { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: {"fr": "1,22 kg", "en": "1.22 kg"} },
           { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: {"fr": "1,43 kg", "en": "1.43 kg"} },
@@ -539,7 +540,7 @@ window.ED_PRODUCTS = [
     useCases: ['inspection', 'securite', 'topographie'],
     highlights: [
       { label: { fr: 'Autonomie', en: 'Flight time' }, value: '49 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
-      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '35 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '25 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
       { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
     ],
     specs: [
@@ -547,7 +548,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Performances', en: 'Performance' },
         rows: [
           { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '49 min' },
-          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '35 km' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '25 km' },
           { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
           { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: {"fr": "1,22 kg", "en": "1.22 kg"} },
           { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: {"fr": "1,43 kg", "en": "1.43 kg"} },
@@ -609,6 +610,7 @@ window.ED_PRODUCTS = [
           { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: {"fr": "9,2 kg", "en": "9.2 kg"} },
           { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '23 m/s' },
           { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+          { label: { fr: 'Indice de protection', en: 'Protection Rating' }, value: 'IP55' },
         ]
       },
       {
@@ -642,7 +644,7 @@ window.ED_PRODUCTS = [
     useCases: ['topographie', 'inspection', 'cartographie'],
     highlights: [
       { label: { fr: 'Autonomie', en: 'Flight time' }, value: '45 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
-      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '32 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '15 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
       { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
     ],
     specs: [
@@ -650,7 +652,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Performances', en: 'Performance' },
         rows: [
           { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '45 min' },
-          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '32 km' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '15 km' },
           { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '6000 m' },
           { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: {"fr": "0,92 kg", "en": "0.92 kg"} },
           { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: {"fr": "1,05 kg", "en": "1.05 kg"} },
@@ -692,7 +694,7 @@ window.ED_PRODUCTS = [
     useCases: ['inspection', 'securite'],
     highlights: [
       { label: { fr: 'Autonomie', en: 'Flight time' }, value: '45 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
-      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '32 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '15 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
       { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
     ],
     specs: [
@@ -700,7 +702,7 @@ window.ED_PRODUCTS = [
         group: { fr: 'Performances', en: 'Performance' },
         rows: [
           { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '45 min' },
-          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '32 km' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '15 km' },
           { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '6000 m' },
           { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: {"fr": "0,92 kg", "en": "0.92 kg"} },
           { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: {"fr": "1,05 kg", "en": "1.05 kg"} },
@@ -1036,7 +1038,7 @@ window.ED_PRODUCTS = [
     useCases: ['inspection', 'securite'],
     highlights: [
       { label: { fr: 'Autonomie', en: 'Flight time' }, value: '41 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
-      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '40 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '15 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
       { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
     ],
     specs: [
@@ -1044,12 +1046,13 @@ window.ED_PRODUCTS = [
         group: { fr: 'Performances', en: 'Performance' },
         rows: [
           { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '41 min' },
-          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '40 km' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '15 km' },
           { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
           { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: {"fr": "3,77 kg", "en": "3.77 kg"} },
           { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: {"fr": "4,07 kg", "en": "4.07 kg"} },
           { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '23 m/s' },
           { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+          { label: { fr: 'Indice de protection', en: 'Protection Rating' }, value: 'IP55' },
         ]
       },
       {
@@ -1087,7 +1090,7 @@ window.ED_PRODUCTS = [
     useCases: ['inspection', 'securite', 'topographie'],
     highlights: [
       { label: { fr: 'Autonomie', en: 'Flight time' }, value: '41 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
-      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '10 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '25 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
       { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
     ],
     specs: [
@@ -1095,12 +1098,13 @@ window.ED_PRODUCTS = [
         group: { fr: 'Performances', en: 'Performance' },
         rows: [
           { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '41 min' },
-          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '10 km' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '25 km' },
           { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
           { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: {"fr": "1,85 kg", "en": "1.85 kg"} },
           { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: {"fr": "2,09 kg", "en": "2.09 kg"} },
           { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '21 m/s' },
           { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+          { label: { fr: 'Indice de protection', en: 'Protection Rating' }, value: 'IP55' },
         ]
       },
       {
@@ -1145,7 +1149,7 @@ window.ED_PRODUCTS = [
     useCases: ['topographie', 'inspection', 'cartographie'],
     highlights: [
       { label: { fr: 'Autonomie', en: 'Flight time' }, value: '41 min', icon: 'assets/img/svg_icons/full_battery.svg', key: 'flight-time' },
-      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '10 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
+      { label: { fr: 'Rayon de vol', en: 'Flight radius' }, value: '25 km', icon: 'assets/img/svg_icons/radar.svg', key: 'flight-radius' },
       { label: { fr: 'Altitude max.', en: 'Max altitude' }, value: '500 m', icon: 'assets/img/svg_icons/max_flight_altitude.svg', key: 'max-altitude' },
     ],
     specs: [
@@ -1153,12 +1157,13 @@ window.ED_PRODUCTS = [
         group: { fr: 'Performances', en: 'Performance' },
         rows: [
           { label: { fr: 'Autonomie de vol max. (sans vent)', en: 'Max Flight Time (no wind)' }, value: '41 min' },
-          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '10 km' },
+          { label: { fr: 'Rayon de vol max.', en: 'Max Flight Radius' }, value: '25 km' },
           { label: { fr: 'Altitude max. de décollage', en: 'Max Takeoff Altitude' }, value: '500 m' },
           { label: { fr: 'Masse à vide', en: 'Empty Weight' }, value: {"fr": "1,85 kg", "en": "1.85 kg"} },
           { label: { fr: 'Masse max. au décollage', en: 'Max Takeoff Weight' }, value: {"fr": "2,09 kg", "en": "2.09 kg"} },
           { label: { fr: 'Vitesse max.', en: 'Max Speed' }, value: '21 m/s' },
           { label: { fr: 'Résistance au vent', en: 'Wind Resistance' }, value: '12 m/s' },
+          { label: { fr: 'Indice de protection', en: 'Protection Rating' }, value: 'IP55' },
         ]
       },
       {
@@ -1179,7 +1184,7 @@ window.ED_PRODUCTS = [
       },
     ],
     availability: 'coming_soon',
-    image: 'assets/img/products/matrice-4e.png',
+    image: 'assets/img/products/matrice-4-td.png',
     imageFallback: 'assets/img/svg/aircraft.svg',
     djiUrl: 'https://enterprise.dji.com',
     compatiblePayloads: []

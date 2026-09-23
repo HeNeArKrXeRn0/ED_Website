@@ -419,17 +419,21 @@ Object.assign(window.ED_STRINGS, {
     "fr": "Débit de chantier — selon les conditions d’exploitation",
     "en": "Field work rate — depends on operating conditions"
   },
-  "agriculture.copy.d-eau-consommee-vs-pulverisation-tractee": {
-    "fr": "Réduction d’eau possible — selon les réglages d’application",
-    "en": "Potential water reduction — depends on application settings"
+  "agriculture.copy.vol-entierement-automatique": {
+    "fr": "Autopilote",
+    "en": "Autopilot"
   },
-  "agriculture.copy.rtk-1-cm": {
-    "fr": "RTK",
-    "en": "RTK"
+  "agriculture.copy.itineraires-planifies-et-execution-autonome": {
+    "fr": "Itinéraires planifiés et exécution autonome",
+    "en": "Planned routes with autonomous execution"
   },
-  "agriculture.copy.precision-de-passage-sur-lignes-de-vol": {
-    "fr": "Précision de positionnement selon le système et les conditions",
-    "en": "Positioning accuracy depends on the system and conditions"
+  "agriculture.copy.radiocommande-intelligente": {
+    "fr": "Contrôleur intelligent",
+    "en": "Smart Controller"
+  },
+  "agriculture.copy.pilotage-et-suivi-du-chantier": {
+    "fr": "Planification du vol, pilotage et suivi",
+    "en": "Flight planning, control and monitoring"
   },
   "agriculture.copy.methodologie-agricole": {
     "fr": "Organisation du chantier",

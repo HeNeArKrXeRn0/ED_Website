@@ -465,7 +465,7 @@
       return 'assets/img/svg_icons/lidar.svg';
     }
     if (l.indexOf('radar') !== -1 || l.indexOf('aesa') !== -1) {
-      return 'assets/img/svg_icons/radar.svg';
+      return 'assets/img/svg_icons/radar_dish.svg';
     }
     if (l.indexOf('rayon') !== -1 || l.indexOf('radius') !== -1 || l.indexOf('portée de vol') !== -1 || l.indexOf('flight radius') !== -1 || l.indexOf('flight distance') !== -1 || l.indexOf('flight range') !== -1) {
       return 'assets/img/svg_icons/radar.svg';
