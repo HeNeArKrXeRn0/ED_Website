@@ -99,9 +99,16 @@
   var byIdMap = {};
   PRODUCTS.forEach(function (p) { byIdMap[p.id] = p; });
 
+  /* Devis : Coming Soon, In Stock et On Order autorisés ;
+     Discontinued et Not Available exclus (cartes, fiche, comparateur, panier). */
+  var QUOTE_ALLOWED = ['in_stock', 'on_order', 'coming_soon'];
+  function isQuoteAllowed(p) { return !!p && QUOTE_ALLOWED.indexOf(p.availability) !== -1; }
+
   var data = {
     products: PRODUCTS,
     byId: function (id) { return byIdMap[id] || null; },
+    quoteAllowed: QUOTE_ALLOWED,
+    isQuoteAllowed: isQuoteAllowed,
     byCategory: function (cat) {
       return PRODUCTS.filter(function (p) { return p.category === cat; });
     },
@@ -134,9 +141,9 @@
     try {
       var raw = JSON.parse(localStorage.getItem(LS_CART) || '[]');
       if (!Array.isArray(raw)) return [];
-      /* On ne garde que les lignes dont le produit existe encore et n'est pas discontinué */
+      /* On ne garde que les lignes dont le produit existe encore et est autorisé au devis */
       return raw
-        .filter(function (l) { return l && byIdMap[l.id] && byIdMap[l.id].availability !== 'discontinued'; })
+        .filter(function (l) { return l && isQuoteAllowed(byIdMap[l.id]); })
         .map(function (l) {
           return { id: l.id, qty: Math.max(1, Math.min(999, parseInt(l.qty, 10) || 1)) };
         });
@@ -160,7 +167,7 @@
       return readCart().some(function (l) { return l.id === id; });
     },
     add: function (id, qty) {
-      if (!byIdMap[id] || byIdMap[id].availability === 'discontinued') return;
+      if (!isQuoteAllowed(byIdMap[id])) return;
       var n = Math.max(1, parseInt(qty, 10) || 1);
       var lines = readCart();
       var found = lines.filter(function (l) { return l.id === id; })[0];
@@ -469,12 +476,23 @@
       return 'assets/img/svg_icons/laser_rangefinder.svg';
     }
 
-    // 9. Éclairage, Projecteur & Haut-parleur
+    // 9. Éclairage, Projecteur & Haut-parleur — ranges first, then base labels
+    if (l.indexOf('portée haut-parleur') !== -1 || l.indexOf('loudspeaker range') !== -1 || l.indexOf('sound range') !== -1) {
+      return 'assets/img/svg_icons/sound_range.svg';
+    }
+    if (l.indexOf('portée projecteur') !== -1 || l.indexOf('spotlight') !== -1 && l.indexOf('range') !== -1 || l.indexOf('light range') !== -1) {
+      return 'assets/img/svg_icons/light_range.svg';
+    }
     if (l.indexOf('projecteur') !== -1 || l.indexOf('spotlight') !== -1 || l.indexOf('éclairage') !== -1 || l.indexOf('light') !== -1) {
       return 'assets/img/svg_icons/spotlight.svg';
     }
     if (l.indexOf('haut-parleur') !== -1 || l.indexOf('speaker') !== -1 || l.indexOf('loudspeaker') !== -1) {
       return 'assets/img/svg_icons/loudspeaker.svg';
+    }
+
+    // 9b. Statut / Status
+    if (l.indexOf('statut') !== -1 || l === 'status') {
+      return 'assets/img/svg_icons/status.svg';
     }
 
     // 10. Caméras spécifiques
@@ -529,14 +547,13 @@
              '<div class="p-card-spec-l">' + esc(L(h.label)) + '</div></div></div>';
     }).join('');
 
-    var soon = p.availability === 'coming_soon';
-    var discontinued = p.availability === 'discontinued';
+    var notAvail = p.availability === 'not_available';
 
-    var actionBtn = discontinued
-      ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.discontinued">' + t('cta.discontinued') + '</button>'
-      : (soon
-        ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.notify">' + t('cta.notify') + '</button>'
-        : '<button type="button" class="btn btn-sm btn-primary" data-add="' + esc(p.id) + '" data-i18n="cta.addQuote">' + t('cta.addQuote') + '</button>');
+    var actionBtn = isQuoteAllowed(p)
+      ? '<button type="button" class="btn btn-sm btn-primary" data-add="' + esc(p.id) + '" data-i18n="cta.addQuote">' + t('cta.addQuote') + '</button>'
+      : (notAvail
+        ? '<button type="button" class="btn btn-sm" disabled data-i18n="avail.not_available">' + t('avail.not_available') + '</button>'
+        : '<button type="button" class="btn btn-sm" disabled data-i18n="cta.discontinued">' + t('cta.discontinued') + '</button>');
 
     return '' +
       '<article class="p-card" data-id="' + esc(p.id) + '">' +
@@ -622,7 +639,7 @@
     if (!btn) return;
     var id = btn.getAttribute('data-add');
     var p = data.byId(id);
-    if (!p || p.availability === 'discontinued') return;
+    if (!isQuoteAllowed(p)) return;
     var qtyInput = document.querySelector('[data-qty-for="' + id + '"]');
     var qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
     cart.add(id, qty);

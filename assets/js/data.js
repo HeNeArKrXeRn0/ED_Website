@@ -43,7 +43,8 @@ window.ED_PHOTOS = {
    ⚠ FAKE DATA : valeurs saisies à la main pour la démonstration.
    À remplacer par un vrai flux de stock. Seul ce champ change ; l'affichage,
    les libellés et les badges restent identiques.
-   Valeurs admises : 'in_stock' | 'on_order' | 'coming_soon'
+   Valeurs admises : 'in_stock' | 'on_order' | 'coming_soon' | 'discontinued' | 'not_available'
+   Devis autorisé : 'in_stock', 'on_order', 'coming_soon' (voir ED.data.isQuoteAllowed dans app.js).
    -------------------------------------------------------------------------- */
 
 window.ED_PRODUCTS = [
@@ -856,8 +857,8 @@ window.ED_PRODUCTS = [
     },
     useCases: ['topographie', 'cartographie'],
     highlights: [
-      { label: { fr: 'Capteur', en: 'Sensor' }, value: { fr: 'Plein format', en: 'Full frame' } },
-      { label: { fr: 'Résolution', en: 'Resolution' }, value: '45 MP' },
+      { label: { fr: 'Capteur', en: 'Sensor' }, value: { fr: 'Plein format', en: 'Full frame' }, icon: 'assets/img/svg_icons/CMOS_sensor.svg' },
+      { label: { fr: 'Résolution', en: 'Resolution' }, value: '45 MP', icon: 'assets/img/svg_icons/sensor_resolution.svg' },
       { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
     specs: [
@@ -1741,7 +1742,7 @@ window.ED_PRODUCTS = [
     useCases: ['securite', 'inspection'],
     highlights: [
       { label: { fr: 'Projecteur visible', en: 'Spotlight VIS' }, value: '30 lux @ 100 m' },
-      { label: { fr: 'Portée', en: 'Range' }, value: '500 m' },
+      { label: { fr: 'Portée effective', en: 'Effective Range' }, value: '500 m', icon: 'assets/img/svg_icons/light_range.svg' },
       { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
     specs: [
@@ -1778,7 +1779,7 @@ window.ED_PRODUCTS = [
     useCases: ['securite', 'inspection'],
     highlights: [
       { label: { fr: 'Haut-parleur', en: 'Loudspeaker' }, value: '129 dB @ 1 m' },
-      { label: { fr: 'Portée', en: 'Range' }, value: '700 m' },
+      { label: { fr: 'Portée effective', en: 'Effective Range' }, value: '700 m', icon: 'assets/img/svg_icons/sound_range.svg' },
       { label: { fr: 'Porteur', en: 'Carrier' }, value: 'Matrice 400' }
     ],
     specs: [

@@ -76,8 +76,8 @@ Every page must load scripts in this order or features will break:
 **Rules:**
 - Specification values must be from published DJI documentation or `—` (not inferred/rounded)
 - Use `id` exactly once in `data.js`, then reference it everywhere (featured lists, recommended, compatibility)
-- Products with `availability: "coming_soon"` must never render an enabled add-to-quote button
-- Accepted availability values: `in_stock`, `on_order`, `coming_soon` — others will break UI and must be added to `i18n.js` and `app.js` first
+- Quote eligibility is centralized in `ED.data.isQuoteAllowed`: `in_stock`, `on_order` and `coming_soon` render an enabled add-to-quote button; `discontinued` and `not_available` render a disabled state button and are excluded from the cart
+- Accepted availability values: `in_stock`, `on_order`, `coming_soon`, `discontinued`, `not_available` — new values must be added to `i18n.js` (`avail.*`), `app.js` (badge and quote rule) and `site.css` (badge style) first
 
 ### Current Inventory
 

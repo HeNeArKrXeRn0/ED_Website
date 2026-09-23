@@ -225,14 +225,14 @@
 
   function headCell(p) {
     var href = 'produit.html?id=' + encodeURIComponent(p.id);
-    var soon = p.availability === 'coming_soon';
-    var discontinued = p.availability === 'discontinued';
+    var allowed = window.ED.data.isQuoteAllowed(p);
+    var notAvail = p.availability === 'not_available';
 
-    var actionBtn = discontinued
-      ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.discontinued">' + esc(t('cta.discontinued')) + '</button>'
-      : (soon
-        ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.notify">' + esc(t('cta.notify')) + '</button>'
-        : '<button type="button" class="btn btn-sm btn-primary" data-add="' + esc(p.id) + '" data-i18n="cta.addQuote">' + esc(t('cta.addQuote')) + '</button>');
+    var actionBtn = allowed
+      ? '<button type="button" class="btn btn-sm btn-primary" data-add="' + esc(p.id) + '" data-i18n="cta.addQuote">' + esc(t('cta.addQuote')) + '</button>'
+      : (notAvail
+        ? '<button type="button" class="btn btn-sm" disabled data-i18n="avail.not_available">' + esc(t('avail.not_available')) + '</button>'
+        : '<button type="button" class="btn btn-sm" disabled data-i18n="cta.discontinued">' + esc(t('cta.discontinued')) + '</button>');
 
     return '<th scope="col"' + STICKY_FIX + '>' +
       '<div class="stack" style="align-items:flex-start">' +
