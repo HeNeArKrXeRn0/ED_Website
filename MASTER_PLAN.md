@@ -288,6 +288,7 @@ gantt
 2. **Case studies (`etudes-de-cas.html`) & Road shows (`actualites.html`) (Day 6):** Data-driven static sections for Algerian field results and upcoming events.
 3. **English editorial coverage — implemented locally 2026-09-20:** Full FR/EN coverage and switcher fixes completed; deployment remains a separate step.
 4. **SEO & Structured Data:** XML sitemap, `robots.txt`, canonical URLs, social open graph tags, and schema.org structured data (Organization, Product, Service, Event).
+   - **Pre-launch implementation handoff:** [`docs/seo-prelaunch-handoff.md`](docs/seo-prelaunch-handoff.md) records the 2026-09-22 local audit, recommended sequencing, owner decisions, validation gates, and launch-day steps. It intentionally does not assume a production domain, host, legal details, or analytics provider.
 
 ### P2 — Post-launch improvements
 
@@ -370,6 +371,7 @@ Validation: the skill frontmatter and metadata were validated; the seven regress
 
 | Date | Change | Notes |
 |---|---|---|
+| 2026-09-22 | Added pre-launch SEO handoff plan | Documented the local SEO audit, implementation sequence, owner decisions, validation gates, and production-launch checklist in `docs/seo-prelaunch-handoff.md`. No production SEO configuration, deployment, or public copy changed. |
 | 2026-09-21 | Renamed Vision System spec to Obstacle Avoidance across all categories | Renamed all instances of "Vision System" (`Système de vision` / `Système de vision pour l’évitement d’obstacles`) to "Obstacle Avoidance" (`Évitement d’obstacles`) across all categories (Agriculture, Enterprise, Camera) in `assets/js/data.js` and CSV inputs (`ENTERPRISE_EQUIPEMENT_SPECS.csv`, `CAMERA_EQUIPEMENT_SPECS.csv`, `Mavic3M_SPECS.csv`, `ICONS_mapping.csv`). Mapped icon resolution to `shield.svg`. Full bilingual verification passed. |
 | 2026-09-21 | Removed DJI Dock 3 from catalogue | Removed `dock-3` from `assets/js/data.js`, `applications.html`, and `MASTER_PLAN.md`. Updated `matrice-4td` and `matrice-4d` descriptions to generic automated operations. Full bilingual verification passed. |
 | 2026-09-21 | Aligned Zenmuse specs, highlights, and similar accessories | Streamlined Zenmuse payload specs in `assets/js/data.js` to only include specs mentioned in `assets/data_input/zenmuse_specs.csv`. Updated highlights to prioritize thermal cameras, main cameras, and laser rangefinders. Updated `relatedBlock` in `assets/js/produit.js` to show similar accessories (payloads) when viewing accessory product detail pages, rather than drones. Full bilingual verification passed. |
