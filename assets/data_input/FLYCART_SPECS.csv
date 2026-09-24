@@ -1,0 +1,17 @@
+﻿Aircraft;FlyCart 30;FlyCart 100
+Max Takeoff Weight (kg);95;170
+Max Payload (kg);40;100
+Travel Distance with Cargo (km);16;12
+Protection Rating;IP55;IP55
+Speed (m/s);20;20
+Max Flight Altitude (m);6000;6000
+Wind Resistance (m/s);12;12
+GNSS Antenna;GPS, BeiDou, Galileo, QZSS;GPS + Galileo + BeiDou + GLONASS
+RTK Antenna;GPS, BeiDou, Galileo, QZSS;GPS + Galileo + BeiDou + GLONASS
+Lidar;FALSE;Included
+Visual Obstalcle Avoidance;Included;Included
+AESA Radar;Included;Included
+FPV Camera;Included;Included
+Parachute;Included;E2MSF-100A
+Winch System;A2EWI-30A;A2EWH-100A
+D-RTK 3 Station;FALSE;Compatible

@@ -423,6 +423,11 @@
       return 'assets/img/svg_icons/max_flight_altitude.svg';
     }
 
+    // Distance avec charge (avant Masse, car le libellé contient "charge")
+    if (l.indexOf('travel distance') !== -1 || l.indexOf('distance avec charge') !== -1) {
+      return 'assets/img/svg_icons/navigation.svg';
+    }
+
     // 2. Masse & Poids
     if (l.indexOf('masse max. au décollage') !== -1 || l.indexOf('masse max. décollage') !== -1 || l.indexOf('masse max') !== -1 || l.indexOf('max takeoff weight') !== -1 || l.indexOf('mtow') !== -1) {
       return 'assets/img/svg_icons/max_takeoff_weight.svg';

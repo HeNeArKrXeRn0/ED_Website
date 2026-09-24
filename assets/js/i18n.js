@@ -860,32 +860,32 @@ Object.assign(window.ED_STRINGS, {
     "en": "4K video"
   },
   "camera.copy.qualite-dimage-exceptionnelle": {
-    "fr": "Résolution selon le modèle et le mode d’enregistrement",
-    "en": "Resolution depends on the model and recording mode"
+    "fr": "Qualité d’image de niveau professionnel",
+    "en": "Professional grade image quality"
   },
   "camera.copy.legers": {
-    "fr": "Transportables",
+    "fr": "Transportable",
     "en": "Portable"
   },
   "camera.copy.compacts-et-faciles-a-transporter": {
-    "fr": "Des modèles compacts pour le voyage",
-    "en": "Compact models for travel"
+    "fr": "Des modèles légers et compacts pour le voyage",
+    "en": "Light and compact models for travel"
   },
   "camera.copy.securitaires": {
-    "fr": "Aides au vol",
+    "fr": "Assistance au vol",
     "en": "Flight assistance"
   },
   "camera.copy.detection-intelligente-des-obstacles": {
-    "fr": "Détection des obstacles selon le modèle",
-    "en": "Obstacle sensing depends on the model"
+    "fr": "Vol en sécurité pour les débutants",
+    "en": "Safe flight for beginners"
   },
   "camera.copy.30-a-50-min": {
-    "fr": "Autonomie",
-    "en": "Flight time"
+    "fr": "Jusqu’à 52 min",
+    "en": "Up to 52 min"
   },
   "camera.copy.autonomie-de-vol-par-batterie": {
-    "fr": "Selon le modèle, la batterie et les conditions",
-    "en": "Varies by model, battery and conditions"
+    "fr": "Autonomie de vol",
+    "en": "Flight time"
   },
   "camera.copy.photo-video-aerienne": {
     "fr": "Photo et vidéo aériennes",
@@ -1252,24 +1252,32 @@ Object.assign(window.ED_STRINGS, {
     "en": "IP55"
   },
   "enterprise.copy.resistance-pluie-vent-et-poussieres-extremes": {
-    "fr": "Indice de protection des modèles concernés ; consultez leur fiche",
-    "en": "Protection rating on applicable models; check the product specifications"
+    "fr": "Indice de protection sur les modèles concernés",
+    "en": "Protection rating on applicable models"
   },
-  "enterprise.copy.autonomie-de-vol-maximale": {
-    "fr": "Autonomie maximale — Matrice 350 RTK, dans les conditions d’essai",
-    "en": "Maximum flight time — Matrice 350 RTK, under test conditions"
+  "enterprise.copy.vision-thermique": {
+    "fr": "Vision thermique",
+    "en": "Thermal Vision"
   },
-  "enterprise.copy.portee-de-transmission-video-o4-enterprise": {
-    "fr": "Portée de transmission — Matrice 350 RTK, dans les conditions indiquées",
-    "en": "Transmission range — Matrice 350 RTK, under specified conditions"
+  "enterprise.copy.capteur-thermique-sur-les-modeles": {
+    "fr": "Capteur thermique sur les modèles concernés",
+    "en": "Thermal sensor on select models"
+  },
+  "enterprise.copy.vision-nocturne": {
+    "fr": "Vision nocturne",
+    "en": "Night Vision"
+  },
+  "enterprise.copy.cameras-haute-resolution-et-vision-nocturne": {
+    "fr": "Caméras haute résolution et vision nocturne",
+    "en": "High Resolution and Night Vision Cameras"
+  },
+  "enterprise.copy.charges-utiles-jusqu-a-30-kg": {
+    "fr": "Charge utile maximale (FlyCart 100)",
+    "en": "Maximum payload (FlyCart 100)"
   },
   "enterprise.copy.jusqu-a-30-kg": {
-    "fr": "Jusqu'à 30 kg",
-    "en": "Up to 30 kg"
-  },
-  "enterprise.copy.capacite-de-fret-lourd-dji-flycart-30": {
-    "fr": "Capacité de transport (DJI FlyCart 30, avec deux batteries)",
-    "en": "Cargo capacity (DJI FlyCart 30, dual-battery configuration)"
+    "fr": "100 kg",
+    "en": "100 kg"
   },
   "enterprise.copy.flotte-entreprise": {
     "fr": "Flotte Entreprise",

@@ -364,8 +364,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .stat:last-child { border-right: 0; }
 .stat-value {
-  font-family: var(--mono); font-size: clamp(1.5rem, 2.6vw, 2.1rem);
-  font-weight: 700; color: var(--text); line-height: 1; letter-spacing: -0.02em;
+  font-family: var(--mono); font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 700; color: var(--text); line-height: 1.15; letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
 }
 .stat-label {
