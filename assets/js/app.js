@@ -118,6 +118,22 @@
     payloads: function () {
       return PRODUCTS.filter(function (p) { return p.type === 'payload'; });
     },
+    parts: function () {
+      return PRODUCTS.filter(function (p) {
+        return p.type === 'battery' || p.type === 'propeller' || p.type === 'accessory';
+      });
+    },
+    partDrones: function () {
+      var seen = [];
+      PRODUCTS.forEach(function (p) {
+        if (p.compatibleDrones) {
+          p.compatibleDrones.forEach(function (d) {
+            if (seen.indexOf(d) === -1) seen.push(d);
+          });
+        }
+      });
+      return seen.sort();
+    },
     bySector: function (sector) {
       return PRODUCTS.filter(function (p) {
         return (p.useCases || []).indexOf(sector) !== -1;
@@ -206,6 +222,7 @@
     { key: 'agriculture',  href: 'agriculture.html',  i18n: 'nav.agriculture' },
     { key: 'enterprise',   href: 'enterprise.html',   i18n: 'nav.enterprise' },
     { key: 'camera',       href: 'camera.html',       i18n: 'nav.camera' },
+    { key: 'catalogue',    href: 'catalogue.html',    i18n: 'nav.catalogue' },
     { key: 'compare',      href: 'comparateur.html',  i18n: 'nav.compare' },
     { key: 'applications', href: 'applications.html', i18n: 'nav.applications' },
     { key: 'services',     href: 'services.html',     i18n: 'nav.services' },
@@ -638,8 +655,20 @@
     paintCartBadge();
   }
 
-  /* Délégation globale : tout bouton [data-add] ajoute au devis */
+  /* Délégation globale : boutons quantité pas-à-pas pour tableaux */
   document.addEventListener('click', function (e) {
+    var stepBtn = e.target.closest && e.target.closest('[data-table-qty-step]');
+    if (stepBtn) {
+      var step = parseInt(stepBtn.getAttribute('data-table-qty-step'), 10) || 0;
+      var targetId = stepBtn.getAttribute('data-target');
+      var input = document.querySelector('[data-qty-for="' + targetId + '"]');
+      if (input) {
+        var cur = parseInt(input.value, 10) || 1;
+        input.value = Math.max(1, Math.min(999, cur + step));
+      }
+      return;
+    }
+
     var btn = e.target.closest && e.target.closest('[data-add]');
     if (!btn) return;
     var id = btn.getAttribute('data-add');

@@ -164,6 +164,86 @@
            '</div>';
   }
 
+  function matchesDrone(a, d) {
+    var an = a.name.toLowerCase();
+    var dn = d.toLowerCase();
+    if (an === dn) return true;
+    if (a.id === 'matrice-400') return dn.indexOf('matrice 400') !== -1;
+    if (a.id === 'matrice-4e' || a.id === 'matrice-4t') return dn.indexOf('(4e / 4t)') !== -1 || dn === 'matrice 4' || dn === 'dji matrice 4';
+    if (a.id === 'matrice-4d') return dn.indexOf('matrice 4d') !== -1 && dn.indexOf('matrice 4td') === -1;
+    if (a.id === 'matrice-4td') return dn.indexOf('matrice 4td') !== -1;
+    if (a.id === 't25') return dn.indexOf('t25') !== -1;
+    if (a.id === 't25p') return dn.indexOf('t25p') !== -1;
+    return an.indexOf(dn) !== -1 || dn.indexOf(an) !== -1;
+  }
+
+  function partTypeLabel(item) {
+    if (item.type === 'battery') return t('parts.typeBattery');
+    if (item.type === 'propeller') return t('parts.typePropeller');
+    if (item.partType === 'charging_station') return t('parts.typeChargingStation');
+    if (item.partType === 'generator') return t('parts.typeGenerator');
+    if (item.partType === 'spreading_system') return t('parts.typeSpreadingSystem');
+    if (item.partType === 'cable') return t('parts.typeCable');
+    return t('cat.payload');
+  }
+
+  function partsTableBlock(p) {
+    if (p.type !== 'aircraft') return '';
+
+    var allParts = ED.data.parts ? ED.data.parts() : [];
+    var list = allParts.filter(function (pt) {
+      return (pt.compatibleDrones || []).some(function (d) { return matchesDrone(p, d); });
+    });
+
+    if (!list.length) return '';
+
+    var rows = list.map(function (item) {
+      var allowed = ED.data.isQuoteAllowed(item);
+      var isDiscontinued = item.availability === 'discontinued';
+      var displayName = (item.title && L(item.title)) ? L(item.title) : item.name;
+
+      var actionBtn = allowed
+        ? '<button type="button" class="btn btn-sm btn-primary" data-add="' + esc(item.id) + '" data-i18n="cta.addQuote">' + esc(t('cta.addQuote')) + '</button>'
+        : (isDiscontinued
+          ? '<button type="button" class="btn btn-sm" disabled data-i18n="cta.discontinued">' + esc(t('cta.discontinued')) + '</button>'
+          : '<button type="button" class="btn btn-sm" disabled data-i18n="avail.not_available">' + esc(t('avail.not_available')) + '</button>');
+
+      var qtyControls = allowed
+        ? '<div class="qty qty-sm">' +
+            '<button type="button" data-table-qty-step="-1" data-target="' + esc(item.id) + '" aria-label="' + esc(t('qty.decrease')) + '">&#8722;</button>' +
+            '<input type="number" id="qty-tbl-' + esc(item.id) + '" value="1" min="1" max="999" step="1" inputmode="numeric" data-qty-for="' + esc(item.id) + '" aria-label="' + esc(t('prod.qty') + ' — ' + displayName) + '">' +
+            '<button type="button" data-table-qty-step="1" data-target="' + esc(item.id) + '" aria-label="' + esc(t('qty.increase')) + '">+</button>' +
+          '</div>'
+        : '';
+
+      return '<tr class="parts-table-row" data-id="' + esc(item.id) + '">' +
+               '<td class="parts-td-type"><span class="badge-subtle">' + esc(partTypeLabel(item)) + '</span></td>' +
+               '<td class="parts-td-name"><span class="strong">' + esc(displayName) + '</span></td>' +
+               '<td class="parts-td-model"><code class="parts-code">' + esc(item.modelNumber || '—') + '</code></td>' +
+               '<td class="parts-td-avail">' + ED.ui.badge(item.availability) + '</td>' +
+               '<td class="parts-td-action">' +
+                 '<div class="parts-action-cell">' + qtyControls + actionBtn + '</div>' +
+               '</td>' +
+             '</tr>';
+    }).join('');
+
+    return heading('prod.compatibleParts') +
+           '<div class="table-scroll mt-6">' +
+             '<table class="parts-table">' +
+               '<thead>' +
+                 '<tr>' +
+                   '<th scope="col" data-i18n="parts.colType">' + esc(t('parts.colType')) + '</th>' +
+                   '<th scope="col" data-i18n="parts.colItem">' + esc(t('parts.colItem')) + '</th>' +
+                   '<th scope="col" data-i18n="parts.colModel">' + esc(t('parts.colModel')) + '</th>' +
+                   '<th scope="col" data-i18n="parts.colAvail">' + esc(t('parts.colAvail')) + '</th>' +
+                   '<th scope="col" data-i18n="parts.colAction" style="text-align:right;">' + esc(t('parts.colAction')) + '</th>' +
+                 '</tr>' +
+               '</thead>' +
+               '<tbody>' + rows + '</tbody>' +
+             '</table>' +
+           '</div>';
+  }
+
   function payloadsBlock(p) {
     var list = (p.compatiblePayloads || [])
       .map(function (pid) { return ED.data.byId(pid); })
@@ -215,7 +295,7 @@
   /* Les sections présentes alternent les fonds, quelles que soient
      celles qui sont omises faute de données. */
   function sections(p) {
-    return [usageBlock(p), specsBlock(p), payloadsBlock(p), relatedBlock(p), ctaBlock()]
+    return [usageBlock(p), specsBlock(p), partsTableBlock(p), payloadsBlock(p), relatedBlock(p), ctaBlock()]
       .filter(function (html) { return !!html; })
       .map(function (html, i) {
         return '<section class="section' + (i % 2 === 0 ? ' section-alt' : '') + '">' +

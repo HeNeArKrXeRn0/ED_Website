@@ -1856,5 +1856,1340 @@ window.ED_PRODUCTS = [
     image: 'assets/img/products/V1.png',
     imageFallback: 'assets/img/svg/payload-gimbal.svg',
     djiUrl: 'https://enterprise.dji.com/zenmuse-v1'
-  }
+  },
+
+  /* ====================== PIÈCES & ACCESSOIRES ===================== */
+  {
+    "id": "bat-bwx234-4276-14-6",
+    "name": "Batterie BWX234-4276-14.6",
+    "title": {
+      "fr": "Batterie BWX234-4276-14.6",
+      "en": "Battery BWX234-4276-14.6"
+    },
+    "modelNumber": "BWX234-4276-14.6",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Air 3S"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Air 3S.",
+      "en": "Official battery compatible with DJI Air 3S."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwxvn1-2700-14-32",
+    "name": "Batterie BWXVN1-2700-14.32",
+    "title": {
+      "fr": "Batterie BWXVN1-2700-14.32",
+      "en": "Battery BWXVN1-2700-14.32"
+    },
+    "modelNumber": "BWXVN1-2700-14.32",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Avata 360"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Avata 360.",
+      "en": "Official battery compatible with DJI Avata 360."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwx141-3110-7-16",
+    "name": "Batterie BWX141-3110-7.16",
+    "title": {
+      "fr": "Batterie BWX141-3110-7.16",
+      "en": "Battery BWX141-3110-7.16"
+    },
+    "modelNumber": "BWX141-3110-7.16",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Flip"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Flip.",
+      "en": "Official battery compatible with DJI Flip."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bpx345-6741-14-76",
+    "name": "Batterie BPX345-6741-14.76",
+    "title": {
+      "fr": "Batterie BPX345-6741-14.76",
+      "en": "Battery BPX345-6741-14.76"
+    },
+    "modelNumber": "BPX345-6741-14.76",
+    "partType": "battery",
+    "category": "enterprise",
+    "segment": "enterprise",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Matrice 4 (4E / 4T)"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Matrice 4 (4E / 4T).",
+      "en": "Official battery compatible with DJI Matrice 4 (4E / 4T)."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bpx230-6768-22-14",
+    "name": "Batterie BPX230-6768-22.14",
+    "title": {
+      "fr": "Batterie BPX230-6768-22.14",
+      "en": "Battery BPX230-6768-22.14"
+    },
+    "modelNumber": "BPX230-6768-22.14",
+    "partType": "battery",
+    "category": "enterprise",
+    "segment": "enterprise",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Matrice 4D",
+      "DJI Matrice 4TD"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Matrice 4D, DJI Matrice 4TD.",
+      "en": "Official battery compatible with DJI Matrice 4D, DJI Matrice 4TD."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwx260-5000-15-4",
+    "name": "Batterie BWX260-5000-15.4",
+    "title": {
+      "fr": "Batterie BWX260-5000-15.4",
+      "en": "Battery BWX260-5000-15.4"
+    },
+    "modelNumber": "BWX260-5000-15.4",
+    "partType": "battery",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Mavic 3 Multispectral"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Mavic 3 Multispectral.",
+      "en": "Official battery compatible with DJI Mavic 3 Multispectral."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwxnn5-4680-7-16",
+    "name": "Batterie BWXNN5-4680-7.16",
+    "title": {
+      "fr": "Batterie BWXNN5-4680-7.16",
+      "en": "Battery BWXNN5-4680-7.16"
+    },
+    "modelNumber": "BWXNN5-4680-7.16",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Mini 5 Pro"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Mini 5 Pro.",
+      "en": "Official battery compatible with DJI Mini 5 Pro."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwxnn5-2788-7-0",
+    "name": "Batterie BWXNN5-2788-7.0",
+    "title": {
+      "fr": "Batterie BWXNN5-2788-7.0",
+      "en": "Battery BWXNN5-2788-7.0"
+    },
+    "modelNumber": "BWXNN5-2788-7.0",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Mini 5 Pro"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Mini 5 Pro.",
+      "en": "Official battery compatible with DJI Mini 5 Pro."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwx140-2590-7-32",
+    "name": "Batterie BWX140-2590-7.32",
+    "title": {
+      "fr": "Batterie BWX140-2590-7.32",
+      "en": "Battery BWX140-2590-7.32"
+    },
+    "modelNumber": "BWX140-2590-7.32",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Mini 4 Pro"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Mini 4 Pro.",
+      "en": "Official battery compatible with DJI Mini 4 Pro."
+    },
+    "availability": "discontinued",
+    "quoteEligible": false,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwx162-3850-7-38",
+    "name": "Batterie BWX162-3850-7.38",
+    "title": {
+      "fr": "Batterie BWX162-3850-7.38",
+      "en": "Battery BWX162-3850-7.38"
+    },
+    "modelNumber": "BWX162-3850-7.38",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Mini 4 Pro"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Mini 4 Pro.",
+      "en": "Official battery compatible with DJI Mini 4 Pro."
+    },
+    "availability": "discontinued",
+    "quoteEligible": false,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-db2160-41000",
+    "name": "Batterie DB2160-41000",
+    "title": {
+      "fr": "Batterie DB2160-41000",
+      "en": "Battery DB2160-41000"
+    },
+    "modelNumber": "DB2160-41000",
+    "partType": "battery",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Agras T70P"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Agras T70P.",
+      "en": "Official battery compatible with DJI Agras T70P."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-db1580-30000",
+    "name": "Batterie DB1580-30000",
+    "title": {
+      "fr": "Batterie DB1580-30000",
+      "en": "Battery DB1580-30000"
+    },
+    "modelNumber": "DB1580-30000",
+    "partType": "battery",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Agras T70P",
+      "DJI Agras T55"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Agras T70P, DJI Agras T55.",
+      "en": "Official battery compatible with DJI Agras T70P, DJI Agras T55."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-db1050-20000",
+    "name": "Batterie DB1050-20000",
+    "title": {
+      "fr": "Batterie DB1050-20000",
+      "en": "Battery DB1050-20000"
+    },
+    "modelNumber": "DB1050-20000",
+    "partType": "battery",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Agras T55"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Agras T55.",
+      "en": "Official battery compatible with DJI Agras T55."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-db800",
+    "name": "Batterie DB800",
+    "title": {
+      "fr": "Batterie DB800",
+      "en": "Battery DB800"
+    },
+    "modelNumber": "DB800",
+    "partType": "battery",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Agras T25P",
+      "DJI FlyCart 30"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Agras T25P, DJI FlyCart 30.",
+      "en": "Official battery compatible with DJI Agras T25P, DJI FlyCart 30."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-db1560",
+    "name": "Batterie DB1560",
+    "title": {
+      "fr": "Batterie DB1560",
+      "en": "Battery DB1560"
+    },
+    "modelNumber": "DB1560",
+    "partType": "battery",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Agras T50"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Agras T50.",
+      "en": "Official battery compatible with DJI Agras T50."
+    },
+    "availability": "discontinued",
+    "quoteEligible": false,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-tb100",
+    "name": "Batterie TB100",
+    "title": {
+      "fr": "Batterie TB100",
+      "en": "Battery TB100"
+    },
+    "modelNumber": "TB100",
+    "partType": "battery",
+    "category": "enterprise",
+    "segment": "enterprise",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Matrice 400"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Matrice 400.",
+      "en": "Official battery compatible with DJI Matrice 400."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-tb100c",
+    "name": "Batterie TB100C",
+    "title": {
+      "fr": "Batterie TB100C",
+      "en": "Battery TB100C"
+    },
+    "modelNumber": "TB100C",
+    "partType": "battery",
+    "category": "enterprise",
+    "segment": "enterprise",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Matrice 400"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Matrice 400.",
+      "en": "Official battery compatible with DJI Matrice 400."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwxen2-1606-7-16",
+    "name": "Batterie BWXEN2-1606-7.16",
+    "title": {
+      "fr": "Batterie BWXEN2-1606-7.16",
+      "en": "Battery BWXEN2-1606-7.16"
+    },
+    "modelNumber": "BWXEN2-1606-7.16",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Neo 2"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Neo 2.",
+      "en": "Official battery compatible with DJI Neo 2."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwx341-6654-14-3",
+    "name": "Batterie BWX341-6654-14.3",
+    "title": {
+      "fr": "Batterie BWX341-6654-14.3",
+      "en": "Battery BWX341-6654-14.3"
+    },
+    "modelNumber": "BWX341-6654-14.3",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Mavic 4 Pro"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Mavic 4 Pro.",
+      "en": "Official battery compatible with DJI Mavic 4 Pro."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-db1050",
+    "name": "Batterie DB1050",
+    "title": {
+      "fr": "Batterie DB1050",
+      "en": "Battery DB1050"
+    },
+    "modelNumber": "DB1050",
+    "partType": "battery",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Agras T55"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Agras T55.",
+      "en": "Official battery compatible with DJI Agras T55."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-db2160",
+    "name": "Batterie DB2160",
+    "title": {
+      "fr": "Batterie DB2160",
+      "en": "Battery DB2160"
+    },
+    "modelNumber": "DB2160",
+    "partType": "battery",
+    "category": "enterprise",
+    "segment": "enterprise",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI FlyCart 100"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI FlyCart 100.",
+      "en": "Official battery compatible with DJI FlyCart 100."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwxgn1-2590-7-32",
+    "name": "Batterie BWXGN1-2590-7.32",
+    "title": {
+      "fr": "Batterie BWXGN1-2590-7.32",
+      "en": "Battery BWXGN1-2590-7.32"
+    },
+    "modelNumber": "BWXGN1-2590-7.32",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Lito 1"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Lito 1.",
+      "en": "Official battery compatible with DJI Lito 1."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwxgp1-2788-7-0",
+    "name": "Batterie BWXGP1-2788-7.0",
+    "title": {
+      "fr": "Batterie BWXGP1-2788-7.0",
+      "en": "Battery BWXGP1-2788-7.0"
+    },
+    "modelNumber": "BWXGP1-2788-7.0",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Lito X1"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Lito X1.",
+      "en": "Official battery compatible with DJI Lito X1."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "bat-bwxgp1-4680-7-16",
+    "name": "Batterie BWXGP1-4680-7.16",
+    "title": {
+      "fr": "Batterie BWXGP1-4680-7.16",
+      "en": "Battery BWXGP1-4680-7.16"
+    },
+    "modelNumber": "BWXGP1-4680-7.16",
+    "partType": "battery",
+    "category": "camera",
+    "segment": "camera",
+    "type": "battery",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Lito X1"
+    ],
+    "tagline": {
+      "fr": "Batterie officielle compatible DJI Lito X1.",
+      "en": "Official battery compatible with DJI Lito X1."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg_icons/full_battery.svg"
+  },
+  {
+    "id": "prop-8747f",
+    "name": "Hélices 8747F",
+    "title": {
+      "fr": "Hélices 8747F",
+      "en": "Propellers 8747F"
+    },
+    "modelNumber": "8747F",
+    "partType": "propeller",
+    "category": "camera",
+    "segment": "camera",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Air 3S"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Air 3S.",
+      "en": "Original spare propellers for DJI Air 3S."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-3340s",
+    "name": "Hélices 3340S",
+    "title": {
+      "fr": "Hélices 3340S",
+      "en": "Propellers 3340S"
+    },
+    "modelNumber": "3340S",
+    "partType": "propeller",
+    "category": "camera",
+    "segment": "camera",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Avata 360"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Avata 360.",
+      "en": "Original spare propellers for DJI Avata 360."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-4022f",
+    "name": "Hélices 4022F",
+    "title": {
+      "fr": "Hélices 4022F",
+      "en": "Propellers 4022F"
+    },
+    "modelNumber": "4022F",
+    "partType": "propeller",
+    "category": "camera",
+    "segment": "camera",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Flip"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Flip.",
+      "en": "Original spare propellers for DJI Flip."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-6028f",
+    "name": "Hélices 6028F",
+    "title": {
+      "fr": "Hélices 6028F",
+      "en": "Propellers 6028F"
+    },
+    "modelNumber": "6028F",
+    "partType": "propeller",
+    "category": "camera",
+    "segment": "camera",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Mini 5 Pro"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Mini 5 Pro.",
+      "en": "Original spare propellers for DJI Mini 5 Pro."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-mt3m3vd-pps",
+    "name": "Hélices MT3M3VD_PPS",
+    "title": {
+      "fr": "Hélices MT3M3VD_PPS",
+      "en": "Propellers MT3M3VD_PPS"
+    },
+    "modelNumber": "MT3M3VD_PPS",
+    "partType": "propeller",
+    "category": "camera",
+    "segment": "camera",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Mini 4 Pro"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Mini 4 Pro.",
+      "en": "Original spare propellers for DJI Mini 4 Pro."
+    },
+    "availability": "discontinued",
+    "quoteEligible": false,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-r2217s",
+    "name": "Hélices R2217S",
+    "title": {
+      "fr": "Hélices R2217S",
+      "en": "Propellers R2217S"
+    },
+    "modelNumber": "R2217S",
+    "partType": "propeller",
+    "category": "camera",
+    "segment": "camera",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Neo 2"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Neo 2.",
+      "en": "Original spare propellers for DJI Neo 2."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-2510f",
+    "name": "Hélices 2510F",
+    "title": {
+      "fr": "Hélices 2510F",
+      "en": "Propellers 2510F"
+    },
+    "modelNumber": "2510F",
+    "partType": "propeller",
+    "category": "enterprise",
+    "segment": "enterprise",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Matrice 400"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Matrice 400.",
+      "en": "Original spare propellers for DJI Matrice 400."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-9453f",
+    "name": "Hélices 9453F",
+    "title": {
+      "fr": "Hélices 9453F",
+      "en": "Propellers 9453F"
+    },
+    "modelNumber": "9453F",
+    "partType": "propeller",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Mavic 3 Multispectral"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Mavic 3 Multispectral.",
+      "en": "Original spare propellers for DJI Mavic 3 Multispectral."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-1157f",
+    "name": "Hélices 1157F",
+    "title": {
+      "fr": "Hélices 1157F",
+      "en": "Propellers 1157F"
+    },
+    "modelNumber": "1157F",
+    "partType": "propeller",
+    "category": "enterprise",
+    "segment": "enterprise",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Matrice 4 (4E / 4T)"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Matrice 4 (4E / 4T).",
+      "en": "Original spare propellers for DJI Matrice 4 (4E / 4T)."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-1154f",
+    "name": "Hélices 1154F",
+    "title": {
+      "fr": "Hélices 1154F",
+      "en": "Propellers 1154F"
+    },
+    "modelNumber": "1154F",
+    "partType": "propeller",
+    "category": "enterprise",
+    "segment": "enterprise",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Matrice 4 (4E / 4T)"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Matrice 4 (4E / 4T).",
+      "en": "Original spare propellers for DJI Matrice 4 (4E / 4T)."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-1158f",
+    "name": "Hélices 1158F",
+    "title": {
+      "fr": "Hélices 1158F",
+      "en": "Propellers 1158F"
+    },
+    "modelNumber": "1158F",
+    "partType": "propeller",
+    "category": "camera",
+    "segment": "camera",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Mavic 4 Pro"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Mavic 4 Pro.",
+      "en": "Original spare propellers for DJI Mavic 4 Pro."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-1364f",
+    "name": "Hélices 1364F",
+    "title": {
+      "fr": "Hélices 1364F",
+      "en": "Propellers 1364F"
+    },
+    "modelNumber": "1364F",
+    "partType": "propeller",
+    "category": "enterprise",
+    "segment": "enterprise",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Matrice 4D",
+      "DJI Matrice 4TD"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Matrice 4D, DJI Matrice 4TD.",
+      "en": "Original spare propellers for DJI Matrice 4D, DJI Matrice 4TD."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "prop-6030f",
+    "name": "Hélices 6030F",
+    "title": {
+      "fr": "Hélices 6030F",
+      "en": "Propellers 6030F"
+    },
+    "modelNumber": "6030F",
+    "partType": "propeller",
+    "category": "camera",
+    "segment": "camera",
+    "type": "propeller",
+    "productGroup": "spare_part",
+    "compatibleDrones": [
+      "DJI Lito 1",
+      "DJI Lito X1"
+    ],
+    "tagline": {
+      "fr": "Hélices de rechange d’origine pour DJI Lito 1, DJI Lito X1.",
+      "en": "Original spare propellers for DJI Lito 1, DJI Lito X1."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-charging-station-c8000",
+    "name": "Station de recharge C8000",
+    "title": {
+      "fr": "Station de recharge C8000",
+      "en": "Charging Station C8000"
+    },
+    "modelNumber": "C8000",
+    "partType": "charging_station",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T25P"
+    ],
+    "tagline": {
+      "fr": "Station de recharge d’origine compatible avec DJI Agras T25P.",
+      "en": "Original charging station compatible with DJI Agras T25P."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-t25p-spreading-system",
+    "name": "Système d’épandage (DJI Agras T25P)",
+    "title": {
+      "fr": "Système d’épandage (DJI Agras T25P)",
+      "en": "Spreading System (DJI Agras T25P)"
+    },
+    "modelNumber": "—",
+    "partType": "spreading_system",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T25P"
+    ],
+    "tagline": {
+      "fr": "Système d’épandage d’origine compatible avec DJI Agras T25P.",
+      "en": "Original spreading system compatible with DJI Agras T25P."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-generator-d6000i",
+    "name": "Générateur D6000i",
+    "title": {
+      "fr": "Générateur D6000i",
+      "en": "Generator D6000i"
+    },
+    "modelNumber": "D6000i",
+    "partType": "generator",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T25P"
+    ],
+    "tagline": {
+      "fr": "Générateur d’origine compatible avec DJI Agras T25P.",
+      "en": "Original generator compatible with DJI Agras T25P."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-generator-d14000ie",
+    "name": "Générateur D14000ie",
+    "title": {
+      "fr": "Générateur D14000ie",
+      "en": "Generator D14000ie"
+    },
+    "modelNumber": "D14000ie",
+    "partType": "generator",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T50",
+      "DJI Agras T70P"
+    ],
+    "tagline": {
+      "fr": "Générateur d’origine compatible avec DJI Agras T50, DJI Agras T70P.",
+      "en": "Original generator compatible with DJI Agras T50, DJI Agras T70P."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-generator-d12000ie",
+    "name": "Générateur D12000ie",
+    "title": {
+      "fr": "Générateur D12000ie",
+      "en": "Generator D12000ie"
+    },
+    "modelNumber": "D12000ie",
+    "partType": "generator",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T50"
+    ],
+    "tagline": {
+      "fr": "Générateur d’origine compatible avec DJI Agras T50.",
+      "en": "Original generator compatible with DJI Agras T50."
+    },
+    "availability": "discontinued",
+    "quoteEligible": false,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-cable-d14000-adaptor",
+    "name": "Câble adaptateur D14000.ADAPTOR",
+    "title": {
+      "fr": "Câble adaptateur D14000.ADAPTOR",
+      "en": "Adapter Cable D14000.ADAPTOR"
+    },
+    "modelNumber": "D14000.ADAPTOR",
+    "partType": "cable",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T50"
+    ],
+    "tagline": {
+      "fr": "Câble adaptateur d’origine compatible avec DJI Agras T50.",
+      "en": "Original adapter cable compatible with DJI Agras T50."
+    },
+    "availability": "discontinued",
+    "quoteEligible": false,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-charging-station-c10000",
+    "name": "Station de recharge C10000",
+    "title": {
+      "fr": "Station de recharge C10000",
+      "en": "Charging Station C10000"
+    },
+    "modelNumber": "C10000",
+    "partType": "charging_station",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T50"
+    ],
+    "tagline": {
+      "fr": "Station de recharge d’origine compatible avec DJI Agras T50.",
+      "en": "Original charging station compatible with DJI Agras T50."
+    },
+    "availability": "discontinued",
+    "quoteEligible": false,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-t50-spreading-system",
+    "name": "Système d’épandage (DJI Agras T50)",
+    "title": {
+      "fr": "Système d’épandage (DJI Agras T50)",
+      "en": "Spreading System (DJI Agras T50)"
+    },
+    "modelNumber": "—",
+    "partType": "spreading_system",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T50"
+    ],
+    "tagline": {
+      "fr": "Système d’épandage d’origine compatible avec DJI Agras T50.",
+      "en": "Original spreading system compatible with DJI Agras T50."
+    },
+    "availability": "discontinued",
+    "quoteEligible": false,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-charging-station-c7000",
+    "name": "Station de recharge C7000",
+    "title": {
+      "fr": "Station de recharge C7000",
+      "en": "Charging Station C7000"
+    },
+    "modelNumber": "C7000",
+    "partType": "charging_station",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T55"
+    ],
+    "tagline": {
+      "fr": "Station de recharge d’origine compatible avec DJI Agras T55.",
+      "en": "Original charging station compatible with DJI Agras T55."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-generator-d8000ie",
+    "name": "Générateur D8000ie",
+    "title": {
+      "fr": "Générateur D8000ie",
+      "en": "Generator D8000ie"
+    },
+    "modelNumber": "D8000ie",
+    "partType": "generator",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T55"
+    ],
+    "tagline": {
+      "fr": "Générateur d’origine compatible avec DJI Agras T55.",
+      "en": "Original generator compatible with DJI Agras T55."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-spreading-system-ds80l",
+    "name": "Système d’épandage DS80L",
+    "title": {
+      "fr": "Système d’épandage DS80L",
+      "en": "Spreading System DS80L"
+    },
+    "modelNumber": "DS80L",
+    "partType": "spreading_system",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T55"
+    ],
+    "tagline": {
+      "fr": "Système d’épandage d’origine compatible avec DJI Agras T55.",
+      "en": "Original spreading system compatible with DJI Agras T55."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-t70p-spreading-system",
+    "name": "Système d’épandage (DJI Agras T70P)",
+    "title": {
+      "fr": "Système d’épandage (DJI Agras T70P)",
+      "en": "Spreading System (DJI Agras T70P)"
+    },
+    "modelNumber": "—",
+    "partType": "spreading_system",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T70P"
+    ],
+    "tagline": {
+      "fr": "Système d’épandage d’origine compatible avec DJI Agras T70P.",
+      "en": "Original spreading system compatible with DJI Agras T70P."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-charging-station-c12000",
+    "name": "Station de recharge C12000",
+    "title": {
+      "fr": "Station de recharge C12000",
+      "en": "Charging Station C12000"
+    },
+    "modelNumber": "C12000",
+    "partType": "charging_station",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Agras T70P"
+    ],
+    "tagline": {
+      "fr": "Station de recharge d’origine compatible avec DJI Agras T70P.",
+      "en": "Original charging station compatible with DJI Agras T70P."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+  {
+    "id": "acc-mavic-3m-charging-station",
+    "name": "Station de recharge (DJI Mavic 3 Multispectral)",
+    "title": {
+      "fr": "Station de recharge (DJI Mavic 3 Multispectral)",
+      "en": "Charging Station (DJI Mavic 3 Multispectral)"
+    },
+    "modelNumber": "—",
+    "partType": "charging_station",
+    "category": "agriculture",
+    "segment": "agriculture",
+    "type": "accessory",
+    "productGroup": "accessory",
+    "compatibleDrones": [
+      "DJI Mavic 3 Multispectral"
+    ],
+    "tagline": {
+      "fr": "Station de recharge d’origine compatible avec DJI Mavic 3 Multispectral.",
+      "en": "Original charging station compatible with DJI Mavic 3 Multispectral."
+    },
+    "availability": "coming_soon",
+    "quoteEligible": true,
+    "specs": [],
+    "highlights": [],
+    "imageFallback": "assets/img/svg/agras-t.svg"
+  },
+
 ];

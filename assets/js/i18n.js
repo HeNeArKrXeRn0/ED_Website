@@ -2081,3 +2081,110 @@ Object.assign(window.ED_STRINGS, {
     en: 'No aircraft are listed for this sector in our catalogue. Contact us to discuss your needs.'
   }
 });
+
+Object.assign(window.ED_STRINGS, {
+  'parts.eyebrow': {
+    fr: 'Pièces d’origine et accessoires',
+    en: 'Original spare parts and accessories'
+  },
+  'parts.title': {
+    fr: 'Batteries, hélices et accessoires',
+    en: 'Batteries, Propellers & Accessories'
+  },
+  'parts.lead': {
+    fr: 'Consultez les batteries de rechange, hélices et équipements compatibles avec vos appareils DJI et ajoutez-les directement à votre demande de devis.',
+    en: 'Browse spare batteries, propellers, and accessories compatible with your DJI aircraft and add them directly to your quote request.'
+  },
+  'parts.tabAll': {
+    fr: 'Toutes les pièces',
+    en: 'All parts'
+  },
+  'parts.tabBatteries': {
+    fr: 'Batteries',
+    en: 'Batteries'
+  },
+  'parts.tabPropellers': {
+    fr: 'Hélices de rechange',
+    en: 'Spare Propellers'
+  },
+  'parts.tabAgrasAccessories': {
+    fr: 'Accessoires Agras',
+    en: 'Agras Accessories'
+  },
+  'parts.filterDrone': {
+    fr: 'Filtrer par appareil',
+    en: 'Filter by aircraft'
+  },
+  'parts.allDrones': {
+    fr: 'Tous les appareils',
+    en: 'All aircraft'
+  },
+  'parts.searchPlaceholder': {
+    fr: 'Rechercher une référence ou un modèle...',
+    en: 'Search part number or model...'
+  },
+  'parts.colType': {
+    fr: 'Type',
+    en: 'Type'
+  },
+  'parts.colItem': {
+    fr: 'Désignation',
+    en: 'Item'
+  },
+  'parts.colModel': {
+    fr: 'Réf. modèle',
+    en: 'Model #'
+  },
+  'parts.colDrones': {
+    fr: 'Appareils compatibles',
+    en: 'Compatible aircraft'
+  },
+  'parts.colAvail': {
+    fr: 'Disponibilité',
+    en: 'Availability'
+  },
+  'parts.colAction': {
+    fr: 'Devis',
+    en: 'Quote'
+  },
+  'parts.typeBattery': {
+    fr: 'Batterie',
+    en: 'Battery'
+  },
+  'parts.typePropeller': {
+    fr: 'Hélice',
+    en: 'Propeller'
+  },
+  'parts.typeChargingStation': {
+    fr: 'Station de recharge',
+    en: 'Charging Station'
+  },
+  'parts.typeGenerator': {
+    fr: 'Générateur',
+    en: 'Generator'
+  },
+  'parts.typeSpreadingSystem': {
+    fr: 'Système d’épandage',
+    en: 'Spreading System'
+  },
+  'parts.typeCable': {
+    fr: 'Câble adaptateur',
+    en: 'Adapter Cable'
+  },
+  'parts.empty': {
+    fr: 'Aucune pièce ne correspond à ces critères.',
+    en: 'No parts match these criteria.'
+  },
+  'parts.results': {
+    fr: 'pièces trouvées',
+    en: 'parts found'
+  },
+  'parts.reset': {
+    fr: 'Réinitialiser les filtres',
+    en: 'Reset filters'
+  },
+  'prod.compatibleParts': {
+    fr: 'Batteries, hélices et accessoires compatibles',
+    en: 'Compatible batteries, propellers & accessories'
+  }
+});

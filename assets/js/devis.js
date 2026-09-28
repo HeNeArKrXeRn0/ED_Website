@@ -37,8 +37,9 @@
     var p = ED().data.byId(line.id);
     if (!p || p.availability === 'discontinued') return '';
 
-    var id  = esc(p.id);
-    var qid = 'qty-' + id;
+    var isPart = p.type === 'battery' || p.type === 'propeller' || p.type === 'accessory';
+    var linkHref = isPart ? 'catalogue.html#pieces-accessoires' : 'produit.html?id=' + encodeURIComponent(p.id);
+    var displayName = (p.title && ED().i18n.L(p.title)) ? ED().i18n.L(p.title) : p.name;
 
     return '' +
       '<div class="cart-line" data-line="' + id + '">' +
@@ -49,8 +50,8 @@
           '<span class="p-card-cat" data-i18n="cat.' + esc(p.category) + '">' +
             esc(t('cat.' + p.category)) +
           '</span>' +
-          '<a class="strong" href="produit.html?id=' + encodeURIComponent(p.id) + '">' +
-            esc(p.name) +
+          '<a class="strong" href="' + linkHref + '">' +
+            esc(displayName) +
           '</a>' +
           '<div>' + ED().ui.badge(p.availability) + '</div>' +
         '</div>' +

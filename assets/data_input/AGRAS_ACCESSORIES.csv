@@ -1,0 +1,16 @@
+﻿Drone;Type;Model
+T25P;Charging Station;C8000
+T25P;Spreading System;Uknown
+T25P;Generator;D6000i
+T50;Generator;D14000ie
+T50;Generator;D12000ie
+T50;Cable;D14000.ADAPTOR
+T50;Charging Station;C10000
+T50;Spreading System;Uknown
+T55;Charging Station;C7000
+T55;Generator;D8000ie
+T55;Spreading System;DS80L
+T70P;Spreading System;Uknown
+T70P;Generator;D14000ie
+T70P;Charging Station;C12000
+Mavic 3M;Charging Station;Uknown

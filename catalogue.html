@@ -60,6 +60,45 @@
     </div>
   </section>
 
+  <!-- ===================== Batteries, hélices et accessoires ===================== -->
+  <section class="section-sm section-bordered" id="pieces-accessoires">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-muted" data-i18n="parts.eyebrow">Pièces d’origine et accessoires</p>
+        <h2 class="h-section" data-i18n="parts.title">Batteries, hélices et accessoires</h2>
+        <p class="lead measure" data-i18n="parts.lead">Consultez les batteries de rechange, hélices et équipements compatibles avec vos appareils DJI et ajoutez-les directement à votre demande de devis.</p>
+      </div>
+
+      <!-- Barre d'outils et filtres pour les pièces : construite par catalogue.js -->
+      <div class="parts-toolbar mb-6" id="ed-parts-toolbar"></div>
+
+      <!-- Tableau responsive -->
+      <div class="table-scroll">
+        <table class="parts-table" id="ed-parts-table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="parts.colType">Type</th>
+              <th scope="col" data-i18n="parts.colItem">Désignation</th>
+              <th scope="col" data-i18n="parts.colModel">Réf. modèle</th>
+              <th scope="col" data-i18n="parts.colDrones">Appareils compatibles</th>
+              <th scope="col" data-i18n="parts.colAvail">Disponibilité</th>
+              <th scope="col" data-i18n="parts.colAction" style="text-align:right;">Devis</th>
+            </tr>
+          </thead>
+          <tbody id="ed-parts-body"></tbody>
+        </table>
+      </div>
+
+      <!-- État vide -->
+      <div id="ed-parts-empty" class="hidden mt-6">
+        <div class="empty-state">
+          <p class="lead" data-i18n="parts.empty">Aucune pièce ne correspond à ces critères.</p>
+          <button type="button" class="btn mt-5" data-parts-reset data-i18n="parts.reset">Réinitialiser les filtres</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <div data-footer></div>
