@@ -1,7 +1,7 @@
 # Equip Drones — Catalogue Inventory
 
 **Created:** 2026-09-26
-**Status:** Reference only — reporting snapshot. No product data was changed to produce this document.
+**Status:** Reference only — reporting snapshot of 2026-09-26 (38 records). Superseded in scope by the 2026-09-28 parts intake (89 records total); see `MASTER_PLAN.md` §5 for the current inventory. No product data was changed to produce this document.
 **Source of truth:** `assets/js/data.js` → `window.ED_PRODUCTS` (38 records).
 **Audience:** A coding agent or owner reconciling the catalogue, availability, and support scope.
 

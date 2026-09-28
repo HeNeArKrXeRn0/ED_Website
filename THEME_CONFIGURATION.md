@@ -168,7 +168,7 @@ const THEME = {
 1. Edit `theme-config.js`
 2. Reload any page in the browser
 3. CSS variables are updated immediately via `applyTheme()`
-4. Check all 8 pages to ensure the new theme applies consistently
+4. Check all 12 root pages to ensure the new theme applies consistently
 
 ## CSS Variable Reference
 
@@ -206,7 +206,7 @@ After editing `theme-config.js`:
 
 1. Update `MASTER_PLAN.md` change log
 2. Test on mobile (360px), tablet (768px), and desktop (1440px)
-3. Verify all 8 pages load without console errors
+3. Verify all 12 root pages load without console errors
 4. Check reduced-motion preference works (Settings → Accessibility → Motion)
 
 ## Questions?

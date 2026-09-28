@@ -2,7 +2,7 @@
 
 **Role:** This is the living handoff document for the Equip Drones website. Read it before changing the site, then update the relevant sections and the change log in the same piece of work. It records the *implemented* site, current operating status, and synchronized future plans from [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md).
 
-**Last reviewed:** 2026-09-20
+**Last reviewed:** 2026-09-28
 **Current release:** static v0 with modular components (no build step or package manager)  
 **Languages:** French by default; complete French/English editorial and interface copy
 **Authoritative source of current state:** the files described below. Use [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md) for the 10-day implementation roadmap and release criteria.
@@ -42,12 +42,20 @@ Browse catalogue / sector / product / compare
 
 1. **Local preview:** Serve the project root locally: `python -m http.server 8000`, then open `http://localhost:8000`. Opening `*.html` directly via `file://` also works for basic inspection.
 2. **Architecture constraint:** Do not introduce a Node.js build step or framework unless explicitly instructed. Keep the vanilla static architecture.
-3. **Data inputs (`assets/data_input/`):**
-   - [`assets/data_input/AGRAS_SPECS.csv`](assets/data_input/AGRAS_SPECS.csv): Authoritative Agras aircraft specifications and operational limits.
-   - [`assets/data_input/ENTERPRISE_EQUIPEMENT_SPECS.csv`](assets/data_input/ENTERPRISE_EQUIPEMENT_SPECS.csv): Authoritative Enterprise aircraft equipment specifications (RTK, GNSS, FPV, thermal, LiDAR, rangefinder, spotlights, speakers, cameras).
-   - [`assets/data_input/FLYCART_SPECS.csv`](assets/data_input/FLYCART_SPECS.csv): Authoritative FlyCart 30 / FlyCart 100 cargo specifications and equipment (payload, protection, winch, parachute).
+3. **Data inputs (`assets/data_input/`):** CSV sources for specifications and icon mappings (easy to edit & parse). Runtime data in `assets/js/data.js` must stay traceable to these files:
+   - [`assets/data_input/AGRAS_SPECS.csv`](assets/data_input/AGRAS_SPECS.csv): Agras aircraft specifications and operational limits.
+   - [`assets/data_input/AGRAS_ACCESSORIES.csv`](assets/data_input/AGRAS_ACCESSORIES.csv): Agras accessories (spreading systems, chargers, generators, cables).
+   - [`assets/data_input/ENTERPRISE_EQUIPEMENT_SPECS.csv`](assets/data_input/ENTERPRISE_EQUIPEMENT_SPECS.csv): Enterprise aircraft equipment (RTK, GNSS, FPV, thermal, LiDAR, rangefinder, spotlights, speakers, cameras).
+   - [`assets/data_input/ENTERPRISE_CORE_SPECS.csv`](assets/data_input/ENTERPRISE_CORE_SPECS.csv): Enterprise core aircraft specifications.
+   - [`assets/data_input/FLYCART_SPECS.csv`](assets/data_input/FLYCART_SPECS.csv): FlyCart 30 / FlyCart 100 cargo specifications and equipment.
+   - [`assets/data_input/CAMERA_EQUIPEMENT_SPECS.csv`](assets/data_input/CAMERA_EQUIPEMENT_SPECS.csv): Camera aircraft equipment specifications.
+   - [`assets/data_input/CAMERA_CORE_SPECS.csv`](assets/data_input/CAMERA_CORE_SPECS.csv): Camera core aircraft specifications.
+   - [`assets/data_input/Mavic3M_SPECS.csv`](assets/data_input/Mavic3M_SPECS.csv): Mavic 3 Multispectral specifications.
+   - [`assets/data_input/zenmuse_specs.csv`](assets/data_input/zenmuse_specs.csv): Zenmuse payload specifications.
+   - [`assets/data_input/BATTERIES.csv`](assets/data_input/BATTERIES.csv): Battery parts and drone compatibility.
+   - [`assets/data_input/PROPELLERS.csv`](assets/data_input/PROPELLERS.csv): Propeller parts and drone compatibility.
    - [`assets/data_input/ICONS_mapping.csv`](assets/data_input/ICONS_mapping.csv): Mapping between specification fields and reusable SVG icons in `assets/img/svg_icons/`.
-4. **Catalogue source of truth:** Maintain `assets/js/data.js` as the runtime source of truth. Every item must have a unique `id`.
+4. **Catalogue source of truth:** Maintain `assets/js/data.js` as the runtime source of truth. Every item must have a unique `id`. Aircraft and payloads use `category` (`agriculture` | `enterprise` | `camera`) and `type` (`aircraft` | `payload`); batteries, propellers, and accessories additionally carry `partType` and `compatibleDrones` (drone name strings matched in `catalogue.js`/`produit.js`). There is no `marketSegment` or `serviceLevel` field — support scope is derived from `category`. Full schema and live inventory in §5.
 5. **Script load order:** Preserve the required script order on every page:  
    `theme-config.js` → `data.js` → `i18n.js` → `app.js` → page-specific/inline script → `motion.js`.
 6. **Bilingual text:** All editorial and interface text must have deliberate FR/EN entries in `assets/js/i18n.js`. Use `data-i18n`, `data-i18n-html` for trusted repository-owned markup, and `data-i18n-attr` for attributes. Product prose, spec labels and language-dependent values use `{fr, en}` in `data.js`. Brand names, official organisation names, units and user-entered text remain unchanged. Run `node --test tests/i18n.test.cjs`.
@@ -134,85 +142,148 @@ Home (index.html)
 
 ### Data structure (`assets/js/data.js`)
 
-Each product entry adheres to this schema:
+89 records at runtime (verified 2026-09-28). Two shapes exist:
+
+Aircraft and payloads (38 records):
 
 ```js
 {
   id: "t70p",
   name: "DJI Agras T70P",
-  marketSegment: "agriculture", // 'agriculture' | 'enterprise' | 'camera'
-  productGroup: "aircraft",     // 'aircraft' | 'payload' | 'accessory' | 'spare_part'
-  serviceLevel: "full_support", // 'full_support' (Agri) | 'sales_only' (Enterprise/Camera)
-  quoteEligible: true,
-  availability: "coming_soon",  // 'in_stock' | 'on_order' | 'coming_soon'
+  segment: "agriculture",   // mirror of category, kept for compatibility
+  category: "agriculture",  // 'agriculture' | 'enterprise' | 'camera' — renderers filter on this
+  type: "aircraft",         // 'aircraft' | 'payload' (+ 'battery' | 'propeller' | 'accessory' below)
+  availability: "coming_soon", // 'in_stock' | 'on_order' | 'coming_soon' | 'discontinued' | 'not_available'
   tagline: { fr: "...", en: "..." },
   usage: { fr: "...", en: "..." },
   useCases: ["cereals", "vines", "palms"],
+  highlights: [ { label: { fr: "...", en: "..." }, value: "...", icon: "..." } ],
   specs: [
     { group: { fr: "Performances", en: "Performance" }, rows: [{ label: { fr: "...", en: "..." }, value: "..." }] }
   ],
-  compatiblePayloads: [],
+  compatiblePayloads: [],   // payload IDs
   image: "assets/img/products/t70p.png",
   imageFallback: "assets/img/svg/agras-t.svg",
   djiUrl: "https://ag.dji.com/..."
 }
 ```
 
-### Aircraft inventory
+Batteries, propellers, and accessories (51 records, from `BATTERIES.csv`, `PROPELLERS.csv`, `AGRAS_ACCESSORIES.csv`):
 
-| ID | Model | Segment | Service Level | Current Availability | Spec Source |
-|---|---|---|---|---|---|
-| `t100` | DJI Agras T100 | Agriculture | Full Support | Coming soon / Not Available | `AGRAS_SPECS.csv` |
-| `t70p` | DJI Agras T70P | Agriculture | Full Support | Coming soon | `AGRAS_SPECS.csv` |
-| `t55` | DJI Agras T55 | Agriculture | Full Support | Coming soon | `AGRAS_SPECS.csv` |
-| `t50` | DJI Agras T50 | Agriculture | Full Support | Coming soon | `AGRAS_SPECS.csv` |
-| `t25p` | DJI Agras T25P | Agriculture | Full Support | Coming soon | `AGRAS_SPECS.csv` |
-| `t25` | DJI Agras T25 | Agriculture | Full Support | In stock (demo) | DJI Official |
-| `mavic-3m` | DJI Mavic 3 Multispectral | Agriculture | Full Support | In stock (demo) | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
-| `matrice-400` | DJI Matrice 400 | Enterprise | Sales only | On order | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
-| `matrice-4e` | DJI Matrice 4E | Enterprise | Sales only | In stock (demo) | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
-| `matrice-4t` | DJI Matrice 4T | Enterprise | Sales only | In stock (demo) | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
-| `matrice-4d` | DJI Matrice 4D | Enterprise | Sales only | Coming soon | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
-| `matrice-4td` | DJI Matrice 4TD | Enterprise | Sales only | Coming soon | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
-| `matrice-30t` | DJI Matrice 30T | Enterprise | Sales only | Coming soon | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
-| `matrice-350-rtk` | DJI Matrice 350 RTK | Enterprise | Sales only | In stock (demo) | DJI Official |
+```js
+{
+  id: "bat-db2160-41000",
+  name: "Batterie DB2160",
+  category: "agriculture",  // 'agriculture' | 'enterprise' | 'camera'
+  segment: "agriculture",   // mirror of category
+  type: "battery",          // 'battery' | 'propeller' | 'accessory'
+  partType: "battery",      // sub-type; drives labels in catalogue.js / produit.js
+  productGroup: "spare_part",
+  compatibleDrones: ["DJI Agras T70P"], // drone name strings, matched in catalogue.js / produit.js
+  tagline: { fr: "...", en: "..." },
+  availability: "coming_soon",
+  quoteEligible: true,
+  specs: [],
+  highlights: [],
+  imageFallback: "assets/img/svg_icons/full_battery.svg"
+}
+```
 
-### Payloads and accessories
+Rules: quote eligibility is centralized in `ED.data.isQuoteAllowed` (`app.js`): `in_stock`, `on_order`, and `coming_soon` render an enabled add-to-quote button; `discontinued` and `not_available` render a disabled state and are excluded from the cart. New `availability` values must be added to `i18n.js` (`avail.*`), `app.js` (badge and quote rule), and `site.css` (badge style) first. Specification values must come from published DJI documentation or `—`. Support scope is derived from `category` (Agriculture = full support; Enterprise/Camera = sales only) — there is no `serviceLevel` field.
 
-| ID | Name | Segment | Compatibility |
+### Aircraft inventory (27 records, verified 2026-09-28)
+
+| ID | Model | Segment | Availability | Spec Source |
+|---|---|---|---|---|
+| `t100` | DJI Agras T100 | Agriculture | Not available | `AGRAS_SPECS.csv` |
+| `t70p` | DJI Agras T70P | Agriculture | Coming soon | `AGRAS_SPECS.csv` |
+| `t55` | DJI Agras T55 | Agriculture | Coming soon | `AGRAS_SPECS.csv` |
+| `t50` | DJI Agras T50 | Agriculture | Discontinued | `AGRAS_SPECS.csv` |
+| `t25p` | DJI Agras T25P | Agriculture | Coming soon | `AGRAS_SPECS.csv` |
+| `t25` | DJI Agras T25 | Agriculture | Discontinued | DJI Official |
+| `mavic-3m` | DJI Mavic 3 Multispectral | Agriculture | Coming soon | `Mavic3M_SPECS.csv` & DJI Official |
+| `matrice-400` | DJI Matrice 400 | Enterprise | Coming soon | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `matrice-4e` | DJI Matrice 4E | Enterprise | Coming soon | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `matrice-4t` | DJI Matrice 4T | Enterprise | Coming soon | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `matrice-4d` | DJI Matrice 4D | Enterprise | Coming soon | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `matrice-4td` | DJI Matrice 4TD | Enterprise | Coming soon | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `matrice-30t` | DJI Matrice 30T | Enterprise | Discontinued | `ENTERPRISE_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `matrice-350-rtk` | DJI Matrice 350 RTK | Enterprise | Discontinued | DJI Official |
+| `mavic-3e` | DJI Mavic 3E | Enterprise | Discontinued | DJI Official |
+| `mavic-3t` | DJI Mavic 3T | Enterprise | Discontinued | DJI Official |
+| `flycart-30` | DJI FlyCart 30 | Enterprise | Coming soon | `FLYCART_SPECS.csv` |
+| `flycart-100` | DJI FlyCart 100 | Enterprise | Not available | `FLYCART_SPECS.csv` |
+| `mavic-4-pro` | DJI Mavic 4 Pro | Camera | Coming soon | `CAMERA_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `mini-5-pro` | DJI Mini 5 Pro | Camera | Coming soon | `CAMERA_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `mini-4-pro` | DJI Mini 4 Pro | Camera | Discontinued | `CAMERA_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `air-3s` | DJI Air 3S | Camera | Coming soon | `CAMERA_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `flip` | DJI Flip | Camera | Coming soon | `CAMERA_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `lito-1` | DJI Lito 1 | Camera | Coming soon | `CAMERA_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `lito-x1` | DJI Lito X1 | Camera | Coming soon | `CAMERA_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `neo-2` | DJI Neo 2 | Camera | Coming soon | `CAMERA_EQUIPEMENT_SPECS.csv` & DJI Official |
+| `avata-360` | DJI Avata 360 | Camera | Coming soon | `CAMERA_EQUIPEMENT_SPECS.csv` & DJI Official |
+
+Availability values are demo data (see `data.js` header) and must be replaced by an owner-approved stock policy before launch (P0).
+
+### Payloads (11 records, Enterprise, verified 2026-09-28)
+
+| ID | Name | Availability | Compatibility |
 |---|---|---|---|
-| `zenmuse-h30t` | DJI Zenmuse H30T | Enterprise | Matrice 400, Matrice 350 RTK |
-| `zenmuse-h20n` | DJI Zenmuse H20N | Enterprise | Matrice 350 RTK |
-| `zenmuse-l2` | DJI Zenmuse L2 | Enterprise | Matrice 400, Matrice 350 RTK |
-| `zenmuse-p1` | DJI Zenmuse P1 | Enterprise | Matrice 400, Matrice 350 RTK |
-| `d-rtk-3` | Station Mobile D-RTK 3 | Shared | Matrice 400, 350 RTK, Matrice 4E/4T/4D/4TD, Mavic 3M |
+| `zenmuse-h30t` | DJI Zenmuse H30T | Coming soon | Matrice 400, Matrice 350 RTK |
+| `zenmuse-h30` | DJI Zenmuse H30 | Coming soon | Matrice 400, Matrice 350 RTK |
+| `zenmuse-h20` | DJI Zenmuse H20 | Discontinued | Matrice 350 RTK |
+| `zenmuse-h20t` | DJI Zenmuse H20T | Discontinued | Matrice 350 RTK |
+| `zenmuse-h20n` | DJI Zenmuse H20N | Discontinued | Matrice 350 RTK |
+| `zenmuse-l2` | DJI Zenmuse L2 | Coming soon | Matrice 400, Matrice 350 RTK |
+| `zenmuse-l3` | DJI Zenmuse L3 | Coming soon | Matrice 400, Matrice 350 RTK |
+| `zenmuse-p1` | DJI Zenmuse P1 | Coming soon | Matrice 400, Matrice 350 RTK |
+| `zenmuse-s1` | DJI Zenmuse S1 | Coming soon | Matrice 400 |
+| `zenmuse-v1` | DJI Zenmuse V1 | Coming soon | Matrice 400 |
+| `d-rtk-3` | Station Mobile D-RTK 3 | Coming soon | Matrice 400, 350 RTK, Matrice 4E/4T/4D/4TD, Mavic 3M |
+
+### Batteries, propellers, and accessories (51 records, verified 2026-09-28)
+
+| Type | Count | Segments | Source |
+|---|---|---|---|
+| Batteries (`type: battery`) | 24 | Agriculture 7, Enterprise 5, Camera 12 | `BATTERIES.csv` |
+| Propellers (`type: propeller`) | 13 | Agriculture 1, Enterprise 4, Camera 8 | `PROPELLERS.csv` |
+| Accessories (`type: accessory`: charging stations, generators, spreading systems, cables) | 14 | Agriculture 14 | `AGRAS_ACCESSORIES.csv` |
+
+Parts carry `partType` sub-types (`battery`, `charging_station`, `generator`, `spreading_system`, `cable`, …) driving bilingual labels in `catalogue.js`/`produit.js`, and `compatibleDrones` name lists powering the per-drone filter and the compatible-parts table on product detail pages. 43 of 51 are `coming_soon`; 8 are `discontinued` (see `data.js`).
 
 ### Spec icons mapping & equipment specification standard
 
-Icons in `assets/img/svg_icons/` are rendered dynamically in cards and spec tables via `ED.ui.getSpecIcon(label)` with a default fallback to `payload.svg`:
-- **Payload / Takeoff weight:** `payload.svg` (also serves as generic spec placeholder)
+Icons in `assets/img/svg_icons/` are resolved by `ED.ui.getSpecIcon(label)` in `app.js` (fallback `payload.svg`), with per-highlight overrides via the `icon` field in `data.js` and direct `<img>` references in hero stat strips. In-use icons:
+- **Payload / Takeoff weight (also generic fallback):** `payload.svg`
 - **Max Takeoff Weight (MTOW):** `max_takeoff_weight.svg`
 - **Autonomy / Battery / Flight Time:** `full_battery.svg`
 - **Spray Width:** `spray_width_1.svg`
 - **Spray Rate / Nozzles:** `spray_nozzle.svg`
-- **Radars (AESA):** `radar_dish.svg`
-- **Flight Radius:** `radar.svg`
+- **Radars (AESA/CSM):** `radar_dish.svg`
+- **Flight Radius / Range:** `radar.svg`
 - **Flight Speed / Max Speed:** `speed.svg`
 - **Wind Resistance:** `wind_resistance.svg`
 - **Max Flight Altitude:** `max_flight_altitude.svg`
 - **Max Takeoff Altitude:** `max_takeoff_altitude.svg`
+- **Travel Distance with Cargo:** `navigation.svg` (also agriculture Autopilot stat)
 - **RTK / D-RTK Antennas:** `rtk_antenna.svg`
 - **GNSS Antennas / Satellite / Positioning:** `sattelite.svg`
+- **LiDAR:** `lidar.svg`
 - **FPV Cameras:** `fpv_camera.svg`
 - **Thermal Cameras:** `thermal_camera.svg`
 - **Laser Rangefinder:** `laser_rangefinder.svg`
 - **Spotlights & Infrared Lights:** `spotlight.svg`
-- **Loudspeakers / Speakers:** `loudspeaker.svg`
+- **Loudspeakers / Speakers (+ range variants):** `loudspeaker.svg`, `sound_range.svg`, `light_range.svg`
+- **Status values:** `status.svg`
 - **Wide Cameras:** `wide_camera.svg`
 - **Telephoto / Zoom Cameras:** `telephoto_camera.svg`
+- **Sensor (CMOS):** `CMOS_sensor.svg`, `sensor_resolution.svg`
 - **Obstacle Avoidance / IP Protection:** `shield.svg`
+- **Compatible Aircraft / Carrier:** `compatibility.svg`
 - **Generic Optical / Built-in Camera / Gimbal:** `simple_camera.svg`
-- **Remote Control & Radiocommande:** `radio_tower.svg`
+- **Transmission / Remote Control (spec rows):** `radio_tower.svg`
+- **Hero stat strips (direct references):** `remote_control.svg` (agriculture Smart Controller), `camera.svg`, `light_weight.svg` (camera page), `night_vision.svg` (enterprise page)
+- **Parts fallbacks:** `charging_battery.svg`, plus `atom.svg`, `checkmark.svg`, `droplette.svg` available in `assets/img/svg_icons/`
 
 #### Standardized Agras specification structure (`assets/js/data.js`)
 All DJI Agras models (`t100`, `t70p`, `t55`, `t50`, `t25p`, `t25`) feature a streamlined 3-tier spec structure:
@@ -262,15 +333,17 @@ gantt
     Day 2 Agriculture Positioning       :done, 2026-08-14, 1d
     Day 3 Agras Operation Cycle         :done, 2026-08-24, 1d
     section Commercial & Catalogue
-    Day 4 Services & Catalogue Taxonomy :active, 2026-08-25, 2d
+    Day 4 Services & Catalogue Taxonomy :done, 2026-08-25, 2d
     Day 5 Secure RFQ & Anti-Spam        :2026-08-27, 2d
     Day 6 Case Studies & News           :2026-08-29, 2d
-    Day 7 Enterprise & Camera Retail    :2026-08-31, 1d
+    Day 7 Enterprise & Camera Retail    :done, 2026-08-31, 1d
     section Hardening & Launch
     Day 8 Production Hardening & Legal  :2026-09-01, 2d
     Day 9 Full QA & Rehearsal           :2026-09-03, 1d
     Day 10 Post-Launch Monitoring       :2026-09-04, 1d
 ```
+
+Dates above are the original plan dates. Status as of 2026-09-28: Days 1–4 and 7 are implemented (Day 7 pages exist; sales-only refinement continues); Days 5, 6, 8, 9, 10 remain open and block launch (see P0).
 
 ### P0 — Must launch first (Release blockers)
 
@@ -286,7 +359,7 @@ gantt
 
 ### P1 — Launch when approved content is ready
 
-1. **Enterprise & Camera retail-only refinement (Day 7):** Ensure clear "sales only" badges and banners across all non-agriculture cards and RFQ flows.
+1. **Enterprise & Camera retail-only refinement (Day 7 pages exist):** Keep clear "sales only" badges and banners across all non-agriculture cards and RFQ flows.
 2. **Case studies (`etudes-de-cas.html`) & Road shows (`actualites.html`) (Day 6):** Data-driven static sections for Algerian field results and upcoming events.
 3. **English editorial coverage — implemented locally 2026-09-20:** Full FR/EN coverage and switcher fixes completed; deployment remains a separate step.
 4. **SEO & Structured Data:** XML sitemap, `robots.txt`, canonical URLs, social open graph tags, and schema.org structured data (Organization, Product, Service, Event).
@@ -313,6 +386,13 @@ When making changes to the site:
 | **Contact / Social** | Update `ED_CONTACT` in `data.js` → verify header, footer, `a-propos.html`, and `devis.html`. |
 | **RFQ & Form Logic** | Verify validation in `devis.js` → test submission flow, feedback states, and cart preservation. |
 | **Documentation** | Update `MASTER_PLAN.md` change log and review consistency with `IMPLEMENTATION_PLAN.md`. |
+
+### Recurring procedures (migrated from the former full-length Copilot instructions)
+
+- **Add a product:** append an object to `ED_PRODUCTS` in `assets/js/data.js` with a unique `id` (see §5 for the aircraft/payload vs parts shapes) → add product PNG to `assets/img/products/` → add fallback SVG to `assets/img/svg/` → add `i18n.js` keys for new use cases/sectors → update `compatiblePayloads` on related aircraft (or `compatibleDrones` name lists for parts) → if featured, add the `id` to the home page inline script → if recommended, update the `PREFERRED` object in `applications.html`.
+- **Update availability:** edit `availability` in `assets/js/data.js` only; badges, quote buttons, and filters follow automatically. New values require `i18n.js` (`avail.*`), `app.js` (badge + quote rule), and `site.css` (badge style) first.
+- **Add a translation key:** add `key: { fr, en }` to the dictionary in `assets/js/i18n.js`, apply with `data-i18n` / `data-i18n-attr` / `data-i18n-html` (trusted markup only) per the bilingual skill.
+- **Add a page:** create `page-name.html` with the §2 script load order, `data-header`/`data-footer` mounts, and a page script if needed → update navigation in `app.js` → update the §4 site map.
 
 ---
 
@@ -373,6 +453,7 @@ Validation: the skill frontmatter and metadata were validated; the seven regress
 
 | Date | Change | Notes |
 |---|---|---|
+| 2026-09-28 | Harmonized agent docs; slimmed Copilot instructions to a pointer | Replaced `.github/copilot-instructions.md` (233 lines, stale schema/inventory/counts) with a short runtime-contract pointer to `MASTER_PLAN.md` and the bilingual skill; migrated its unique task procedures into §9. Rewrote `MASTER_PLAN.md` §2 (all 12 CSV inputs, real `category`/`type`/`partType` fields) and §5 (89-record schema, 27-aircraft + 11-payload tables, 51-part summary, corrected icon list) against runtime `data.js`. Marked Day 4/Day 7 done in §8. `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. No visitor-facing copy changed. |
 | 2026-09-28 | Added Compatible Accessories Table to Drone Detail Pages | Integrated a dedicated compatible parts and accessories table on all drone product detail pages (produit.html?id=...) located under specs and above similar models, displaying matching batteries, propellers, and equipment with inline quantity stepper and add-to-quote button. Added Catalogue link to header navigation (NAV array in app.js). Integrated 51 items (24 batteries, 13 propellers, 14 accessories) into data.js and catalogue.html table. node --test tests/i18n.test.cjs passes (7/7); git diff --check clean. |
 | 2026-09-24 | Hero payload stat to 100 kg, cargo-distance icon, FC100 not available | Enterprise hero stat now "100 kg / Charge utile maximale (FlyCart 100)". `getSpecIcon` maps Travel Distance with Cargo / Distance avec charge to `navigation.svg` (checked before the payload branch, since the French label contains "charge"); mapping CSV extended. `flycart-100` availability set to `not_available`. `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. |
 | 2026-09-24 | Integrated FlyCart specs from CSV input | Added `assets/data_input/FLYCART_SPECS.csv` as the authoritative FlyCart 30/100 source. `flycart-30` and `flycart-100` in `assets/js/data.js` gained full Performance and Integrated Equipment spec tables (MTOW, payload, cargo distance, IP55, speed, altitude, wind, GNSS/RTK, LiDAR, visual avoidance, AESA, FPV, parachute, winch, D-RTK 3). Card highlights now payload / max flight altitude / wind resistance with `payload.svg`, `max_flight_altitude.svg`, `wind_resistance.svg`. Bilingual labels inline. `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. |
