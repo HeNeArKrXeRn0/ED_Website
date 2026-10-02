@@ -412,44 +412,7 @@
         <a class="link-arrow" href="agriculture.html" data-i18n="cycle-operationnel-agras.copy.voir-le-catalogue-complet">Voir le catalogue complet →</a>
       </div>
 
-      <div class="grid grid-3 mt-6">
-        
-        <div class="card p-5">
-          <span class="badge badge-muted" data-i18n="cycle-operationnel-agras.copy.non-disponible">Non disponible</span>
-          <h3 class="h-card mt-3">DJI Agras T100</h3>
-          <p class="tiny color-muted mt-2" data-i18n="cycle-operationnel-agras.copy.100-kg-charge-utile-mtow-175-kg">Charge utile 100 kg | Masse maximale au décollage 175 kg | Vitesse 13,8 m/s</p>
-          <a class="btn btn-secondary btn-sm mt-4" href="produit.html?id=t100" data-i18n="cycle-operationnel-agras.copy.fiche-produit">Fiche produit</a>
-        </div>
-
-        <div class="card p-5">
-          <span class="badge badge-accent" data-i18n="cycle-operationnel-agras.copy.bientot-disponible">Bientôt disponible</span>
-          <h3 class="h-card mt-3">DJI Agras T70P</h3>
-          <p class="tiny color-muted mt-2" data-i18n="cycle-operationnel-agras.copy.70-kg-charge-utile-mtow-130-kg">Charge utile 70 kg | Masse maximale au décollage 130 kg | Largeur de pulvérisation 11 m</p>
-          <a class="btn btn-secondary btn-sm mt-4" href="produit.html?id=t70p" data-i18n="cycle-operationnel-agras.copy.fiche-produit">Fiche produit</a>
-        </div>
-
-        <div class="card p-5">
-          <span class="badge badge-accent" data-i18n="cycle-operationnel-agras.copy.bientot-disponible">Bientôt disponible</span>
-          <h3 class="h-card mt-3">DJI Agras T55</h3>
-          <p class="tiny color-muted mt-2" data-i18n="cycle-operationnel-agras.copy.50-kg-charge-utile-mtow-104-kg">Charge utile 50 kg | Masse maximale au décollage 104 kg | Largeur de pulvérisation 11 m</p>
-          <a class="btn btn-secondary btn-sm mt-4" href="produit.html?id=t55" data-i18n="cycle-operationnel-agras.copy.fiche-produit">Fiche produit</a>
-        </div>
-
-        <div class="card p-5">
-          <span class="badge badge-accent" data-i18n="cycle-operationnel-agras.copy.bientot-disponible.2">Fin de série</span>
-          <h3 class="h-card mt-3">DJI Agras T50</h3>
-          <p class="tiny color-muted mt-2" data-i18n="cycle-operationnel-agras.copy.50-kg-charge-utile-mtow-92-kg">Charge utile 50 kg | Masse maximale au décollage 92 kg | Vitesse 10 m/s</p>
-          <a class="btn btn-secondary btn-sm mt-4" href="produit.html?id=t50" data-i18n="cycle-operationnel-agras.copy.fiche-produit">Fiche produit</a>
-        </div>
-
-        <div class="card p-5">
-          <span class="badge badge-accent" data-i18n="cycle-operationnel-agras.copy.bientot-disponible">Bientôt disponible</span>
-          <h3 class="h-card mt-3">DJI Agras T25P</h3>
-          <p class="tiny color-muted mt-2" data-i18n="cycle-operationnel-agras.copy.20-kg-charge-utile-mtow-53-kg">Charge utile 20 kg | Masse maximale au décollage 53 kg | Largeur de pulvérisation 7 m</p>
-          <a class="btn btn-secondary btn-sm mt-4" href="produit.html?id=t25p" data-i18n="cycle-operationnel-agras.copy.fiche-produit">Fiche produit</a>
-        </div>
-
-      </div>
+      <div class="grid grid-3 mt-6" id="agras-grid"></div>
     </div>
   </section>
 
@@ -473,6 +436,31 @@
 <script src="assets/js/data.js"></script>
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var AGRAS = ['t100', 't70p', 't55', 't50', 't25p'];
+
+  function render() {
+    var grid = document.getElementById('agras-grid');
+    if (!grid || !window.ED) return;
+
+    var html = AGRAS
+      .map(function (id) { return ED.data.byId(id); })
+      .filter(Boolean)
+      .map(function (p) { return ED.ui.productCard(p); })
+      .join('');
+
+    grid.innerHTML = html ||
+      '<p class="small">' + ED.i18n.t('cat.empty') + '</p>';
+    ED.i18n.apply(grid);
+  }
+
+  document.addEventListener('ed:ready', render);
+  document.addEventListener('ed:langchange', render);
+})();
+</script>
 <script src="assets/js/motion.js"></script>
 </body>
 </html>

@@ -259,10 +259,6 @@ Object.assign(window.ED_STRINGS, {
     "fr": "Equip Drones se présente comme la première compagnie algérienne partenaire de DJI et agréée par le Centre National des Systèmes d’Aéronefs Sans Pilote à bord. Notre formation au pilotage agricole aborde le cadre d’exploitation et les responsabilités de l’opérateur. L’agrément ne remplace pas les autorisations nécessaires à chaque opération.",
     "en": "Equip Drones presents itself as the first Algerian company to partner with DJI and hold accreditation from the Centre National des Systèmes d’Aéronefs Sans Pilote à bord. Our agricultural pilot training covers the operating framework and the operator's responsibilities. Accreditation does not replace the authorisations required for an individual operation."
   },
-  "a-propos.copy.formulation-dorigine-premiere-compagnie-algerienne-en-partenariat": {
-    "fr": "<span class=\"strong\">Présentation de l’entreprise :</span> « Première compagnie algérienne en partenariat avec DJI et agréée par le Centre National des Systèmes d’Aéronefs Sans Pilote à bord. »",
-    "en": "<span class=\"strong\">Company statement:</span> “The first Algerian company to partner with DJI and hold accreditation from the Centre National des Systèmes d’Aéronefs Sans Pilote à bord.”"
-  },
   "a-propos.copy.notre-activite": {
     "fr": "Notre activité",
     "en": "Our work"
@@ -819,10 +815,6 @@ Object.assign(window.ED_STRINGS, {
     "fr": "<span class=\"strong\">Ce que l’opérateur y gagne :</span> des observations datées pour orienter les inspections et les décisions d’apport, ainsi qu’une base de comparaison entre passages et entre saisons.",
     "en": "<span class=\"strong\">What the operator gains:</span> dated observations to guide inspections and input decisions, plus a basis for comparing fields across visits and seasons."
   },
-  "applications.copy.les-modeles-listes-dans-chaque-secteur-sont": {
-    "fr": "Les modèles listés par secteur sont des points de départ, pas des recommandations définitives. Le choix dépend de la surface, du relief, de la fréquence des missions et de la logistique d’exploitation. Nous en discutons avant le devis.",
-    "en": "The models listed for each sector are starting points, not final recommendations. The choice depends on the area, terrain, mission frequency and operating logistics. We review these before preparing a quote."
-  },
   "applications.copy.parlons-de-votre-parcellaire": {
     "fr": "Parlons de votre projet",
     "en": "Let's discuss your project"
@@ -1087,42 +1079,6 @@ Object.assign(window.ED_STRINGS, {
   "cycle-operationnel-agras.copy.voir-le-catalogue-complet": {
     "fr": "Voir le catalogue complet →",
     "en": "View the full catalogue →"
-  },
-  "cycle-operationnel-agras.copy.non-disponible": {
-    "fr": "Non disponible",
-    "en": "Not available"
-  },
-  "cycle-operationnel-agras.copy.100-kg-charge-utile-mtow-175-kg": {
-    "fr": "Charge utile 100 kg | Masse maximale au décollage 175 kg | Vitesse 13,8 m/s",
-    "en": "100 kg payload | 175 kg MTOW | 13.8 m/s speed"
-  },
-  "cycle-operationnel-agras.copy.fiche-produit": {
-    "fr": "Fiche produit",
-    "en": "Product details"
-  },
-  "cycle-operationnel-agras.copy.bientot-disponible": {
-    "fr": "Bientôt disponible",
-    "en": "Coming soon"
-  },
-  "cycle-operationnel-agras.copy.70-kg-charge-utile-mtow-130-kg": {
-    "fr": "Charge utile 70 kg | Masse maximale au décollage 130 kg | Largeur de pulvérisation 11 m",
-    "en": "70 kg payload | 130 kg MTOW | 11 m spray width"
-  },
-  "cycle-operationnel-agras.copy.50-kg-charge-utile-mtow-104-kg": {
-    "fr": "Charge utile 50 kg | Masse maximale au décollage 104 kg | Largeur de pulvérisation 11 m",
-    "en": "50 kg payload | 104 kg MTOW | 11 m spray width"
-  },
-  "cycle-operationnel-agras.copy.bientot-disponible.2": {
-    "fr": "Fin de série",
-    "en": "Discontinued"
-  },
-  "cycle-operationnel-agras.copy.50-kg-charge-utile-mtow-92-kg": {
-    "fr": "Charge utile 50 kg | Masse maximale au décollage 92 kg | Vitesse 10 m/s",
-    "en": "50 kg payload | 92 kg MTOW | 10 m/s speed"
-  },
-  "cycle-operationnel-agras.copy.20-kg-charge-utile-mtow-53-kg": {
-    "fr": "Charge utile 20 kg | Masse maximale au décollage 53 kg | Largeur de pulvérisation 7 m",
-    "en": "20 kg payload | 53 kg MTOW | 7 m spray width"
   },
   "cycle-operationnel-agras.copy.equipez-votre-exploitation-d-un-pack-agras": {
     "fr": "Équipez votre exploitation d'un pack Agras complet",
