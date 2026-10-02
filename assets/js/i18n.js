@@ -1075,26 +1075,7 @@ Object.assign(window.ED_STRINGS, {
     "fr": "Rechargez les batteries avec un équipement approuvé pour l’appareil et la batterie choisis. <strong>La durée dépend de la batterie, du chargeur, de l’alimentation, de la température et du niveau de charge.</strong> Une rotation de quatre batteries doit aussi prévoir le refroidissement et les manipulations sûres ; elle ne garantit pas une activité sans interruption.",
     "en": "Charge used batteries with equipment approved for the selected aircraft and battery. <strong>Charging time depends on the battery, charger, power supply, temperature and charge level.</strong> A four-battery rotation must also allow for cooling and safe handling; it does not guarantee uninterrupted operation."
   },
-  "cycle-operationnel-agras.copy.recharge-complete-par-batterie": {
-    "fr": "Durée de charge selon le matériel",
-    "en": "Charging time depends on the equipment"
-  },
-  "cycle-operationnel-agras.copy.4-batteries": {
-    "fr": "4 batteries",
-    "en": "4 batteries"
-  },
-  "cycle-operationnel-agras.copy.rotation-continue-zero-interruption": {
-    "fr": "Exemple de rotation à dimensionner pour votre chantier",
-    "en": "Example rotation to size for your operation"
-  },
-  "cycle-operationnel-agras.copy.temps-d-escale-et-swap-au-sol": {
-    "fr": "Temps au sol selon l’organisation du travail",
-    "en": "Ground turnaround depends on the workflow"
-  },
-  "cycle-operationnel-agras.copy.autonomie-energetique-sur-le-terrain": {
-    "fr": "Alimentation de terrain compatible requise",
-    "en": "Compatible field power supply required"
-  },
+
   "cycle-operationnel-agras.copy.gamme-dji-agras": {
     "fr": "Gamme DJI Agras",
     "en": "DJI Agras range"
@@ -2050,29 +2031,21 @@ Object.assign(window.ED_STRINGS, {
   "index.title": {
     "fr": "Equip Drones — Distributeur officiel DJI en Algérie",
     "en": "Equip Drones — Official DJI distributor in Algeria"
-  },
-  "cycle.fly": {
-    "fr": "Décollage et application",
-    "en": "Takeoff and application"
-  },
-  "cycle.refill": {
-    "fr": "Atterrissage et remplissage",
-    "en": "Landing and refill"
-  },
-  "cycle.swap": {
-    "fr": "Remplacement de la batterie",
-    "en": "Battery replacement"
-  },
-  "cycle.charge": {
-    "fr": "Recharge avec un chargeur compatible",
-    "en": "Charging with a compatible charger"
   }
 });
 
 Object.assign(window.ED_STRINGS, {
   'camera.avata': { fr: 'Série DJI Avata', en: 'DJI Avata series' },
-  'cycle.variable': { fr: 'Variable', en: 'Variable' },
-  'cycle.compatible': { fr: 'Compatible', en: 'Compatible' }
+  'cycle.svg.spraying': { fr: 'Pulvérisation ~10-15 min', en: 'Spraying ~10-15min' },
+  'cycle.svg.landing': { fr: 'Atterrissage', en: 'Landing' },
+  'cycle.svg.takeoff': { fr: 'Décollage', en: 'Takeoff' },
+  'cycle.svg.batteryChange': { fr: 'Changement de batterie', en: 'Battery Change' },
+  'cycle.svg.rotation1': { fr: 'Rotation continue', en: 'Continuous Rotation' },
+  'cycle.svg.rotation2': { fr: 'de 4 batteries', en: 'of 4 Batteries' },
+  'cycle.svg.refill': { fr: 'Remplissage', en: 'Payload Refill' },
+  'cycle.svg.generator1': { fr: 'Générateur', en: 'Fuel Generator' },
+  'cycle.svg.generator2': { fr: 'pour charger les batteries', en: 'for Charging Batteries' },
+  'cycle.svg.chargeTime': { fr: 'Charge complète en 10 min', en: 'Full Charge in 10min' }
 });
 
 Object.assign(window.ED_STRINGS, {

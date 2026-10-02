@@ -39,10 +39,7 @@ window.ED_PHOTOS = {
 };
 
 /* --------------------------------------------------------------------------
-   DISPONIBILITÉS — DONNÉES FICTIVES
-   ⚠ FAKE DATA : valeurs saisies à la main pour la démonstration.
-   À remplacer par un vrai flux de stock. Seul ce champ change ; l'affichage,
-   les libellés et les badges restent identiques.
+   DISPONIBILITÉS
    Valeurs admises : 'in_stock' | 'on_order' | 'coming_soon' | 'discontinued' | 'not_available'
    Devis autorisé : 'in_stock', 'on_order', 'coming_soon' (voir ED.data.isQuoteAllowed dans app.js).
    -------------------------------------------------------------------------- */
