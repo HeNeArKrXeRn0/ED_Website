@@ -43,18 +43,19 @@ test('all product bilingual fields are complete and all page scripts parse', () 
 });
 function quoteHarness() {
   let lang = 'fr';
-  const nodes = Object.fromEntries(['q-msg','q-wa','q-mail'].map(id=>[id,{}]));
+  const nodes = Object.fromEntries(['q-msg','q-wa','q-mail','quote-lines','quote-count'].map(id=>[id,{classList:{add(){},remove(){},contains(){return false;}},setAttribute(){},innerHTML:'',textContent:''}]));
+  let cartItems = [{id:'t100',qty:3}];
   const ED = {
-    i18n: { t: key => strings[key]?.[lang] ?? key },
-    ui: { esc: String },
+    i18n: { t: key => strings[key]?.[lang] ?? key, L: v => typeof v === 'object' ? (v?.[lang] || v?.fr || '') : String(v || ''), apply: () => {} },
+    ui: { esc: String, img: p => `<img alt="${p.name}">`, badge: a => `<span>${a}</span>` },
     data: { byId: id => products.find(p=>p.id===id) },
-    cart: { items: () => [{id:'t100',qty:3}] },
+    cart: { items: () => cartItems, count: () => cartItems.reduce((acc, i) => acc + i.qty, 0) },
     contact: {company:'Equip Drones',email:'example@example.com',whatsapp:'123'}
   };
-  const ctx = vm.createContext({ window:{ED}, document:{readyState:'loading',addEventListener(){},getElementById:id=>nodes[id]} });
-  const code = read('assets/js/devis.js').replace(/\}\)\(\);\s*$/, 'window.testQuote = {buildMessage:buildMessage, show:function(d){lastData=d;showPanel();}};})();');
+  const ctx = vm.createContext({ window:{ED}, document:{readyState:'loading',addEventListener(){},getElementById:id=>nodes[id],querySelector:()=>null,querySelectorAll:()=>[]} });
+  const code = read('assets/js/devis.js').replace(/\}\)\(\);\s*$/, 'window.testQuote = {buildMessage:buildMessage, renderCart:renderCart, show:function(d){lastData=d;showPanel();}};})();');
   vm.runInContext(code,ctx);
-  return { api:ctx.window.testQuote,nodes,setLang:v=>lang=v };
+  return { api:ctx.window.testQuote,nodes,setLang:v=>lang=v,setCart:items=>cartItems=items };
 }
 test('quote body, product availability, activity and mail links follow language without translating user content', () => {
   const h=quoteHarness();
@@ -71,6 +72,12 @@ test('quote body, product availability, activity and mail links follow language 
     assert.equal(email.searchParams.get('subject'),strings['message.subject'][lang]+' — Test');
     assert.equal(email.searchParams.get('body'),msg.replace(/\n/g,'\r\n'));
     assert.equal(new URL(h.nodes['q-wa'].href).searchParams.get('text'),msg);
+
+    // Verify cart lines render properly above the form without errors
+    h.api.renderCart();
+    assert.ok(h.nodes['quote-lines'].innerHTML.includes('cart-line'));
+    assert.ok(h.nodes['quote-lines'].innerHTML.includes('DJI Agras T100'));
+    assert.ok(h.nodes['quote-count'].textContent.includes(strings['quote.items'][lang]));
   }
 });
 test('contact form produces translated errors and outgoing text', () => {

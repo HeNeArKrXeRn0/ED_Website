@@ -277,13 +277,18 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   background: var(--border);
   margin-inline: 4px;
 }
+.brand-dji-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
 .brand-dji {
-  height: 27px !important;
-  width: auto !important;
+  height: 27px;
+  width: auto;
   opacity: 0.9;
   transition: opacity var(--t);
 }
-.brand:hover .brand-dji {
+.brand-dji-link:hover .brand-dji {
   opacity: 1;
 }
 
@@ -677,17 +682,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
    14. Cart lines
    -------------------------------------------------------------------------- */
 .cart-line {
-  display: grid; grid-template-columns: 88px 1fr auto auto;
+  display: grid; grid-template-columns: 1fr auto auto;
   gap: var(--s4); align-items: center;
   padding: var(--s4) 0;
   border-bottom: 1px solid var(--border-soft);
 }
-.cart-line-media {
-  aspect-ratio: 1; background: var(--surface-2);
-  border: 1px solid var(--border-soft); border-radius: var(--radius);
-  display: flex; align-items: center; justify-content: center; padding: var(--s2);
-}
-.cart-line-media img { max-height: 100%; width: auto; object-fit: contain; }
 .btn-remove {
   background: transparent; border: 0; cursor: pointer;
   color: var(--dim); font-size: 13px; padding: var(--s2);
@@ -757,8 +756,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   height: 32px;
   margin-inline: var(--s2);
 }
+.site-footer .brand-dji-link {
+  display: flex;
+  align-items: center;
+}
 .site-footer .brand-dji {
-  height: 36px !important;
+  height: 36px;
 }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: var(--s7); }
 .footer-title {
@@ -859,8 +862,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .section { padding-block: var(--s7); }
   .cta-band { padding: var(--s6) var(--s5); }
   .p-card-specs { grid-template-columns: repeat(3, 1fr); }
-  .cart-line { grid-template-columns: 64px 1fr; row-gap: var(--s3); }
-  .cart-line > :nth-child(3), .cart-line > :nth-child(4) { grid-column: 2; justify-self: start; }
+  .cart-line { grid-template-columns: 1fr auto; row-gap: var(--s3); }
+  .cart-line > :first-child { grid-column: 1 / -1; }
   .cmp-table tbody th { width: 150px; }
   .btn { width: 100%; }
   .row .btn, .btn-row .btn, .p-card-actions .btn, .hero-actions .btn { width: auto; }
@@ -976,7 +979,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .header-actions .cart-link { width: auto; }
 @media (max-width: 440px) {
   .site-header .wrap { gap: 8px; }
-  .site-header .brand-dji, .site-header .brand-divider { display: none; }
+  .site-header .brand-dji, .site-header .brand-divider, .site-header .brand-dji-link { display: none; }
   .header-actions { gap: 8px; }
 }
 .cycle-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s5); padding: 0; list-style: none; }

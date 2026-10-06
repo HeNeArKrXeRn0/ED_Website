@@ -256,10 +256,12 @@
             '<img class="brand-logo" src="' + esc(CONTACT.logo) + '" alt="' + esc(CONTACT.company) + '" ' +
                  'onerror="this.onerror=null;this.style.display=\'none\'">' +
             '<span class="brand-text">Equip Drones</span>' +
-            (CONTACT.djiLogo ? '<span class="brand-divider" aria-hidden="true"></span>' +
-            '<img class="brand-dji" src="' + esc(CONTACT.djiLogo) + '" alt="DJI" ' +
-                 'onerror="this.onerror=null;this.style.display=\'none\'">' : '') +
           '</a>' +
+          (CONTACT.djiLogo ? '<span class="brand-divider" aria-hidden="true"></span>' +
+          '<a href="https://ag.dji.com/" target="_blank" rel="noopener noreferrer" class="brand-dji-link" aria-label="DJI Agriculture">' +
+          '<img class="brand-dji" src="' + esc(CONTACT.djiLogo) + '" alt="DJI Agriculture" ' +
+               'onerror="this.onerror=null;this.style.display=\'none\'">' +
+          '</a>' : '') +
           '<nav class="nav" id="ed-nav">' + links + '</nav>' +
           '<div class="header-actions">' +
             '<div class="lang-toggle" role="group" data-i18n-attr="aria-label:nav.language" aria-label="' + esc(t('nav.language')) + '">' +
@@ -295,7 +297,9 @@
                 '<img class="brand-logo" src="' + esc(CONTACT.logo) + '" alt="" onerror="this.onerror=null;this.style.display=\'none\'">' +
                 '<span class="brand-text">Equip Drones</span>' +
                 (CONTACT.djiLogo ? '<span class="brand-divider" aria-hidden="true"></span>' +
-                '<img class="brand-dji" src="' + esc(CONTACT.djiLogo) + '" alt="DJI" onerror="this.onerror=null;this.style.display=\'none\'">' : '') +
+                '<a href="https://ag.dji.com/" target="_blank" rel="noopener noreferrer" class="brand-dji-link" aria-label="DJI Agriculture">' +
+                '<img class="brand-dji" src="' + esc(CONTACT.djiLogo) + '" alt="DJI Agriculture" onerror="this.onerror=null;this.style.display=\'none\'">' +
+                '</a>' : '') +
               '</div>' +
               '<p class="small measure" data-i18n="foot.tagline">' + t('foot.tagline') + '</p>' +
               '<div class="socials mt-5">' +

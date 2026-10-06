@@ -131,7 +131,7 @@ window.ED_STRINGS = {
   'foot.products':   { fr: 'Produits',      en: 'Products' },
   'foot.contact':    { fr: 'Contact',       en: 'Contact' },
   'foot.follow':     { fr: 'Nous suivre',   en: 'Follow us' },
-  'foot.tagline':    { fr: 'Distributeur agréé, officiel et exclusif de DJI en Algérie.', en: 'Authorised, official and exclusive DJI distributor in Algeria.' },
+  'foot.tagline':    { fr: 'Distributeur agréé et officiel de DJI en Algérie.', en: 'Authorised and official DJI distributor in Algeria.' },
   'foot.rights':     { fr: 'Tous droits réservés.', en: 'All rights reserved.' },
   'foot.disclaimer': { fr: 'DJI et Agras sont des marques déposées de SZ DJI Technology Co., Ltd.', en: 'DJI and Agras are registered trademarks of SZ DJI Technology Co., Ltd.' },
 
@@ -200,8 +200,8 @@ Object.assign(window.ED_STRINGS, {
     "en": "About Equip Drones"
   },
   "a-propos.copy.sarl-equip-drones-est-le-distributeur-agree": {
-    "fr": "SARL Equip Drones est le distributeur agréé, officiel et exclusif de DJI en Algérie. Notre cœur de métier est le drone agricole : les appareils, mais aussi le conseil, la formation, l’entretien et les pièces qui font qu’ils volent encore la saison suivante.",
-    "en": "SARL Equip Drones is the authorised, official and exclusive DJI distributor in Algeria. Agricultural drones are our core business: the equipment, advice, training, maintenance and parts that keep it working season after season."
+    "fr": "SARL Equip Drones est le distributeur agréé et officiel de DJI en Algérie. Notre cœur de métier est le drone agricole : les appareils, mais aussi le conseil, la formation, l’entretien et les pièces qui font qu’ils volent encore la saison suivante.",
+    "en": "SARL Equip Drones is the authorised and official DJI distributor in Algeria. Agricultural drones are our core business: the equipment, advice, training, maintenance and parts that keep it working season after season."
   },
   "a-propos.copy.notre-raison-detre": {
     "fr": "Notre raison d’être",
@@ -244,8 +244,8 @@ Object.assign(window.ED_STRINGS, {
     "en": "Official DJI partner in Algeria"
   },
   "a-propos.copy.equip-drones-est-le-partenaire-officiel-de": {
-    "fr": "Equip Drones est le distributeur officiel, agréé et exclusif de DJI en Algérie. Le canal officiel donne accès aux pièces d’origine, aux mises à jour adaptées à la configuration et à l’assistance du constructeur. La couverture de garantie dépend du produit et des conditions applicables.",
-    "en": "Equip Drones is DJI's official, authorised and exclusive distributor in Algeria. The official distribution channel provides access to genuine parts, configuration-specific updates and manufacturer support. Warranty coverage depends on the product and the applicable terms."
+    "fr": "Equip Drones est le distributeur officiel et agréé de DJI en Algérie. Le canal officiel donne accès aux pièces d’origine, aux mises à jour adaptées à la configuration et à l’assistance du constructeur. La couverture de garantie dépend du produit et des conditions applicables.",
+    "en": "Equip Drones is DJI's official and authorised distributor in Algeria. The official distribution channel provides access to genuine parts, configuration-specific updates and manufacturer support. Warranty coverage depends on the product and the applicable terms."
   },
   "a-propos.copy.02-agrement-national": {
     "fr": "02 — AGRÉMENT NATIONAL",
@@ -356,8 +356,8 @@ Object.assign(window.ED_STRINGS, {
     "en": "info@equipdrones.com"
   },
   "a-propos.copy.sarl-equip-drones-distributeur-agree-officiel-et": {
-    "fr": "SARL Equip Drones — distributeur agréé, officiel et exclusif de DJI en Algérie.",
-    "en": "SARL Equip Drones — authorised, official and exclusive DJI distributor in Algeria."
+    "fr": "SARL Equip Drones — distributeur agréé et officiel de DJI en Algérie.",
+    "en": "SARL Equip Drones — authorised and official DJI distributor in Algeria."
   },
   "a-propos.copy.preparer-une-demande-de-devis": {
     "fr": "Préparer une demande de devis →",
@@ -380,8 +380,8 @@ Object.assign(window.ED_STRINGS, {
     "en": "Enter an email address or phone number so we can reply."
   },
   "a-propos.meta.description": {
-    "fr": "SARL Equip Drones, distributeur officiel et exclusif DJI en Algérie. Vente de drones agricoles, conseil, formation des pilotes, maintenance et pièces d’origine.",
-    "en": "SARL Equip Drones, official and exclusive DJI distributor in Algeria. Agricultural drone sales, advice, pilot training, maintenance and genuine parts."
+    "fr": "SARL Equip Drones, distributeur officiel et agréé de DJI en Algérie. Vente de drones agricoles, conseil, formation des pilotes, maintenance et pièces d’origine.",
+    "en": "SARL Equip Drones, official and authorised DJI distributor in Algeria. Agricultural drone sales, advice, pilot training, maintenance and genuine parts."
   },
   "a-propos.a11y.drapeau-algerien": {
     "fr": "Drapeau algérien",
@@ -1345,8 +1345,8 @@ Object.assign(window.ED_STRINGS, {
     "en": "Official"
   },
   "index.copy.distributeur-officiel-et-exclusif-dji-pour-lalgerie": {
-    "fr": "Distributeur officiel et exclusif DJI pour l’Algérie",
-    "en": "Official and exclusive DJI distributor in Algeria"
+    "fr": "Distributeur officiel et agréé DJI pour l’Algérie",
+    "en": "Official and authorised DJI distributor in Algeria"
   },
   "index.copy.agree": {
     "fr": "Agréé",
@@ -1513,8 +1513,8 @@ Object.assign(window.ED_STRINGS, {
     "en": "We will discuss a suitable configuration, provide a detailed quote and confirm the expected delivery time."
   },
   "index.meta.description": {
-    "fr": "SARL Equip Drones, distributeur officiel et exclusif DJI en Algérie : drones agricoles Agras, plateformes d’entreprise, formation de pilotes, maintenance et pièces détachées. Devis sur demande.",
-    "en": "SARL Equip Drones, official and exclusive DJI distributor in Algeria: Agras agricultural drones, Enterprise equipment, agricultural pilot training, maintenance and spare parts. Quotes on request."
+    "fr": "SARL Equip Drones, distributeur officiel et agréé de DJI en Algérie : drones agricoles Agras, plateformes d’entreprise, formation de pilotes, maintenance et pièces détachées. Devis sur demande.",
+    "en": "SARL Equip Drones, official and authorised DJI distributor in Algeria: Agras agricultural drones, Enterprise equipment, agricultural pilot training, maintenance and spare parts. Quotes on request."
   },
   "index.a11y.drone-dji-agras-en-pulverisation-au-dessus": {
     "fr": "Drone DJI Agras en pulvérisation au-dessus d’une parcelle cultivée",
