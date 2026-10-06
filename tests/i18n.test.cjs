@@ -38,7 +38,13 @@ test('all product bilingual fields are complete and all page scripts parse', () 
   products.forEach(p=>walk(p,p.id));
   for (const f of sources) {
     if (f.endsWith('.js')) new vm.Script(read(f),{filename:f});
-    else for (const m of read(f).matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)) new vm.Script(m[1],{filename:f});
+    else {
+      for (const m of read(f).matchAll(/<script(?:\s+([^>]*))?>([\s\S]*?)<\/script>/gi)) {
+        const attrs = m[1] || '';
+        if (/type\s*=\s*["']?application\/ld\+json["']?/i.test(attrs)) continue;
+        new vm.Script(m[2],{filename:f});
+      }
+    }
   }
 });
 function quoteHarness() {
