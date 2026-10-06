@@ -366,9 +366,61 @@
       document.title = p.name + ' — ' + SITE;
       main.innerHTML = heroBlock(p) + sections(p);
       wireQty();
+      updateProductMeta(p);
     }
 
     ED.i18n.apply(main);
+  }
+
+  function updateProductMeta(p) {
+    var canonicalUrl = 'https://equipdrones.com/produit.html?id=' + encodeURIComponent(p.id);
+    var canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) canonicalLink.href = canonicalUrl;
+
+    var desc = p.tagline ? L(p.tagline) : (p.name + ' — DJI en Algérie par SARL Equip Drones');
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content = desc;
+
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.content = canonicalUrl;
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.content = p.name + ' — ' + SITE;
+    var ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.content = desc;
+
+    var existingJsonLd = document.getElementById('product-jsonld');
+    if (existingJsonLd) existingJsonLd.remove();
+
+    var script = document.createElement('script');
+    script.id = 'product-jsonld';
+    script.type = 'application/ld+json';
+    var schema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": p.name,
+      "description": desc,
+      "brand": {
+        "@type": "Brand",
+        "name": "DJI"
+      },
+      "url": canonicalUrl,
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "DZD",
+        "availability": p.availability === 'in_stock' ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
+        "url": canonicalUrl
+      }
+    };
+    if (p.image) {
+      schema.image = p.image.startsWith('http') ? p.image : ('https://equipdrones.com/' + p.image);
+    }
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
   }
 
   document.addEventListener('ed:ready', render);
