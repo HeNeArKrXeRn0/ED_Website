@@ -1,0 +1,59 @@
+# Deploy the static site to GitHub Pages with the Web3Forms API key injected.
+#
+# Why this exists: the real key lives in the repository secret WEB3FORMS_KEY
+# (Settings → Secrets and variables → Actions) and is written into the
+# git-ignored assets/js/web3forms-config.js at deploy time, so the key never
+# appears in git history while the live site still receives it.
+# Restrict the key to www.equipdrones.com in the Web3Forms dashboard.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inject Web3Forms API key
+        run: |
+          if [ -z "$WEB3FORMS_KEY" ]; then
+            echo "::error::WEB3FORMS_KEY secret is not set (Settings → Secrets and variables → Actions)."
+            exit 1
+          fi
+          printf 'window.ED_WEB3FORMS_KEY = "%s";\n' "$WEB3FORMS_KEY" > assets/js/web3forms-config.js
+          echo "web3forms-config.js written ($(wc -c < assets/js/web3forms-config.js) bytes)"
+        env:
+          WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
