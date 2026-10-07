@@ -49,35 +49,32 @@ test('all product bilingual fields are complete and all page scripts parse', () 
 });
 function quoteHarness() {
   let lang = 'fr';
-  const nodes = Object.fromEntries(['q-msg','q-wa','q-mail','quote-lines','quote-count'].map(id=>[id,{classList:{add(){},remove(){},contains(){return false;}},setAttribute(){},innerHTML:'',textContent:''}]));
+  const nodes = Object.fromEntries(['quote-lines','quote-count','quote-form','quote-status','quote-submit-btn','quote-form-wrap','quote-sent','q-name'].map(id=>[id,{classList:{add(){},remove(){},contains(){return false;}},setAttribute(){},addEventListener(){},focus(){},innerHTML:'',textContent:'',value:'',href:''}]));
   let cartItems = [{id:'t100',qty:3}];
   const ED = {
     i18n: { t: key => strings[key]?.[lang] ?? key, L: v => typeof v === 'object' ? (v?.[lang] || v?.fr || '') : String(v || ''), apply: () => {} },
     ui: { esc: String, img: p => `<img alt="${p.name}">`, badge: a => `<span>${a}</span>` },
     data: { byId: id => products.find(p=>p.id===id) },
-    cart: { items: () => cartItems, count: () => cartItems.reduce((acc, i) => acc + i.qty, 0) },
+    cart: { items: () => cartItems, count: () => cartItems.reduce((acc, i) => acc + i.qty, 0), clear: () => { cartItems = []; } },
     contact: {company:'Equip Drones',email:'example@example.com',whatsapp:'123'}
   };
   const ctx = vm.createContext({ window:{ED}, document:{readyState:'loading',addEventListener(){},getElementById:id=>nodes[id],querySelector:()=>null,querySelectorAll:()=>[]} });
-  const code = read('assets/js/devis.js').replace(/\}\)\(\);\s*$/, 'window.testQuote = {buildMessage:buildMessage, renderCart:renderCart, show:function(d){lastData=d;showPanel();}};})();');
+  const code = read('assets/js/devis.js').replace(/\}\)\(\);\s*$/, 'window.testQuote = {buildMessage:buildMessage, renderCart:renderCart, subject:quoteSubject};})();');
   vm.runInContext(code,ctx);
   return { api:ctx.window.testQuote,nodes,setLang:v=>lang=v,setCart:items=>cartItems=items };
 }
-test('quote body, product availability, activity and mail links follow language without translating user content', () => {
+test('quote body, product availability, activity and subject follow language without translating user content', () => {
   const h=quoteHarness();
   const data={name:'Test',company:'Farm',email:'test@example.com',phone:'0123456789',wilaya:'Alger',activity:'devis.copy.exploitation-agricole',area:'10',message:'Texte libre / free text'};
   for (const lang of ['fr','en']) {
-    h.setLang(lang); h.api.show(data);
-    const msg=h.nodes['q-msg'].value;
+    h.setLang(lang);
+    const msg=h.api.buildMessage(data);
     assert.ok(msg.startsWith(strings['message.quote'][lang]));
     assert.ok(msg.includes(strings[data.activity][lang]));
     assert.ok(msg.includes(strings['avail.not_available'][lang]));
     assert.ok(msg.includes('3 x DJI Agras T100'));
     assert.ok(msg.endsWith(data.message));
-    const email = new URL(h.nodes['q-mail'].href);
-    assert.equal(email.searchParams.get('subject'),strings['message.subject'][lang]+' — Test');
-    assert.equal(email.searchParams.get('body'),msg.replace(/\n/g,'\r\n'));
-    assert.equal(new URL(h.nodes['q-wa'].href).searchParams.get('text'),msg);
+    assert.equal(h.api.subject(data.name),strings['message.subject'][lang]+' — Test');
 
     // Verify cart lines render properly above the form without errors
     h.api.renderCart();
@@ -86,14 +83,18 @@ test('quote body, product availability, activity and mail links follow language 
     assert.ok(h.nodes['quote-count'].textContent.includes(strings['quote.items'][lang]));
   }
 });
-test('contact form produces translated errors and outgoing text', () => {
+test('contact form validation follows language; direct submit needs no prepared message', () => {
   let lang='fr';const fields={'c-name':'Test','c-company':'Company','c-email':'test@example.com','c-phone':'0123456789','c-message':'Texte libre / free text'};
   const ctx=vm.createContext({window:{},ED:{i18n:{t:k=>strings[k]?.[lang]??k}},document:{addEventListener(){},getElementById:id=>({value:fields[id]||''})}});
   const script=[...read('a-propos.html').matchAll(/<script>([\s\S]*?)<\/script>/g)][0][1];
-  vm.runInContext(script.replace(/\}\)\(\);\s*$/, 'window.testContact = {build:buildMessage,problem:firstProblem};})();'),ctx);
-  for(const l of ['fr','en']){lang=l;const msg=ctx.window.testContact.build();assert.ok(msg.startsWith(strings['message.contactTitle'][l]));assert.ok(msg.includes(strings['quote.name'][l]));assert.ok(msg.endsWith(fields['c-message']));}
+  vm.runInContext(script.replace(/\}\)\(\);\s*$/, 'window.testContact = {problem:firstProblem};})();'),ctx);
+  assert.equal(ctx.window.testContact.problem(),null);
   fields['c-name']='';assert.equal(ctx.window.testContact.problem().key,'contact.needName');
-  fields['c-name']='Test';fields['c-email']='bad';assert.equal(ctx.window.testContact.problem().key,'contact.badEmail');
+  fields['c-name']='Test';fields['c-email']='';fields['c-phone']='';assert.equal(ctx.window.testContact.problem().key,'contact.needChannel');
+  fields['c-email']='bad';fields['c-phone']='0123456789';assert.equal(ctx.window.testContact.problem().key,'contact.badEmail');
+  fields['c-email']='test@example.com';fields['c-phone']='123';assert.equal(ctx.window.testContact.problem().key,'contact.badPhone');
+  fields['c-phone']='0123456789';fields['c-message']='';assert.equal(ctx.window.testContact.problem().key,'contact.needMessage');
+  for(const l of ['fr','en']){lang=l;fields['c-message']='Texte libre / free text';assert.equal(ctx.window.testContact.problem(),null);}
 });
 test('language persists, invalid choices are ignored, and all product cards render bilingual values', () => {
   const storage=new Map([['ed_lang','en']]); const events=[];

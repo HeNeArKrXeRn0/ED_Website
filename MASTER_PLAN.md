@@ -31,10 +31,21 @@ SARL Equip Drones is DJI's official distributor in Algeria, positioning DJI Agri
 Browse catalogue / sector / product / compare
   → Add items (aircraft, payloads, accessories, parts) to RFQ cart
   → Review multi-item cart in `devis.html`
-  → Current v0: WhatsApp / email client / clipboard handoff
+  → Direct submit via Web3Forms (interim, client-side): structured bilingual
+    message + cart contents POSTed to https://api.web3forms.com/submit;
+    API key lives in the git-ignored local `assets/js/web3forms-config.js`
+    (see `web3forms-config.example.js`) and the key is restricted to
+    www.equipdrones.com in the Web3Forms dashboard. Contact form in
+    `a-propos.html` uses the same helper (`assets/js/web3forms.js`).
   → Target (Day 5 / P0): Secure server-side form submission to info@equipdrones.com 
      with Cloudflare Turnstile CAPTCHA, honeypot, rate limiting, and email authentication (SPF/DKIM/DMARC)
 ```
+
+> Note: Web3Forms is an interim step, not the Day 5 server-side target. The
+> access key is intentionally *not* committed (public repo); the placeholder
+> `MY_API_KEY` / `PASTE-YOUR-…` is all that exists in git. Owner setup:
+> copy the example config locally, paste the real key, and set the domain
+> allowlist in Web3Forms.
 
 ---
 
@@ -129,8 +140,8 @@ Home (index.html)
 | `enterprise.html` | Implemented | DJI Enterprise retail catalogue (Matrice, FlyCart, Zenmuse); clearly labelled "sales only". |
 | `camera.html` | Implemented | DJI Camera retail catalogue (Mavic, Air, Mini, Neo, Avata); clearly labelled "sales only". |
 | `applications.html` | Implemented | 8 editorial sectors (cereals, palms, vines, market gardening, inspection, surveying, safety, mapping) with recommended drones. |
-| `a-propos.html` | Implemented | Company story, official DJI partnership, accreditation, global stats, contact info, and contact form. |
-| `devis.html` | Implemented (v0) | Multi-item quote cart with contact form, 58 wilayas, and formatted WhatsApp/email handoff. *(Server-side RFQ planned Day 5)*. |
+| `a-propos.html` | Implemented | Company story, official DJI partnership, accreditation, global stats, contact info, and direct contact form (Web3Forms, `assets/js/web3forms.js` + local git-ignored key config). |
+| `devis.html` | Implemented (Web3Forms interim) | Multi-item quote cart with contact form, 58 wilayas, and direct Web3Forms submission of the structured bilingual message + cart contents. Success panel replaces the former WhatsApp/email/clipboard handoff. *(Server-side RFQ still planned Day 5)*. |
 | `etudes-de-cas.html` | Planned (Day 6) | Agriculture case studies: real field interventions, crop/problem, equipment used, and verified outcomes. |
 | `actualites.html` | Planned (Day 6) | Road shows & news listing with dates, Algerian cities, event status, and registration links. |
 | `mentions-legales.html` | Planned (Day 8) | Business identifiers, legal status, hosting details, copyright, and disclaimers. |
@@ -453,6 +464,7 @@ Validation: the skill frontmatter and metadata were validated; the seven regress
 
 | Date | Change | Notes |
 |---|---|---|
+| 2026-10-07 | Replaced WhatsApp/email handoff with direct Web3Forms submission | `devis.html` + `a-propos.html` submit directly via shared `assets/js/web3forms.js` (honeypot `botcheck`, bilingual status, personalized subject/from_name). Fixed broken `devis.html` confirmation markup left by a partial edit; `devis.js` now sends the structured cart message and clears the cart on success. API key kept out of git (local `web3forms-config.js`, git-ignored; `web3forms-config.example.js` versioned; domain allowlist required). FR/EN copy updated (`quote.submit/sentTitle/sentBody/newRequest`, `form.*`, devis lead + meta, a-propos intro); tests updated to the direct flow. `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. Owner still needs to create the local key config and set the Web3Forms domain allowlist before launch. |
 | 2026-10-06 | Fixed cart selection list rendering & streamlined row layout | Declared missing `id` and `qid` variables in `lineHTML` within `assets/js/devis.js`, fixing a fatal `ReferenceError` that prevented selected cart items from rendering above the contact form on `devis.html`. Removed image thumbnails from cart lines for a cleaner, streamlined review list and updated `.cart-line` grid and responsive layouts in `site.css`. Verified with `node --test tests/i18n.test.cjs` and `git diff --check`. |
 | 2026-09-28 | Harmonized agent docs; slimmed Copilot instructions to a pointer | Replaced `.github/copilot-instructions.md` (233 lines, stale schema/inventory/counts) with a short runtime-contract pointer to `MASTER_PLAN.md` and the bilingual skill; migrated its unique task procedures into §9. Rewrote `MASTER_PLAN.md` §2 (all 12 CSV inputs, real `category`/`type`/`partType` fields) and §5 (89-record schema, 27-aircraft + 11-payload tables, 51-part summary, corrected icon list) against runtime `data.js`. Marked Day 4/Day 7 done in §8. `node --test tests/i18n.test.cjs` passes (7/7); `git diff --check` clean. No visitor-facing copy changed. |
 | 2026-09-28 | Added Compatible Accessories Table to Drone Detail Pages | Integrated a dedicated compatible parts and accessories table on all drone product detail pages (produit.html?id=...) located under specs and above similar models, displaying matching batteries, propellers, and equipment with inline quantity stepper and add-to-quote button. Added Catalogue link to header navigation (NAV array in app.js). Integrated 51 items (24 batteries, 13 propellers, 14 accessories) into data.js and catalogue.html table. node --test tests/i18n.test.cjs passes (7/7); git diff --check clean. |

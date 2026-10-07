@@ -2,15 +2,17 @@
    EQUIP DRONES — Page « Demande de devis »
    Consomme le contrat window.ED exposé par app.js. Ne le modifie jamais.
 
-   Aucun back-end : le formulaire produit UN message texte dans la langue choisie, que
-   l'utilisateur transmet lui-même par WhatsApp, par e-mail ou par copier-coller.
-   Aucun prix, aucun total, aucune donnée envoyée ailleurs que par ces canaux.
+   Envoi direct via Web3Forms (https://api.web3forms.com/submit) : le
+   formulaire construit un message structuré bilingue (coordonnées +
+   sélection du panier) et l'envoie sans passer par WhatsApp, e-mail ou
+   presse-papiers. La clé API est lue dans window.ED_WEB3FORMS_KEY
+   (fichier local ignoré web3forms-config.js) — jamais versionnée.
+   Aucun prix, aucun total.
    ========================================================================== */
 (function () {
   'use strict';
 
   var started   = false;  /* garde-fou : render() ne démarre qu'une fois */
-  var lastData  = null;   /* dernières coordonnées saisies, pour régénérer */
   var wantFocus = null;   /* contrôle à refocaliser après reconstruction */
 
   /* ------------------------------------------------------------- raccourcis */
@@ -239,7 +241,7 @@
   }
 
   /* ==========================================================================
-     C. Message + envoi
+     C. Message + envoi direct (Web3Forms)
      ========================================================================== */
 
   function buildMessage(d) {
@@ -278,45 +280,63 @@
     return out.join('\n');
   }
 
-  function showPanel() {
-    if (!lastData) return;
+  function web3forms() {
+    if (ED() && ED().web3forms) { return ED().web3forms; }
+    return window.ED_WEB3FORMS || null;
+  }
 
-    var message = buildMessage(lastData);
-    var subject = t('message.subject') + ' — ' + (lastData.name || ED().contact.company);
+  function quoteSubject(name) {
+    return t('message.subject') + ' — ' + (name || ED().contact.company);
+  }
 
-    var box = $('q-msg');
-    if (box) box.value = message;
+  function submitDirect(d) {
+    var form = $('quote-form');
+    var statusEl = $('quote-status');
+    var submitBtn = $('quote-submit-btn');
+    var helper = web3forms();
 
-    var wa = $('q-wa');
-    if (wa) {
-      wa.href = 'https://wa.me/' + ED().contact.whatsapp +
-                '?text=' + encodeURIComponent(message);
+    if (!form || !helper) {
+      if (window.console && console.warn) {
+        console.warn('[devis] Web3Forms helper missing: check script order.');
+      }
+      return;
     }
 
-    var mail = $('q-mail');
-    if (mail) {
-      /* RFC 6068 : dans un mailto, les sauts de ligne s'écrivent %0D%0A. */
-      mail.href = 'mailto:' + ED().contact.email +
-                  '?subject=' + encodeURIComponent(subject) +
-                  '&body='    + encodeURIComponent(message.replace(/\n/g, '\r\n'));
-    }
+    var subject = quoteSubject(d.name);
+
+    helper.submit({
+      form: form,
+      statusEl: statusEl,
+      submitBtn: submitBtn,
+      extraData: {
+        subject: subject,
+        from_name: d.name,
+        message: buildMessage(d)
+      },
+      onSuccess: function () {
+        try { ED().cart.clear(); } catch (e) { /* panier déjà vide */ }
+        renderCart();
+        openPanel();
+      }
+    });
   }
 
   function openPanel() {
-    var form  = $('quote-form-wrap');
+    var formWrap = $('quote-form-wrap');
     var panel = $('quote-sent');
-    showPanel();
-    if (form)  form.classList.add('hidden');
+    if (formWrap) { formWrap.classList.add('hidden'); }
     if (panel) { panel.classList.remove('hidden'); panel.focus(); }
   }
 
   function closePanel() {
-    var form  = $('quote-form-wrap');
+    var formWrap = $('quote-form-wrap');
     var panel = $('quote-sent');
-    if (panel) panel.classList.add('hidden');
-    if (form)  form.classList.remove('hidden');
+    if (panel) { panel.classList.add('hidden'); }
+    if (formWrap) { formWrap.classList.remove('hidden'); }
+    var status = $('quote-status');
+    if (status) { status.classList.add('hidden'); status.textContent = ''; }
     var name = $('q-name');
-    if (name) name.focus();
+    if (name) { name.focus(); }
   }
 
   function panelIsOpen() {
@@ -324,55 +344,19 @@
     return !!panel && !panel.classList.contains('hidden');
   }
 
-  /* Copie robuste : l'API Presse-papiers est absente ou refusée sur file://
-     dans plusieurs navigateurs — on ne doit jamais lever d'exception. */
-  function copyMessage() {
-    var box = $('q-msg');
-    var text = box ? box.value : '';
-    if (!text) return;
-
-    function ok() { ED().ui.toast(t('cta.copied')); }
-
-    function legacy() {
-      var done = false;
-      try {
-        box.focus();
-        box.select();
-        if (box.setSelectionRange) box.setSelectionRange(0, text.length);
-        done = document.execCommand('copy');
-      } catch (e) {
-        done = false;
-      }
-      if (done) ok();
-      else ED().ui.toast(t('cta.copyManual'));
-    }
-
-    try {
-      if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
-        navigator.clipboard.writeText(text).then(ok, legacy);
-        return;
-      }
-    } catch (e) { /* API présente mais inutilisable : on passe au repli */ }
-
-    legacy();
-  }
-
   function wireForm() {
     var form = $('quote-form');
     if (form) {
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        if (!validate()) return;
-        lastData = readForm();
-        openPanel();
+        if (panelIsOpen()) { return; }
+        if (!validate()) { return; }
+        submitDirect(readForm());
       });
     }
 
-    var copy = $('q-copy');
-    if (copy) copy.addEventListener('click', copyMessage);
-
     var again = $('q-new');
-    if (again) again.addEventListener('click', closePanel);
+    if (again) { again.addEventListener('click', closePanel); }
   }
 
   /* ==========================================================================
@@ -408,14 +392,12 @@
         setFieldError(input, rule.err, t(input.value.trim() ? rule.key : 'quote.required'));
       }
     });
-    if (panelIsOpen()) showPanel();
+    /* Le panneau de confirmation est statique (data-i18n) : appliqué par ED. */
   });
 
   document.addEventListener('ed:cartchange', function () {
     if (!started) return;
     renderCart();
-    /* Panneau ouvert : le message doit refléter le panier courant. */
-    if (panelIsOpen()) showPanel();
   });
 
 })();

@@ -99,11 +99,15 @@ window.ED_STRINGS = {
   'quote.area':      { fr: 'Superficie à traiter (ha)', en: 'Area to treat (ha)' },
   'quote.message':   { fr: 'Message',           en: 'Message' },
   'quote.messagePh': { fr: 'Précisez votre besoin, vos cultures, vos délais…', en: 'Tell us about your needs, crops, timeline…' },
-  'quote.submit':    {"fr": "Préparer ma demande", "en": "Prepare my request"},
+  'quote.submit':    {"fr": "Envoyer ma demande", "en": "Send my request"},
   'quote.how':       { fr: 'Comment souhaitez-vous nous transmettre votre demande ?', en: 'How would you like to send us your request?' },
-  'quote.sentTitle': { fr: 'Votre demande est prête', en: 'Your request is ready' },
-  'quote.sentBody':  { fr: 'Choisissez WhatsApp ou l’e-mail pour nous l’envoyer. Vous pouvez aussi copier le message et nous l’adresser par le canal de votre choix.', en: 'Choose WhatsApp or email to send it. You can also copy the message and send it however you prefer.' },
-  'quote.newRequest':{ fr: 'Modifier ma demande', en: 'Edit my request' },
+  'quote.sentTitle': { fr: 'Votre demande a été envoyée', en: 'Your request has been sent' },
+  'quote.sentBody':  { fr: 'Merci pour votre demande. Nous reviendrons vers vous dans les plus brefs délais.', en: 'Thank you for your request. We will get back to you as soon as possible.' },
+  'quote.newRequest':{ fr: 'Faire une nouvelle demande', en: 'Start a new request' },
+  'form.send':       { fr: 'Envoyer le message', en: 'Send the message' },
+  'form.sending':    { fr: 'Envoi en cours…', en: 'Sending…' },
+  'form.success':    { fr: 'Message envoyé. Merci, nous revenons vers vous dans les plus brefs délais.', en: 'Message sent. Thank you — we will get back to you as soon as possible.' },
+  'form.error':      { fr: 'L’envoi a échoué. Vérifiez votre connexion puis réessayez.', en: 'Sending failed. Check your connection and try again.' },
   'quote.required':  { fr: 'Champ obligatoire', en: 'Required field' },
   'quote.badEmail':  { fr: 'Adresse e-mail invalide', en: 'Invalid email address' },
   'quote.badPhone':  { fr: 'Numéro de téléphone invalide', en: 'Invalid phone number' },
@@ -374,6 +378,10 @@ Object.assign(window.ED_STRINGS, {
   "a-propos.copy.ce-formulaire-ne-transmet-rien-a-un": {
     "fr": "Préparez votre message ici, puis envoyez-le depuis WhatsApp ou votre messagerie. Il ne sera transmis qu’après votre confirmation dans cette application.",
     "en": "Prepare your message here, then send it from WhatsApp or your email application. Your message is not sent until you confirm it in that application."
+  },
+  "a-propos.copy.envoyez-nous-un-message-directement": {
+    "fr": "Envoyez-nous un message directement depuis ce formulaire. Nous vous répondrons dans les plus brefs délais.",
+    "en": "Send us a message directly from this form. We will reply as soon as possible."
   },
   "a-propos.copy.indiquez-au-moins-un-e-mail-ou": {
     "fr": "Indiquez au moins un e-mail ou un numéro de téléphone pour que nous puissions vous répondre.",
@@ -1105,8 +1113,8 @@ Object.assign(window.ED_STRINGS, {
     "en": "Quote request — Equip Drones"
   },
   "devis.copy.selectionnez-vos-appareils-renseignez-vos-coordonnees-puis": {
-    "fr": "Sélectionnez vos appareils, renseignez vos coordonnées, puis transmettez votre demande par WhatsApp ou par e-mail. Nous revenons vers vous avec une proposition détaillée.",
-    "en": "Select your equipment, enter your details, then send your prepared request through WhatsApp or email. We will reply with a detailed proposal."
+    "fr": "Sélectionnez vos appareils, renseignez vos coordonnées, puis envoyez-nous votre demande directement depuis ce formulaire. Nous revenons vers vous avec une proposition détaillée.",
+    "en": "Select your equipment, enter your details, then send your request directly from this form. We will reply with a detailed proposal."
   },
   "devis.copy.nom-complet": {
     "fr": "<span>Nom complet</span> <span class=\"req\">*</span>",
@@ -1169,8 +1177,8 @@ Object.assign(window.ED_STRINGS, {
     "en": "<span>Message</span>"
   },
   "devis.meta.description": {
-    "fr": "Composez votre demande de devis DJI : sélectionnez vos appareils, indiquez vos coordonnées, puis envoyez-nous votre demande par WhatsApp ou par e-mail. SARL Equip Drones, distributeur officiel DJI en Algérie.",
-    "en": "Prepare a DJI quote request: select equipment, enter your details and send your request via WhatsApp or email. SARL Equip Drones, official DJI distributor in Algeria."
+    "fr": "Composez votre demande de devis DJI : sélectionnez vos appareils, indiquez vos coordonnées, puis envoyez-nous votre demande directement depuis le formulaire. SARL Equip Drones, distributeur officiel DJI en Algérie.",
+    "en": "Build your DJI quote request: select equipment, enter your details, then send it directly from the form. SARL Equip Drones, official DJI distributor in Algeria."
   },
   "enterprise.copy.dji-entreprise-drones-professionnels-industriels-en-algerie": {
     "fr": "DJI Entreprise — Drones Professionnels & Industriels en Algérie | Equip Drones",

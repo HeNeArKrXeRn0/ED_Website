@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-i18n="devis.copy.demande-de-devis-equip-drones">Demande de devis — Equip Drones</title>
-<meta name="description" content="Composez votre demande de devis DJI : sélectionnez vos appareils, indiquez vos coordonnées, puis envoyez-nous votre demande par WhatsApp ou par e-mail. SARL Equip Drones, distributeur officiel DJI en Algérie." data-i18n-attr="content:devis.meta.description">
+<meta name="description" content="Composez votre demande de devis DJI : sélectionnez vos appareils, indiquez vos coordonnées, puis envoyez-nous votre demande directement depuis le formulaire. SARL Equip Drones, distributeur officiel DJI en Algérie." data-i18n-attr="content:devis.meta.description">
 <link rel="icon" href="assets/img/svg/Logo.svg" type="image/svg+xml">
 <link rel="canonical" href="https://equipdrones.com/devis.html">
 <meta property="og:type" content="website">
@@ -28,7 +28,7 @@
     <div class="wrap">
       <p class="eyebrow" data-i18n="misc.official">Distributeur officiel DJI — Algérie</p>
       <h1 class="h-section" data-i18n="quote.title">Demande de devis</h1>
-      <p class="lead measure" data-i18n="devis.copy.selectionnez-vos-appareils-renseignez-vos-coordonnees-puis">Sélectionnez vos appareils, renseignez vos coordonnées, puis transmettez votre demande par WhatsApp ou par e-mail. Nous revenons vers vous avec une proposition détaillée.</p>
+      <p class="lead measure" data-i18n="devis.copy.selectionnez-vos-appareils-renseignez-vos-coordonnees-puis">Sélectionnez vos appareils, renseignez vos coordonnées, puis envoyez-nous votre demande directement depuis ce formulaire. Nous revenons vers vous avec une proposition détaillée.</p>
     </div>
   </section>
 
@@ -125,8 +125,13 @@
 
           </div>
 
+          <input type="hidden" name="subject" value="Demande de devis — Equip Drones">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="notice mt-4 hidden" id="quote-status" role="status"></div>
+
           <div class="mt-6">
-            <button type="submit" class="btn btn-primary btn-lg" data-i18n="quote.submit">Préparer ma demande</button>
+            <button type="submit" class="btn btn-primary btn-lg" id="quote-submit-btn" data-i18n="quote.submit">Envoyer ma demande</button>
           </div>
         </form>
       </div>
@@ -135,29 +140,12 @@
            C. Confirmation — remplace le formulaire après validation
            ================================================================= -->
       <div id="quote-sent" class="card hidden" role="status" tabindex="-1">
-        <h2 class="h-card" data-i18n="quote.sentTitle">Votre demande est prête</h2>
-        <p class="body measure mt-4" data-i18n="quote.sentBody">Choisissez WhatsApp ou l’e-mail pour nous l’envoyer. Vous pouvez aussi copier le message et nous l’adresser par le canal de votre choix.</p>
-
-        <p class="small mt-6" data-i18n="quote.how">Comment souhaitez-vous nous transmettre votre demande ?</p>
-
-        <div class="row mt-4">
-          <a class="btn btn-wa btn-lg" id="q-wa" href="https://wa.me/213661936666"
-             target="_blank" rel="noopener noreferrer"
-             data-i18n="cta.whatsapp">Envoyer par WhatsApp</a>
-          <a class="btn btn-lg" id="q-mail" href="mailto:info@equipdrones.com"
-             data-i18n="cta.email">Envoyer par e-mail</a>
-          <button type="button" class="btn btn-ghost btn-lg" id="q-copy"
-                  data-i18n="cta.copy">Copier le message</button>
-        </div>
-
-        <div class="field mt-6">
-          <label for="q-msg" data-i18n-html="devis.copy.message"><span>Message</span></label>
-          <textarea class="textarea mono" id="q-msg" rows="14" readonly></textarea>
-        </div>
+        <h2 class="h-card" data-i18n="quote.sentTitle">Votre demande a été envoyée</h2>
+        <p class="body measure mt-4" data-i18n="quote.sentBody">Merci pour votre demande. Nous reviendrons vers vous dans les plus brefs délais.</p>
 
         <div class="mt-5">
           <button type="button" class="btn btn-ghost" id="q-new"
-                  data-i18n="quote.newRequest">Modifier ma demande</button>
+                  data-i18n="quote.newRequest">Faire une nouvelle demande</button>
         </div>
       </div>
 
@@ -172,7 +160,9 @@
 <script src="assets/js/data.js"></script>
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/web3forms-config.js"></script>
+<script src="assets/js/web3forms.js"></script>
 <script src="assets/js/devis.js"></script>
-  <script src="assets/js/motion.js"></script>
+<script src="assets/js/motion.js"></script>
 </body>
 </html>

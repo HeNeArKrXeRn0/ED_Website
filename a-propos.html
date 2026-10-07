@@ -175,9 +175,11 @@
 
         <div class="card">
           <h3 class="h-sub" data-i18n="a-propos.copy.nous-ecrire">Nous écrire</h3>
-          <p class="small mt-4" data-i18n="a-propos.copy.ce-formulaire-ne-transmet-rien-a-un">Préparez votre message ici, puis envoyez-le depuis WhatsApp ou votre messagerie. Il ne sera transmis qu’après votre confirmation dans cette application.</p>
+          <p class="small mt-4" data-i18n="a-propos.copy.envoyez-nous-un-message-directement">Envoyez-nous un message directement depuis ce formulaire. Nous vous répondrons dans les plus brefs délais.</p>
 
           <form id="contact-form" class="mt-5" novalidate>
+            <input type="hidden" name="subject" value="Contact depuis le site — Equip Drones">
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-grid">
               <div class="field">
                 <label for="c-name" data-i18n="quote.name">Nom complet</label>
@@ -189,7 +191,7 @@
               </div>
               <div class="field">
                 <label for="c-email" data-i18n="quote.email">E-mail</label>
-                <input class="input" type="email" id="c-email" name="email" autocomplete="email">
+                <input class="input" type="email" id="c-email" name="email" autocomplete="email" required>
               </div>
               <div class="field">
                 <label for="c-phone" data-i18n="quote.phone">Téléphone</label>
@@ -206,10 +208,10 @@
             <p class="tiny mt-4" data-i18n="a-propos.copy.indiquez-au-moins-un-e-mail-ou">Indiquez au moins un e-mail ou un numéro de téléphone pour que nous puissions vous répondre.</p>
 
             <div class="notice mt-4 hidden" id="contact-error" role="alert"></div>
+            <div class="mt-4 hidden" id="contact-status" role="status"></div>
 
-            <div class="row mt-5">
-              <button type="button" class="btn btn-wa" id="send-wa" data-i18n="cta.whatsapp">Envoyer par WhatsApp</button>
-              <button type="button" class="btn" id="send-mail" data-i18n="cta.email">Envoyer par e-mail</button>
+            <div class="mt-5">
+              <button type="submit" class="btn btn-primary" id="send-contact" data-i18n="form.send">Envoyer le message</button>
             </div>
           </form>
         </div>
@@ -225,6 +227,8 @@
 <script src="assets/js/data.js"></script>
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/web3forms-config.js"></script>
+<script src="assets/js/web3forms.js"></script>
 <script>
 (function () {
   'use strict';
@@ -298,16 +302,6 @@
     return null;
   }
 
-  function buildMessage() {
-    var lines = [t('message.contactTitle'), ''];
-    lines.push(t('quote.name') + ': ' + val('c-name'));
-    if (val('c-company')) { lines.push(t('quote.company') + ': ' + val('c-company')); }
-    if (val('c-email'))   { lines.push(t('quote.email') + ': ' + val('c-email')); }
-    if (val('c-phone'))   { lines.push(t('quote.phone') + ': ' + val('c-phone')); }
-    lines.push('', t('quote.message') + ':', val('c-message'));
-    return lines.join('\n');
-  }
-
   function showError(problem) {
     var box = document.getElementById('contact-error');
     if (box) {
@@ -324,25 +318,9 @@
     if (box) { box.classList.add('hidden'); box.textContent = ''; }
   }
 
-  function send(channel) {
-    var problem = firstProblem();
-    if (problem) { showError(problem); return; }
-    clearError();
-
-    var c = contact();
-    var text = buildMessage();
-
-    if (channel === 'wa') {
-      var wa = c.whatsapp || '213661936666';
-      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(text),
-                  '_blank', 'noopener');
-    } else {
-      var mail = c.email || 'info@equipdrones.com';
-      var subject = t('message.contactSubject') + ' — ' + val('c-name');
-      window.location.href = 'mailto:' + mail +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(text);
-    }
+  function clearStatus() {
+    var box = document.getElementById('contact-status');
+    if (box) { box.classList.add('hidden'); box.textContent = ''; }
   }
 
   function bindForm() {
@@ -350,15 +328,39 @@
     var form = document.getElementById('contact-form');
     if (!form) { return; }
 
-    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var problem = firstProblem();
+      if (problem) { showError(problem); return; }
+      clearError();
+      clearStatus();
 
-    var wa = document.getElementById('send-wa');
-    if (wa) { wa.addEventListener('click', function () { send('wa'); }); }
+      var submitBtn = document.getElementById('send-contact');
+      var statusEl  = document.getElementById('contact-status');
+      var helper = (window.ED && ED.web3forms) ? ED.web3forms : window.ED_WEB3FORMS;
 
-    var mail = document.getElementById('send-mail');
-    if (mail) { mail.addEventListener('click', function () { send('mail'); }); }
+      if (!helper) {
+        if (window.console && console.warn) {
+          console.warn('[contact] Web3Forms helper missing: check script order.');
+        }
+        return;
+      }
 
-    form.addEventListener('input', clearError);
+      helper.submit({
+        form: form,
+        statusEl: statusEl,
+        submitBtn: submitBtn,
+        extraData: {
+          subject: t('message.contactSubject') + ' — ' + val('c-name'),
+          from_name: val('c-name')
+        }
+      });
+    });
+
+    form.addEventListener('input', function () {
+      clearError();
+      clearStatus();
+    });
     bound = true;
   }
 
