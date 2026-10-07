@@ -72,10 +72,16 @@
 
     var originalLabel = submitBtn ? submitBtn.textContent : '';
 
-    /* Honeypot : les robots cochent `botcheck`, les humains non. */
+    /* Honeypot : les robots cochent `botcheck`, les humains non.
+       Attention : une checkbox décochée a quand même `value === "on"` ;
+       seul `checked` compte pour ce type de champ. */
     var honeypot = form ? form.querySelector('[name="botcheck"]') : null;
-    if (honeypot && ((honeypot.type === 'checkbox' && honeypot.checked) ||
-                     (honeypot.value && honeypot.value !== ''))) {
+    var isBot = false;
+    if (honeypot) {
+      if (honeypot.type === 'checkbox') { isBot = !!honeypot.checked; }
+      else { isBot = !!(honeypot.value && honeypot.value !== ''); }
+    }
+    if (isBot) {
       /* Silencieux : on simule un succès pour ne pas renseigner le robot. */
       showStatus(statusEl, 'form.success');
       if (form && form.reset) { form.reset(); }
